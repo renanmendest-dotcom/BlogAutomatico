@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  titulo="Como verificamos"
+  descricao="Conheça as fontes, regras e limites usados nas fichas do Combina Casa."
+>
+  <header class="page-header shell">
+    <p class="eyebrow">Método aberto</p>
+    <h1>Como verificamos</h1>
+    <p>
+      O site mostra de onde veio cada informação e deixa as lacunas visíveis. A
+      automação ajuda a organizar; ela não ganha permissão para inventar.
+    </p>
+  </header>
+
+  <section class="method-section shell">
+    <ol class="method-steps">
+      <li>
+        <span>01</span>
+        <div>
+          <h2>Escolhemos o modelo exato</h2>
+          <p>
+            Nome parecido não basta. Versão, potência e região podem mudar a
+            compatibilidade.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span>02</span>
+        <div>
+          <h2>Procuramos a fonte oficial</h2>
+          <p>
+            Página do fabricante, manual e ficha técnica têm prioridade sobre
+            anúncios e textos de terceiros.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span>03</span>
+        <div>
+          <h2>Registramos fonte e data</h2>
+          <p>
+            Uma informação sem endereço e data de acesso não entra como
+            confirmada.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span>04</span>
+        <div>
+          <h2>Mostramos o que falta</h2>
+          <p>
+            “Não verificado” não quer dizer “não funciona”. Quer dizer apenas que
+            não encontramos confirmação suficiente.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section section-ink">
+    <div class="shell policy-grid">
+      <div>
+        <p class="eyebrow">Ordem de confiança</p>
+        <h2>Fonte técnica antes de anúncio.</h2>
+      </div>
+      <ol>
+        <li>Manual ou ficha técnica do fabricante</li>
+        <li>Página oficial do produto</li>
+        <li>Central de ajuda oficial</li>
+        <li>Anúncio selecionado, apenas para preço e disponibilidade</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section shell prose prose-standalone">
+    <h2>Limites do conteúdo</h2>
+    <p>
+      O Combina Casa não orienta instalação elétrica nem dimensiona equipamentos.
+      Quando tensão, corrente ou potência forem relevantes, mostramos apenas o
+      dado declarado pela fonte e recomendamos a conferência do manual.
+    </p>
+    <p>
+      Links comerciais poderão gerar comissão no futuro. Isso não muda a ordem
+      das fontes nem autoriza esconder produtos sem link de afiliado.
+    </p>
+    <h2>Correções</h2>
+    <p>
+      Produtos e integrações mudam. Uma correção deve indicar o modelo completo,
+      o campo divergente e uma fonte oficial mais recente.
+    </p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+import { formatarData, rotuloCategoria } from "../lib/produtos";
+
+interface Props {
+  post: {
+    id: string;
+    data: {
+      titulo: string;
+      resposta_curta: string;
+      categoria: string;
+      atualizado_em: Date;
+      verificado_em: Date;
+    };
+  };
+}
+
+const { post } = Astro.props;
+---
+
+<article class="article-card">
+  <div class="article-meta">
+    <span>{rotuloCategoria(post.data.categoria)}</span>
+    <span>verificado {formatarData(post.data.verificado_em)}</span>
+  </div>
+  <h3><a href={`/artigos/${post.id}/`}>{post.data.titulo}</a></h3>
+  <p>{post.data.resposta_curta}</p>
+  <a class="text-link" href={`/artigos/${post.id}/`}>
+    Ler resposta completa <span aria-hidden="true">→</span>
+  </a>
+</article>

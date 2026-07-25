@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import ArticleCard from "../../components/ArticleCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const posts = (await getCollection("posts"))
+  .filter((post) => !post.data.rascunho)
+  .sort(
+    (a, b) =>
+      b.data.atualizado_em.getTime() - a.data.atualizado_em.getTime()
+  );
+---
+
+<BaseLayout
+  titulo="Guias de compatibilidade"
+  descricao="Respostas diretas sobre compatibilidade de dispositivos, sempre com fonte e data."
+>
+  <header class="page-header shell">
+    <p class="eyebrow">Guias verificados</p>
+    <h1>Uma pergunta por vez.</h1>
+    <p>
+      Cada guia começa pela resposta e mostra o que foi confirmado, o que falta
+      verificar e qual fonte foi consultada.
+    </p>
+  </header>
+
+  <section class="section shell section-first">
+    <div class="article-grid article-grid-light">
+      {posts.map((post) => <ArticleCard post={post} />)}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+interface Props {
+  label: string;
+  estado: "compativel" | "incompativel" | "nao_verificado" | "confirmado";
+  compacto?: boolean;
+}
+
+const { label, estado, compacto = false } = Astro.props;
+const textoEstado = {
+  compativel: "compatível",
+  incompativel: "incompatível",
+  nao_verificado: "não verificado",
+  confirmado: "confirmado"
+}[estado];
+---
+
+<span class:list={["status-chip", `is-${estado}`, { "is-compact": compacto }]}>
+  <span class="status-light" aria-hidden="true"></span>
+  <span>{label}</span>
+  <span class="sr-only">: {textoEstado}</span>
+</span>

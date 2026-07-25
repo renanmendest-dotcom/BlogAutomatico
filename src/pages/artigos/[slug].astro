@@ -1,0 +1,123 @@
+---
+import { getCollection, render } from "astro:content";
+import ProductCard from "../../components/ProductCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  buscarProduto,
+  formatarData,
+  rotuloCategoria
+} from "../../lib/produtos";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("posts")).filter(
+    (post) => !post.data.rascunho
+  );
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const produtos = post.data.produtos
+  .map((id: string) => buscarProduto(id))
+  .filter(Boolean);
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.data.titulo,
+  description: post.data.descricao,
+  datePublished: post.data.publicado_em.toISOString(),
+  dateModified: post.data.atualizado_em.toISOString(),
+  author: {
+    "@type": "Organization",
+    name: "Combina Casa",
+    url: new URL("/como-verificamos/", Astro.site)
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Combina Casa"
+  },
+  mainEntityOfPage: Astro.url,
+  citation: post.data.fontes.map((fonte: { url: string }) => fonte.url),
+  about: produtos.map((produto) => ({
+    "@type": "Product",
+    name: produto?.nome,
+    brand: produto?.marca
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Início",
+      item: new URL("/", Astro.site)
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Guias",
+      item: new URL("/artigos/", Astro.site)
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: post.data.titulo,
+      item: Astro.url
+    }
+  ]
+};
+---
+
+<BaseLayout titulo={post.data.titulo} descricao={post.data.descricao}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <article>
+    <header class="article-header">
+      <div class="shell article-header-inner">
+        <div class="article-kicker">
+          <span>{rotuloCategoria(post.data.categoria)}</span>
+          <span>verificado {formatarData(post.data.verificado_em)}</span>
+        </div>
+        <h1>{post.data.titulo}</h1>
+        <p class="answer-box">{post.data.resposta_curta}</p>
+        <dl class="article-dates">
+          <div>
+            <dt>Publicado</dt>
+            <dd>{formatarData(post.data.publicado_em)}</dd>
+          </div>
+          <div>
+            <dt>Atualizado</dt>
+            <dd>{formatarData(post.data.atualizado_em)}</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="shell article-layout">
+      <div class="prose">
+        <Content />
+      </div>
+      <aside class="article-aside">
+        <p class="eyebrow">Dados usados</p>
+        <p>
+          Este texto foi montado a partir das fichas abaixo. Uma alteração na
+          fonte deve gerar nova verificação.
+        </p>
+        {
+          produtos.map(
+            (produto) => produto && <ProductCard produto={produto} />
+          )
+        }
+      </aside>
+    </div>
+  </article>
+</BaseLayout>

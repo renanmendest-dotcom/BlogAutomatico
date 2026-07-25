@@ -1,0 +1,55 @@
+---
+import type { ProdutoPublicado } from "../lib/produtos";
+import { formatarData, formatarPreco } from "../lib/produtos";
+import StatusChip from "./StatusChip.astro";
+
+interface Props {
+  produto: ProdutoPublicado;
+}
+
+const { produto } = Astro.props;
+---
+
+<article class="product-card">
+  <div class="product-card-topline">
+    <span>{produto.marca}</span>
+    <span>verificado {formatarData(produto.verificadoEm)}</span>
+  </div>
+  <div class="product-card-body">
+    <p class="product-code">{produto.id}</p>
+    <h3><a href={`/produtos/${produto.id}/`}>{produto.nome}</a></h3>
+    <p>{produto.descricao}</p>
+
+    <div class="chip-row" aria-label="Compatibilidade resumida">
+      <StatusChip
+        label="Alexa"
+        estado={produto.campos.alexa.estado}
+        compacto
+      />
+      <StatusChip
+        label="Google"
+        estado={produto.campos.googleHome.estado}
+        compacto
+      />
+      <StatusChip
+        label="Matter"
+        estado={produto.campos.matter.estado}
+        compacto
+      />
+    </div>
+  </div>
+  <div class="product-card-footer">
+    {
+      produto.preco.valor !== null ? (
+        <span class="price">
+          {formatarPreco(produto.preco.valor, produto.preco.moeda)}
+        </span>
+      ) : (
+        <span class="price-pending">preço ainda não coletado</span>
+      )
+    }
+    <a class="text-link" href={`/produtos/${produto.id}/`}>
+      Ver ficha <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</article>

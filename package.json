@@ -1,0 +1,24 @@
+{
+  "name": "combina-casa",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/validar-conteudo.mjs && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "validar": "node scripts/validar-conteudo.mjs",
+    "atualizar-precos": "node scripts/atualizar-precos.mjs",
+    "novo-rascunho": "node scripts/criar-rascunho-local.mjs"
+  },
+  "dependencies": {
+    "astro": "latest",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "latest",
+    "typescript": "^6.0.0"
+  }
+}

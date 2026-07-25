@@ -1,0 +1,41 @@
+---
+import ProductCard from "../../components/ProductCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  produtosNaFila,
+  produtosPublicados
+} from "../../lib/produtos";
+---
+
+<BaseLayout
+  titulo="Produtos verificados"
+  descricao="Fichas de compatibilidade de produtos de casa inteligente, com fonte e data."
+>
+  <header class="page-header shell">
+    <p class="eyebrow">Base de compatibilidade</p>
+    <h1>Produtos verificados</h1>
+    <p>
+      Aqui aparecem somente produtos com pelo menos uma informação confirmada em
+      fonte oficial. Campos incompletos continuam visíveis como não verificados.
+    </p>
+  </header>
+
+  <section class="section shell section-first">
+    <div class="product-grid">
+      {produtosPublicados.map((produto) => <ProductCard produto={produto} />)}
+    </div>
+  </section>
+
+  <section class="queue-section">
+    <div class="shell queue-grid">
+      <div>
+        <p class="eyebrow">Próximas verificações</p>
+        <h2>{produtosNaFila.length} produtos aguardando pesquisa</h2>
+      </div>
+      <p>
+        Eles não aparecem como ficha pública até que uma fonte confirme seus
+        dados. Essa fila existe para manter o ritmo sem sacrificar a confiança.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

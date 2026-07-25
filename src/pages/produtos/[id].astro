@@ -1,0 +1,132 @@
+---
+import StatusChip from "../../components/StatusChip.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  formatarData,
+  formatarPreco,
+  produtosPublicados,
+  rotuloCategoria,
+  type CampoProduto,
+  type ProdutoPublicado
+} from "../../lib/produtos";
+
+export function getStaticPaths() {
+  return produtosPublicados.map((produto) => ({
+    params: { id: produto.id },
+    props: { produto }
+  }));
+}
+
+interface Props {
+  produto: ProdutoPublicado;
+}
+
+const { produto } = Astro.props;
+
+const linhas: Array<{ rotulo: string; campo: CampoProduto }> = [
+  { rotulo: "Conexão", campo: produto.campos.protocolo },
+  { rotulo: "Hub", campo: produto.campos.hub },
+  { rotulo: "Amazon Alexa", campo: produto.campos.alexa },
+  { rotulo: "Google Home", campo: produto.campos.googleHome },
+  { rotulo: "Matter", campo: produto.campos.matter },
+  { rotulo: "Voltagem", campo: produto.campos.voltagem }
+];
+
+const productSchema =
+  produto.preco.valor !== null && produto.preco.url
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        name: produto.nome,
+        description: produto.descricao,
+        brand: { "@type": "Brand", name: produto.marca },
+        offers: {
+          "@type": "Offer",
+          priceCurrency: produto.preco.moeda,
+          price: produto.preco.valor,
+          url: produto.preco.url,
+          availability: "https://schema.org/InStock"
+        }
+      }
+    : null;
+---
+
+<BaseLayout titulo={produto.nome} descricao={produto.descricao}>
+  {productSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />}
+
+  <header class="product-hero">
+    <div class="shell product-hero-grid">
+      <div>
+        <p class="eyebrow">{rotuloCategoria(produto.categoria)} / {produto.marca}</p>
+        <h1>{produto.nome}</h1>
+        <p class="product-description">{produto.descricao}</p>
+        <p class="verified-line">
+          <span class="live-dot"></span>
+          Verificado em {formatarData(produto.verificadoEm)}
+        </p>
+      </div>
+      <div class="price-panel">
+        <span class="price-panel-label">Preço monitorado</span>
+        {
+          produto.preco.valor !== null ? (
+            <>
+              <strong>{formatarPreco(produto.preco.valor, produto.preco.moeda)}</strong>
+              <span>coletado em {formatarData(produto.preco.coletadoEm!)}</span>
+              {produto.preco.url && <a href={produto.preco.url}>Ver anúncio →</a>}
+            </>
+          ) : (
+            <>
+              <strong class="price-empty">— —</strong>
+              <span>Aguardando a escolha de um anúncio exato.</span>
+            </>
+          )
+        }
+      </div>
+    </div>
+  </header>
+
+  <div class="shell product-detail-grid">
+    <section class="spec-sheet">
+      <div class="spec-sheet-header">
+        <h2>Ficha de compatibilidade</h2>
+        <span>{produto.id}</span>
+      </div>
+      <dl>
+        {
+          linhas.map(({ rotulo, campo }) => (
+            <div class="spec-row">
+              <dt>{rotulo}</dt>
+              <dd>
+                <span>{campo.valor}</span>
+                <StatusChip label={rotulo} estado={campo.estado} compacto />
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+      <p class="spec-note">
+        “Não verificado” significa que a fonte consultada não confirmou o campo.
+        Não significa automaticamente “não compatível”.
+      </p>
+    </section>
+
+    <aside class="source-panel">
+      <p class="eyebrow">Rastreabilidade</p>
+      <h2>Fontes da ficha</h2>
+      <ol>
+        {
+          produto.fontes.map((fonte) => (
+            <li>
+              <a href={fonte.url}>{fonte.titulo}</a>
+              <span>Acessada em {formatarData(fonte.acessadoEm)}</span>
+            </li>
+          ))
+        }
+      </ol>
+      <p>
+        Encontrou uma divergência? Guarde o modelo completo e a fonte oficial
+        mais recente para solicitar uma correção.
+      </p>
+    </aside>
+  </div>
+</BaseLayout>

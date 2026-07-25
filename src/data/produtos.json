@@ -1,0 +1,241 @@
+[
+  {
+    "id": "tapo-l530e",
+    "nome": "Tapo L530E",
+    "descricao": "Lâmpada inteligente Wi-Fi multicolorida de 8,7 W e 806 lúmens.",
+    "marca": "TP-Link",
+    "categoria": "iluminacao",
+    "publicado": true,
+    "verificadoEm": "2026-07-25",
+    "mercadoLivreId": null,
+    "preco": {
+      "valor": null,
+      "moeda": "BRL",
+      "coletadoEm": null,
+      "url": null,
+      "status": "aguardando_item"
+    },
+    "campos": {
+      "protocolo": {
+        "valor": "Wi-Fi",
+        "estado": "confirmado",
+        "fonteId": "tp-link-l530e"
+      },
+      "hub": {
+        "valor": "Não precisa",
+        "estado": "confirmado",
+        "fonteId": "tp-link-l530e"
+      },
+      "alexa": {
+        "valor": "Compatível",
+        "estado": "compativel",
+        "fonteId": "tp-link-l530e"
+      },
+      "googleHome": {
+        "valor": "Compatível",
+        "estado": "compativel",
+        "fonteId": "tp-link-l530e"
+      },
+      "matter": {
+        "valor": "Não verificado",
+        "estado": "nao_verificado",
+        "fonteId": null
+      },
+      "voltagem": {
+        "valor": "Confirmar na embalagem da versão vendida no Brasil",
+        "estado": "nao_verificado",
+        "fonteId": null
+      }
+    },
+    "fontes": [
+      {
+        "id": "tp-link-l530e",
+        "titulo": "Página oficial Tapo L530E — TP-Link Brasil",
+        "url": "https://www.tp-link.com/br/home-networking/smart-bulb/tapo-l530e/",
+        "acessadoEm": "2026-07-25"
+      }
+    ]
+  },
+  {
+    "id": "intelbras-ews-410",
+    "nome": "Intelbras EWS 410",
+    "descricao": "Lâmpada LED smart Wi-Fi colorida de 10 W.",
+    "marca": "Intelbras",
+    "categoria": "iluminacao",
+    "publicado": true,
+    "verificadoEm": "2026-07-25",
+    "mercadoLivreId": null,
+    "preco": {
+      "valor": null,
+      "moeda": "BRL",
+      "coletadoEm": null,
+      "url": null,
+      "status": "aguardando_item"
+    },
+    "campos": {
+      "protocolo": {
+        "valor": "Wi-Fi",
+        "estado": "confirmado",
+        "fonteId": "intelbras-ews410-produto"
+      },
+      "hub": {
+        "valor": "Não verificado",
+        "estado": "nao_verificado",
+        "fonteId": null
+      },
+      "alexa": {
+        "valor": "Compatível",
+        "estado": "compativel",
+        "fonteId": "intelbras-ews410-datasheet"
+      },
+      "googleHome": {
+        "valor": "Compatível",
+        "estado": "compativel",
+        "fonteId": "intelbras-ews410-datasheet"
+      },
+      "matter": {
+        "valor": "Não verificado",
+        "estado": "nao_verificado",
+        "fonteId": null
+      },
+      "voltagem": {
+        "valor": "Bivolt (127 V e 220 V)",
+        "estado": "confirmado",
+        "fonteId": "intelbras-ews410-ajuda"
+      }
+    },
+    "fontes": [
+      {
+        "id": "intelbras-ews410-produto",
+        "titulo": "Página oficial EWS 410 — Intelbras",
+        "url": "https://www.intelbras.com/pt-br/lampada-led-smart-wi-fi-ews-410-elw-1001",
+        "acessadoEm": "2026-07-25"
+      },
+      {
+        "id": "intelbras-ews410-ajuda",
+        "titulo": "Ajuda e especificações EWS 410 — Intelbras",
+        "url": "https://www.intelbras.com/pt-br/ajuda-download/videos/lampada-led-smart-wi-fi-ews-410-elw-1001",
+        "acessadoEm": "2026-07-25"
+      },
+      {
+        "id": "intelbras-ews410-datasheet",
+        "titulo": "Datasheet oficial EWS 410 — Intelbras",
+        "url": "https://backend.intelbras.com/sites/default/files/2023-07/EWS%20410%20-%20Datasheet%20v2_0.pdf",
+        "acessadoEm": "2026-07-25"
+      }
+    ]
+  },
+  {
+    "id": "intelbras-ews-305",
+    "nome": "Intelbras EWS 305",
+    "descricao": "Protetor eletrônico smart Wi-Fi com cinco tomadas controladas em conjunto.",
+    "marca": "Intelbras",
+    "categoria": "tomadas",
+    "publicado": true,
+    "verificadoEm": "2026-07-25",
+    "mercadoLivreId": null,
+    "preco": {
+      "valor": null,
+      "moeda": "BRL",
+      "coletadoEm": null,
+      "url": null,
+      "status": "aguardando_item"
+    },
+    "campos": {
+      "protocolo": {
+        "valor": "Wi-Fi",
+        "estado": "confirmado",
+        "fonteId": "intelbras-ews305"
+      },
+      "hub": {
+        "valor": "Não verificado",
+        "estado": "nao_verificado",
+        "fonteId": null
+      },
+      "alexa": {
+        "valor": "Compatível",
+        "estado": "compativel",
+        "fonteId": "intelbras-ews305"
+      },
+      "googleHome": {
+        "valor": "Compatível",
+        "estado": "compativel",
+        "fonteId": "intelbras-ews305"
+      },
+      "matter": {
+        "valor": "Não verificado",
+        "estado": "nao_verificado",
+        "fonteId": null
+      },
+      "voltagem": {
+        "valor": "Não verificado",
+        "estado": "nao_verificado",
+        "fonteId": null
+      }
+    },
+    "fontes": [
+      {
+        "id": "intelbras-ews305",
+        "titulo": "Página oficial EWS 305 — Intelbras",
+        "url": "https://www.intelbras.com/pt-br/protetor-eletronico-smart-wi-fi-ews-305",
+        "acessadoEm": "2026-07-25"
+      }
+    ]
+  },
+  {
+    "id": "tapo-p100",
+    "nome": "Tapo P100",
+    "marca": "TP-Link",
+    "categoria": "tomadas",
+    "publicado": false,
+    "status": "fila_de_verificacao"
+  },
+  {
+    "id": "positivo-lampada-wifi",
+    "nome": "Lâmpada Smart Wi-Fi Positivo",
+    "marca": "Positivo Casa Inteligente",
+    "categoria": "iluminacao",
+    "publicado": false,
+    "status": "fila_de_verificacao"
+  },
+  {
+    "id": "positivo-tomada-wifi",
+    "nome": "Tomada Smart Wi-Fi Positivo",
+    "marca": "Positivo Casa Inteligente",
+    "categoria": "tomadas",
+    "publicado": false,
+    "status": "fila_de_verificacao"
+  },
+  {
+    "id": "intelbras-ews-301",
+    "nome": "Intelbras EWS 301",
+    "marca": "Intelbras",
+    "categoria": "tomadas",
+    "publicado": false,
+    "status": "fila_de_verificacao"
+  },
+  {
+    "id": "sonoff-basic-r4",
+    "nome": "Sonoff BASICR4",
+    "marca": "Sonoff",
+    "categoria": "tomadas",
+    "publicado": false,
+    "status": "fila_de_verificacao"
+  },
+  {
+    "id": "geonav-lampada-hi",
+    "nome": "Lâmpada inteligente Geonav",
+    "marca": "Geonav",
+    "categoria": "iluminacao",
+    "publicado": false,
+    "status": "fila_de_verificacao"
+  },
+  {
+    "id": "philips-hue-white",
+    "nome": "Philips Hue White",
+    "marca": "Philips Hue",
+    "categoria": "iluminacao",
+    "publicado": false,
+    "status": "fila_de_verificacao"
+  }
+]

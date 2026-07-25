@@ -1,0 +1,62 @@
+name: Atualizar dados
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 10 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-dados
+  cancel-in-progress: false
+
+jobs:
+  precos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Baixar o projeto
+        uses: actions/checkout@v4
+
+      - name: Respeitar o botão de pausa
+        shell: bash
+        run: |
+          if [ -f PAUSE ]; then
+            echo "PAUSE encontrado. Encerrando sem alterar dados."
+            exit 0
+          fi
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Preparar pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Instalar dependências
+        run: pnpm install --frozen-lockfile
+
+      - name: Consultar preços
+        run: pnpm atualizar-precos
+        env:
+          ML_ACCESS_TOKEN: ${{ secrets.ML_ACCESS_TOKEN }}
+
+      - name: Validar resultado
+        run: pnpm validar
+
+      - name: Salvar somente se algo mudou
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "Nenhuma mudança de preço."
+            exit 0
+          fi
+          git config user.name "combina-casa[bot]"
+          git config user.email "combina-casa[bot]@users.noreply.github.com"
+          git add src/data/produtos.json
+          git commit -m "dados: atualizar preços do Mercado Livre"
+          git push

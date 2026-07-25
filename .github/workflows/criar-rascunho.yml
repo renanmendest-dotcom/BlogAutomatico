@@ -1,0 +1,103 @@
+name: Criar rascunho
+
+on:
+  workflow_dispatch:
+    inputs:
+      pergunta:
+        description: "Pergunta que o artigo deve responder"
+        required: true
+        type: string
+      produto_id:
+        description: "ID da ficha, por exemplo: tapo-l530e"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: criar-rascunho
+  cancel-in-progress: false
+
+jobs:
+  rascunho:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PERGUNTA: ${{ inputs.pergunta }}
+      PRODUTO_ID: ${{ inputs.produto_id }}
+    steps:
+      - name: Baixar o projeto
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Respeitar o botão de pausa
+        shell: bash
+        run: |
+          if [ -f PAUSE ]; then
+            echo "PAUSE encontrado. Nenhum rascunho será criado."
+            exit 1
+          fi
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Preparar pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Instalar dependências
+        run: pnpm install --frozen-lockfile
+
+      - name: Criar esqueleto seguro
+        run: pnpm novo-rascunho -- --produto "$PRODUTO_ID" --pergunta "$PERGUNTA"
+
+      - name: Redigir usando somente a ficha
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Existe exatamente um novo arquivo Markdown em src/data/posts.
+            Edite apenas esse arquivo.
+
+            Transforme o esqueleto em um artigo claro, em português brasileiro,
+            com 600 a 900 palavras. Responda a pergunta nos dois primeiros
+            parágrafos. Use exclusivamente os dados já presentes em
+            src/data/produtos.json e as fontes listadas no esqueleto.
+
+            Regras obrigatórias:
+            - preserve rascunho: true;
+            - não invente compatibilidade, preço, voltagem ou requisito de hub;
+            - mantenha "não verificado" quando a ficha não confirmar;
+            - não dê orientação de instalação ou dimensionamento elétrico;
+            - não crie novas fontes;
+            - não edite nenhum outro arquivo.
+          claude_args: |
+            --max-turns 8
+            --allowedTools "Read,Edit,Glob,Grep"
+
+      - name: Validar o rascunho
+        run: pnpm validar
+
+      - name: Abrir para aprovação
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="rascunho/${GITHUB_RUN_ID}"
+          git config user.name "combina-casa[bot]"
+          git config user.email "combina-casa[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add src/data/posts
+          git commit -m "rascunho: ${PERGUNTA}"
+          git push --set-upstream origin "$BRANCH"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "Rascunho: ${PERGUNTA}" \
+            --body "Rascunho criado automaticamente. Confira resposta, ficha e fontes antes de aprovar. O artigo continua invisível enquanto rascunho: true."

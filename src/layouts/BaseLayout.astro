@@ -1,0 +1,60 @@
+---
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import "../styles/global.css";
+
+interface Props {
+  titulo?: string;
+  descricao?: string;
+  noindex?: boolean;
+}
+
+const {
+  titulo,
+  descricao = "Compatibilidade de casa inteligente explicada com fonte e data.",
+  noindex = false
+} = Astro.props;
+
+const siteName = "Combina Casa";
+const pageTitle = titulo ? `${titulo} | ${siteName}` : `${siteName} — antes de comprar, confira se combina`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteName,
+  url: Astro.site?.toString(),
+  description:
+    "Base editorial de compatibilidade para dispositivos de casa inteligente no Brasil."
+};
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={descricao} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={descricao} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL("/og-cover.svg", Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <SiteHeader />
+    <main id="conteudo">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

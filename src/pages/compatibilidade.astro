@@ -1,0 +1,135 @@
+---
+/**
+ * A matriz, exposta inteira numa página.
+ *
+ * É o ativo principal do projeto e a página que um motor generativo tem mais
+ * motivo para citar: uma tabela de compatibilidade em português, com fonte e
+ * data por campo, que não existe em outro lugar.
+ */
+import Base from '../layouts/Base.astro';
+import ChipCompatibilidade from '../components/ChipCompatibilidade.astro';
+import { ASSISTENTES, ROTULO_ASSISTENTE, ROTULO_PROTOCOLO, ROTULO_VOLTAGEM, dataLegivel } from '../lib/compat';
+import { todasEntradasCompat } from '../lib/dados';
+import { breadcrumb } from '../lib/schema';
+
+const entradas = [...todasEntradasCompat()].sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
+
+// Campos não verificados são a lista de tarefas de melhoria (Seção 14), então
+// aparecem contados na própria página em vez de escondidos.
+const lacunas = entradas.reduce((total, e) => {
+  let n = 0;
+  if (e.protocolo === 'nao_verificado') n++;
+  if (e.voltagem === 'nao_verificado') n++;
+  if (e.hub_necessario === null) n++;
+  if (e.funciona_offline === null) n++;
+  n += ASSISTENTES.filter((a) => e.assistentes[a] === 'nao_verificado').length;
+  return total + n;
+}, 0);
+---
+
+<Base
+  titulo="Matriz de compatibilidade"
+  descricao="Tabela de compatibilidade de dispositivos de casa inteligente vendidos no Brasil: assistentes suportados, protocolo, voltagem e necessidade de hub, com fonte e data de verificação em cada campo."
+  nosSchema={[
+    breadcrumb([
+      { nome: 'Início', caminho: '/' },
+      { nome: 'Matriz de compatibilidade', caminho: '/compatibilidade' },
+    ]),
+  ]}
+>
+  <h1>Matriz de compatibilidade</h1>
+
+  <p class="coluna-texto">
+    Um dispositivo por linha. Cada estado carrega a fonte e a data de verificação —
+    passe o cursor ou dê foco de teclado no indicador para ver a procedência.
+    Campo sem fonte que confirme fica como <strong>não verificado</strong>; ele não é
+    preenchido por dedução.
+  </p>
+
+  <dl class="resumo">
+    <div><dt class="rotulo">Dispositivos</dt><dd class="dado">{entradas.length}</dd></div>
+    <div><dt class="rotulo">Campos não verificados</dt><dd class="dado">{lacunas}</dd></div>
+  </dl>
+
+  {
+    entradas.length === 0 ? (
+      <p class="vazio">
+        A matriz está vazia. A coleta e a verificação são tarefa da Fase B — meta
+        inicial de 40 dispositivos verificados.
+      </p>
+    ) : (
+      <div class="tabela-envelope">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Dispositivo</th>
+              <th scope="col">Protocolo</th>
+              <th scope="col">Voltagem</th>
+              <th scope="col">Hub</th>
+              {ASSISTENTES.map((a) => (
+                <th scope="col">{ROTULO_ASSISTENTE[a]}</th>
+              ))}
+              <th scope="col">Verificado</th>
+            </tr>
+          </thead>
+          <tbody>
+            {entradas.map((e) => (
+              <tr>
+                <th scope="row">{e.nome}</th>
+                <td class="dado">{ROTULO_PROTOCOLO[e.protocolo]}</td>
+                <td class="dado">{ROTULO_VOLTAGEM[e.voltagem]}</td>
+                <td class="dado">
+                  {e.hub_necessario === null ? (
+                    <span class="vazio">não verificado</span>
+                  ) : e.hub_necessario ? (
+                    'sim'
+                  ) : (
+                    'não'
+                  )}
+                </td>
+                {ASSISTENTES.map((a) => (
+                  <td>
+                    <ChipCompatibilidade produtoId={e.produto_id} assistente={a} compacto />
+                  </td>
+                ))}
+                <td class="dado data">{dataLegivel(e.verificado_em)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+</Base>
+
+<style>
+  .resumo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    background: var(--traco);
+    border: var(--borda);
+    margin: 1.5rem 0;
+  }
+
+  .resumo > div {
+    background: var(--papel);
+    padding: 0.6rem 1rem;
+    flex: 1 1 10rem;
+  }
+
+  .resumo dd {
+    margin: 0.1rem 0 0;
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+
+  .vazio {
+    color: var(--nulo);
+  }
+
+  .data {
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
+</style>

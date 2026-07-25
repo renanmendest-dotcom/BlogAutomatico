@@ -1,0 +1,22 @@
+# build
+dist/
+.astro/
+
+# deps
+node_modules/
+
+# ambiente
+.env
+.env.production
+.env.local
+
+# configuração local do Claude Code (launch.json é versionado de propósito)
+.claude/settings.local.json
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*

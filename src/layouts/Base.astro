@@ -1,0 +1,76 @@
+---
+/**
+ * Layout global. Carrega o `Organization` e o `WebSite` no `@graph` de toda
+ * página — os nós específicos de cada rota chegam por `nosSchema`.
+ */
+import Cabecalho from '../components/Cabecalho.astro';
+import Rodape from '../components/Rodape.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { SITE } from '../consts';
+import { grafo, organizacao, website, type No } from '../lib/schema';
+import '../styles/global.css';
+
+interface Props {
+  titulo: string;
+  descricao: string;
+  /** Nós JSON-LD específicos da página. `null` é descartado. */
+  nosSchema?: Array<No | null>;
+  /** Impede indexação — usado só no 404. */
+  semIndexacao?: boolean;
+}
+
+const { titulo, descricao, nosSchema = [], semIndexacao = false } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, SITE.url).href.replace(/\/$/, '') || SITE.url;
+const tituloCompleto = titulo === SITE.nome ? titulo : `${titulo} — ${SITE.nome}`;
+const dados = grafo([organizacao(), website(), ...nosSchema]);
+
+// Cloudflare Web Analytics: gratuito, sem cookie, sem banner de consentimento.
+// O token sai do painel do Cloudflare (SETUP.md, passo 4). Sem token, nada é
+// carregado — nenhuma requisição externa em desenvolvimento.
+const tokenAnalytics = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{tituloCompleto}</title>
+    <meta name="description" content={descricao} />
+    <link rel="canonical" href={canonical} />
+    {semIndexacao && <meta name="robots" content="noindex, follow" />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.nome} />
+    <meta property="og:title" content={tituloCompleto} />
+    <meta property="og:description" content={descricao} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={SITE.locale} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <JsonLd dados={dados} />
+
+    {
+      tokenAnalytics && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={`{"token": "${tokenAnalytics}"}`}
+        />
+      )
+    }
+  </head>
+
+  <body>
+    <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <Cabecalho />
+    <main id="conteudo" class="envelope">
+      <slot />
+    </main>
+    <Rodape />
+  </body>
+</html>

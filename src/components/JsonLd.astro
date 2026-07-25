@@ -1,0 +1,17 @@
+---
+/**
+ * Emite um bloco JSON-LD no `<head>`.
+ *
+ * `set:html` com JSON.stringify é seguro aqui porque a saída é JSON válido e o
+ * conteúdo vem de /data e do frontmatter, não de entrada de usuário. Ainda assim
+ * escapamos `<` para não fechar o `<script>` por acidente.
+ */
+interface Props {
+  dados: Record<string, unknown>;
+}
+
+const { dados } = Astro.props as Props;
+const json = JSON.stringify(dados).replace(/</g, '\\u003c');
+---
+
+<script type="application/ld+json" is:inline set:html={json} />

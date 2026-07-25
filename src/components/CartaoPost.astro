@@ -1,0 +1,74 @@
+---
+import { CATEGORIAS } from '../consts';
+import { dataLegivel } from '../lib/compat';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const d = post.data;
+const categoria = CATEGORIAS[d.categoria as keyof typeof CATEGORIAS];
+const iso = (data: Date) => data.toISOString().slice(0, 10);
+---
+
+<article class="cartao">
+  <p class="rotulo">{categoria?.nome}</p>
+
+  <h3 class="cartao__titulo">
+    <a href={`/posts/${d.slug}`}>{d.titulo}</a>
+  </h3>
+
+  <p class="cartao__resposta">{d.resposta_curta}</p>
+
+  <p class="dado cartao__meta">
+    <time datetime={iso(d.atualizado_em)}>atualizado {dataLegivel(iso(d.atualizado_em))}</time>
+    {d.produtos.length > 0 && <> · {d.produtos.length} dispositivo{d.produtos.length > 1 ? 's' : ''}</>}
+    {d.referencia_formato && <> · referência de formato</>}
+  </p>
+</article>
+
+<style>
+  .cartao {
+    border: var(--borda);
+    border-top: 3px solid var(--tinta);
+    background: var(--papel);
+    padding: 0.875rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .cartao__titulo {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+
+  .cartao__titulo a {
+    text-decoration: none;
+  }
+  .cartao__titulo a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--ok);
+  }
+
+  .cartao__resposta {
+    margin: 0;
+    font-size: 0.875rem;
+    /* O cartão mostra a resposta, não uma chamada. Quem lê a home já leva o dado. */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .cartao__meta {
+    margin: auto 0 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--sulco);
+    font-size: 0.6875rem;
+    color: var(--nulo);
+  }
+</style>

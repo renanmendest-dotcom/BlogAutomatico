@@ -1,0 +1,72 @@
+name: deploy
+
+# O publish em si é feito pelo Cloudflare Pages, que observa a branch main pela
+# integração com o GitHub e faz o build a cada push (SETUP.md, passo 4). Este
+# workflow é o portão: se ele falha, o commit já está marcado como quebrado e o
+# operador vê antes de o site ficar errado no ar.
+#
+# Nenhum secret é usado aqui de propósito — assim o workflow roda igual em pull
+# request de fora do repositório.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Push novo cancela build antigo da mesma branch: minuto de Actions é gratuito,
+# mas fila não é.
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Kill switch (Seção 11). Primeiro passo de todo workflow: se o arquivo
+      # PAUSE existir na raiz, nada mais roda. É como o operador para tudo pelo
+      # celular, criando o arquivo pela interface web do GitHub.
+      - name: Verificar kill switch
+        run: |
+          if [ -f PAUSE ]; then
+            echo "::warning::Arquivo PAUSE existe na raiz — pipeline pausado pelo operador."
+            echo "Conteúdo do PAUSE:"
+            cat PAUSE
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Checagem de tipos
+        run: npm run check
+
+      - name: Build
+        run: npm run build
+
+      # Schema errado é pior que schema ausente (Seção 8.2). O Rich Results Test
+      # do Google precisa de URL pública e roda depois do deploy; esta validação
+      # pega a classe de erro que mais aparece, antes.
+      - name: Validar JSON-LD
+        run: npm run validar:schemas
+
+      - name: Guardar o build
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: dist
+          retention-days: 5

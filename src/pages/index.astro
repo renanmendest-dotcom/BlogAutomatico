@@ -1,0 +1,138 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import CartaoPost from '../components/CartaoPost.astro';
+import { CATEGORIAS, SITE } from '../consts';
+import { todasEntradasCompat, todosProdutos } from '../lib/dados';
+
+const posts = (await getCollection('posts')).sort(
+  (a, b) => b.data.publicado_em.valueOf() - a.data.publicado_em.valueOf(),
+);
+
+const entradas = todasEntradasCompat();
+const produtos = todosProdutos();
+
+// Números reais do estado atual do repositório. Nenhum é estimado — se a coleta
+// ainda não rodou, aparece zero, e zero é a informação correta.
+const painel = [
+  { rotulo: 'Dispositivos na matriz', valor: entradas.length },
+  { rotulo: 'Produtos com preço', valor: produtos.filter((p) => p.preco != null).length },
+  { rotulo: 'Artigos', valor: posts.length },
+];
+---
+
+<Base titulo={SITE.nome} descricao={SITE.descricao}>
+  <section class="capa">
+    <h1 class="capa__titulo">O que funciona com o quê, em que condição, a que preço</h1>
+
+    <p class="capa__texto coluna-texto">
+      Fichas de compatibilidade de dispositivos de casa inteligente vendidos no Brasil.
+      Cada campo carrega a fonte e a data em que foi verificado. Quando não há fonte que
+      confirme, o campo aparece como <strong>não verificado</strong> — nunca como palpite.
+    </p>
+
+    <dl class="painel-numeros">
+      {
+        painel.map((n) => (
+          <div class="painel-numeros__item">
+            <dt class="rotulo">{n.rotulo}</dt>
+            <dd class="dado">{n.valor}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section aria-labelledby="artigos-titulo">
+    <h2 id="artigos-titulo">Artigos</h2>
+    {
+      posts.length === 0 ? (
+        <p class="vazio">Nenhum artigo publicado ainda.</p>
+      ) : (
+        <div class="grade">
+          {posts.map((post) => (
+            <CartaoPost post={post} />
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  <section aria-labelledby="categorias-titulo">
+    <h2 id="categorias-titulo">Categorias</h2>
+    <ul class="lista-categorias">
+      {
+        Object.values(CATEGORIAS).map((c) => (
+          <li>
+            <a href={`/categorias/${c.slug}`}>{c.nome}</a>
+            <span class="lista-categorias__desc">{c.descricao}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .capa {
+    padding: 2.5rem 0 1rem;
+  }
+
+  .capa__titulo {
+    max-width: 20ch;
+    font-size: clamp(2rem, 1.3rem + 3.4vw, 3.5rem);
+  }
+
+  .capa__texto {
+    font-size: 1.0625rem;
+  }
+
+  .painel-numeros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1px;
+    background: var(--traco);
+    border: var(--borda);
+    margin: 2rem 0 0;
+  }
+
+  .painel-numeros__item {
+    background: var(--papel);
+    padding: 0.75rem 1rem;
+  }
+
+  .painel-numeros dd {
+    margin: 0.1rem 0 0;
+    font-size: 1.75rem;
+    line-height: 1.1;
+  }
+
+  .grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+    gap: 1rem;
+  }
+
+  .lista-categorias {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+    gap: 0.75rem;
+  }
+
+  .lista-categorias li {
+    border-left: 3px solid var(--traco);
+    padding-left: 0.75rem;
+  }
+
+  .lista-categorias__desc {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--nulo);
+  }
+
+  .vazio {
+    color: var(--nulo);
+  }
+</style>

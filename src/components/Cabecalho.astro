@@ -1,0 +1,27 @@
+---
+import { NAV, SITE } from '../consts';
+
+const atual = Astro.url.pathname.replace(/\/$/, '');
+---
+
+<header class="cabecalho">
+  <div class="envelope cabecalho__interno">
+    <a class="cabecalho__marca" href="/">{SITE.nome}</a>
+    <nav class="cabecalho__nav" aria-label="Principal">
+      {
+        NAV.map((item) => (
+          <a href={item.href} aria-current={atual === item.href ? 'page' : undefined}>
+            {item.texto}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<style>
+  a[aria-current='page'] {
+    text-decoration-color: var(--ok);
+    text-decoration-thickness: 2px;
+  }
+</style>

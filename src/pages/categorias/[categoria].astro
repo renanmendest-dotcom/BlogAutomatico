@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CartaoPost from '../../components/CartaoPost.astro';
+import { CATEGORIAS } from '../../consts';
+import { breadcrumb } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return Object.values(CATEGORIAS).map((c) => ({
+    params: { categoria: c.slug },
+    props: {
+      categoria: c,
+      posts: posts
+        .filter((p) => p.data.categoria === c.slug)
+        .sort((a, b) => b.data.publicado_em.valueOf() - a.data.publicado_em.valueOf()),
+    },
+  }));
+}
+
+const { categoria, posts } = Astro.props;
+---
+
+<Base
+  titulo={categoria.nome}
+  descricao={categoria.descricao}
+  nosSchema={[
+    breadcrumb([
+      { nome: 'Início', caminho: '/' },
+      { nome: 'Categorias', caminho: '/categorias' },
+      { nome: categoria.nome, caminho: `/categorias/${categoria.slug}` },
+    ]),
+  ]}
+>
+  <h1>{categoria.nome}</h1>
+  <p class="coluna-texto">{categoria.descricao}</p>
+
+  {
+    posts.length === 0 ? (
+      <p class="vazio">Nenhum artigo nesta categoria ainda.</p>
+    ) : (
+      <div class="grade">
+        {posts.map((post) => (
+          <CartaoPost post={post} />
+        ))}
+      </div>
+    )
+  }
+</Base>
+
+<style>
+  .grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .vazio {
+    color: var(--nulo);
+  }
+</style>

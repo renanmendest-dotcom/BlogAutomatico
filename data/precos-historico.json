@@ -1,0 +1,5 @@
+{
+  "atualizado_em": null,
+  "observacao": "Série temporal por produto. Chave = id do ML. Uma amostra por dia, gravada pelo coletor diário. O git guarda o histórico de graça — nunca reescrever pontos antigos.",
+  "series": {}
+}

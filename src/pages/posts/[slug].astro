@@ -1,0 +1,21 @@
+---
+import { getCollection, render } from 'astro:content';
+import Post from '../../layouts/Post.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    // A rota usa o `slug` do frontmatter, não o nome do arquivo: o slug é dado
+    // editorial e precisa ser estável mesmo se o arquivo for renomeado.
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Post post={post}>
+  <Content />
+</Post>

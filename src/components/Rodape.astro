@@ -1,0 +1,44 @@
+---
+import { SITE } from '../consts';
+
+const ano = new Date().getFullYear();
+---
+
+<footer class="rodape">
+  <div class="envelope">
+    <p class="rodape__linha">
+      <strong>{SITE.nome}</strong> — fichas de compatibilidade de casa inteligente no Brasil.
+      As fichas são compiladas automaticamente e cada campo carrega fonte e data.
+      <a href="/como-fazemos">Como fazemos</a>.
+    </p>
+
+    <p class="rodape__linha rodape__aviso">
+      Alguns links para o Mercado Livre podem gerar comissão, sem custo extra para
+      quem compra. Produto sem link de comissão é citado do mesmo jeito — a
+      utilidade do artigo vem antes.
+    </p>
+
+    <p class="dado rodape__linha rodape__meta">
+      © {ano} {SITE.nome} · correções: {SITE.email}
+    </p>
+  </div>
+</footer>
+
+<style>
+  .rodape__linha {
+    max-width: var(--largura-texto);
+  }
+
+  .rodape__aviso,
+  .rodape__meta {
+    color: var(--nulo);
+    font-size: 0.8125rem;
+  }
+
+  .rodape__meta {
+    font-size: 0.75rem;
+    border-top: 1px solid var(--sulco);
+    padding-top: 0.75rem;
+    margin-bottom: 0;
+  }
+</style>

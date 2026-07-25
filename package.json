@@ -1,0 +1,25 @@
+{
+  "name": "blog-casa-inteligente",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "validar:schemas": "node scripts/validar-schemas.mjs",
+    "validar": "npm run check && npm run build && npm run validar:schemas"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.14.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^5.9.2"
+  }
+}

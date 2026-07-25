@@ -1,0 +1,254 @@
+---
+/**
+ * O elemento assinatura do site.
+ *
+ * Mostra `dispositivo ↔ assistente` com indicador de três posições
+ * (compatível / incompatível / não verificado) e carrega fonte e data de
+ * verificação, visíveis no hover e no foco de teclado.
+ *
+ * O dado vem de `entradaCompat()` e o estado sai de `posicao()` — as mesmas
+ * funções que `propriedadesSchema()` usa para emitir o JSON-LD. Visual e schema
+ * não podem divergir porque leem a mesma fonte.
+ */
+import {
+  ESTADO_ACESSIVEL,
+  ROTULO_ASSISTENTE,
+  ROTULO_ESTADO,
+  estadoDe,
+  posicao,
+  procedencia,
+} from '../lib/compat';
+import { entradaCompat } from '../lib/dados';
+import { idUnico } from '../lib/id';
+import type { Assistente } from '../lib/tipos';
+
+interface Props {
+  /** Id do Mercado Livre. Sem entrada na matriz, o chip cai em "não verificado". */
+  produtoId: string;
+  assistente: Assistente;
+  /** Sobrescreve o nome exibido. Por padrão usa o nome da matriz. */
+  nome?: string;
+  /**
+   * Esconde o nome do dispositivo, para uso dentro de tabela onde a linha já
+   * nomeia o produto. Mesmo componente, mesmo dado, mesma procedência — só a
+   * densidade muda.
+   */
+  compacto?: boolean;
+}
+
+const { produtoId, assistente, nome, compacto = false } = Astro.props;
+
+const entrada = entradaCompat(produtoId);
+const estado = estadoDe(entrada, assistente);
+const pos = posicao(estado);
+const dispositivo = nome ?? entrada?.nome ?? produtoId;
+const assistenteRotulo = ROTULO_ASSISTENTE[assistente];
+
+const idProcedencia = idUnico('proc');
+const textoProcedencia = procedencia(entrada);
+const descricaoAcessivel = `${dispositivo} com ${assistenteRotulo}: ${ESTADO_ACESSIVEL[estado]}`;
+---
+
+<span
+  class:list={['chip', `chip--${pos}`, compacto && 'chip--compacto']}
+  tabindex="0"
+  aria-describedby={idProcedencia}
+>
+  <span class="chip__led" aria-hidden="true"></span>
+  <span class="chip__par">
+    {
+      !compacto && (
+        <>
+          <span class="chip__dispositivo">{dispositivo}</span>
+          <span class="chip__seta" aria-hidden="true">↔</span>
+        </>
+      )
+    }
+    <span class="chip__assistente">{assistenteRotulo}</span>
+  </span>
+  <span class="chip__estado dado" aria-hidden="true">{ROTULO_ESTADO[estado]}</span>
+  <span class="chip__acessivel">{descricaoAcessivel}</span>
+  <span class="chip__procedencia" id={idProcedencia} role="note">
+    {textoProcedencia}
+    {
+      entrada?.url_fonte && (
+        <>
+          {' · '}
+          <a href={entrada.url_fonte} rel="nofollow noopener" target="_blank">
+            ver fonte
+          </a>
+        </>
+      )
+    }
+  </span>
+</span>
+
+<style>
+  .chip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    max-width: 100%;
+    padding: 0.2rem 0.5rem 0.2rem 0.4rem;
+    border: 1px solid var(--traco);
+    border-left-width: 3px;
+    border-radius: var(--raio);
+    background: var(--papel);
+    font-size: 0.8125rem;
+    line-height: 1.3;
+    /* Sem sombra, sem gradiente: a cor da borda esquerda é o estado. */
+  }
+
+  .chip--ok {
+    border-left-color: var(--ok);
+  }
+  .chip--atencao {
+    border-left-color: var(--atencao);
+  }
+  .chip--nulo {
+    border-left-color: var(--nulo);
+    border-style: dashed;
+    border-left-style: solid;
+  }
+
+  /* O LED de status. Bloco chapado, como indicador de painel. */
+  .chip__led {
+    flex: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+  }
+  .chip--ok .chip__led {
+    background: var(--ok);
+  }
+  .chip--atencao .chip__led {
+    background: var(--atencao);
+  }
+  .chip--nulo .chip__led {
+    background: transparent;
+    border: 1px solid var(--nulo);
+  }
+
+  .chip__par {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    min-width: 0;
+  }
+
+  .chip__dispositivo,
+  .chip__assistente {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .chip__seta {
+    color: var(--nulo);
+    flex: none;
+  }
+
+  .chip__estado {
+    flex: none;
+    padding-left: 0.4rem;
+    border-left: 1px solid var(--sulco);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .chip--ok .chip__estado {
+    color: var(--ok);
+  }
+  .chip--atencao .chip__estado {
+    color: var(--atencao);
+  }
+  .chip--nulo .chip__estado {
+    color: var(--nulo);
+  }
+
+  /* O rótulo textual do estado existe para leitor de tela: cor e LED sozinhos
+     não comunicam nada para quem não enxerga a diferença. */
+  .chip__acessivel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  /* Procedência: escondida até hover ou foco, nunca removida do DOM — o dado de
+     origem precisa existir para quem lê a página sem CSS. */
+  .chip__procedencia {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: -1px;
+    z-index: 5;
+    width: max-content;
+    max-width: min(22rem, 80vw);
+    padding: 0.4rem 0.55rem;
+    border: 1px solid var(--tinta);
+    border-radius: var(--raio);
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: var(--fonte-dados);
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 120ms linear;
+  }
+
+  .chip:hover .chip__procedencia,
+  .chip:focus-visible .chip__procedencia,
+  .chip__procedencia:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .chip__procedencia {
+      transition: none;
+    }
+  }
+
+  .chip--compacto {
+    gap: 0.3rem;
+    padding-right: 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  /* Toque não tem hover: abaixo de 48rem a procedência fica sempre visível,
+     embaixo do chip, porque o dado de origem vale mais que a economia de espaço. */
+  @media (hover: none) {
+    .chip {
+      flex-wrap: wrap;
+    }
+    .chip__procedencia {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 0.25rem;
+      border: 0;
+      border-top: 1px solid var(--sulco);
+      padding: 0.3rem 0 0;
+      color: var(--nulo);
+    }
+
+    /* Dentro de tabela isso estouraria a célula. A procedência da linha já vive
+       na coluna "Fonte", então aqui o chip compacto continua enxuto. */
+    .chip--compacto {
+      flex-wrap: nowrap;
+    }
+    .chip--compacto .chip__procedencia {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+</style>

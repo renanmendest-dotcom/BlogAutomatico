@@ -1,0 +1,73 @@
+---
+/**
+ * Lista de fontes do artigo, com data de acesso.
+ *
+ * Toda afirmação factual carrega fonte e data (Seção 7.3). Esta lista é o
+ * registro consolidado — é o que torna o artigo auditável e citável.
+ */
+import { dataLegivel } from '../lib/compat';
+
+interface Props {
+  fontes: Array<{ titulo: string; url: string; acessado_em: Date }>;
+  verificadoEm: Date;
+}
+
+const { fontes, verificadoEm } = Astro.props;
+const iso = (d: Date) => d.toISOString().slice(0, 10);
+---
+
+<section class="fontes" aria-labelledby="fontes-titulo">
+  <h2 id="fontes-titulo">Fontes</h2>
+
+  {
+    fontes.length === 0 ? (
+      <p class="fontes__vazio">
+        Este artigo ainda não tem fontes externas registradas. Enquanto isso, nenhuma
+        afirmação de compatibilidade aqui deve ser tratada como verificada.
+      </p>
+    ) : (
+      <ol class="fontes__lista">
+        {fontes.map((f) => (
+          <li>
+            <a href={f.url} rel="nofollow noopener" target="_blank">
+              {f.titulo}
+            </a>
+            <span class="dado fontes__data">acessado em {dataLegivel(iso(f.acessado_em))}</span>
+          </li>
+        ))}
+      </ol>
+    )
+  }
+
+  <p class="dado fontes__rodape">
+    Dados verificados em <time datetime={iso(verificadoEm)}>{dataLegivel(iso(verificadoEm))}</time>.
+    Encontrou erro? Escreva — a correção entra com nova data de verificação.
+  </p>
+</section>
+
+<style>
+  .fontes__lista {
+    padding-left: 1.25rem;
+  }
+
+  .fontes__lista li {
+    margin-bottom: 0.5rem;
+  }
+
+  .fontes__data {
+    display: block;
+    font-size: 0.6875rem;
+    color: var(--nulo);
+  }
+
+  .fontes__vazio {
+    color: var(--nulo);
+  }
+
+  .fontes__rodape {
+    font-size: 0.75rem;
+    color: var(--nulo);
+    border-top: 1px solid var(--sulco);
+    padding-top: 0.75rem;
+  }
+</style>

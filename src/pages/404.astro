@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base titulo="Página não encontrada" descricao="Esta página não existe." semIndexacao>
+  <div class="coluna-texto erro">
+    <p class="dado codigo">404</p>
+    <h1>Esta página não existe</h1>
+    <p>
+      O endereço pode ter mudado. A <a href="/compatibilidade">matriz de compatibilidade</a>
+      e a <a href="/categorias">lista de categorias</a> continuam onde estavam.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .erro {
+    padding: 3rem 0;
+  }
+
+  .codigo {
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--nulo);
+    margin: 0 0 0.5rem;
+  }
+</style>

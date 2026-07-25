@@ -1,0 +1,293 @@
+/*
+  Direção visual: etiqueta de equipamento elétrico.
+  Plaqueta de voltagem, LED de status, ficha técnica em serigrafia.
+
+  Regras duras:
+  - 6 tokens de cor. Variação só por color-mix sobre eles — nunca cor nova.
+  - Sem gradiente. Sem sombra difusa. Linha e bloco chapado resolvem tudo.
+  - Fundo claro e frio, nunca creme.
+  - Preço, voltagem, protocolo e data SEMPRE em monoespaçada. É o que separa
+    "dado" de "texto" visualmente.
+*/
+
+:root {
+  /* --- paleta: 6 tokens, ver Seção 9 --- */
+  --base: #eef0f1; /* cinza de plástico de espelho de tomada */
+  --tinta: #14202b; /* azul-tinta quase preto, para texto */
+  --traco: #c4cbd0; /* linhas e divisórias */
+  --ok: #0f7b6c; /* verde-instrumento: compatível */
+  --atencao: #c2410c; /* laranja de etiqueta de aviso: incompatível */
+  --nulo: #8a9099; /* cinza: não verificado */
+
+  /* --- superfícies derivadas, sem introduzir cor nova --- */
+  --papel: color-mix(in srgb, var(--base) 55%, #fff);
+  --sulco: color-mix(in srgb, var(--traco) 45%, var(--base));
+
+  /* --- tipografia: 3 papéis --- */
+  /* Display: grotesca condensada. Texto em equipamento é sempre condensado. */
+  --fonte-display: 'Archivo Narrow', 'Roboto Condensed', 'Liberation Sans Narrow',
+    'Arial Narrow', 'Helvetica Neue', system-ui, sans-serif;
+  /* Corpo: humanista, boa leitura em tela pequena. */
+  --fonte-corpo: 'Segoe UI', system-ui, -apple-system, 'Noto Sans', 'Helvetica Neue',
+    Arial, sans-serif;
+  /* Dados: monoespaçada. */
+  --fonte-dados: ui-monospace, 'Cascadia Mono', 'JetBrains Mono', 'SFMono-Regular',
+    Consolas, 'Liberation Mono', monospace;
+
+  --escala-corpo: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --altura-linha: 1.6;
+
+  /* --- métrica --- */
+  --largura-texto: 68ch;
+  --largura-total: 76rem;
+  --gap: 1rem;
+  --raio: 2px; /* etiqueta industrial: canto quase reto */
+  --borda: 1px solid var(--traco);
+}
+
+/* --- reset enxuto --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--base);
+  color: var(--tinta);
+  font-family: var(--fonte-corpo);
+  font-size: var(--escala-corpo);
+  line-height: var(--altura-linha);
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- tipografia --- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fonte-display);
+  font-stretch: 87.5%;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+  margin: 2.25rem 0 0.75rem;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 1.3rem + 2.2vw, 2.75rem);
+  margin-top: 0;
+}
+h2 {
+  font-size: clamp(1.35rem, 1.15rem + 1vw, 1.75rem);
+  padding-top: 1.25rem;
+  border-top: var(--borda);
+}
+h3 {
+  font-size: 1.15rem;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--tinta);
+  text-decoration-color: var(--nulo);
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration-color: var(--ok);
+}
+
+code,
+kbd,
+samp {
+  font-family: var(--fonte-dados);
+  font-size: 0.9em;
+}
+
+/* Preço, voltagem, protocolo, data: sempre monoespaçada. */
+.dado {
+  font-family: var(--fonte-dados);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.rotulo {
+  font-family: var(--fonte-display);
+  font-stretch: 87.5%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--nulo);
+}
+
+/* --- foco de teclado, sempre visível --- */
+:focus-visible {
+  outline: 2px solid var(--tinta);
+  outline-offset: 2px;
+}
+
+/* --- layout --- */
+.envelope {
+  width: min(100% - 2rem, var(--largura-total));
+  margin-inline: auto;
+}
+
+.coluna-texto {
+  width: min(100%, var(--largura-texto));
+}
+
+.pular-para-conteudo {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--tinta);
+  color: var(--base);
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+.pular-para-conteudo:focus {
+  left: 0;
+}
+
+/* --- cabeçalho e rodapé --- */
+.cabecalho {
+  border-bottom: 2px solid var(--tinta);
+  background: var(--papel);
+}
+.cabecalho__interno {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  padding: 0.875rem 0;
+}
+.cabecalho__marca {
+  font-family: var(--fonte-display);
+  font-stretch: 87.5%;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: auto;
+}
+.cabecalho__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.rodape {
+  border-top: 2px solid var(--tinta);
+  background: var(--papel);
+  margin-top: 4rem;
+  padding: 1.5rem 0 2.5rem;
+  font-size: 0.875rem;
+}
+
+/* --- tabelas de dado --- */
+.tabela-envelope {
+  overflow-x: auto;
+  border: var(--borda);
+  background: var(--papel);
+  margin: 1.5rem 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9375rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--sulco);
+  vertical-align: top;
+}
+
+thead th {
+  font-family: var(--fonte-display);
+  font-stretch: 87.5%;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tinta);
+  border-bottom: 2px solid var(--tinta);
+  white-space: nowrap;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* --- caixas --- */
+.painel {
+  border: var(--borda);
+  border-left: 4px solid var(--tinta);
+  background: var(--papel);
+  padding: 1rem 1.125rem;
+  margin: 1.5rem 0;
+}
+.painel--atencao {
+  border-left-color: var(--atencao);
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid var(--traco);
+  color: color-mix(in srgb, var(--tinta) 80%, var(--base));
+}
+
+hr {
+  border: 0;
+  border-top: var(--borda);
+  margin: 2.5rem 0;
+}
+
+/* --- movimento --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --- 360px é o piso --- */
+@media (max-width: 24rem) {
+  :root {
+    --gap: 0.75rem;
+  }
+  .envelope {
+    width: calc(100% - 1.5rem);
+  }
+}

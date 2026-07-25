@@ -1,0 +1,9 @@
+# O repositório é editado no Windows e roda no Linux (GitHub Actions e Cloudflare
+# Pages). Normalizar para LF no repositório evita diff inteiro de arquivo por
+# causa de fim de linha e evita script de workflow chegar com CRLF no runner.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary

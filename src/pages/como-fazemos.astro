@@ -1,0 +1,99 @@
+---
+/**
+ * Identidade editorial transparente (Seção 8.3).
+ *
+ * Não existe autor-pessoa neste site. Esta página é a credencial: explica como o
+ * dado é compilado, o que é verificado, o que não é, e como corrigir. Para
+ * conteúdo factual isso constrói mais confiança que um perfil fictício — e é
+ * verdade, o que significa que resiste a ser checado.
+ */
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+import { breadcrumb } from '../lib/schema';
+---
+
+<Base
+  titulo="Como fazemos"
+  descricao="Como as fichas de compatibilidade deste site são compiladas, o que é verificado, o que não é, e como reportar erro."
+  nosSchema={[
+    breadcrumb([
+      { nome: 'Início', caminho: '/' },
+      { nome: 'Como fazemos', caminho: '/como-fazemos' },
+    ]),
+  ]}
+>
+  <div class="coluna-texto">
+    <h1>Como fazemos</h1>
+
+    <p>
+      Este site não tem autor-pessoa. As fichas de compatibilidade são compiladas
+      automaticamente a partir de manuais de fabricante, páginas oficiais dos
+      fabricantes e fichas técnicas do Mercado Livre. Cada campo carrega a fonte de
+      onde saiu e a data em que foi verificado, e os dois aparecem na página, ao lado
+      do dado.
+    </p>
+
+    <h2>O que é verificado</h2>
+
+    <p>
+      Um campo só sai de <strong>não verificado</strong> quando existe uma fonte que o
+      confirma explicitamente. Compatibilidade com assistente, protocolo de rádio,
+      voltagem e necessidade de hub são checados contra o material do fabricante. Preço,
+      disponibilidade e reputação do vendedor vêm da API do Mercado Livre, com a data da
+      coleta registrada.
+    </p>
+
+    <h2>O que não é verificado</h2>
+
+    <p>
+      Compatibilidade não é deduzida. Se um fabricante não afirma que um modelo funciona
+      com determinado assistente, o campo fica como não verificado — mesmo quando outro
+      produto da mesma linha funciona, e mesmo quando é provável. Lacuna honesta vale mais
+      que palpite: um dado inventado sobre compatibilidade destruiria a única coisa que dá
+      valor a este site.
+    </p>
+
+    <h2>Com que frequência o dado é reverificado</h2>
+
+    <p>
+      Preço e disponibilidade são reconsultados diariamente e o histórico é guardado, o
+      que permite mostrar a faixa de preço observada ao longo do tempo, e não só o número
+      de hoje. Fichas de compatibilidade são reverificadas quando a fonte muda ou quando
+      o campo passa de duas semanas sem checagem.
+    </p>
+
+    <h2>Como o conteúdo é produzido</h2>
+
+    <p>
+      Os textos são redigidos com apoio de automação sobre esses dados, sob revisão
+      editorial das regras publicadas neste site. A responsabilidade editorial é de
+      {SITE.nome}. Nenhum artigo é publicado sem dado coletado por máquina associado a
+      ele — isso é uma trava técnica no pipeline, não uma política de boas intenções.
+    </p>
+
+    <h2>Links de afiliado</h2>
+
+    <p>
+      Alguns links para o Mercado Livre podem gerar comissão, sem custo adicional para
+      quem compra. Isso não altera qual produto aparece nem em que ordem: a ordenação sai
+      dos dados. Produto sem link de comissão mapeado é citado com link comum — nunca
+      omitido.
+    </p>
+
+    <h2>O que este site não cobre</h2>
+
+    <p>
+      Câmeras de segurança profissionais, alarmes monitorados e projetos de instalação
+      elétrica estão fora de escopo. São assuntos em que uma informação errada tem
+      consequência séria e em que conteúdo produzido com automação não deve opinar.
+    </p>
+
+    <h2>Erros</h2>
+
+    <p>
+      Se um campo estiver errado, escreva para <strong>{SITE.email}</strong> com o modelo
+      e a fonte. A correção entra com nova data de verificação, e a data anterior fica no
+      histórico do repositório público do site.
+    </p>
+  </div>
+</Base>

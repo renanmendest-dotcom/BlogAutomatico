@@ -1,0 +1,9 @@
+{
+  "atualizado_em": null,
+  "observacao": "Estado do agendador. 'posts' NÃO inclui os posts de referência escritos à mão na Fase A — o teto conta apenas publicação automática.",
+  "ano_corrente": 2026,
+  "teto_anual": 180,
+  "publicados_no_ano": 0,
+  "ultimo_publicado_em": null,
+  "posts": []
+}

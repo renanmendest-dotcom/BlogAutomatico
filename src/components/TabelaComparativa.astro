@@ -1,0 +1,154 @@
+---
+/**
+ * Tabela comparativa — obrigatória em qualquer artigo que cite mais de um
+ * produto (Seção 7.3).
+ *
+ * Preço sai de `produtos.json` e sempre vem acompanhado da data de coleta:
+ * preço sem data é bloqueado pela trava de dado. Compatibilidade sai da matriz,
+ * pelo mesmo chip usado no resto do site.
+ */
+import ChipCompatibilidade from './ChipCompatibilidade.astro';
+import { ROTULO_PROTOCOLO, ROTULO_VOLTAGEM, dataLegivel, procedencia } from '../lib/compat';
+import { entradaCompat, faixaDePreco, produto, urlDoProduto } from '../lib/dados';
+import type { Assistente } from '../lib/tipos';
+
+interface Props {
+  produtoIds: string[];
+  /** Nomes de exibição quando o produto ainda não está em `produtos.json`. */
+  nomes?: Record<string, string>;
+  assistentes?: Assistente[];
+  legenda?: string;
+}
+
+const {
+  produtoIds,
+  nomes = {},
+  assistentes = ['alexa', 'google_home'] as Assistente[],
+  legenda,
+} = Astro.props;
+
+const moeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+
+const linhas = produtoIds.map((id) => {
+  const p = produto(id);
+  const e = entradaCompat(id);
+  const faixa = faixaDePreco(id);
+  return {
+    id,
+    nome: nomes[id] ?? p?.titulo ?? e?.nome ?? id,
+    url: p ? urlDoProduto(p).url : null,
+    preco: p?.preco ?? null,
+    coletadoEm: p?.coletado_em ?? null,
+    faixa,
+    protocolo: e ? ROTULO_PROTOCOLO[e.protocolo] : 'não verificado',
+    voltagem: e ? ROTULO_VOLTAGEM[e.voltagem] : 'não verificado',
+    procedencia: procedencia(e),
+    urlFonte: e?.url_fonte ?? null,
+  };
+});
+---
+
+<div class="tabela-envelope">
+  <table>
+    {legenda && <caption>{legenda}</caption>}
+    <thead>
+      <tr>
+        <th scope="col">Produto</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Protocolo</th>
+        <th scope="col">Voltagem</th>
+        {assistentes.map((a) => <th scope="col">{a === 'alexa' ? 'Alexa' : a === 'google_home' ? 'Google Home' : a === 'apple_home' ? 'Apple Home' : 'SmartThings'}</th>)}
+        <th scope="col">Fonte</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        linhas.map((l) => (
+          <tr>
+            <th scope="row" class="celula-produto">
+              {l.url ? (
+                <a href={l.url} rel="sponsored nofollow noopener" target="_blank">
+                  {l.nome}
+                </a>
+              ) : (
+                l.nome
+              )}
+            </th>
+
+            <td class="dado">
+              {l.preco == null ? (
+                <span class="vazio">não coletado</span>
+              ) : (
+                <>
+                  {moeda.format(l.preco)}
+                  <span class="nota">
+                    coleta {dataLegivel(l.coletadoEm?.slice(0, 10) ?? null)}
+                  </span>
+                  {l.faixa && (
+                    <span class="nota">
+                      faixa {moeda.format(l.faixa.minimo)}–{moeda.format(l.faixa.maximo)}
+                    </span>
+                  )}
+                </>
+              )}
+            </td>
+
+            <td class="dado">{l.protocolo}</td>
+            <td class="dado">{l.voltagem}</td>
+
+            {assistentes.map((a) => (
+              <td>
+                {/* `nome` importa mesmo escondido: é o que o leitor de tela
+                    anuncia, e o id cru não diz nada a ninguém. */}
+                <ChipCompatibilidade produtoId={l.id} assistente={a} nome={l.nome} compacto />
+              </td>
+            ))}
+
+            <td class="celula-fonte dado">
+              {l.urlFonte ? (
+                <a href={l.urlFonte} rel="nofollow noopener" target="_blank">
+                  {l.procedencia}
+                </a>
+              ) : (
+                <span class="vazio">{l.procedencia}</span>
+              )}
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+
+<style>
+  caption {
+    caption-side: top;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--sulco);
+    text-align: left;
+    font-family: var(--fonte-display);
+    font-stretch: 87.5%;
+    font-weight: 700;
+  }
+
+  .celula-produto {
+    font-weight: 600;
+    min-width: 12rem;
+  }
+
+  .nota {
+    display: block;
+    font-size: 0.6875rem;
+    color: var(--nulo);
+    white-space: nowrap;
+  }
+
+  .vazio {
+    color: var(--nulo);
+  }
+
+  .celula-fonte {
+    font-size: 0.6875rem;
+    max-width: 14rem;
+  }
+</style>

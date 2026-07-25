@@ -1,0 +1,219 @@
+---
+/**
+ * Layout de artigo.
+ *
+ * A resposta curta aparece antes de qualquer coisa — nada de introdução
+ * contextualizando o assunto (Seção 7.3). É também o texto que vira o
+ * `FAQPage` e o que motores generativos extraem.
+ */
+import Base from './Base.astro';
+import Faq from '../components/Faq.astro';
+import FichaTecnica from '../components/FichaTecnica.astro';
+import Fontes from '../components/Fontes.astro';
+import TabelaComparativa from '../components/TabelaComparativa.astro';
+import { CATEGORIAS } from '../consts';
+import { dataLegivel } from '../lib/compat';
+import {
+  artigo,
+  breadcrumb,
+  faqPage,
+  itemList,
+  produtoSchema,
+  type No,
+} from '../lib/schema';
+import { produto } from '../lib/dados';
+import { SITE } from '../consts';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const d = post.data;
+
+const iso = (data: Date) => data.toISOString().slice(0, 10);
+const categoria = CATEGORIAS[d.categoria as keyof typeof CATEGORIAS];
+const url = new URL(`/posts/${d.slug}`, SITE.url).href;
+
+// Product + Offer só para produtos que já têm coleta com preço e data.
+// Sem isso o nó é omitido: schema errado é pior que schema ausente.
+const nosProduto = d.produtos
+  .map((id) => produto(id))
+  .filter((p): p is NonNullable<typeof p> => p !== null)
+  .map((p) => produtoSchema(p))
+  .filter((n): n is No => n !== null);
+
+const nosSchema: Array<No | null> = [
+  artigo({
+    url,
+    titulo: d.titulo,
+    descricao: d.resposta_curta,
+    publicadoEm: iso(d.publicado_em),
+    atualizadoEm: iso(d.atualizado_em),
+    secao: categoria?.nome,
+  }),
+  // A pergunta principal e sua resposta curta entram no FAQ estruturado junto
+  // com o bloco de perguntas frequentes — é a mesma unidade extraível.
+  faqPage(url, [
+    { pergunta: d.pergunta_principal, resposta: d.resposta_curta },
+    ...d.faq,
+  ]),
+  breadcrumb([
+    { nome: 'Início', caminho: '/' },
+    { nome: categoria?.nome ?? 'Categoria', caminho: `/categorias/${d.categoria}` },
+    { nome: d.titulo, caminho: `/posts/${d.slug}` },
+  ]),
+  ...nosProduto,
+  d.ranking
+    ? itemList(
+        url,
+        d.produtos.map((id) => {
+          const p = produto(id);
+          return { nome: p?.titulo ?? id, url: p?.permalink };
+        }),
+      )
+    : null,
+];
+---
+
+<Base titulo={d.titulo} descricao={d.resposta_curta} nosSchema={nosSchema}>
+  <article class="post">
+    <nav class="migalhas" aria-label="Trilha de navegação">
+      <a href="/">Início</a>
+      <span aria-hidden="true">/</span>
+      <a href={`/categorias/${d.categoria}`}>{categoria?.nome}</a>
+    </nav>
+
+    <header class="post__cabecalho coluna-texto">
+      <h1>{d.titulo}</h1>
+
+      <p class="dado post__meta">
+        <time datetime={iso(d.publicado_em)}>publicado {dataLegivel(iso(d.publicado_em))}</time>
+        <span aria-hidden="true">·</span>
+        <time datetime={iso(d.atualizado_em)}>atualizado {dataLegivel(iso(d.atualizado_em))}</time>
+        <span aria-hidden="true">·</span>
+        <span>dados verificados em {dataLegivel(iso(d.verificado_em))}</span>
+      </p>
+    </header>
+
+    {
+      d.referencia_formato && (
+        <aside class="painel painel--atencao coluna-texto">
+          <p class="rotulo">Post de referência de formato</p>
+          <p>
+            Escrito à mão na Fase A para fixar o formato editorial, antes da camada de
+            coleta existir. O texto técnico geral vale; as fichas de produto aparecem
+            como <strong>não verificadas</strong> de propósito, porque ainda não passaram
+            por coleta com fonte. Nenhuma compatibilidade específica de modelo aqui deve
+            ser tratada como confirmada.
+          </p>
+        </aside>
+      )
+    }
+
+    <section class="resposta coluna-texto" aria-labelledby="resposta-titulo">
+      <h2 id="resposta-titulo" class="rotulo">{d.pergunta_principal}</h2>
+      <p class="resposta__texto">{d.resposta_curta}</p>
+    </section>
+
+    {
+      /*
+        O bloco de dado vem antes da prosa, e é gerado a partir de /data — não é
+        escrito em Markdown. É a trava estrutural do princípio da Seção 3: se a
+        tabela pudesse ser digitada à mão no texto, o dado deixaria de ser o
+        produto. Mais de um produto vira tabela comparativa; um só vira ficha.
+      */
+      d.produtos.length > 1 && (
+        <TabelaComparativa
+          produtoIds={d.produtos}
+          nomes={d.nomes_produtos}
+          legenda="Comparativo — preço da última coleta, compatibilidade da matriz"
+        />
+      )
+    }
+    {
+      d.produtos.length === 1 && (
+        <div class="coluna-texto">
+          <FichaTecnica produtoId={d.produtos[0]!} nome={d.nomes_produtos[d.produtos[0]!]} />
+        </div>
+      )
+    }
+
+    <div class="post__corpo">
+      <slot />
+    </div>
+
+    {
+      d.produtos.length > 1 && (
+        <section class="fichas" aria-labelledby="fichas-titulo">
+          <h2 id="fichas-titulo">Ficha de cada dispositivo</h2>
+          {d.produtos.map((id) => (
+            <FichaTecnica produtoId={id} nome={d.nomes_produtos[id]} />
+          ))}
+        </section>
+      )
+    }
+
+    <div class="coluna-texto">
+      <Faq pares={d.faq} />
+      <Fontes fontes={d.fontes} verificadoEm={d.verificado_em} />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .post {
+    padding: 2rem 0 0;
+  }
+
+  .migalhas {
+    display: flex;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--nulo);
+    margin-bottom: 1.25rem;
+  }
+
+  .post__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+    color: var(--nulo);
+    margin-bottom: 0;
+  }
+
+  /* A resposta direta. Bloco chapado, borda grossa à esquerda: é a plaqueta
+     principal da página. */
+  .resposta {
+    margin: 1.75rem 0 2rem;
+    padding: 1rem 1.125rem;
+    border: var(--borda);
+    border-left: 4px solid var(--ok);
+    background: var(--papel);
+  }
+
+  .resposta h2 {
+    margin: 0 0 0.4rem;
+    padding: 0;
+    border: 0;
+    font-size: 0.75rem;
+  }
+
+  .resposta__texto {
+    margin: 0;
+    font-size: 1.0625rem;
+  }
+
+  /* O corpo é largo o bastante para tabela, mas o texto corrido fica na medida
+     de leitura. */
+  .post__corpo :global(> p),
+  .post__corpo :global(> ul),
+  .post__corpo :global(> ol),
+  .post__corpo :global(> h2),
+  .post__corpo :global(> h3),
+  .post__corpo :global(> blockquote) {
+    max-width: var(--largura-texto);
+  }
+</style>

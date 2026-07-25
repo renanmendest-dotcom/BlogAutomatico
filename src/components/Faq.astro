@@ -1,0 +1,54 @@
+---
+/**
+ * Bloco de FAQ ao final do artigo.
+ *
+ * Renderiza o mesmo array do frontmatter que vira o `FAQPage` no `<head>` —
+ * uma fonte só, sem chance de o schema prometer resposta que a página não tem.
+ * O limite de 40 a 60 palavras é validado no schema da coleção, no build.
+ */
+interface Props {
+  pares: Array<{ pergunta: string; resposta: string }>;
+}
+
+const { pares } = Astro.props;
+---
+
+{
+  pares.length > 0 && (
+    <section class="faq" aria-labelledby="faq-titulo">
+      <h2 id="faq-titulo">Perguntas frequentes</h2>
+      <dl>
+        {pares.map((p) => (
+          <div class="faq__par">
+            <dt>{p.pergunta}</dt>
+            <dd>{p.resposta}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  )
+}
+
+<style>
+  .faq dl {
+    margin: 0;
+    border-top: var(--borda);
+  }
+
+  .faq__par {
+    padding: 1rem 0;
+    border-bottom: var(--borda);
+  }
+
+  .faq dt {
+    font-family: var(--fonte-display);
+    font-stretch: 87.5%;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .faq dd {
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,6 @@
+{
+  "atualizado_em": null,
+  "fonte": "api_mercadolivre",
+  "observacao": "Populado pelo coletor da Fase B (scripts/coletar-ml.ts). Meta: >= 60 produtos reais.",
+  "produtos": []
+}

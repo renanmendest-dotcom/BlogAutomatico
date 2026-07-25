@@ -1,0 +1,133 @@
+---
+/**
+ * Ficha técnica de um dispositivo: protocolo, voltagem, hub e operação offline.
+ *
+ * Plaqueta de equipamento — rótulo serigrafado em cima, valor em monoespaçada
+ * embaixo. Campo não verificado aparece como lacuna explícita, nunca omitido:
+ * a lista de lacunas é o que diz ao leitor o que ainda falta checar.
+ */
+import {
+  ROTULO_PROTOCOLO,
+  ROTULO_VOLTAGEM,
+  dataLegivel,
+  procedencia,
+} from '../lib/compat';
+import { entradaCompat } from '../lib/dados';
+
+interface Props {
+  produtoId: string;
+  nome?: string;
+}
+
+const { produtoId, nome } = Astro.props;
+const e = entradaCompat(produtoId);
+
+const campos = [
+  {
+    rotulo: 'Protocolo',
+    valor: e ? ROTULO_PROTOCOLO[e.protocolo] : 'não verificado',
+    vazio: !e || e.protocolo === 'nao_verificado',
+  },
+  {
+    rotulo: 'Voltagem',
+    valor: e ? ROTULO_VOLTAGEM[e.voltagem] : 'não verificado',
+    vazio: !e || e.voltagem === 'nao_verificado',
+  },
+  {
+    rotulo: 'Exige hub',
+    valor: e?.hub_necessario == null ? 'não verificado' : e.hub_necessario ? 'sim' : 'não',
+    vazio: e?.hub_necessario == null,
+  },
+  {
+    rotulo: 'Sem internet',
+    valor:
+      e?.funciona_offline == null ? 'não verificado' : e.funciona_offline ? 'funciona' : 'não funciona',
+    vazio: e?.funciona_offline == null,
+  },
+  {
+    rotulo: 'App',
+    valor: e?.app_fabricante ?? 'não verificado',
+    vazio: !e?.app_fabricante,
+  },
+];
+---
+
+<figure class="ficha">
+  <figcaption class="ficha__titulo">
+    <span class="rotulo">Ficha técnica</span>
+    <span>{nome ?? e?.nome ?? produtoId}</span>
+  </figcaption>
+
+  <dl class="ficha__grade">
+    {
+      campos.map((c) => (
+        <div class:list={['ficha__campo', c.vazio && 'ficha__campo--vazio']}>
+          <dt class="rotulo">{c.rotulo}</dt>
+          <dd class="dado">{c.valor}</dd>
+        </div>
+      ))
+    }
+  </dl>
+
+  <p class="ficha__procedencia dado">
+    {procedencia(e)}
+    {e?.url_fonte && (
+      <>
+        {' · '}
+        <a href={e.url_fonte} rel="nofollow noopener" target="_blank">fonte</a>
+      </>
+    )}
+    {e?.verificado_em && <> · id <span>{produtoId}</span> · {dataLegivel(e.verificado_em)}</>}
+  </p>
+</figure>
+
+<style>
+  .ficha {
+    margin: 1.75rem 0;
+    border: var(--borda);
+    border-top: 3px solid var(--tinta);
+    background: var(--papel);
+  }
+
+  .ficha__titulo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.75rem;
+    padding: 0.6rem 0.875rem;
+    border-bottom: 1px solid var(--sulco);
+    font-family: var(--fonte-display);
+    font-stretch: 87.5%;
+    font-weight: 700;
+  }
+
+  .ficha__grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 1px;
+    margin: 0;
+    background: var(--sulco);
+  }
+
+  .ficha__campo {
+    background: var(--papel);
+    padding: 0.6rem 0.875rem;
+  }
+
+  .ficha__campo dd {
+    margin: 0.15rem 0 0;
+    font-size: 0.9375rem;
+  }
+
+  .ficha__campo--vazio dd {
+    color: var(--nulo);
+  }
+
+  .ficha__procedencia {
+    margin: 0;
+    padding: 0.5rem 0.875rem;
+    border-top: 1px solid var(--sulco);
+    font-size: 0.6875rem;
+    color: var(--nulo);
+  }
+</style>

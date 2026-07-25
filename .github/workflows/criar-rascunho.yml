@@ -15,7 +15,6 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  id-token: write
 
 concurrency:
   group: criar-rascunho
@@ -60,6 +59,7 @@ jobs:
       - name: Redigir usando somente a ficha
         uses: anthropics/claude-code-action@v1
         with:
+          github_token: ${{ github.token }}
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
             Existe exatamente um novo arquivo Markdown em src/data/posts.

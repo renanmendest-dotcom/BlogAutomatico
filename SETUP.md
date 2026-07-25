@@ -32,11 +32,15 @@ Cada aprovação incorporada na branch `main` será publicada automaticamente.
 
 ### 3. Habilitar o botão “Criar rascunho”
 
-1. Abra o Claude Code e execute `/install-github-app` para conectar o repositório.
-2. No computador onde o Claude Code está instalado, execute `claude setup-token`.
-3. No GitHub, abra **Settings → Secrets and variables → Actions**.
-4. Crie o secret `CLAUDE_CODE_OAUTH_TOKEN` e cole o token.
-5. Em **Settings → Actions → General**, permita que Actions criem pull requests.
+Esta etapa exige uma assinatura Claude Pro, Max, Team ou Enterprise.
+
+1. Instale o Claude Code no computador.
+2. Abra o PowerShell e execute `claude setup-token`.
+3. Entre na sua conta do Claude e copie o token exibido.
+4. No GitHub, abra **Settings → Secrets and variables → Actions**.
+5. Crie o secret `CLAUDE_CODE_OAUTH_TOKEN` e cole o token.
+6. Em **Settings → Actions → General**, escolha **Read and write permissions** e
+   marque **Allow GitHub Actions to create and approve pull requests**.
 
 O token é secreto. Nunca o escreva em um arquivo do projeto.
 

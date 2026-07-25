@@ -11,7 +11,8 @@
     "check": "astro check",
     "validar": "node scripts/validar-conteudo.mjs",
     "atualizar-precos": "node scripts/atualizar-precos.mjs",
-    "novo-rascunho": "node scripts/criar-rascunho-local.mjs"
+    "novo-rascunho": "node scripts/criar-rascunho-local.mjs",
+    "publicar-rascunho": "node scripts/publicar-rascunho.mjs"
   },
   "dependencies": {
     "astro": "latest",

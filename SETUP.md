@@ -63,9 +63,11 @@ Produto sem preço continua no ar, mas exibe “preço ainda não coletado”.
 4. Informe a pergunta e o ID do produto.
 5. Aguarde a criação de uma pull request.
 6. Leia o texto e confira as fontes.
-7. Aprove somente se estiver correto.
+7. Se estiver correto, clique em **Merge pull request** e depois em
+   **Confirm merge**.
 
-Até a aprovação, o artigo permanece invisível no site.
+Até a aprovação, o artigo permanece invisível. Depois da confirmação, a
+automação troca o estado do texto e o Cloudflare publica a nova versão.
 
 ### Parar tudo
 

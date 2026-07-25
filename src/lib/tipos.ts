@@ -36,8 +36,23 @@ export type FonteDado =
   | 'nao_verificado';
 
 export interface EntradaCompatibilidade {
+  /**
+   * Chave estável da entrada: `marca-modelo` em kebab-case.
+   *
+   * O PROJETO.md previa o id do Mercado Livre aqui. Trocamos por um slug de
+   * modelo porque anúncio do ML morre e é recriado o tempo todo — a matriz
+   * perderia o histórico de verificação junto. O que é compatível é o
+   * *dispositivo*, não o anúncio. Os anúncios entram em `ml_ids`.
+   */
   produto_id: string;
   nome: string;
+  marca: string;
+  modelo: string;
+  /**
+   * Anúncios do ML que vendem este dispositivo. É por aqui que a entrada
+   * encontra preço em `produtos.json`. Vazio até a coleta rodar.
+   */
+  ml_ids: string[];
   protocolo: Protocolo;
   /** `null` quando não verificado — não confundir com `false`. */
   hub_necessario: boolean | null;
@@ -51,6 +66,12 @@ export interface EntradaCompatibilidade {
   url_fonte: string | null;
   /** ISO `YYYY-MM-DD`. */
   verificado_em: string | null;
+  /**
+   * Ressalvas que a fonte deixa explícitas e que mudam a decisão de compra —
+   * "só a versão P110 mede consumo", "descontinuado, substituído pelo 02P".
+   * Exibidas na ficha. Nunca use para especular.
+   */
+  notas?: string[];
 }
 
 export interface ArquivoCompatibilidade {

@@ -37,14 +37,25 @@ npm run dev
 npm run validar
 ```
 
-`validar` roda checagem de tipos, build e validação do JSON-LD gerado. É o mesmo
-conjunto que o CI roda. Rode antes de considerar qualquer mudança pronta.
+`validar` roda a trava da matriz, a checagem de tipos, o build e a validação do
+JSON-LD gerado. É o mesmo conjunto que o CI roda. Rode antes de considerar
+qualquer mudança pronta.
+
+```bash
+npm run coletar:ml:diagnostico
+```
+
+Coleta de dados: `coletar:ml` (preços e disponibilidade, exige
+`ML_CLIENT_ID`/`ML_CLIENT_SECRET`) e `coletar:demanda` (autocomplete do Google,
+não exige nada). Os scripts são `.ts` rodados direto pelo Node 24, sem
+compilador — por isso os imports relativos entre eles levam a extensão `.ts`.
 
 ## Estrutura
 
 | Caminho | O que é |
 | :---- | :---- |
 | `data/*.json` | Camada de dados. Formatos em [data/README.md](data/README.md) |
+| `scripts/lib/` | HTTP com backoff, IO atômico de `/data`, cliente do ML |
 | `src/lib/tipos.ts` | Tipos canônicos de `/data`. Não redeclare formato em outro lugar |
 | `src/lib/compat.ts` | Lógica do chip **e** do schema de compatibilidade |
 | `src/lib/schema.ts` | Construtores de JSON-LD |
@@ -129,10 +140,33 @@ respeitado, Lighthouse acima de 95 em performance.
 
 - **Fase A — infraestrutura:** concluída. Site, layout, chip, schemas validados,
   CI e 3 posts de referência.
-- **Fase B — dados:** pendente. Cliente da API do ML, coletor de trends,
-  `produtos.json` com 60+ produtos, matriz com 40+ entradas verificadas.
+- **Fase B — dados:** parcial.
+  - Feito: cliente da API do ML com `client_credentials`, backoff e degradação
+    segura; coletor de demanda por autocomplete (~1.900 termos reais); trava da
+    matriz (`validar-matriz.ts`); workflow `coletar.yml` em `workflow_dispatch`.
+  - Falta: `produtos.json` com 60+ produtos — **bloqueado** até
+    `ML_CLIENT_ID`/`ML_CLIENT_SECRET` existirem (SETUP.md, passo 5).
+  - Falta: matriz com 40 dispositivos verificados. Hoje tem 12.
 - **Fase C — agentes:** pendente. Descoberta e redação em `workflow_dispatch`.
 - **Fase D — automação:** pendente. Crons, agendador com ritmo humano,
   guardrails testados.
 
 Não pule fase. A Fase C depende de a Fase B estar rodando com dados reais.
+
+## Ampliando a matriz
+
+É o trabalho mais valioso em aberto, e é manual por natureza: cada campo precisa
+de uma fonte que o afirme.
+
+O que funciona bem: páginas de produto da `loja.intelbras.com.br` e do
+`itead.cc` (SONOFF) respondem a fetch simples e trazem ficha completa. As FAQ
+oficiais da TP-Link cobrem uma linha inteira de uma vez.
+
+O que não funciona: `intelbras.com` e os PDFs de datasheet devolvem 403. Lojas em
+VTEX/FastStore (Positivo) renderizam a ficha por JavaScript — precisam de
+navegador, não de fetch.
+
+**Nunca use resumo de busca como fonte.** Um resumo de resultados de busca
+misturou especificações de três produtos diferentes e atribuiu compatibilidade
+com Alexa a uma lâmpada cuja página do fabricante não cita assistente nenhum.
+A fonte é a página, aberta e lida.

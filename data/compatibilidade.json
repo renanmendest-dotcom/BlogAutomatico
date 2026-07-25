@@ -1,5 +1,324 @@
 {
-  "atualizado_em": null,
-  "observacao": "A matriz. Ativo principal do projeto. Populada na Fase B, meta: >= 40 entradas verificadas. Regra rígida: campo sem fonte confirmada é 'nao_verificado'. Nunca inferir.",
-  "entradas": []
+  "atualizado_em": "2026-07-25",
+  "observacao": "A matriz. Ativo principal do projeto. Cada campo só sai de 'nao_verificado' com fonte oficial do fabricante que o afirme explicitamente. Nunca inferir. Chave = slug marca-modelo: anúncio do ML morre, dispositivo não. Meta da Fase B: 40 entradas verificadas.",
+  "entradas": [
+    {
+      "produto_id": "intelbras-ews-1001",
+      "nome": "Intelbras EWS 1001 — interruptor inteligente touch 1 tecla",
+      "marca": "Intelbras",
+      "modelo": "EWS 1001",
+      "ml_ids": [],
+      "protocolo": "wifi_2.4",
+      "hub_necessario": false,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "bivolt",
+      "funciona_offline": null,
+      "app_fabricante": "Izy Smart",
+      "fonte": "site_oficial",
+      "url_fonte": "https://loja.intelbras.com.br/interruptor-smart-touch-ews-1001-branco/p",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "A página informa 'IEEE 802.11b/g/n 2,4 GHz' e 'Sem necessidade de hub de automação'.",
+        "Tensão de operação declarada: 100 ~ 240 Vac (bivolt automático) 50/60 Hz."
+      ]
+    },
+    {
+      "produto_id": "intelbras-ews-1006",
+      "nome": "Intelbras EWS 1006 — interruptor inteligente touch 6 teclas",
+      "marca": "Intelbras",
+      "modelo": "EWS 1006",
+      "ml_ids": [],
+      "protocolo": "wifi_2.4",
+      "hub_necessario": false,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "bivolt",
+      "funciona_offline": null,
+      "app_fabricante": null,
+      "fonte": "site_oficial",
+      "url_fonte": "https://loja.intelbras.com.br/interruptor-smart-wi-fi-touch-6-teclas-ews-1006-branco/p",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Corrente máxima declarada: 10 A (FP = 1). Potência máxima: 1.270 W em 127 Vac e 2.200 W em 220 Vac.",
+        "A página não nomeia o aplicativo, então o campo ficou vazio em vez de assumir o app das outras linhas."
+      ]
+    },
+    {
+      "produto_id": "intelbras-ews-410",
+      "nome": "Intelbras EWS 410 — lâmpada LED inteligente E27",
+      "marca": "Intelbras",
+      "modelo": "EWS 410",
+      "ml_ids": [],
+      "protocolo": "nao_verificado",
+      "hub_necessario": false,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "bivolt",
+      "funciona_offline": null,
+      "app_fabricante": "Mibo Smart",
+      "fonte": "site_oficial",
+      "url_fonte": "https://loja.intelbras.com.br/lampada-led-wi-fi-smart-ews-410/p",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Soquete E27. Tensão: bivolt 100-240 Vac automático.",
+        "A página afirma 'Não é necessário nenhum hub adicional', mas não informa a frequência do Wi-Fi — por isso o protocolo ficou como não verificado."
+      ]
+    },
+    {
+      "produto_id": "intelbras-ews-440",
+      "nome": "Intelbras EWS 440 — lâmpada spot LED inteligente GU10",
+      "marca": "Intelbras",
+      "modelo": "EWS 440",
+      "ml_ids": [],
+      "protocolo": "nao_verificado",
+      "hub_necessario": false,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "bivolt",
+      "funciona_offline": null,
+      "app_fabricante": null,
+      "fonte": "site_oficial",
+      "url_fonte": "https://loja.intelbras.com.br/lampada-led-spot-ews-440/p",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Base GU10. Tensão: 100 ~ 240 Vac (bivolt automático).",
+        "A página declara 'conexão direta com roteador Wi-Fi, sem necessidade de hub', mas não informa a frequência.",
+        "O aplicativo ficou vazio de propósito: a mesma página cita 'Mibo Smart' e 'Izy Smart', e não dá para saber qual vale."
+      ]
+    },
+    {
+      "produto_id": "intelbras-ews-301",
+      "nome": "Intelbras EWS 301 — conector inteligente Wi-Fi 10 A",
+      "marca": "Intelbras",
+      "modelo": "EWS 301",
+      "ml_ids": [],
+      "protocolo": "wifi_2.4",
+      "hub_necessario": null,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "bivolt",
+      "funciona_offline": null,
+      "app_fabricante": "Izy Smart",
+      "fonte": "site_oficial",
+      "url_fonte": "https://loja.intelbras.com.br/interruptor-conector-ews-301-smart/p",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Corrente máxima declarada: 10 A. Tensão: bivolt automático (100 ~ 240 Vac).",
+        "A página informa 'IEEE 802.11 b/g/n'. As modulações b e g só existem em 2,4 GHz, então a faixa está confirmada pela própria norma citada.",
+        "A necessidade de hub não é mencionada na página, então o campo ficou nulo em vez de 'não'."
+      ]
+    },
+    {
+      "produto_id": "tp-link-tapo-p100",
+      "nome": "TP-Link Tapo P100 — tomada inteligente Wi-Fi",
+      "marca": "TP-Link",
+      "modelo": "Tapo P100",
+      "ml_ids": [],
+      "protocolo": "wifi_2.4",
+      "hub_necessario": false,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "nao_verificado",
+      "funciona_offline": true,
+      "app_fabricante": "Tapo",
+      "fonte": "site_oficial",
+      "url_fonte": "https://www.tp-link.com/br/support/faq/3417/",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "A TP-Link afirma: 'a tomada inteligente Tapo pode ser controlada pelo aplicativo Tapo na sua rede local' — é o que sustenta o campo de funcionamento sem internet.",
+        "As 'Ações Inteligentes' exigem hub para uso local, mas o controle básico não exige.",
+        "É preciso concluir a configuração no app Tapo antes de vincular Alexa ou Google Home.",
+        "A voltagem da versão vendida no Brasil não consta na fonte consultada."
+      ]
+    },
+    {
+      "produto_id": "tp-link-tapo-p105",
+      "nome": "TP-Link Tapo P105 — tomada inteligente Wi-Fi mini",
+      "marca": "TP-Link",
+      "modelo": "Tapo P105",
+      "ml_ids": [],
+      "protocolo": "wifi_2.4",
+      "hub_necessario": false,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "nao_verificado",
+      "funciona_offline": true,
+      "app_fabricante": "Tapo",
+      "fonte": "site_oficial",
+      "url_fonte": "https://www.tp-link.com/br/support/faq/3417/",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Tamanho mini, segundo a TP-Link. Não mede consumo de energia — só os modelos P110 e P115 medem.",
+        "A voltagem da versão vendida no Brasil não consta na fonte consultada."
+      ]
+    },
+    {
+      "produto_id": "tp-link-tapo-p110",
+      "nome": "TP-Link Tapo P110 — tomada inteligente Wi-Fi com medição de consumo",
+      "marca": "TP-Link",
+      "modelo": "Tapo P110",
+      "ml_ids": [],
+      "protocolo": "wifi_2.4",
+      "hub_necessario": false,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "nao_verificado",
+      "funciona_offline": true,
+      "app_fabricante": "Tapo",
+      "fonte": "site_oficial",
+      "url_fonte": "https://www.tp-link.com/br/support/faq/3417/",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Mede consumo de energia, ao contrário da P100 e da P105.",
+        "A voltagem da versão vendida no Brasil não consta na fonte consultada."
+      ]
+    },
+    {
+      "produto_id": "tp-link-tapo-p115",
+      "nome": "TP-Link Tapo P115 — tomada inteligente Wi-Fi mini com medição de consumo",
+      "marca": "TP-Link",
+      "modelo": "Tapo P115",
+      "ml_ids": [],
+      "protocolo": "wifi_2.4",
+      "hub_necessario": false,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "nao_verificado",
+      "funciona_offline": true,
+      "app_fabricante": "Tapo",
+      "fonte": "site_oficial",
+      "url_fonte": "https://www.tp-link.com/br/support/faq/3417/",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Junta as duas coisas: tamanho mini e medição de consumo.",
+        "A voltagem da versão vendida no Brasil não consta na fonte consultada."
+      ]
+    },
+    {
+      "produto_id": "positivo-smart-lampada-rgb-mais-e27",
+      "nome": "Positivo Smart Lâmpada Wi-Fi RGB+ E27 10 W",
+      "marca": "Positivo Casa Inteligente",
+      "modelo": "Smart Lâmpada Wi-Fi RGB+ E27 10W",
+      "ml_ids": [],
+      "protocolo": "wifi_2.4",
+      "hub_necessario": null,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nao_verificado",
+        "google_home": "nao_verificado",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "bivolt",
+      "funciona_offline": null,
+      "app_fabricante": null,
+      "fonte": "site_oficial",
+      "url_fonte": "https://loja.meupositivo.com.br/smart-lampada-rgb-mais-wi-fi-11167878/p",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Ficha do fabricante: 'Conexão Wi-Fi IEEE 802.11 b/g/n, 2.4GHz' e 'Tensão de entrada 100 ~240 VCA, 50/60Hz'.",
+        "Nenhum assistente de voz é citado na página do fabricante. A compatibilidade com Alexa e Google circula em material de terceiros, e por isso NÃO foi registrada aqui — é exatamente o tipo de dado que este site se recusa a deduzir."
+      ]
+    },
+    {
+      "produto_id": "sonoff-s26",
+      "nome": "SONOFF S26 — tomada inteligente Wi-Fi",
+      "marca": "SONOFF",
+      "modelo": "S26",
+      "ml_ids": [],
+      "protocolo": "wifi_2.4",
+      "hub_necessario": null,
+      "hub_modelos": [],
+      "assistentes": {
+        "alexa": "nativo",
+        "google_home": "nativo",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "bivolt",
+      "funciona_offline": null,
+      "app_fabricante": "eWeLink",
+      "fonte": "site_oficial",
+      "url_fonte": "https://itead.cc/product/sonoff-s26-wifi-smart-plug",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Faixa declarada: 90 V ~ 250 V AC (50/60 Hz), corrente máxima 10 A — cobre 127 V e 220 V.",
+        "Wi-Fi 2,4 GHz (802.11 b/g/n).",
+        "Existe versão com sufixo BR, mas a página não detalha se o plugue segue a NBR 14136."
+      ]
+    },
+    {
+      "produto_id": "sonoff-snzb-02",
+      "nome": "SONOFF SNZB-02 — sensor Zigbee de temperatura e umidade",
+      "marca": "SONOFF",
+      "modelo": "SNZB-02",
+      "ml_ids": [],
+      "protocolo": "zigbee",
+      "hub_necessario": true,
+      "hub_modelos": ["SONOFF Zigbee Bridge"],
+      "assistentes": {
+        "alexa": "via_hub",
+        "google_home": "via_hub",
+        "apple_home": "nao_verificado",
+        "smartthings": "nao_verificado"
+      },
+      "voltagem": "nao_verificado",
+      "funciona_offline": null,
+      "app_fabricante": "eWeLink",
+      "fonte": "site_oficial",
+      "url_fonte": "https://itead.cc/product/sonoff-snzb-02-zigbee-temperature-and-humidity-sensor",
+      "verificado_em": "2026-07-25",
+      "notas": [
+        "Zigbee (IEEE 802.15.4). O fabricante afirma: 'Zigbee Bridge and batteries are required' — daí o hub obrigatório e os assistentes marcados como 'via hub'.",
+        "Alimentado por pilha CR2450 de 3 V: o campo de voltagem da rede elétrica não se aplica a este dispositivo.",
+        "Descontinuado. O fabricante recomenda o modelo SNZB-02P no lugar."
+      ]
+    }
+  ]
 }

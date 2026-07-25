@@ -12,7 +12,11 @@
     "preview": "astro preview",
     "check": "astro check",
     "validar:schemas": "node scripts/validar-schemas.mjs",
-    "validar": "npm run check && npm run build && npm run validar:schemas"
+    "validar:matriz": "node scripts/validar-matriz.ts",
+    "validar": "npm run validar:matriz && npm run check && npm run build && npm run validar:schemas",
+    "coletar:ml": "node scripts/coletar-ml.ts",
+    "coletar:ml:diagnostico": "node scripts/coletar-ml.ts --diagnostico",
+    "coletar:demanda": "node scripts/coletar-trends.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",

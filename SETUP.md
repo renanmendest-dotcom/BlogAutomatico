@@ -79,7 +79,7 @@ to Git*, escolha este repositório e configure:
 | Build command | `npm run build` |
 | Build output directory | `dist` |
 | Production branch | `main` |
-| Node version | variável de ambiente `NODE_VERSION` = `22` |
+| Node version | variável de ambiente `NODE_VERSION` = `24` |
 
 A partir daí, todo push na `main` dispara build e deploy automáticos. O workflow
 `deploy.yml` do GitHub Actions roda em paralelo como portão de qualidade: ele não
@@ -96,15 +96,37 @@ o token. Gratuito, sem cookie e sem banner de consentimento. Cadastre o token em
 `PUBLIC_CF_ANALYTICS_TOKEN`. Sem essa variável, nenhum script de analytics é
 carregado — o site não faz uma requisição externa sequer.
 
-## 5. Aplicação no Mercado Livre
+## 5. Aplicação no Mercado Livre — BLOQUEANTE
 
-Pré-requisito da Fase B, e só se a API exigir autenticação — a primeira tarefa da
-Fase B é justamente descobrir se `https://api.mercadolibre.com/sites/MLB/search`
-ainda responde sem token.
+**Verificado em 25/07/2026: a API do Mercado Livre não responde mais sem
+autenticação.** Nem a busca, nem o endpoint básico `/sites/MLB`. Todos devolvem
+HTTP 403 com `PA_UNAUTHORIZED_RESULT_FROM_POLICIES`. Não existe caminho grátis
+sem credencial.
 
-Se exigir: crie uma aplicação em `developers.mercadolivre.com.br`, use o fluxo
-`client_credentials`, e cadastre `ML_CLIENT_ID` e `ML_CLIENT_SECRET` como secrets
-do repositório.
+Consequência prática: **enquanto este passo não for feito, o site não tem preço
+nenhum.** Sem preço não há `Product`/`Offer` no schema, e a trava de dado impede
+publicação automática de artigo. O pipeline continua rodando e o site continua no
+ar — mas parado no conteúdo que já existe.
+
+O que fazer:
+
+1. Entre em `developers.mercadolivre.com.br` com sua conta do Mercado Livre.
+2. Crie uma aplicação. Não precisa ser vendedor — a aplicação é de leitura.
+3. Anote o **Client ID** e o **Client Secret**.
+4. No GitHub, em *Settings → Secrets and variables → Actions*, crie dois secrets:
+   `ML_CLIENT_ID` e `ML_CLIENT_SECRET`.
+
+Para conferir se funcionou, rode localmente:
+
+```bash
+npm run coletar:ml:diagnostico
+```
+
+Ele imprime o estado da autenticação em uma linha. Também dá para rodar pelo
+GitHub, no workflow `coletar`, marcando a opção de diagnóstico.
+
+O coletor usa o fluxo `client_credentials` e renova o token sozinho. Se a API
+falhar, ele registra o erro, mantém o último dado bom e não derruba o pipeline.
 
 ## 6. Google Search Console
 

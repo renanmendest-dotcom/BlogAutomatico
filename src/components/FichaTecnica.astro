@@ -69,6 +69,18 @@ const campos = [
     }
   </dl>
 
+  {
+    /* Ressalvas que a própria fonte deixa explícitas. Ficam visíveis porque é
+       nelas que mora a diferença entre "compatível" e "compatível se". */
+    e?.notas && e.notas.length > 0 && (
+      <ul class="ficha__notas">
+        {e.notas.map((n) => (
+          <li>{n}</li>
+        ))}
+      </ul>
+    )
+  }
+
   <p class="ficha__procedencia dado">
     {procedencia(e)}
     {e?.url_fonte && (
@@ -121,6 +133,17 @@ const campos = [
 
   .ficha__campo--vazio dd {
     color: var(--nulo);
+  }
+
+  .ficha__notas {
+    margin: 0;
+    padding: 0.6rem 0.875rem 0.6rem 1.9rem;
+    border-top: 1px solid var(--sulco);
+    font-size: 0.8125rem;
+  }
+
+  .ficha__notas li + li {
+    margin-top: 0.3rem;
   }
 
   .ficha__procedencia {

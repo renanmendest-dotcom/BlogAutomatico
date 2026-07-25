@@ -1,0 +1,48 @@
+{
+  "observacao": "Sementes do nicho. Entram no coletor do Mercado Livre como termos de busca e no coletor de demanda como raiz da expansão por autocomplete. Marcas conforme Seção 2 do PROJETO.md.",
+  "atualizado_em": "2026-07-25",
+  "buscas_ml": [
+    { "termo": "lampada inteligente wifi", "categoria": "iluminacao" },
+    { "termo": "lampada inteligente alexa", "categoria": "iluminacao" },
+    { "termo": "fita led inteligente wifi", "categoria": "iluminacao" },
+    { "termo": "plafon led inteligente", "categoria": "iluminacao" },
+    { "termo": "tomada inteligente wifi", "categoria": "tomadas" },
+    { "termo": "tomada inteligente 16a", "categoria": "tomadas" },
+    { "termo": "interruptor inteligente wifi", "categoria": "tomadas" },
+    { "termo": "modulo rele inteligente wifi", "categoria": "tomadas" },
+    { "termo": "echo dot alexa", "categoria": "assistentes" },
+    { "termo": "google nest mini", "categoria": "assistentes" },
+    { "termo": "controle universal infravermelho wifi", "categoria": "assistentes" },
+    { "termo": "sensor de presenca inteligente wifi", "categoria": "sensores" },
+    { "termo": "sensor de porta e janela inteligente", "categoria": "sensores" },
+    { "termo": "sensor de temperatura e umidade zigbee", "categoria": "sensores" },
+    { "termo": "hub zigbee tuya", "categoria": "hubs" },
+    { "termo": "central inteligente matter", "categoria": "hubs" }
+  ],
+  "sementes_demanda": [
+    "lampada inteligente",
+    "tomada inteligente",
+    "interruptor inteligente",
+    "sensor de presenca inteligente",
+    "hub zigbee",
+    "alexa",
+    "google home",
+    "matter casa inteligente",
+    "casa inteligente barata",
+    "automacao residencial wifi"
+  ],
+  "marcas": [
+    "Intelbras",
+    "Positivo Casa Inteligente",
+    "Geonav",
+    "Multilaser",
+    "Elgin",
+    "Xiaomi",
+    "Tuya",
+    "Sonoff",
+    "TP-Link Tapo",
+    "Philips Hue",
+    "Novadigital",
+    "Ekaza"
+  ]
+}

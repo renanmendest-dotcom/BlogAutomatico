@@ -1,0 +1,88 @@
+name: coletar
+
+# Agente coletor da Seção 7.2. Só move dados: reconsulta preço e
+# disponibilidade, grava o ponto do dia na série histórica e levanta alerta
+# quando algo muda demais.
+#
+# O cron fica COMENTADO até a Fase D. Ligar coleta automática antes dos
+# guardrails estarem testados é o caminho mais curto para o pipeline gastar cota
+# sozinho — e a cota do token do Claude é a mesma da assinatura do operador.
+
+on:
+  workflow_dispatch:
+    inputs:
+      diagnostico:
+        description: 'Só checar o estado da autenticação, sem coletar'
+        type: boolean
+        default: false
+  # schedule:
+  #   - cron: '17 8 * * *'   # diário, 05:17 em São Paulo. Ativar na Fase D.
+
+concurrency:
+  group: coletar
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Kill switch (Seção 11), primeiro passo, sempre.
+      - name: Verificar kill switch
+        run: |
+          if [ -f PAUSE ]; then
+            echo "::warning::Arquivo PAUSE existe na raiz — coleta pausada pelo operador."
+            cat PAUSE
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Diagnóstico da API do Mercado Livre
+        run: npm run coletar:ml:diagnostico
+
+      - name: Coletar preços e disponibilidade
+        if: ${{ !inputs.diagnostico }}
+        env:
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+        run: npm run coletar:ml
+
+      - name: Coletar demanda (autocomplete)
+        if: ${{ !inputs.diagnostico }}
+        run: npm run coletar:demanda
+
+      # A matriz não é tocada pelo coletor, mas se um dado ficou incoerente é
+      # melhor descobrir aqui do que no deploy.
+      - name: Validar matriz
+        if: ${{ !inputs.diagnostico }}
+        run: npm run validar:matriz
+
+      # Log auditável (Seção 11): o commit registra o que mudou e quem mudou.
+      - name: Commitar o que mudou
+        if: ${{ !inputs.diagnostico }}
+        run: |
+          git config user.name 'coletor'
+          git config user.email 'coletor@users.noreply.github.com'
+          if git diff --quiet -- data/; then
+            echo "Nenhuma mudança nos dados."
+            exit 0
+          fi
+          git add data/
+          git commit -m "dados: coleta de $(date -u +%Y-%m-%d)
+
+          Agente: coletor (scripts/coletar-ml.ts, scripts/coletar-trends.ts)
+          Fontes: API do Mercado Livre, autocomplete do Google (pt-BR)
+          Disparo: ${{ github.event_name }}"
+          git push

@@ -9,7 +9,7 @@
  */
 import ChipCompatibilidade from './ChipCompatibilidade.astro';
 import { ROTULO_PROTOCOLO, ROTULO_VOLTAGEM, dataLegivel, procedencia } from '../lib/compat';
-import { entradaCompat, faixaDePreco, produto, urlDoProduto } from '../lib/dados';
+import { entradaCompat, faixaDePreco, melhorOferta, urlDoProduto } from '../lib/dados';
 import type { Assistente } from '../lib/tipos';
 
 interface Props {
@@ -30,12 +30,14 @@ const {
 const moeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 
 const linhas = produtoIds.map((id) => {
-  const p = produto(id);
+  // A oferta mais barata entre os anúncios que vendem este dispositivo, não um
+  // anúncio fixo — anúncio encerrado não pode zerar a ficha.
+  const p = melhorOferta(id);
   const e = entradaCompat(id);
   const faixa = faixaDePreco(id);
   return {
     id,
-    nome: nomes[id] ?? p?.titulo ?? e?.nome ?? id,
+    nome: nomes[id] ?? e?.nome ?? p?.titulo ?? id,
     url: p ? urlDoProduto(p).url : null,
     preco: p?.preco ?? null,
     coletadoEm: p?.coletado_em ?? null,

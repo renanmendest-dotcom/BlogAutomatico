@@ -46,11 +46,19 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          # 24 porque os coletores são .ts rodados direto pelo Node, sem
+          # compilador. Precisa bater com o NODE_VERSION do Cloudflare Pages.
+          node-version: 24
           cache: npm
 
       - name: Instalar dependências
         run: npm ci
+
+      # A trava da matriz vem antes de tudo: campo de compatibilidade afirmado
+      # sem fonte é o único erro que este projeto não pode cometer, e é barato
+      # de detectar.
+      - name: Validar matriz de compatibilidade
+        run: npm run validar:matriz
 
       - name: Checagem de tipos
         run: npm run check

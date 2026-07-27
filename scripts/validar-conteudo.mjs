@@ -108,6 +108,22 @@ for (const produto of produtos) {
     }
   }
 
+  if (!produto.afiliado || typeof produto.afiliado !== "object") {
+    erro(`${prefixo}: falta o controle de link de afiliado.`);
+  } else {
+    if (!produto.afiliado.loja) {
+      erro(`${prefixo}: falta o nome da loja afiliada.`);
+    }
+    if (produto.afiliado.url !== null) {
+      if (!urlSegura(produto.afiliado.url)) {
+        erro(`${prefixo}: o link de afiliado precisa de URL HTTPS válida.`);
+      }
+      if (!dataValida(produto.afiliado.atualizadoEm)) {
+        erro(`${prefixo}: o link de afiliado precisa de data de atualização.`);
+      }
+    }
+  }
+
   if (produto.preco?.valor !== null) {
     if (!produto.mercadoLivreId) {
       erro(`${prefixo}: preço informado sem ID do Mercado Livre.`);
@@ -187,6 +203,49 @@ for (const nome of arquivos) {
 
   if (content.trim().length < 800) {
     erro(`${prefixo}: o texto está curto demais para uma verificação útil.`);
+  }
+
+  if (data.origem) {
+    if (
+      !data.origem.pergunta_encontrada ||
+      !data.origem.motivo ||
+      !Array.isArray(data.origem.fontes_demanda) ||
+      data.origem.fontes_demanda.length < 2
+    ) {
+      erro(`${prefixo}: a descoberta automática precisa explicar a oportunidade.`);
+    } else {
+      for (const fonte of data.origem.fontes_demanda) {
+        if (!fonte.titulo || !urlSegura(fonte.url)) {
+          erro(`${prefixo}: há uma fonte de demanda inválida.`);
+        }
+      }
+    }
+
+    if (
+      !Array.isArray(data.perguntas_frequentes) ||
+      data.perguntas_frequentes.length < 2 ||
+      data.perguntas_frequentes.length > 5
+    ) {
+      erro(`${prefixo}: artigo automático precisa de duas a cinco perguntas frequentes.`);
+    }
+
+    const textoEditorial = [
+      data.titulo,
+      data.pergunta_principal,
+      data.resposta_curta,
+      data.descricao,
+      data.origem.pergunta_encontrada,
+      data.origem.motivo,
+      ...(data.perguntas_frequentes ?? []).flatMap((item) => [
+        item.pergunta,
+        item.resposta
+      ]),
+      content
+    ].join("\n");
+
+    if (/[—–]/u.test(textoEditorial)) {
+      erro(`${prefixo}: artigo automático não pode usar travessão.`);
+    }
   }
 
   if (/\bR\$\s?\d/i.test(content) && !/coletad[oa] em/i.test(content)) {

@@ -28,6 +28,11 @@ export type ProdutoPublicado = {
   publicado: true;
   verificadoEm: string;
   mercadoLivreId: string | null;
+  afiliado: {
+    loja: string;
+    url: string | null;
+    atualizadoEm: string | null;
+  };
   preco: {
     valor: number | null;
     moeda: string;

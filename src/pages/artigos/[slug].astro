@@ -74,11 +74,29 @@ const breadcrumbSchema = {
     }
   ]
 };
+
+const perguntasFrequentes = post.data.perguntas_frequentes ?? [];
+const faqSchema =
+  perguntasFrequentes.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: perguntasFrequentes.map((item) => ({
+          "@type": "Question",
+          name: item.pergunta,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.resposta
+          }
+        }))
+      }
+    : null;
 ---
 
 <BaseLayout titulo={post.data.titulo} descricao={post.data.descricao}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 
   <article>
     <header class="article-header">
@@ -105,6 +123,21 @@ const breadcrumbSchema = {
     <div class="shell article-layout">
       <div class="prose">
         <Content />
+        {
+          perguntasFrequentes.length > 0 && (
+            <section class="faq-section" aria-labelledby="perguntas-frequentes">
+              <h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+              <dl>
+                {perguntasFrequentes.map((item) => (
+                  <div>
+                    <dt>{item.pergunta}</dt>
+                    <dd>{item.resposta}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )
+        }
       </div>
       <aside class="article-aside">
         <p class="eyebrow">Dados usados</p>

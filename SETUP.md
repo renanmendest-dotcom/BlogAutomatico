@@ -1,87 +1,94 @@
-# Configuração do Combina Casa
+# Configuração simples do Combina Casa
 
-Este guia separa o que você faz uma única vez do que fará no dia a dia.
+O sistema pesquisa uma oportunidade por semana e mantém somente um artigo
+esperando aprovação.
 
 ## O que já está pronto
 
-- O site e o visual.
-- Três fichas de produto com fontes.
-- Três artigos de referência.
-- Validação de dados.
-- Automação de preço preparada.
-- Criação de rascunho com aprovação.
+- Site, páginas de produto e artigos.
+- Pesquisa automática de dúvidas na internet.
+- Pesquisa de produto, fabricante e anúncio candidato.
+- Redação com fontes e perguntas frequentes.
+- Bloqueio de travessão, pressão comercial e orientação elétrica.
+- Aprovação humana antes da publicação.
+- Publicação automática pelo GitHub e pelo Vercel.
+- Espaço seguro para links de afiliado autorizados.
 
-## Configuração única
+## Configuração feita uma única vez
 
-### 1. Criar o repositório
+### 1. Confirmar o GitHub
 
-1. Crie um repositório público no GitHub.
-2. Envie todos os arquivos desta pasta.
-3. Use `main` como a branch principal.
+O repositório deve conter as pastas `.github`, `scripts` e `src`. A branch
+principal deve se chamar `main`.
 
-### 2. Conectar ao Cloudflare Pages
+### 2. Conectar ao Vercel
 
-1. Entre no Cloudflare.
-2. Abra **Workers & Pages** e escolha **Create application**.
-3. Conecte o repositório do GitHub.
-4. Em comando de build, informe `pnpm build`.
-5. Em pasta de saída, informe `dist`.
-6. Adicione a variável `SITE_URL` com o endereço definitivo do site.
+1. No Vercel, clique em **Add New** e depois em **Project**.
+2. Importe o repositório do GitHub.
+3. Confirme o framework **Astro**.
+4. Clique em **Deploy**.
+5. Copie o endereço criado pelo Vercel.
+6. No Vercel e no GitHub, cadastre `SITE_URL` com esse endereço.
 
-Cada aprovação incorporada na branch `main` será publicada automaticamente.
+Cada alteração aprovada na branch `main` será publicada automaticamente.
 
-### 3. Habilitar o botão “Criar rascunho”
+### 3. Habilitar a inteligência artificial
 
 Esta etapa exige uma assinatura Claude Pro, Max, Team ou Enterprise.
 
-1. Instale o Claude Code no computador.
-2. Abra o PowerShell e execute `claude setup-token`.
-3. Entre na sua conta do Claude e copie o token exibido.
-4. No GitHub, abra **Settings → Secrets and variables → Actions**.
-5. Crie o secret `CLAUDE_CODE_OAUTH_TOKEN` e cole o token.
-6. Em **Settings → Actions → General**, escolha **Read and write permissions** e
-   marque **Allow GitHub Actions to create and approve pull requests**.
+1. Instale o Claude Code.
+2. Gere um token com `claude setup-token`.
+3. No GitHub, abra **Settings**, **Secrets and variables** e **Actions**.
+4. Crie o secret `CLAUDE_CODE_OAUTH_TOKEN` e cole o token.
+5. Em **Settings**, **Actions** e **General**, escolha **Read and write
+   permissions**.
+6. Marque **Allow GitHub Actions to create and approve pull requests**.
 
-O token é secreto. Nunca o escreva em um arquivo do projeto.
+O token é secreto e nunca deve ser enviado por mensagem ou salvo no projeto.
 
-### 4. Preços do Mercado Livre
+## Funcionamento semanal
 
-Cada preço deve apontar para um anúncio específico. Por isso, os preços começam
-vazios.
+Toda segunda-feira pela manhã:
 
-Quando os anúncios forem escolhidos:
+1. A IA procura dúvidas e oportunidades na internet.
+2. Confere se o assunto ainda não existe no site.
+3. Identifica o produto exato.
+4. Consulta fabricante e outras fontes técnicas.
+5. Localiza um anúncio candidato.
+6. Escreve e confere um único artigo.
+7. Abre uma solicitação no GitHub para sua aprovação.
 
-1. Informe o ID `MLB...` no campo `mercadoLivreId` do produto.
-2. Cadastre `ML_ACCESS_TOKEN` nos secrets do GitHub, se a API exigir.
-3. Execute **Actions → Atualizar dados → Run workflow**.
+Se já existir um artigo esperando sua decisão, a automação não cria outro.
 
-Produto sem preço continua no ar, mas exibe “preço ainda não coletado”.
+## Sua decisão
 
-## Operação normal
+Abra **Pull requests** no GitHub e escolha o artigo.
 
-### Pedir um artigo
+- **Merge pull request** aprova e publica.
+- **Close pull request** descarta.
+- Um comentário pode registrar o que precisa ser corrigido.
 
-1. Abra **Actions** no GitHub.
-2. Escolha **Criar rascunho**.
-3. Clique em **Run workflow**.
-4. Informe a pergunta e o ID do produto.
-5. Aguarde a criação de uma pull request.
-6. Leia o texto e confira as fontes.
-7. Se estiver correto, clique em **Merge pull request** e depois em
-   **Confirm merge**.
+Até a aprovação, o artigo permanece invisível.
 
-Até a aprovação, o artigo permanece invisível. Depois da confirmação, a
-automação troca o estado do texto e o Cloudflare publica a nova versão.
+## Links de afiliado
 
-### Parar tudo
+A IA encontra o anúncio candidato, mas não pode transformar um link comum em
+link de afiliado.
 
-Crie na raiz do repositório um arquivo vazio chamado `PAUSE`. As automações
-encerrarão antes de alterar dados.
+1. Abra o anúncio sugerido.
+2. Gere o link na Central ou na Barra de Afiliados.
+3. Envie o link autorizado para inclusão no produto.
 
-Apague o arquivo somente quando quiser retomá-las.
+O site marca links comerciais e informa a possibilidade de comissão.
+
+## Parar a automação
+
+Crie na raiz do repositório um arquivo chamado `PAUSE`. As automações encerrarão
+sem pesquisar ou alterar dados.
+
+Apague o arquivo quando quiser retomar.
 
 ## Regra de segurança
 
-O site não fornece orientação de instalação elétrica, dimensionamento de carga,
-chuveiros ou aparelhos de alta potência. Esses casos exigem fabricante e
-profissional habilitado.
+Uma afirmação sem fonte vira `Não verificado`. O site não produz orientação de
+instalação elétrica ou dimensionamento de carga.

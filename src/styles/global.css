@@ -751,6 +751,17 @@ h3 {
   font-size: 0.8rem;
 }
 
+.price-panel .shop-button {
+  display: inline-flex;
+  margin-top: 0.5rem;
+}
+
+.price-panel .affiliate-note {
+  margin-top: 0.8rem;
+  color: var(--nulo);
+  line-height: 1.45;
+}
+
 .product-detail-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
@@ -1007,6 +1018,28 @@ h3 {
   font-size: 0.68rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.faq-section {
+  margin-top: 3.5rem;
+}
+
+.faq-section dl {
+  margin: 0;
+  border-top: 1px solid var(--traco);
+}
+
+.faq-section dl div {
+  padding-block: 1.25rem;
+  border-bottom: 1px solid var(--traco);
+}
+
+.faq-section dt {
+  font-weight: 800;
+}
+
+.faq-section dd {
+  margin: 0.45rem 0 0;
 }
 
 .article-aside {

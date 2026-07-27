@@ -26,6 +26,30 @@ const posts = defineCollection({
         })
       )
       .min(1),
+    origem: z
+      .object({
+        pergunta_encontrada: z.string(),
+        motivo: z.string(),
+        fontes_demanda: z
+          .array(
+            z.object({
+              titulo: z.string(),
+              url: z.url()
+            })
+          )
+          .min(1)
+      })
+      .optional(),
+    perguntas_frequentes: z
+      .array(
+        z.object({
+          pergunta: z.string(),
+          resposta: z.string()
+        })
+      )
+      .min(2)
+      .max(5)
+      .optional(),
     rascunho: z.boolean().default(true)
   })
 });

@@ -22,6 +22,7 @@ interface Props {
 }
 
 const { produto } = Astro.props;
+const linkAfiliado = produto.afiliado?.url;
 
 const linhas: Array<{ rotulo: string; campo: CampoProduto }> = [
   { rotulo: "Conexão", campo: produto.campos.protocolo },
@@ -66,18 +67,37 @@ const productSchema =
         </p>
       </div>
       <div class="price-panel">
-        <span class="price-panel-label">Preço monitorado</span>
+        <span class="price-panel-label">
+          {linkAfiliado ? "Onde comprar" : "Preço monitorado"}
+        </span>
         {
-          produto.preco.valor !== null ? (
+          linkAfiliado ? (
+            <>
+              {produto.preco.valor !== null && (
+                <strong>{formatarPreco(produto.preco.valor, produto.preco.moeda)}</strong>
+              )}
+              <a
+                class="button button-primary shop-button"
+                href={linkAfiliado}
+                target="_blank"
+                rel="nofollow sponsored noopener"
+              >
+                Ver oferta na {produto.afiliado.loja}
+              </a>
+              <span class="affiliate-note">
+                Podemos receber comissão pela compra, sem alterar o seu preço.
+              </span>
+            </>
+          ) : produto.preco.valor !== null ? (
             <>
               <strong>{formatarPreco(produto.preco.valor, produto.preco.moeda)}</strong>
               <span>coletado em {formatarData(produto.preco.coletadoEm!)}</span>
-              {produto.preco.url && <a href={produto.preco.url}>Ver anúncio →</a>}
+              <span>O link de afiliado ainda não foi ativado.</span>
             </>
           ) : (
             <>
-              <strong class="price-empty">— —</strong>
-              <span>Aguardando a escolha de um anúncio exato.</span>
+              <strong class="price-empty">Aguardando oferta</strong>
+              <span>A IA pode sugerir anúncios, mas o link precisa ser autorizado.</span>
             </>
           )
         }

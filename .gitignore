@@ -6,4 +6,5 @@ dist/
 .DS_Store
 doc_review_render/
 qa/
+tmp/
 *.log

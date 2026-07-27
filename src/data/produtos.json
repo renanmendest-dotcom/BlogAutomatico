@@ -8,6 +8,11 @@
     "publicado": true,
     "verificadoEm": "2026-07-25",
     "mercadoLivreId": null,
+    "afiliado": {
+      "loja": "Mercado Livre",
+      "url": null,
+      "atualizadoEm": null
+    },
     "preco": {
       "valor": null,
       "moeda": "BRL",
@@ -65,6 +70,11 @@
     "publicado": true,
     "verificadoEm": "2026-07-25",
     "mercadoLivreId": null,
+    "afiliado": {
+      "loja": "Mercado Livre",
+      "url": null,
+      "atualizadoEm": null
+    },
     "preco": {
       "valor": null,
       "moeda": "BRL",
@@ -134,6 +144,11 @@
     "publicado": true,
     "verificadoEm": "2026-07-25",
     "mercadoLivreId": null,
+    "afiliado": {
+      "loja": "Mercado Livre",
+      "url": null,
+      "atualizadoEm": null
+    },
     "preco": {
       "valor": null,
       "moeda": "BRL",

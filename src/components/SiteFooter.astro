@@ -3,20 +3,27 @@ const ano = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
-  <div class="shell footer-grid">
+  <div class="shell footer-main">
     <div>
-      <p class="footer-brand">Combina Casa</p>
-      <p class="footer-copy">
-        Compatibilidade explicada com fonte, data e lacunas visíveis.
+      <a class="footer-brand" href="/">Curva Viva</a>
+      <p>
+        Escolhas mais claras para cabelos ondulados, cacheados e crespos.
       </p>
     </div>
-    <div>
-      <p class="footer-label">Transparência</p>
-      <a href="/como-verificamos/">Como verificamos</a>
-      <a href="/sobre/">Sobre o projeto</a>
-    </div>
-    <p class="footer-legal">
-      © {ano}. Preços podem mudar. Confirme modelo, versão e especificações antes da compra.
+
+    <nav aria-label="Navegação do rodapé">
+      <a href="/artigos/">Guias</a>
+      <a href="/produtos/">Produtos</a>
+      <a href="/como-verificamos/">Nosso método</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+  </div>
+
+  <div class="shell footer-bottom">
+    <p>© {ano} Curva Viva.</p>
+    <p>
+      Recebemos comissão pelas compras qualificadas. Isso não altera o preço
+      para você.
     </p>
   </div>
 </footer>

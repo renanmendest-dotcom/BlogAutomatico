@@ -1,55 +1,53 @@
 ---
 import type { ProdutoPublicado } from "../lib/produtos";
-import { formatarData, formatarPreco } from "../lib/produtos";
-import StatusChip from "./StatusChip.astro";
+import {
+  resumoCurvaturas,
+  rotuloCategoria
+} from "../lib/produtos";
 
 interface Props {
   produto: ProdutoPublicado;
+  compacto?: boolean;
 }
 
-const { produto } = Astro.props;
+const { produto, compacto = false } = Astro.props;
+const initials = produto.marca
+  .split(/\s+/)
+  .map((parte) => parte[0])
+  .join("")
+  .slice(0, 2);
 ---
 
-<article class="product-card">
-  <div class="product-card-topline">
-    <span>{produto.marca}</span>
-    <span>verificado {formatarData(produto.verificadoEm)}</span>
-  </div>
-  <div class="product-card-body">
-    <p class="product-code">{produto.id}</p>
-    <h3><a href={`/produtos/${produto.id}/`}>{produto.nome}</a></h3>
-    <p>{produto.descricao}</p>
+<article class:list={["product-card", { "is-compact": compacto }]}>
+  <a class="product-card-visual" href={`/produtos/${produto.id}/`} aria-hidden="true" tabindex="-1">
+    <span class="product-monogram">{initials}</span>
+    <span class="product-shape"></span>
+    <span class="product-kind">{rotuloCategoria(produto.categoria)}</span>
+  </a>
 
-    <div class="chip-row" aria-label="Compatibilidade resumida">
-      <StatusChip
-        label="Alexa"
-        estado={produto.campos.alexa.estado}
-        compacto
-      />
-      <StatusChip
-        label="Google"
-        estado={produto.campos.googleHome.estado}
-        compacto
-      />
-      <StatusChip
-        label="Matter"
-        estado={produto.campos.matter.estado}
-        compacto
-      />
+  <div class="product-card-content">
+    <p class="product-brand">{produto.marca}</p>
+    <h3><a href={`/produtos/${produto.id}/`}>{produto.nome}</a></h3>
+    <p class="product-summary">{produto.descricao}</p>
+
+    <dl class="product-card-facts">
+      <div>
+        <dt>Para quem</dt>
+        <dd>{resumoCurvaturas(produto.perfil.curvaturas)}</dd>
+      </div>
+      <div>
+        <dt>Textura</dt>
+        <dd>{produto.perfil.textura}</dd>
+      </div>
+    </dl>
+
+    <div class="product-card-footer">
+      <span class="evidence-pill">
+        {produto.analise.testado ? "Teste real" : "Análise documental"}
+      </span>
+      <a class="arrow-link" href={`/produtos/${produto.id}/`}>
+        Ver ficha <span aria-hidden="true">↗</span>
+      </a>
     </div>
-  </div>
-  <div class="product-card-footer">
-    {
-      produto.preco.valor !== null ? (
-        <span class="price">
-          {formatarPreco(produto.preco.valor, produto.preco.moeda)}
-        </span>
-      ) : (
-        <span class="price-pending">preço ainda não coletado</span>
-      )
-    }
-    <a class="text-link" href={`/produtos/${produto.id}/`}>
-      Ver ficha <span aria-hidden="true">→</span>
-    </a>
   </div>
 </article>

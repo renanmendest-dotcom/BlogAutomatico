@@ -12,10 +12,20 @@ const posts = defineCollection({
     pergunta_principal: z.string(),
     resposta_curta: z.string().min(80),
     descricao: z.string(),
+    autor: z.string().default("Curadoria Curva Viva"),
+    tipo_analise: z.enum(["documental", "teste_real"]).default("documental"),
     publicado_em: z.coerce.date(),
     atualizado_em: z.coerce.date(),
     verificado_em: z.coerce.date(),
-    categoria: z.enum(["iluminacao", "tomadas", "assistentes", "sensores", "hubs"]),
+    categoria: z.enum([
+      "curvatura",
+      "porosidade",
+      "finalizacao",
+      "lavagem",
+      "tratamento",
+      "couro_cabeludo",
+      "produtos"
+    ]),
     produtos: z.array(z.string()).min(1),
     fontes: z
       .array(
@@ -37,19 +47,18 @@ const posts = defineCollection({
               url: z.url()
             })
           )
-          .min(1)
+          .min(2)
       })
       .optional(),
     perguntas_frequentes: z
       .array(
         z.object({
           pergunta: z.string(),
-          resposta: z.string()
+          resposta: z.string().min(50)
         })
       )
       .min(2)
-      .max(5)
-      .optional(),
+      .max(5),
     rascunho: z.boolean().default(true)
   })
 });

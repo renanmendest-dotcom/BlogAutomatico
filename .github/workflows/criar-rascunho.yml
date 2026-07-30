@@ -87,7 +87,7 @@ jobs:
             Leia primeiro e siga integralmente:
             .github/INSTRUCOES-IA.md
 
-            Você executará o ciclo editorial automático do Combina Casa.
+            Você executará o ciclo editorial automático da Curva Viva.
 
             O tema opcional informado pelo proprietário é:
             "${{ env.FOCO }}"
@@ -96,15 +96,17 @@ jobs:
 
             Tarefas:
             1. Leia os artigos e produtos existentes para evitar duplicidade.
-            2. Faça pesquisas na web sobre dúvidas reais de brasileiros
-               relacionadas a casa inteligente.
+            2. Faça pesquisas na web sobre dúvidas reais de brasileiros com
+               cabelos ondulados, cacheados, crespos ou em transição.
             3. Use pelo menos duas fontes públicas como sinais de demanda.
-            4. Escolha uma dúvida específica com utilidade e intenção de compra.
-            5. Identifique o produto exato mencionado.
+            4. Escolha uma dúvida específica sobre curvatura, porosidade,
+               finalização, lavagem, tratamento ou escolha de produto.
+            5. Dê preferência a uma pergunta com intenção de compra e
+               identifique o produto exato mencionado.
             6. Consulte pelo menos uma fonte oficial do fabricante.
-            7. Procure um anúncio correspondente no Mercado Livre ou em outra
-               loja que possa trabalhar com afiliados.
-            8. Crie uma ficha segura se o produto ainda não existir.
+            7. Procure um anúncio correspondente na Amazon, Shopee, Mercado
+               Livre ou em outra loja que trabalhe com afiliados.
+            8. Crie uma ficha documental segura se o produto ainda não existir.
             9. Crie exatamente um artigo novo e mantenha rascunho: true.
             10. Crie tmp/resumo-aprovacao.md para o proprietário.
 
@@ -135,11 +137,11 @@ jobs:
         run: |
           BRANCH="rascunho/${GITHUB_RUN_ID}"
           TITULO="$(cat tmp/titulo-pr.txt)"
-          git config user.name "combina-casa[bot]"
-          git config user.email "combina-casa[bot]@users.noreply.github.com"
+          git config user.name "curva-viva[bot]"
+          git config user.email "curva-viva[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
           git add src/data/produtos.json src/data/posts
-          git commit -m "rascunho: oportunidade encontrada pela pesquisa"
+          git commit -m "rascunho: nova dúvida de compra encontrada"
           git push --set-upstream origin "$BRANCH"
           gh pr create \
             --base main \

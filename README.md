@@ -1,23 +1,29 @@
-# Combina Casa
+# Curva Viva
 
-Site brasileiro de compatibilidade para casa inteligente. A automação pesquisa
-dúvidas, prepara um artigo com fontes e envia o rascunho para aprovação humana.
+Site brasileiro para ajudar pessoas com cabelos ondulados, cacheados e crespos
+a escolher produtos com mais segurança.
 
-## Para quem não programa
+## Como o projeto funciona
 
-Abra o arquivo [SETUP.md](SETUP.md). Ele explica os poucos passos manuais e o
-significado de cada botão.
+1. A IA procura dúvidas reais que as pessoas fazem na internet.
+2. Ela escolhe uma pergunta útil e com intenção de compra.
+3. Confere as informações no site oficial da marca.
+4. Prepara um artigo e indica produtos que podem ter link de afiliado.
+5. Abre uma solicitação no GitHub para o proprietário revisar.
+6. O artigo só é publicado depois da aprovação humana.
 
-O arquivo [PLANO-DIARIO.md](PLANO-DIARIO.md) divide a ativação e a rotina em uma
-hora por dia útil.
+A IA não inventa testes, fotos, resultados de uso ou experiências pessoais.
 
-## Comandos de desenvolvimento
+## Endereço atual
 
-```bash
-pnpm install
-pnpm dev
-pnpm check
-pnpm build
-```
+[blog-automatico-sigma.vercel.app](https://blog-automatico-sigma.vercel.app)
 
-O build sempre executa a validação do conteúdo antes de gerar o site.
+## Comandos usados pelo projeto
+
+Estes comandos são executados automaticamente pelo GitHub e pela Vercel:
+
+- `pnpm validar`: confere o conteúdo e as fontes.
+- `pnpm check`: procura erros no site.
+- `pnpm build`: prepara a versão que será publicada.
+
+O guia sem termos técnicos está em [SETUP.md](./SETUP.md).

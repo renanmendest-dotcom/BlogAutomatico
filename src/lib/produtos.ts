@@ -1,22 +1,16 @@
 import produtosJson from "../data/produtos.json";
 
-export type EstadoCampo =
-  | "compativel"
-  | "incompativel"
-  | "nao_verificado"
-  | "confirmado";
-
-export type CampoProduto = {
-  valor: string;
-  estado: EstadoCampo;
-  fonteId: string | null;
-};
-
 export type FonteProduto = {
   id: string;
   titulo: string;
   url: string;
   acessadoEm: string;
+};
+
+export type DestaqueProduto = {
+  rotulo: string;
+  valor: string;
+  fonteId: string | null;
 };
 
 export type ProdutoPublicado = {
@@ -27,26 +21,22 @@ export type ProdutoPublicado = {
   categoria: string;
   publicado: true;
   verificadoEm: string;
-  mercadoLivreId: string | null;
-  afiliado: {
+  perfil: {
+    curvaturas: string[];
+    textura: string;
+    intensidade: string;
+    objetivos: string[];
+  };
+  destaques: DestaqueProduto[];
+  oferta: {
     loja: string;
     url: string | null;
     atualizadoEm: string | null;
   };
-  preco: {
-    valor: number | null;
-    moeda: string;
-    coletadoEm: string | null;
-    url: string | null;
-    status: string;
-  };
-  campos: {
-    protocolo: CampoProduto;
-    hub: CampoProduto;
-    alexa: CampoProduto;
-    googleHome: CampoProduto;
-    matter: CampoProduto;
-    voltagem: CampoProduto;
+  analise: {
+    tipo: "documental" | "teste_real";
+    testado: boolean;
+    nota: string;
   };
   fontes: FonteProduto[];
 };
@@ -82,24 +72,27 @@ export function formatarData(data: string | Date) {
     month: "long",
     year: "numeric",
     timeZone: "UTC"
-  }).format(typeof data === "string" ? new Date(`${data}T12:00:00`) : data);
-}
-
-export function formatarPreco(valor: number, moeda = "BRL") {
-  return new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: moeda
-  }).format(valor);
+  }).format(typeof data === "string" ? new Date(`${data}T12:00:00Z`) : data);
 }
 
 export function rotuloCategoria(categoria: string) {
   const rotulos: Record<string, string> = {
-    iluminacao: "Iluminação",
-    tomadas: "Tomadas",
-    assistentes: "Assistentes",
-    sensores: "Sensores",
-    hubs: "Hubs"
+    curvatura: "Curvatura",
+    porosidade: "Porosidade",
+    finalizacao: "Finalização",
+    lavagem: "Lavagem",
+    tratamento: "Tratamento",
+    couro_cabeludo: "Couro cabeludo",
+    produtos: "Produtos",
+    creme_para_pentear: "Creme para pentear",
+    gelatina: "Gelatina",
+    mascara: "Máscara"
   };
 
   return rotulos[categoria] ?? categoria;
+}
+
+export function resumoCurvaturas(curvaturas: string[]) {
+  if (curvaturas.length > 6) return "Ondulados, cacheados e crespos";
+  return curvaturas.join(", ");
 }

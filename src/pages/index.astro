@@ -14,93 +14,165 @@ const posts = (await getCollection("posts"))
     (a, b) =>
       b.data.atualizado_em.getTime() - a.data.atualizado_em.getTime()
   );
+
+const caminhos = [
+  {
+    numero: "2",
+    titulo: "Meu cabelo é ondulado",
+    texto: "Quero definição leve, movimento e menos produto acumulado.",
+    href: "/artigos/creme-de-pentear-ou-gelatina-qual-escolher-2026/"
+  },
+  {
+    numero: "3",
+    titulo: "Meu cabelo é cacheado",
+    texto: "Quero equilibrar definição, maciez e duração no day after.",
+    href: "/produtos/"
+  },
+  {
+    numero: "4",
+    titulo: "Meu cabelo é crespo",
+    texto: "Quero retenção de umidade, cuidado e finalização sem receita pronta.",
+    href: "/produtos/"
+  },
+  {
+    numero: "?",
+    titulo: "Ainda não sei",
+    texto: "Quero entender meu fio antes de comprar mais um produto.",
+    href: "/como-verificamos/#entenda-seu-fio"
+  }
+];
 ---
 
 <BaseLayout>
   <section class="hero">
     <div class="shell hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span> base em construção, dados abertos</p>
-        <h1>Antes de comprar,<br /><em>confira se combina.</em></h1>
+        <p class="eyebrow">Seu fio vem primeiro</p>
+        <h1>
+          Menos produto<br />
+          encostado.<br />
+          <em>Mais acerto.</em>
+        </h1>
         <p class="hero-lead">
-          Compatibilidade de casa inteligente sem palpite. Cada resposta mostra
-          a fonte, a data e também o que ainda não foi possível confirmar.
+          A Curva Viva organiza rótulos, indicações e fontes para ajudar você a
+          escolher melhor para o seu cabelo ondulado, cacheado ou crespo.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" href="/produtos/">Consultar produtos</a>
-          <a class="button button-secondary" href="/como-verificamos/">Entender os dados</a>
+          <a class="button button-primary" href="#meu-cabelo">
+            Começar pelo meu cabelo
+          </a>
+          <a class="text-link" href="/como-verificamos/">
+            Como escolhemos <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
 
-      <aside class="instrument-panel" aria-label="Estado da base">
-        <div class="instrument-header">
-          <span>STATUS DA BASE</span>
-          <span>BR / 01</span>
+      <aside class="curve-card" aria-label="Mapa de curvaturas">
+        <div class="curve-orbit" aria-hidden="true">
+          <span class="orbit-one"></span>
+          <span class="orbit-two"></span>
+          <span class="orbit-three"></span>
         </div>
-        <div class="instrument-display">
-          <span class="instrument-number">{produtosPublicados.length}</span>
-          <span class="instrument-unit">fichas públicas</span>
+        <p class="curve-card-kicker">Um ponto de partida, não uma regra</p>
+        <div class="curve-numbers" aria-hidden="true">
+          <span>2</span><span>3</span><span>4</span>
         </div>
-        <dl class="instrument-list">
-          <div>
-            <dt>Artigos verificados</dt>
-            <dd>{posts.length.toString().padStart(2, "0")}</dd>
-          </div>
-          <div>
-            <dt>Na fila de pesquisa</dt>
-            <dd>{produtosNaFila.length.toString().padStart(2, "0")}</dd>
-          </div>
-          <div>
-            <dt>Palpites permitidos</dt>
-            <dd>00</dd>
-          </div>
-        </dl>
-        <p class="instrument-note">
-          Um campo sem confirmação aparece como “não verificado”.
+        <p>
+          Curvatura ajuda, mas porosidade, quantidade e textura do produto
+          também mudam o resultado.
         </p>
       </aside>
+    </div>
+  </section>
+
+  <section class="section shell" id="meu-cabelo">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Encontre seu caminho</p>
+        <h2>Por onde você quer começar?</h2>
+      </div>
+      <p class="section-intro">
+        Escolha a frase que mais se aproxima do seu momento. Você pode mudar de
+        caminho quando quiser.
+      </p>
+    </div>
+
+    <div class="path-grid">
+      {
+        caminhos.map((caminho) => (
+          <a class="path-card" href={caminho.href}>
+            <span class="path-number">{caminho.numero}</span>
+            <div>
+              <h3>{caminho.titulo}</h3>
+              <p>{caminho.texto}</p>
+            </div>
+            <span class="path-arrow" aria-hidden="true">↗</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Respostas antes da compra</p>
+          <h2>Guias diretos, sem receita pronta.</h2>
+        </div>
+        <a class="text-link" href="/artigos/">
+          Ver todos os guias <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="article-layout-home">
+        {
+          posts.map((post, index) => (
+            <ArticleCard post={post} destaque={index === 0} />
+          ))
+        }
+      </div>
     </div>
   </section>
 
   <section class="section shell">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Fichas técnicas</p>
-        <h2>Compatibilidade, sem letras miúdas.</h2>
+        <p class="eyebrow">Fichas claras</p>
+        <h2>O que a marca informa e o que ainda falta testar.</h2>
       </div>
-      <a class="text-link" href="/produtos/">Ver todos os produtos →</a>
-    </div>
-    <div class="product-grid">
-      {produtosPublicados.map((produto) => <ProductCard produto={produto} />)}
-    </div>
-  </section>
-
-  <section class="section section-ink">
-    <div class="shell">
-      <div class="section-heading section-heading-light">
-        <div>
-          <p class="eyebrow">Respostas diretas</p>
-          <h2>Guias feitos a partir dos dados.</h2>
-        </div>
-        <a class="text-link text-link-light" href="/artigos/">Ver todos os guias →</a>
-      </div>
-      <div class="article-grid">
-        {posts.slice(0, 3).map((post) => <ArticleCard post={post} />)}
-      </div>
-    </div>
-  </section>
-
-  <section class="section shell">
-    <div class="manifesto">
-      <p class="eyebrow">Nossa regra</p>
-      <blockquote>
-        “Não verificado” é uma resposta melhor do que uma compatibilidade inventada.
-      </blockquote>
-      <p>
-        Fabricante, manual e página oficial têm prioridade. Anúncio de marketplace
-        ajuda a acompanhar preço, mas não substitui a fonte técnica.
+      <p class="section-intro">
+        Começamos com {produtosPublicados.length} produtos e outros {
+          produtosNaFila.length
+        } já estão na fila de pesquisa.
       </p>
-      <a class="button button-primary" href="/como-verificamos/">Como a ficha é montada</a>
+    </div>
+
+    <div class="product-grid">
+      {
+        produtosPublicados.map((produto) => (
+          <ProductCard produto={produto} />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section manifesto-section">
+    <div class="shell manifesto-grid">
+      <p class="eyebrow">A regra da Curva Viva</p>
+      <blockquote>
+        Se não testamos, não dizemos que testamos. Se a fonte não confirma,
+        a ficha mostra a dúvida.
+      </blockquote>
+      <div class="manifesto-copy">
+        <p>
+          A inteligência artificial pesquisa perguntas, reúne fontes e prepara
+          o rascunho. A publicação só acontece depois de revisão humana.
+        </p>
+        <a class="button button-light" href="/como-verificamos/">
+          Conhecer o método
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>

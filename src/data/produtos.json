@@ -1,256 +1,223 @@
 [
   {
-    "id": "tapo-l530e",
-    "nome": "Tapo L530E",
-    "descricao": "Lâmpada inteligente Wi-Fi multicolorida de 8,7 W e 806 lúmens.",
-    "marca": "TP-Link",
-    "categoria": "iluminacao",
+    "id": "salon-line-gelatina-definicao-duradoura-550g",
+    "nome": "Gelatina Definição Duradoura 550 g",
+    "descricao": "Gelatina de finalização que a Salon Line apresenta para curvaturas de 2A a 4C, com foco em fixação, definição e controle de frizz.",
+    "marca": "Salon Line",
+    "categoria": "gelatina",
     "publicado": true,
-    "verificadoEm": "2026-07-25",
-    "mercadoLivreId": null,
-    "afiliado": {
-      "loja": "Mercado Livre",
+    "verificadoEm": "2026-07-30",
+    "perfil": {
+      "curvaturas": ["2A", "2B", "2C", "3A", "3B", "3C", "4A", "4B", "4C"],
+      "textura": "Gelatina",
+      "intensidade": "Fixação alta, segundo a marca",
+      "objetivos": ["Definição", "Controle de frizz", "Day after"]
+    },
+    "destaques": [
+      {
+        "rotulo": "Indicação da marca",
+        "valor": "Ondulados, cacheados e crespos",
+        "fonteId": "salon-line-definicao-duradoura"
+      },
+      {
+        "rotulo": "Curvaturas informadas",
+        "valor": "2A a 4C",
+        "fonteId": "salon-line-definicao-duradoura"
+      },
+      {
+        "rotulo": "Promessa apresentada",
+        "valor": "Fixação e definição por até 72 horas",
+        "fonteId": "salon-line-definicao-duradoura"
+      },
+      {
+        "rotulo": "Proteção UV",
+        "valor": "Informada pela marca",
+        "fonteId": "salon-line-definicao-duradoura"
+      }
+    ],
+    "oferta": {
+      "loja": "Amazon",
       "url": null,
       "atualizadoEm": null
     },
-    "preco": {
-      "valor": null,
-      "moeda": "BRL",
-      "coletadoEm": null,
-      "url": null,
-      "status": "aguardando_item"
-    },
-    "campos": {
-      "protocolo": {
-        "valor": "Wi-Fi",
-        "estado": "confirmado",
-        "fonteId": "tp-link-l530e"
-      },
-      "hub": {
-        "valor": "Não precisa",
-        "estado": "confirmado",
-        "fonteId": "tp-link-l530e"
-      },
-      "alexa": {
-        "valor": "Compatível",
-        "estado": "compativel",
-        "fonteId": "tp-link-l530e"
-      },
-      "googleHome": {
-        "valor": "Compatível",
-        "estado": "compativel",
-        "fonteId": "tp-link-l530e"
-      },
-      "matter": {
-        "valor": "Não verificado",
-        "estado": "nao_verificado",
-        "fonteId": null
-      },
-      "voltagem": {
-        "valor": "Confirmar na embalagem da versão vendida no Brasil",
-        "estado": "nao_verificado",
-        "fonteId": null
-      }
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A ficha organiza informações publicadas pela marca. A duração e o resultado ainda não foram testados pela Curva Viva."
     },
     "fontes": [
       {
-        "id": "tp-link-l530e",
-        "titulo": "Página oficial Tapo L530E — TP-Link Brasil",
-        "url": "https://www.tp-link.com/br/home-networking/smart-bulb/tapo-l530e/",
-        "acessadoEm": "2026-07-25"
+        "id": "salon-line-definicao-duradoura",
+        "titulo": "Gelatina #todecacho Definição Duradoura",
+        "url": "https://universo.salonline.com.br/lp-teste-to-de-cacho/",
+        "acessadoEm": "2026-07-30"
       }
     ]
   },
   {
-    "id": "intelbras-ews-410",
-    "nome": "Intelbras EWS 410",
-    "descricao": "Lâmpada LED smart Wi-Fi colorida de 10 W.",
-    "marca": "Intelbras",
-    "categoria": "iluminacao",
+    "id": "lola-meu-cacho-minha-vida-creme-pentear-500g",
+    "nome": "Meu Cacho Minha Vida Creme de Pentear 500 g",
+    "descricao": "Creme finalizador da Lola com proposta de desembaraço, emoliência, definição e cuidado para fios cacheados.",
+    "marca": "Lola Cosmetics",
+    "categoria": "creme_para_pentear",
     "publicado": true,
-    "verificadoEm": "2026-07-25",
-    "mercadoLivreId": null,
-    "afiliado": {
-      "loja": "Mercado Livre",
+    "verificadoEm": "2026-07-30",
+    "perfil": {
+      "curvaturas": ["Cacheados, sem numeração informada"],
+      "textura": "Creme",
+      "intensidade": "Finalização suave, segundo a marca",
+      "objetivos": ["Desembaraço", "Definição", "Maciez"]
+    },
+    "destaques": [
+      {
+        "rotulo": "Indicação publicada",
+        "valor": "Fios cacheados, sem faixa de curvatura específica",
+        "fonteId": "lola-meu-cacho-minha-vida"
+      },
+      {
+        "rotulo": "Tamanho",
+        "valor": "500 g",
+        "fonteId": "lola-meu-cacho-minha-vida"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Óleos, manteigas vegetais, glicerina e extrato de mamão",
+        "fonteId": "lola-meu-cacho-minha-vida"
+      },
+      {
+        "rotulo": "Modo de uso",
+        "valor": "Aplicação nos fios limpos, úmidos e condicionados",
+        "fonteId": "lola-meu-cacho-minha-vida"
+      }
+    ],
+    "oferta": {
+      "loja": "Amazon",
       "url": null,
       "atualizadoEm": null
     },
-    "preco": {
-      "valor": null,
-      "moeda": "BRL",
-      "coletadoEm": null,
-      "url": null,
-      "status": "aguardando_item"
-    },
-    "campos": {
-      "protocolo": {
-        "valor": "Wi-Fi",
-        "estado": "confirmado",
-        "fonteId": "intelbras-ews410-produto"
-      },
-      "hub": {
-        "valor": "Não verificado",
-        "estado": "nao_verificado",
-        "fonteId": null
-      },
-      "alexa": {
-        "valor": "Compatível",
-        "estado": "compativel",
-        "fonteId": "intelbras-ews410-datasheet"
-      },
-      "googleHome": {
-        "valor": "Compatível",
-        "estado": "compativel",
-        "fonteId": "intelbras-ews410-datasheet"
-      },
-      "matter": {
-        "valor": "Não verificado",
-        "estado": "nao_verificado",
-        "fonteId": null
-      },
-      "voltagem": {
-        "valor": "Bivolt (127 V e 220 V)",
-        "estado": "confirmado",
-        "fonteId": "intelbras-ews410-ajuda"
-      }
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "Ainda não medimos peso, rendimento ou duração no cabelo. A ficha separa o que a marca informa do que depende de teste real."
     },
     "fontes": [
       {
-        "id": "intelbras-ews410-produto",
-        "titulo": "Página oficial EWS 410 — Intelbras",
-        "url": "https://www.intelbras.com/pt-br/lampada-led-smart-wi-fi-ews-410-elw-1001",
-        "acessadoEm": "2026-07-25"
-      },
-      {
-        "id": "intelbras-ews410-ajuda",
-        "titulo": "Ajuda e especificações EWS 410 — Intelbras",
-        "url": "https://www.intelbras.com/pt-br/ajuda-download/videos/lampada-led-smart-wi-fi-ews-410-elw-1001",
-        "acessadoEm": "2026-07-25"
-      },
-      {
-        "id": "intelbras-ews410-datasheet",
-        "titulo": "Datasheet oficial EWS 410 — Intelbras",
-        "url": "https://backend.intelbras.com/sites/default/files/2023-07/EWS%20410%20-%20Datasheet%20v2_0.pdf",
-        "acessadoEm": "2026-07-25"
+        "id": "lola-meu-cacho-minha-vida",
+        "titulo": "Meu Cacho Minha Vida Creme de Pentear 500 g",
+        "url": "https://www.lolacosmetics.com.br/meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409",
+        "acessadoEm": "2026-07-30"
       }
     ]
   },
   {
-    "id": "intelbras-ews-305",
-    "nome": "Intelbras EWS 305",
-    "descricao": "Protetor eletrônico smart Wi-Fi com cinco tomadas controladas em conjunto.",
-    "marca": "Intelbras",
-    "categoria": "tomadas",
+    "id": "skala-mais-cachos-3-em-1-250g",
+    "nome": "Skala #Mais Cachos 3 em 1 250 g",
+    "descricao": "Produto multifuncional que a Skala direciona a cabelos cacheados, crespos, crespíssimos e em transição.",
+    "marca": "Skala",
+    "categoria": "creme_para_pentear",
     "publicado": true,
-    "verificadoEm": "2026-07-25",
-    "mercadoLivreId": null,
-    "afiliado": {
-      "loja": "Mercado Livre",
+    "verificadoEm": "2026-07-30",
+    "perfil": {
+      "curvaturas": ["Cacheados", "Crespos", "Crespíssimos", "Em transição"],
+      "textura": "Creme 3 em 1",
+      "intensidade": "Não informada",
+      "objetivos": ["Hidratação", "Desembaraço", "Força"]
+    },
+    "destaques": [
+      {
+        "rotulo": "Indicação da marca",
+        "valor": "Cacheados, crespos, crespíssimos e em transição",
+        "fonteId": "skala-mais-cachos"
+      },
+      {
+        "rotulo": "Tamanho",
+        "valor": "250 g",
+        "fonteId": "skala-mais-cachos"
+      },
+      {
+        "rotulo": "Uso informado",
+        "valor": "Creme 3 em 1, com opções de uso com e sem enxágue",
+        "fonteId": "skala-mais-cachos"
+      },
+      {
+        "rotulo": "Co-wash",
+        "valor": "A marca apresenta o produto como liberado",
+        "fonteId": "skala-mais-cachos"
+      }
+    ],
+    "oferta": {
+      "loja": "Amazon",
       "url": null,
       "atualizadoEm": null
     },
-    "preco": {
-      "valor": null,
-      "moeda": "BRL",
-      "coletadoEm": null,
-      "url": null,
-      "status": "aguardando_item"
-    },
-    "campos": {
-      "protocolo": {
-        "valor": "Wi-Fi",
-        "estado": "confirmado",
-        "fonteId": "intelbras-ews305"
-      },
-      "hub": {
-        "valor": "Não verificado",
-        "estado": "nao_verificado",
-        "fonteId": null
-      },
-      "alexa": {
-        "valor": "Compatível",
-        "estado": "compativel",
-        "fonteId": "intelbras-ews305"
-      },
-      "googleHome": {
-        "valor": "Compatível",
-        "estado": "compativel",
-        "fonteId": "intelbras-ews305"
-      },
-      "matter": {
-        "valor": "Não verificado",
-        "estado": "nao_verificado",
-        "fonteId": null
-      },
-      "voltagem": {
-        "valor": "Não verificado",
-        "estado": "nao_verificado",
-        "fonteId": null
-      }
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A página oficial não inclui cabelos ondulados na indicação. Ainda não fizemos teste para avaliar peso ou resultado nesse tipo de fio."
     },
     "fontes": [
       {
-        "id": "intelbras-ews305",
-        "titulo": "Página oficial EWS 305 — Intelbras",
-        "url": "https://www.intelbras.com/pt-br/protetor-eletronico-smart-wi-fi-ews-305",
-        "acessadoEm": "2026-07-25"
+        "id": "skala-mais-cachos",
+        "titulo": "Creme para Pentear #Mais Cachos",
+        "url": "https://www.skala.com.br/produto/-mais-cachos-740",
+        "acessadoEm": "2026-07-30"
       }
     ]
   },
   {
-    "id": "tapo-p100",
-    "nome": "Tapo P100",
-    "marca": "TP-Link",
-    "categoria": "tomadas",
+    "id": "widi-care-juba-creme-pentear",
+    "nome": "Juba Creme de Pentear",
+    "marca": "Widi Care",
+    "categoria": "creme_para_pentear",
     "publicado": false,
-    "status": "fila_de_verificacao"
+    "status": "Aguardando conferência da fórmula e da página oficial atual"
   },
   {
-    "id": "positivo-lampada-wifi",
-    "nome": "Lâmpada Smart Wi-Fi Positivo",
-    "marca": "Positivo Casa Inteligente",
-    "categoria": "iluminacao",
+    "id": "soul-power-curly-on-cream",
+    "nome": "Curly On Cream",
+    "marca": "Soul Power",
+    "categoria": "creme_para_pentear",
     "publicado": false,
-    "status": "fila_de_verificacao"
+    "status": "Aguardando conferência da indicação e da textura"
   },
   {
-    "id": "positivo-tomada-wifi",
-    "nome": "Tomada Smart Wi-Fi Positivo",
-    "marca": "Positivo Casa Inteligente",
-    "categoria": "tomadas",
+    "id": "apse-cachos-creme-pentear",
+    "nome": "Creme de Pentear Cachos",
+    "marca": "Apse",
+    "categoria": "creme_para_pentear",
     "publicado": false,
-    "status": "fila_de_verificacao"
+    "status": "Aguardando conferência da ficha oficial"
   },
   {
-    "id": "intelbras-ews-301",
-    "nome": "Intelbras EWS 301",
-    "marca": "Intelbras",
-    "categoria": "tomadas",
+    "id": "novex-meus-cachos-creme-pentear",
+    "nome": "Meus Cachos Creme de Pentear",
+    "marca": "Novex",
+    "categoria": "creme_para_pentear",
     "publicado": false,
-    "status": "fila_de_verificacao"
+    "status": "Aguardando identificação da versão exata"
   },
   {
-    "id": "sonoff-basic-r4",
-    "nome": "Sonoff BASICR4",
-    "marca": "Sonoff",
-    "categoria": "tomadas",
+    "id": "seda-boom-definicao",
+    "nome": "Seda Boom Definição",
+    "marca": "Seda",
+    "categoria": "creme_para_pentear",
     "publicado": false,
-    "status": "fila_de_verificacao"
+    "status": "Aguardando identificação da versão exata"
   },
   {
-    "id": "geonav-lampada-hi",
-    "nome": "Lâmpada inteligente Geonav",
-    "marca": "Geonav",
-    "categoria": "iluminacao",
+    "id": "inoar-meu-cacho-meu-crush",
+    "nome": "Meu Cacho, Meu Crush",
+    "marca": "Inoar",
+    "categoria": "creme_para_pentear",
     "publicado": false,
-    "status": "fila_de_verificacao"
+    "status": "Aguardando conferência da indicação oficial"
   },
   {
-    "id": "philips-hue-white",
-    "nome": "Philips Hue White",
-    "marca": "Philips Hue",
-    "categoria": "iluminacao",
+    "id": "arvensis-cachos-naturais-ativador",
+    "nome": "Ativador de Cachos Naturais",
+    "marca": "Arvensis",
+    "categoria": "creme_para_pentear",
     "publicado": false,
-    "status": "fila_de_verificacao"
+    "status": "Aguardando conferência da ficha oficial"
   }
 ]

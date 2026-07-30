@@ -28,7 +28,7 @@ const pergunta = argumento("pergunta") || process.env.PERGUNTA;
 
 if (!produtoId || !pergunta) {
   console.error(
-    'Uso: npm run novo-rascunho -- --produto "tapo-l530e" --pergunta "Minha pergunta?"'
+    'Uso: pnpm novo-rascunho -- --produto "id-do-produto" --pergunta "Minha pergunta?"'
   );
   process.exit(1);
 }
@@ -69,54 +69,62 @@ const fontesYaml = produto.fontes
   )
   .join("\n");
 
-const linhasTabela = Object.entries(produto.campos)
-  .map(
-    ([campo, valor]) =>
-      `| ${campo} | ${valor.valor} | ${valor.estado.replaceAll("_", " ")} |`
-  )
+const linhasTabela = produto.destaques
+  .map((item) => `| ${item.rotulo} | ${item.valor} |`)
   .join("\n");
 
 const conteudo = `---
 titulo: ${yamlSeguro(pergunta)}
 pergunta_principal: ${yamlSeguro(pergunta)}
 resposta_curta: ${yamlSeguro(
-    `Rascunho aguardando revisão. Os dados disponíveis para ${produto.nome} devem ser explicados somente a partir das fontes oficiais registradas nesta ficha.`
+    `Rascunho aguardando revisão. A resposta sobre ${produto.nome} deve usar apenas as fontes registradas e deixar claro o que ainda não foi testado.`
   )}
-descricao: ${yamlSeguro(`Rascunho de verificação sobre ${produto.nome}.`)}
+descricao: ${yamlSeguro(`Rascunho de análise sobre ${produto.nome}.`)}
+autor: "Curadoria Curva Viva"
+tipo_analise: documental
 publicado_em: ${hoje}
 atualizado_em: ${hoje}
 verificado_em: ${produto.verificadoEm}
-categoria: ${produto.categoria}
+categoria: produtos
 produtos:
   - ${produto.id}
 fontes:
 ${fontesYaml}
+perguntas_frequentes:
+  - pergunta: "Primeira dúvida frequente?"
+    resposta: "Escreva uma resposta simples com pelo menos cinquenta caracteres e baseada nas fontes."
+  - pergunta: "Segunda dúvida frequente?"
+    resposta: "Escreva uma resposta simples com pelo menos cinquenta caracteres e baseada nas fontes."
 rascunho: true
 ---
 
-> **Rascunho automático:** este texto ainda não está publicado. Revise a resposta,
-> os dados e as fontes antes de trocar o campo \`rascunho\` para \`false\`.
+> **Rascunho:** este texto ainda não está publicado. Revise a resposta,
+> os limites e as fontes antes da aprovação.
 
 ## Resposta direta
 
-Escreva aqui uma resposta curta, usando somente os dados confirmados abaixo. Se
-o campo estiver como não verificado, diga isso de forma explícita.
+Escreva aqui uma resposta curta e útil. Diferencie alegação da marca, análise
+documental e teste real.
 
 ## O que a ficha confirma?
 
-| Campo | Valor | Situação |
-| --- | --- | --- |
+| Campo | Informação |
+| --- | --- |
 ${linhasTabela}
 
-## O que ainda precisa ser conferido?
+## Para quem pode fazer sentido?
 
-Liste os campos não verificados e explique que ausência de confirmação não é o
-mesmo que incompatibilidade.
+Explique a indicação publicada, sem ampliar a faixa de curvaturas por conta
+própria.
+
+## O que ainda precisa ser testado?
+
+Liste peso, rendimento, duração, acabamento e outras dúvidas que dependem de
+experiência real.
 
 ## O que conferir antes da compra?
 
-Confirme o código exato do modelo e compare a ficha com o anúncio escolhido. Não
-forneça orientação de instalação ou dimensionamento elétrico.
+Inclua um checklist curto e prático.
 
 ## Fontes
 

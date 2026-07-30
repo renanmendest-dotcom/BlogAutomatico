@@ -7,24 +7,29 @@ interface Props {
   titulo?: string;
   descricao?: string;
   noindex?: boolean;
+  tipo?: "website" | "article";
 }
 
 const {
   titulo,
-  descricao = "Compatibilidade de casa inteligente explicada com fonte e data.",
-  noindex = false
+  descricao = "Guias e fichas para escolher produtos para cabelos ondulados, cacheados e crespos com mais clareza.",
+  noindex = false,
+  tipo = "website"
 } = Astro.props;
 
-const siteName = "Combina Casa";
-const pageTitle = titulo ? `${titulo} | ${siteName}` : `${siteName} — antes de comprar, confira se combina`;
+const siteName = "Curva Viva";
+const pageTitle = titulo
+  ? `${titulo} | ${siteName}`
+  : `${siteName} | Seu cabelo, com escolhas mais claras`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL("/og.png", Astro.site);
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: siteName,
   url: Astro.site?.toString(),
   description:
-    "Base editorial de compatibilidade para dispositivos de casa inteligente no Brasil."
+    "Curadoria independente de produtos e guias para cabelos ondulados, cacheados e crespos."
 };
 ---
 
@@ -37,15 +42,15 @@ const organizationSchema = {
     <title>{pageTitle}</title>
     <meta name="description" content={descricao} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={tipo} />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={descricao} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL("/og-cover.svg", Astro.site)} />
+    <meta property="og:image" content={socialImage} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#f7f1e9" />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
   </head>

@@ -1,41 +1,51 @@
-# Combina Casa, versão automática assistida
+# Curva Viva, versão simples
 
 ## Objetivo
 
-Criar um site brasileiro que descubra dúvidas reais sobre casa inteligente e
-responda, com fonte e data, se um dispositivo funciona com Alexa, Google Home ou
-outros ecossistemas.
+Ajudar pessoas com cabelos ondulados, cacheados e crespos a entender qual
+produto faz sentido para o seu cabelo antes da compra.
 
-Uma vez por semana, a inteligência artificial pesquisa oportunidades, encontra
-um produto, consulta fontes técnicas, localiza uma oferta candidata e cria um
-rascunho. Uma pessoa decide se o conteúdo será publicado.
+O site pode ganhar dinheiro de duas formas:
 
-## O que existe na primeira versão
+- comissão quando alguém compra por um link de afiliado;
+- anúncios, quando o site tiver público suficiente.
 
-1. Site estático em Astro, publicável automaticamente no Vercel.
-2. Catálogo com três produtos já apresentados e sete itens na fila de verificação.
-3. Três artigos de referência.
-4. Validação automática de fonte, data e produto antes de cada build.
-5. Atualizador de preço preparado para receber IDs do Mercado Livre.
-6. Pesquisa semanal de dúvidas e oportunidades na internet.
-7. Pesquisa de fabricante e anúncio candidato.
-8. Redação preparada para busca, leitura rápida e perguntas frequentes.
-9. Um único rascunho por vez, aberto para aprovação no GitHub.
-10. Publicação automática somente depois da aprovação.
-11. Arquivo `PAUSE` como botão de emergência para as automações.
+## Organograma
 
-## O que foi adiado
-
-- Quatro agentes separados.
-- Publicação sem aprovação.
-- Horários aleatórios.
-- Histórico completo de preços.
-- Painel e integrações com Search Console.
-- Testes automáticos em outras IAs.
-- Geração automática de links de afiliado, pois o programa exige a conta do
-  proprietário.
+```text
+IA pesquisa dúvidas reais na internet
+                 |
+                 v
+IA escolhe uma dúvida útil e com intenção de compra
+                 |
+                 v
+IA confere o produto no site oficial da marca
+                 |
+                 v
+IA escreve e revisa um único rascunho
+                 |
+                 v
+VOCÊ lê e decide: aprovar ou recusar
+                 |
+                 v
+Se aprovado, o site publica automaticamente
+```
 
 ## Regra principal
 
-Uma afirmação sem fonte vira “não verificado”. Preço ausente não é estimado.
-Conteúdo sobre dimensionamento ou instalação elétrica não é produzido.
+A IA pode fazer a pesquisa, a escrita e a revisão. Ela não pode fingir que usou
+um produto. Quando a análise for apenas baseada em documentos, isso precisa
+ficar claro para o leitor.
+
+## Estrutura do site
+
+- Início: explica rapidamente como o site ajuda.
+- Artigos: responde às dúvidas encontradas pela pesquisa.
+- Produtos: reúne fichas simples e verificadas.
+- Como verificamos: mostra de onde vêm as informações.
+- Sobre: explica a proposta e a transparência.
+
+## Publicação
+
+Existe apenas um rascunho por vez. Nada entra no ar sem a aprovação do
+proprietário.

@@ -1,12 +1,11 @@
 ---
-import StatusChip from "../../components/StatusChip.astro";
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
   formatarData,
-  formatarPreco,
   produtosPublicados,
+  resumoCurvaturas,
   rotuloCategoria,
-  type CampoProduto,
   type ProdutoPublicado
 } from "../../lib/produtos";
 
@@ -22,131 +21,161 @@ interface Props {
 }
 
 const { produto } = Astro.props;
-const linkAfiliado = produto.afiliado?.url;
+const postsRelacionados = (await getCollection("posts"))
+  .filter(
+    (post) =>
+      !post.data.rascunho && post.data.produtos.includes(produto.id)
+  )
+  .slice(0, 3);
 
-const linhas: Array<{ rotulo: string; campo: CampoProduto }> = [
-  { rotulo: "Conexão", campo: produto.campos.protocolo },
-  { rotulo: "Hub", campo: produto.campos.hub },
-  { rotulo: "Amazon Alexa", campo: produto.campos.alexa },
-  { rotulo: "Google Home", campo: produto.campos.googleHome },
-  { rotulo: "Matter", campo: produto.campos.matter },
-  { rotulo: "Voltagem", campo: produto.campos.voltagem }
-];
-
-const productSchema =
-  produto.preco.valor !== null && produto.preco.url
-    ? {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        name: produto.nome,
-        description: produto.descricao,
-        brand: { "@type": "Brand", name: produto.marca },
-        offers: {
-          "@type": "Offer",
-          priceCurrency: produto.preco.moeda,
-          price: produto.preco.valor,
-          url: produto.preco.url,
-          availability: "https://schema.org/InStock"
-        }
-      }
-    : null;
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: produto.nome,
+  brand: {
+    "@type": "Brand",
+    name: produto.marca
+  },
+  description: produto.descricao,
+  category: rotuloCategoria(produto.categoria),
+  additionalProperty: produto.destaques.map((item) => ({
+    "@type": "PropertyValue",
+    name: item.rotulo,
+    value: item.valor
+  }))
+};
 ---
 
 <BaseLayout titulo={produto.nome} descricao={produto.descricao}>
-  {productSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />}
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />
 
   <header class="product-hero">
     <div class="shell product-hero-grid">
       <div>
-        <p class="eyebrow">{rotuloCategoria(produto.categoria)} / {produto.marca}</p>
+        <a class="back-link" href="/produtos/">← Todos os produtos</a>
+        <p class="eyebrow">
+          {produto.marca} · {rotuloCategoria(produto.categoria)}
+        </p>
         <h1>{produto.nome}</h1>
         <p class="product-description">{produto.descricao}</p>
-        <p class="verified-line">
-          <span class="live-dot"></span>
-          Verificado em {formatarData(produto.verificadoEm)}
-        </p>
+        <div class="verified-row">
+          <span class="evidence-pill">Análise documental</span>
+          <span>Atualizada em {formatarData(produto.verificadoEm)}</span>
+        </div>
       </div>
-      <div class="price-panel">
-        <span class="price-panel-label">
-          {linkAfiliado ? "Onde comprar" : "Preço monitorado"}
-        </span>
-        {
-          linkAfiliado ? (
-            <>
-              {produto.preco.valor !== null && (
-                <strong>{formatarPreco(produto.preco.valor, produto.preco.moeda)}</strong>
-              )}
-              <a
-                class="button button-primary shop-button"
-                href={linkAfiliado}
-                target="_blank"
-                rel="nofollow sponsored noopener"
-              >
-                Ver oferta na {produto.afiliado.loja}
-              </a>
-              <span class="affiliate-note">
-                Podemos receber comissão pela compra, sem alterar o seu preço.
-              </span>
-            </>
-          ) : produto.preco.valor !== null ? (
-            <>
-              <strong>{formatarPreco(produto.preco.valor, produto.preco.moeda)}</strong>
-              <span>coletado em {formatarData(produto.preco.coletadoEm!)}</span>
-              <span>O link de afiliado ainda não foi ativado.</span>
-            </>
-          ) : (
-            <>
-              <strong class="price-empty">Aguardando oferta</strong>
-              <span>A IA pode sugerir anúncios, mas o link precisa ser autorizado.</span>
-            </>
-          )
-        }
-      </div>
+
+      <aside class="product-profile" aria-label="Resumo do produto">
+        <span class="profile-label">Perfil rápido</span>
+        <dl>
+          <div>
+            <dt>Para quem</dt>
+            <dd>{resumoCurvaturas(produto.perfil.curvaturas)}</dd>
+          </div>
+          <div>
+            <dt>Textura</dt>
+            <dd>{produto.perfil.textura}</dd>
+          </div>
+          <div>
+            <dt>Intensidade</dt>
+            <dd>{produto.perfil.intensidade}</dd>
+          </div>
+        </dl>
+      </aside>
     </div>
   </header>
 
-  <div class="shell product-detail-grid">
-    <section class="spec-sheet">
-      <div class="spec-sheet-header">
-        <h2>Ficha de compatibilidade</h2>
-        <span>{produto.id}</span>
-      </div>
-      <dl>
+  <section class="section shell product-detail-grid">
+    <div>
+      <p class="eyebrow">O que encontramos</p>
+      <h2 class="content-title">A ficha em linguagem simples.</h2>
+
+      <dl class="detail-list">
         {
-          linhas.map(({ rotulo, campo }) => (
-            <div class="spec-row">
-              <dt>{rotulo}</dt>
-              <dd>
-                <span>{campo.valor}</span>
-                <StatusChip label={rotulo} estado={campo.estado} compacto />
-              </dd>
+          produto.destaques.map((destaque) => (
+            <div>
+              <dt>{destaque.rotulo}</dt>
+              <dd>{destaque.valor}</dd>
             </div>
           ))
         }
       </dl>
-      <p class="spec-note">
-        “Não verificado” significa que a fonte consultada não confirmou o campo.
-        Não significa automaticamente “não compatível”.
-      </p>
-    </section>
 
-    <aside class="source-panel">
-      <p class="eyebrow">Rastreabilidade</p>
-      <h2>Fontes da ficha</h2>
-      <ol>
-        {
-          produto.fontes.map((fonte) => (
-            <li>
-              <a href={fonte.url}>{fonte.titulo}</a>
-              <span>Acessada em {formatarData(fonte.acessadoEm)}</span>
-            </li>
-          ))
-        }
-      </ol>
-      <p>
-        Encontrou uma divergência? Guarde o modelo completo e a fonte oficial
-        mais recente para solicitar uma correção.
-      </p>
+      <div class="objective-block">
+        <p class="eyebrow">Objetivos apresentados</p>
+        <ul class="tag-list">
+          {produto.perfil.objetivos.map((objetivo) => <li>{objetivo}</li>)}
+        </ul>
+      </div>
+
+      <div class="editorial-note">
+        <p class="eyebrow">Limite desta ficha</p>
+        <p>{produto.analise.nota}</p>
+      </div>
+    </div>
+
+    <aside class="purchase-panel">
+      <p class="eyebrow">Onde comprar</p>
+      {
+        produto.oferta.url ? (
+          <>
+            <a
+              class="button button-primary button-full"
+              href={produto.oferta.url}
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Ver na {produto.oferta.loja}
+            </a>
+            <p class="affiliate-note">
+              Recebemos comissão pelas compras qualificadas. Isso não altera o
+              preço para você.
+            </p>
+          </>
+        ) : (
+          <>
+            <strong>Oferta em conferência</strong>
+            <p>
+              O link só aparece depois que a loja, a versão do produto e o
+              endereço de afiliado forem confirmados.
+            </p>
+          </>
+        )
+      }
+
+      <div class="source-list">
+        <p class="eyebrow">Fontes consultadas</p>
+        <ol>
+          {
+            produto.fontes.map((fonte) => (
+              <li>
+                <a href={fonte.url} target="_blank" rel="noopener">
+                  {fonte.titulo}
+                </a>
+                <span>Acesso em {formatarData(fonte.acessadoEm)}</span>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
     </aside>
-  </div>
+  </section>
+
+  {
+    postsRelacionados.length > 0 && (
+      <section class="section section-soft">
+        <div class="shell">
+          <p class="eyebrow">Continue a pesquisa</p>
+          <h2 class="content-title">Guias que citam este produto.</h2>
+          <div class="related-links">
+            {postsRelacionados.map((post) => (
+              <a href={`/artigos/${post.id}/`}>
+                <span>{post.data.titulo}</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 </BaseLayout>

@@ -72,7 +72,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
   resultados.push(
     await inspecionarPagina(
       browser,
-      "/produtos/tapo-l530e/",
+      "/produtos/salon-line-gelatina-definicao-duradoura-550g/",
       { width: 1440, height: 1000 },
       "produto-desktop"
     )
@@ -80,7 +80,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
   resultados.push(
     await inspecionarPagina(
       browser,
-      "/artigos/tapo-l530e-funciona-com-alexa-e-google-home/",
+      "/artigos/creme-de-pentear-ou-gelatina-qual-escolher-2026/",
       { width: 390, height: 844 },
       "artigo-celular"
     )
@@ -89,14 +89,14 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
   const rotas = [
     "/",
     "/artigos/",
-    "/artigos/intelbras-ews-305-funciona-com-alexa/",
-    "/artigos/intelbras-ews-410-e-bivolt/",
-    "/artigos/tapo-l530e-funciona-com-alexa-e-google-home/",
+    "/artigos/creme-de-pentear-ou-gelatina-qual-escolher-2026/",
+    "/artigos/lola-meu-cacho-minha-vida-para-qual-cabelo/",
+    "/artigos/skala-mais-cachos-serve-para-cabelo-ondulado/",
     "/como-verificamos/",
     "/produtos/",
-    "/produtos/tapo-l530e/",
-    "/produtos/intelbras-ews-410/",
-    "/produtos/intelbras-ews-305/",
+    "/produtos/salon-line-gelatina-definicao-duradoura-550g/",
+    "/produtos/lola-meu-cacho-minha-vida-creme-pentear-500g/",
+    "/produtos/skala-mais-cachos-3-em-1-250g/",
     "/sobre/"
   ];
 

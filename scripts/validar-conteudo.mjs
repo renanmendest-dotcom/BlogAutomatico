@@ -27,6 +27,10 @@ function urlSegura(valor) {
   }
 }
 
+function possuiTravessao(texto) {
+  return /[—–]/u.test(String(texto ?? ""));
+}
+
 const produtos = JSON.parse(await fs.readFile(arquivoProdutos, "utf8"));
 const ids = new Set();
 
@@ -49,8 +53,8 @@ for (const produto of produtos) {
 
   if (!produto.publicado) continue;
 
-  if (!dataValida(produto.verificadoEm)) {
-    erro(`${prefixo}: "verificadoEm" deve usar AAAA-MM-DD.`);
+  if (!produto.descricao || !dataValida(produto.verificadoEm)) {
+    erro(`${prefixo}: descrição e data de verificação são obrigatórias.`);
   }
 
   if (!Array.isArray(produto.fontes) || produto.fontes.length === 0) {
@@ -65,74 +69,64 @@ for (const produto of produtos) {
     }
     fontes.add(fonte.id);
 
-    if (!urlSegura(fonte.url)) {
-      erro(`${prefixo}: a fonte "${fonte.id}" precisa de URL HTTPS válida.`);
+    if (!fonte.titulo || !urlSegura(fonte.url)) {
+      erro(`${prefixo}: toda fonte precisa de título e URL HTTPS.`);
     }
     if (!dataValida(fonte.acessadoEm)) {
-      erro(`${prefixo}: a fonte "${fonte.id}" precisa de data de acesso.`);
+      erro(`${prefixo}: toda fonte precisa de data de acesso.`);
     }
   }
 
-  if (!produto.campos || typeof produto.campos !== "object") {
-    erro(`${prefixo}: faltam os campos de compatibilidade.`);
-    continue;
+  const perfil = produto.perfil;
+  if (
+    !perfil ||
+    !Array.isArray(perfil.curvaturas) ||
+    perfil.curvaturas.length === 0 ||
+    !perfil.textura ||
+    !perfil.intensidade ||
+    !Array.isArray(perfil.objetivos) ||
+    perfil.objetivos.length === 0
+  ) {
+    erro(`${prefixo}: o perfil capilar está incompleto.`);
   }
 
-  const camposObrigatorios = [
-    "protocolo",
-    "hub",
-    "alexa",
-    "googleHome",
-    "matter",
-    "voltagem"
-  ];
-
-  for (const nomeCampo of camposObrigatorios) {
-    const campo = produto.campos[nomeCampo];
-    if (!campo) {
-      erro(`${prefixo}: falta o campo "${nomeCampo}".`);
-      continue;
-    }
-
-    if (!campo.valor || !campo.estado) {
-      erro(`${prefixo}: o campo "${nomeCampo}" está incompleto.`);
-    }
-
-    if (
-      campo.estado !== "nao_verificado" &&
-      (!campo.fonteId || !fontes.has(campo.fonteId))
-    ) {
-      erro(
-        `${prefixo}: o campo confirmado "${nomeCampo}" não aponta para uma fonte da ficha.`
-      );
-    }
-  }
-
-  if (!produto.afiliado || typeof produto.afiliado !== "object") {
-    erro(`${prefixo}: falta o controle de link de afiliado.`);
+  if (!Array.isArray(produto.destaques) || produto.destaques.length < 3) {
+    erro(`${prefixo}: a ficha precisa de pelo menos três destaques.`);
   } else {
-    if (!produto.afiliado.loja) {
-      erro(`${prefixo}: falta o nome da loja afiliada.`);
-    }
-    if (produto.afiliado.url !== null) {
-      if (!urlSegura(produto.afiliado.url)) {
-        erro(`${prefixo}: o link de afiliado precisa de URL HTTPS válida.`);
+    for (const destaque of produto.destaques) {
+      if (!destaque.rotulo || !destaque.valor) {
+        erro(`${prefixo}: há um destaque incompleto.`);
       }
-      if (!dataValida(produto.afiliado.atualizadoEm)) {
-        erro(`${prefixo}: o link de afiliado precisa de data de atualização.`);
+      if (destaque.fonteId && !fontes.has(destaque.fonteId)) {
+        erro(`${prefixo}: um destaque aponta para uma fonte inexistente.`);
       }
     }
   }
 
-  if (produto.preco?.valor !== null) {
-    if (!produto.mercadoLivreId) {
-      erro(`${prefixo}: preço informado sem ID do Mercado Livre.`);
+  if (
+    !produto.analise ||
+    !["documental", "teste_real"].includes(produto.analise.tipo) ||
+    typeof produto.analise.testado !== "boolean" ||
+    !produto.analise.nota
+  ) {
+    erro(`${prefixo}: falta informar o tipo e o limite da análise.`);
+  }
+
+  if (
+    produto.analise?.tipo === "teste_real" &&
+    produto.analise?.testado !== true
+  ) {
+    erro(`${prefixo}: teste real precisa estar marcado como realizado.`);
+  }
+
+  if (!produto.oferta || !produto.oferta.loja) {
+    erro(`${prefixo}: falta o controle de oferta afiliada.`);
+  } else if (produto.oferta.url !== null) {
+    if (!urlSegura(produto.oferta.url)) {
+      erro(`${prefixo}: a oferta precisa de URL HTTPS válida.`);
     }
-    if (!produto.preco?.coletadoEm || !dataValida(produto.preco.coletadoEm)) {
-      erro(`${prefixo}: preço informado sem data de coleta válida.`);
-    }
-    if (!produto.preco?.url || !urlSegura(produto.preco.url)) {
-      erro(`${prefixo}: preço informado sem URL HTTPS do anúncio.`);
+    if (!dataValida(produto.oferta.atualizadoEm)) {
+      erro(`${prefixo}: a oferta precisa de data de atualização.`);
     }
   }
 }
@@ -152,12 +146,15 @@ for (const nome of arquivos) {
     "pergunta_principal",
     "resposta_curta",
     "descricao",
+    "autor",
+    "tipo_analise",
     "publicado_em",
     "atualizado_em",
     "verificado_em",
     "categoria",
     "produtos",
     "fontes",
+    "perguntas_frequentes",
     "rascunho"
   ];
 
@@ -165,6 +162,10 @@ for (const nome of arquivos) {
     if (data[campo] === undefined || data[campo] === null) {
       erro(`${prefixo}: falta o campo "${campo}" no início do arquivo.`);
     }
+  }
+
+  if (!["documental", "teste_real"].includes(data.tipo_analise)) {
+    erro(`${prefixo}: o tipo de análise é inválido.`);
   }
 
   if (!Array.isArray(data.produtos) || data.produtos.length === 0) {
@@ -175,7 +176,7 @@ for (const nome of arquivos) {
       if (!produto) {
         erro(`${prefixo}: o produto "${id}" não existe na base.`);
       } else if (!produto.publicado) {
-        erro(`${prefixo}: o produto "${id}" ainda está na fila de verificação.`);
+        erro(`${prefixo}: o produto "${id}" ainda está na fila.`);
       }
     }
   }
@@ -184,8 +185,8 @@ for (const nome of arquivos) {
     erro(`${prefixo}: precisa ter pelo menos uma fonte.`);
   } else {
     for (const fonte of data.fontes) {
-      if (!urlSegura(fonte.url)) {
-        erro(`${prefixo}: há uma fonte sem URL HTTPS válida.`);
+      if (!fonte.titulo || !urlSegura(fonte.url)) {
+        erro(`${prefixo}: há uma fonte sem título ou URL HTTPS válida.`);
       }
       const dataAcesso =
         fonte.acessado_em instanceof Date
@@ -202,7 +203,54 @@ for (const nome of arquivos) {
   }
 
   if (content.trim().length < 800) {
-    erro(`${prefixo}: o texto está curto demais para uma verificação útil.`);
+    erro(`${prefixo}: o texto está curto demais para ser útil.`);
+  }
+
+  if (
+    !Array.isArray(data.perguntas_frequentes) ||
+    data.perguntas_frequentes.length < 2 ||
+    data.perguntas_frequentes.length > 5
+  ) {
+    erro(`${prefixo}: precisa de duas a cinco perguntas frequentes.`);
+  }
+
+  const textoEditorial = [
+    data.titulo,
+    data.pergunta_principal,
+    data.resposta_curta,
+    data.descricao,
+    ...(data.perguntas_frequentes ?? []).flatMap((item) => [
+      item.pergunta,
+      item.resposta
+    ]),
+    content
+  ].join("\n");
+
+  if (possuiTravessao(textoEditorial)) {
+    erro(`${prefixo}: o texto não pode usar travessão.`);
+  }
+
+  if (
+    data.tipo_analise === "documental" &&
+    /\b(em nosso teste|nós testamos|eu testei|usei por \d+ dias)\b/iu.test(
+      textoEditorial
+    )
+  ) {
+    erro(`${prefixo}: uma análise documental não pode inventar teste real.`);
+  }
+
+  const promessasBloqueadas = [
+    /\bcura (?:a )?queda\b/iu,
+    /\btrata alopecia\b/iu,
+    /\bfaz (?:o )?cabelo crescer\b/iu,
+    /\bresultado garantido\b/iu,
+    /\bserve para todo cabelo\b/iu
+  ];
+
+  for (const padrao of promessasBloqueadas) {
+    if (padrao.test(textoEditorial)) {
+      erro(`${prefixo}: contém uma promessa de saúde ou resultado bloqueada.`);
+    }
   }
 
   if (data.origem) {
@@ -220,48 +268,6 @@ for (const nome of arquivos) {
         }
       }
     }
-
-    if (
-      !Array.isArray(data.perguntas_frequentes) ||
-      data.perguntas_frequentes.length < 2 ||
-      data.perguntas_frequentes.length > 5
-    ) {
-      erro(`${prefixo}: artigo automático precisa de duas a cinco perguntas frequentes.`);
-    }
-
-    const textoEditorial = [
-      data.titulo,
-      data.pergunta_principal,
-      data.resposta_curta,
-      data.descricao,
-      data.origem.pergunta_encontrada,
-      data.origem.motivo,
-      ...(data.perguntas_frequentes ?? []).flatMap((item) => [
-        item.pergunta,
-        item.resposta
-      ]),
-      content
-    ].join("\n");
-
-    if (/[—–]/u.test(textoEditorial)) {
-      erro(`${prefixo}: artigo automático não pode usar travessão.`);
-    }
-  }
-
-  if (/\bR\$\s?\d/i.test(content) && !/coletad[oa] em/i.test(content)) {
-    erro(`${prefixo}: cita preço sem informar a data da coleta.`);
-  }
-
-  const afirmacoesPerigosas = [
-    /aguenta (?:o |um )?(?:chuveiro|ar-condicionado)/i,
-    /instale você mesmo/i,
-    /ligue diretamente (?:na|à) rede/i
-  ];
-
-  for (const padrao of afirmacoesPerigosas) {
-    if (padrao.test(content)) {
-      erro(`${prefixo}: contém uma orientação elétrica bloqueada.`);
-    }
   }
 }
 
@@ -272,7 +278,6 @@ if (erros.length > 0) {
 }
 
 const publicos = produtos.filter((produto) => produto.publicado).length;
-const rascunhos = arquivos.length;
 console.log(
-  `Conteúdo válido: ${publicos} produto(s) público(s) e ${rascunhos} artigo(s) conferido(s).`
+  `Conteúdo válido: ${publicos} produto(s) e ${arquivos.length} artigo(s) conferido(s).`
 );

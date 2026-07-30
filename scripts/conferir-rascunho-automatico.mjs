@@ -61,7 +61,7 @@ if (artigos.length !== 1) {
 
 const novosArtigos = artigos.filter((arquivo) => naoRastreados.includes(arquivo));
 if (artigos.length === 1 && novosArtigos.length !== 1) {
-  registrarErro("A IA deve criar um artigo novo, sem reescrever um artigo publicado.");
+  registrarErro("A IA deve criar um artigo novo, sem reescrever conteúdo publicado.");
 }
 
 const caminhoResumo = path.join(raiz, "tmp", "resumo-aprovacao.md");
@@ -110,8 +110,12 @@ if (artigos.length === 1) {
     registrarErro("O artigo automático precisa permanecer como rascunho.");
   }
 
+  if (data.tipo_analise !== "documental") {
+    registrarErro("A IA só pode criar análise documental. Teste real exige prova humana.");
+  }
+
   if (!String(data.pergunta_principal ?? "").includes("?")) {
-    registrarErro("A pergunta principal precisa terminar como uma pergunta real.");
+    registrarErro("A pergunta principal precisa conter uma pergunta real.");
   }
 
   const palavras = content
@@ -119,8 +123,8 @@ if (artigos.length === 1) {
     .trim()
     .split(/\s+/u)
     .filter(Boolean).length;
-  if (palavras < 700 || palavras > 1200) {
-    registrarErro(`O artigo possui ${palavras} palavras. O intervalo aceito é de 700 a 1.200.`);
+  if (palavras < 700 || palavras > 1400) {
+    registrarErro(`O artigo possui ${palavras} palavras. O intervalo aceito é de 700 a 1.400.`);
   }
 
   if (textosEditoriais.some(possuiTravessao)) {
@@ -151,19 +155,14 @@ if (artigos.length === 1) {
     data.perguntas_frequentes.length > 5
   ) {
     registrarErro("O artigo precisa de duas a cinco perguntas frequentes.");
-  } else {
-    for (const item of data.perguntas_frequentes) {
-      if (!String(item.pergunta ?? "").includes("?")) {
-        registrarErro("Toda pergunta frequente precisa conter um ponto de interrogação.");
-      }
-      if (String(item.resposta ?? "").length < 50) {
-        registrarErro("Toda resposta frequente precisa ter pelo menos 50 caracteres.");
-      }
-    }
   }
 
-  if (/compre agora|oferta imperdível|garantia de economia/iu.test(content)) {
-    registrarErro("O artigo usa pressão comercial bloqueada.");
+  if (
+    /\b(em nosso teste|nós testamos|eu testei|resultado garantido|compre agora|oferta imperdível)\b/iu.test(
+      textosEditoriais.join("\n")
+    )
+  ) {
+    registrarErro("O artigo inventa teste, promete resultado ou usa pressão comercial.");
   }
 }
 
@@ -178,11 +177,17 @@ const anterioresPorId = new Map(
 
 for (const produto of produtosAtuais) {
   const anterior = anterioresPorId.get(produto.id);
-  const urlAnterior = anterior?.afiliado?.url ?? null;
-  const urlAtual = produto.afiliado?.url ?? null;
+  const urlAnterior = anterior?.oferta?.url ?? null;
+  const urlAtual = produto.oferta?.url ?? null;
   if (urlAtual && urlAtual !== urlAnterior) {
     registrarErro(
       `A IA tentou ativar um link de afiliado no produto "${produto.id}". Esse link exige autorização humana.`
+    );
+  }
+
+  if (produto.analise?.tipo === "teste_real" && !anterior?.analise?.testado) {
+    registrarErro(
+      `A IA tentou registrar teste real no produto "${produto.id}" sem prova humana.`
     );
   }
 }

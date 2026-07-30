@@ -2,33 +2,50 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout titulo="Sobre">
-  <header class="page-header shell">
+<BaseLayout
+  titulo="Sobre a Curva Viva"
+  descricao="Por que a Curva Viva existe e como o projeto pretende ajudar pessoas com cabelos texturizados."
+>
+  <header class="page-hero shell">
     <p class="eyebrow">Sobre o projeto</p>
-    <h1>Uma base editorial, não um especialista inventado.</h1>
+    <h1>Seu cabelo não precisa caber numa receita pronta.</h1>
     <p>
-      O Combina Casa organiza informações públicas de fabricantes e anúncios
-      selecionados. A inteligência artificial pesquisa dúvidas, prepara os
-      textos e organiza as fontes. Nada é publicado sem aprovação humana.
+      A Curva Viva nasceu para reduzir compras por impulso e tornar a pesquisa
+      de produtos capilares mais simples, honesta e útil.
     </p>
   </header>
 
-  <section class="section shell prose prose-standalone">
-    <h2>Por que o site existe?</h2>
-    <p>
-      Comprar um dispositivo inteligente costuma gerar perguntas simples:
-      funciona com o assistente que já tenho, precisa de hub, qual é a voltagem e
-      o modelo anunciado é realmente o mesmo da ficha?
-    </p>
-    <p>
-      O projeto transforma essas perguntas em campos comparáveis. A redação
-      explica os dados, sem esconder incerteza atrás de um texto convincente.
-    </p>
-    <h2>Como o projeto é financiado?</h2>
-    <p>
-      O projeto pode usar links de afiliado do Mercado Livre e de outras lojas.
-      A possível comissão é informada com transparência e não altera o preço para
-      o comprador.
-    </p>
+  <section class="section shell about-grid">
+    <div class="about-statement">
+      <span aria-hidden="true">“</span>
+      <p>
+        A pergunta não é apenas “este produto é bom?”. A pergunta certa é “o
+        que sabemos sobre ele e para qual necessidade ele pode fazer sentido?”.
+      </p>
+    </div>
+
+    <div class="prose compact-prose">
+      <h2>O foco é estreito de propósito</h2>
+      <p>
+        Falamos de cabelos ondulados, cacheados e crespos. Esse recorte permite
+        aprofundar curvatura, porosidade, finalização, tratamento e cuidado do
+        couro cabeludo sem virar um blog genérico de beleza.
+      </p>
+
+      <h2>Como o projeto pode ganhar dinheiro</h2>
+      <p>
+        Alguns produtos poderão ter links de afiliado. Quando uma compra
+        qualificada acontece, o projeto pode receber comissão sem aumentar o
+        preço para a leitora. A existência de comissão não transforma anúncio
+        em prova técnica.
+      </p>
+
+      <h2>O que ainda precisamos construir</h2>
+      <p>
+        A primeira etapa organiza dados oficiais. A etapa seguinte é incluir
+        testes reais, fotos próprias, textura, rendimento e observações de uso.
+        Nada disso será simulado por inteligência artificial.
+      </p>
+    </div>
   </section>
 </BaseLayout>

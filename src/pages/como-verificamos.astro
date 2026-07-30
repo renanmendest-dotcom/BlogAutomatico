@@ -1,111 +1,98 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const etapas = [
+  {
+    numero: "01",
+    titulo: "A IA encontra a dúvida",
+    texto: "Ela procura perguntas reais, comparações e sinais de intenção de compra em fontes públicas."
+  },
+  {
+    numero: "02",
+    titulo: "A IA confere o produto",
+    texto: "A versão exata, a indicação e os benefícios são comparados com páginas oficiais da marca."
+  },
+  {
+    numero: "03",
+    titulo: "A IA prepara o rascunho",
+    texto: "O texto começa com a resposta direta, traz tabela, limites, fontes e perguntas frequentes."
+  },
+  {
+    numero: "04",
+    titulo: "Uma pessoa decide",
+    texto: "O artigo fica fora do site até ser revisado e aprovado. Link de afiliado nunca é ativado sozinho."
+  }
+];
 ---
 
 <BaseLayout
   titulo="Como verificamos"
-  descricao="Conheça as fontes, regras e limites usados nas fichas do Combina Casa."
+  descricao="Entenda como a Curva Viva usa inteligência artificial, fontes oficiais, revisão humana e testes reais."
 >
-  <header class="page-header shell">
-    <p class="eyebrow">Método aberto</p>
-    <h1>Como verificamos</h1>
+  <header class="page-hero shell">
+    <p class="eyebrow">Transparência antes da recomendação</p>
+    <h1>Pesquisa automática. Decisão humana.</h1>
     <p>
-      O site mostra de onde veio cada informação e deixa as lacunas visíveis. A
-      automação ajuda a organizar; ela não ganha permissão para inventar.
+      A inteligência artificial acelera a busca. Ela não ganha permissão para
+      inventar experiência, esconder dúvida ou publicar sozinha.
     </p>
   </header>
 
-  <section class="method-section shell">
+  <section class="section shell section-first">
     <ol class="method-steps">
-      <li>
-        <span>01</span>
-        <div>
-          <h2>Procuramos dúvidas reais</h2>
-          <p>
-            A automação pesquisa perguntas públicas sobre compatibilidade e
-            compra. Ela registra os endereços usados como sinais de demanda e
-            não inventa volume de busca.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span>02</span>
-        <div>
-          <h2>Identificamos o modelo exato</h2>
-          <p>
-            Nome parecido não basta. Versão, potência e região podem mudar a
-            compatibilidade.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span>03</span>
-        <div>
-          <h2>Procuramos a fonte oficial</h2>
-          <p>
-            Página do fabricante, manual e ficha técnica têm prioridade sobre
-            anúncios e textos de terceiros.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span>04</span>
-        <div>
-          <h2>Registramos fonte e data</h2>
-          <p>
-            Uma informação sem endereço e data de acesso não entra como
-            confirmada.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span>05</span>
-        <div>
-          <h2>Mostramos o que falta</h2>
-          <p>
-            “Não verificado” não quer dizer “não funciona”. Quer dizer apenas que
-            não encontramos confirmação suficiente.
-          </p>
-        </div>
-      </li>
+      {
+        etapas.map((etapa) => (
+          <li>
+            <span>{etapa.numero}</span>
+            <div>
+              <h2>{etapa.titulo}</h2>
+              <p>{etapa.texto}</p>
+            </div>
+          </li>
+        ))
+      }
     </ol>
   </section>
 
-  <section class="section section-ink">
-    <div class="shell policy-grid">
+  <section class="section section-soft" id="entenda-seu-fio">
+    <div class="shell method-grid">
       <div>
-        <p class="eyebrow">Ordem de confiança</p>
-        <h2>Fonte técnica antes de anúncio.</h2>
+        <p class="eyebrow">Curvatura não explica tudo</p>
+        <h2 class="content-title">O produto encontra um cabelo, não um número.</h2>
       </div>
-      <ol>
-        <li>Manual ou ficha técnica do fabricante</li>
-        <li>Página oficial do produto</li>
-        <li>Central de ajuda oficial</li>
-        <li>Anúncio selecionado, apenas para preço e disponibilidade</li>
-      </ol>
+      <div class="prose compact-prose">
+        <p>
+          Os números 2, 3 e 4 ajudam a descrever o formato do fio. Eles não
+          garantem que um creme será leve, que uma gelatina vai durar ou que uma
+          máscara resolverá ressecamento.
+        </p>
+        <p>
+          Por isso, as fichas também mostram textura do produto, objetivo,
+          indicação publicada e o que ainda depende de teste. Porosidade,
+          quantidade aplicada, clima e técnica de finalização podem mudar o
+          resultado.
+        </p>
+      </div>
     </div>
   </section>
 
-  <section class="section shell prose prose-standalone">
-    <h2>Limites do conteúdo</h2>
-    <p>
-      O Combina Casa não orienta instalação elétrica nem dimensiona equipamentos.
-      Quando tensão, corrente ou potência forem relevantes, mostramos apenas o
-      dado declarado pela fonte e recomendamos a conferência do manual.
-    </p>
-    <p>
-      Links identificados como comerciais podem gerar comissão. A automação pode
-      sugerir um anúncio, mas somente um link gerado no programa oficial de
-      afiliados é apresentado como afiliado. Isso não muda a ordem das fontes.
-    </p>
-    <p>
-      A inteligência artificial prepara o rascunho e executa conferências
-      automáticas. Uma pessoa precisa aprovar o conteúdo antes da publicação.
-    </p>
-    <h2>Correções</h2>
-    <p>
-      Produtos e integrações mudam. Uma correção deve indicar o modelo completo,
-      o campo divergente e uma fonte oficial mais recente.
-    </p>
+  <section class="section manifesto-section">
+    <div class="shell evidence-grid">
+      <div>
+        <span class="evidence-number">A</span>
+        <h2>Teste real</h2>
+        <p>Uso documentado, com contexto, quantidade e observação do resultado.</p>
+      </div>
+      <div>
+        <span class="evidence-number">B</span>
+        <h2>Análise documental</h2>
+        <p>Informações organizadas a partir da marca e de fontes identificadas.</p>
+      </div>
+      <div>
+        <span class="evidence-number">C</span>
+        <h2>Ainda não verificado</h2>
+        <p>A informação não foi localizada ou não foi confirmada com segurança.</p>
+      </div>
+    </div>
   </section>
 </BaseLayout>

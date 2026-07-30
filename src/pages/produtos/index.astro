@@ -8,33 +8,45 @@ import {
 ---
 
 <BaseLayout
-  titulo="Produtos verificados"
-  descricao="Fichas de compatibilidade de produtos de casa inteligente, com fonte e data."
+  titulo="Produtos para cabelos ondulados, cacheados e crespos"
+  descricao="Fichas de produtos capilares com indicação da marca, textura, objetivos, fontes e limites visíveis."
 >
-  <header class="page-header shell">
-    <p class="eyebrow">Base de compatibilidade</p>
-    <h1>Produtos verificados</h1>
+  <header class="page-hero shell">
+    <p class="eyebrow">Catálogo em construção</p>
+    <h1>Produtos sem promessa escondida.</h1>
     <p>
-      Aqui aparecem somente produtos com pelo menos uma informação confirmada em
-      fonte oficial. Campos incompletos continuam visíveis como não verificados.
+      Cada ficha separa informação oficial, observação editorial e teste real.
+      Quando ainda não testamos um produto, você verá isso antes de qualquer
+      indicação.
     </p>
   </header>
 
   <section class="section shell section-first">
+    <div class="filter-notes" aria-label="Como ler as fichas">
+      <span>Curvatura é ponto de partida</span>
+      <span>Textura muda o resultado</span>
+      <span>Fonte oficial tem prioridade</span>
+    </div>
+
     <div class="product-grid">
-      {produtosPublicados.map((produto) => <ProductCard produto={produto} />)}
+      {
+        produtosPublicados.map((produto) => (
+          <ProductCard produto={produto} />
+        ))
+      }
     </div>
   </section>
 
-  <section class="queue-section">
-    <div class="shell queue-grid">
+  <section class="queue-strip">
+    <div class="shell queue-inner">
       <div>
-        <p class="eyebrow">Próximas verificações</p>
-        <h2>{produtosNaFila.length} produtos aguardando pesquisa</h2>
+        <p class="eyebrow">Próximas fichas</p>
+        <h2>{produtosNaFila.length} produtos aguardam pesquisa.</h2>
       </div>
       <p>
-        Eles não aparecem como ficha pública até que uma fonte confirme seus
-        dados. Essa fila existe para manter o ritmo sem sacrificar a confiança.
+        A fila inclui Widi Care, Soul Power, Apse, Novex, Seda, Inoar e
+        Arvensis. Só publicamos depois de encontrar a versão exata e uma fonte
+        confiável.
       </p>
     </div>
   </section>

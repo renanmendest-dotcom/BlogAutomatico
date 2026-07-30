@@ -9,22 +9,30 @@ interface Props {
       resposta_curta: string;
       categoria: string;
       atualizado_em: Date;
-      verificado_em: Date;
+      tipo_analise: "documental" | "teste_real";
     };
   };
+  destaque?: boolean;
 }
 
-const { post } = Astro.props;
+const { post, destaque = false } = Astro.props;
 ---
 
-<article class="article-card">
-  <div class="article-meta">
+<article class:list={["article-card", { "is-featured": destaque }]}>
+  <div class="article-card-meta">
     <span>{rotuloCategoria(post.data.categoria)}</span>
-    <span>verificado {formatarData(post.data.verificado_em)}</span>
+    <span>{formatarData(post.data.atualizado_em)}</span>
   </div>
+
   <h3><a href={`/artigos/${post.id}/`}>{post.data.titulo}</a></h3>
   <p>{post.data.resposta_curta}</p>
-  <a class="text-link" href={`/artigos/${post.id}/`}>
-    Ler resposta completa <span aria-hidden="true">→</span>
-  </a>
+
+  <div class="article-card-footer">
+    <span class="evidence-pill">
+      {post.data.tipo_analise === "teste_real" ? "Teste real" : "Fontes oficiais"}
+    </span>
+    <a class="arrow-link" href={`/artigos/${post.id}/`}>
+      Ler guia <span aria-hidden="true">↗</span>
+    </a>
+  </div>
 </article>

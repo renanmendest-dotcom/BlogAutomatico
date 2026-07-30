@@ -1,5 +1,5 @@
 {
-  "name": "combina-casa",
+  "name": "curva-viva",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -10,7 +10,6 @@
     "preview": "astro preview",
     "check": "astro check",
     "validar": "node scripts/validar-conteudo.mjs",
-    "atualizar-precos": "node scripts/atualizar-precos.mjs",
     "novo-rascunho": "node scripts/criar-rascunho-local.mjs",
     "publicar-rascunho": "node scripts/publicar-rascunho.mjs",
     "conferir-rascunho": "node scripts/conferir-rascunho-automatico.mjs"

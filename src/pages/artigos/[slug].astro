@@ -9,14 +9,13 @@ import {
 } from "../../lib/produtos";
 
 export async function getStaticPaths() {
-  const posts = (await getCollection("posts")).filter(
-    (post) => !post.data.rascunho
-  );
-
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: { post }
-  }));
+  const posts = await getCollection("posts");
+  return posts
+    .filter((post) => !post.data.rascunho)
+    .map((post) => ({
+      params: { slug: post.id },
+      props: { post }
+    }));
 }
 
 const { post } = Astro.props;
@@ -34,120 +33,116 @@ const articleSchema = {
   dateModified: post.data.atualizado_em.toISOString(),
   author: {
     "@type": "Organization",
-    name: "Combina Casa",
-    url: new URL("/como-verificamos/", Astro.site)
+    name: post.data.autor
   },
   publisher: {
     "@type": "Organization",
-    name: "Combina Casa"
+    name: "Curva Viva"
   },
-  mainEntityOfPage: Astro.url,
-  citation: post.data.fontes.map((fonte: { url: string }) => fonte.url),
-  about: produtos.map((produto) => ({
-    "@type": "Product",
-    name: produto?.nome,
-    brand: produto?.marca
+  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString()
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: post.data.perguntas_frequentes.map((item) => ({
+    "@type": "Question",
+    name: item.pergunta,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.resposta
+    }
   }))
 };
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Início",
-      item: new URL("/", Astro.site)
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Guias",
-      item: new URL("/artigos/", Astro.site)
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: post.data.titulo,
-      item: Astro.url
-    }
-  ]
-};
-
-const perguntasFrequentes = post.data.perguntas_frequentes ?? [];
-const faqSchema =
-  perguntasFrequentes.length > 0
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: perguntasFrequentes.map((item) => ({
-          "@type": "Question",
-          name: item.pergunta,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.resposta
-          }
-        }))
-      }
-    : null;
 ---
 
-<BaseLayout titulo={post.data.titulo} descricao={post.data.descricao}>
+<BaseLayout
+  titulo={post.data.titulo}
+  descricao={post.data.descricao}
+  tipo="article"
+>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
-  {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <article>
-    <header class="article-header">
-      <div class="shell article-header-inner">
-        <div class="article-kicker">
-          <span>{rotuloCategoria(post.data.categoria)}</span>
-          <span>verificado {formatarData(post.data.verificado_em)}</span>
-        </div>
+    <header class="article-hero">
+      <div class="shell article-hero-inner">
+        <a class="back-link" href="/artigos/">← Todos os guias</a>
+        <p class="eyebrow">
+          {rotuloCategoria(post.data.categoria)} · {
+            post.data.tipo_analise === "teste_real"
+              ? "teste real"
+              : "análise documental"
+          }
+        </p>
         <h1>{post.data.titulo}</h1>
         <p class="answer-box">{post.data.resposta_curta}</p>
-        <dl class="article-dates">
+        <dl class="article-meta">
           <div>
-            <dt>Publicado</dt>
-            <dd>{formatarData(post.data.publicado_em)}</dd>
+            <dt>Por</dt>
+            <dd>{post.data.autor}</dd>
           </div>
           <div>
             <dt>Atualizado</dt>
             <dd>{formatarData(post.data.atualizado_em)}</dd>
           </div>
+          <div>
+            <dt>Fontes verificadas</dt>
+            <dd>{post.data.fontes.length}</dd>
+          </div>
         </dl>
       </div>
     </header>
 
-    <div class="shell article-layout">
+    <div class="shell article-body-grid">
       <div class="prose">
         <Content />
-        {
-          perguntasFrequentes.length > 0 && (
-            <section class="faq-section" aria-labelledby="perguntas-frequentes">
-              <h2 id="perguntas-frequentes">Perguntas frequentes</h2>
-              <dl>
-                {perguntasFrequentes.map((item) => (
-                  <div>
-                    <dt>{item.pergunta}</dt>
-                    <dd>{item.resposta}</dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
-          )
-        }
+
+        <section class="faq-section">
+          <p class="eyebrow">Perguntas rápidas</p>
+          <h2>Dúvidas frequentes</h2>
+          <dl>
+            {
+              post.data.perguntas_frequentes.map((item) => (
+                <div>
+                  <dt>{item.pergunta}</dt>
+                  <dd>{item.resposta}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </section>
+
+        <section class="article-sources">
+          <p class="eyebrow">Rastreabilidade</p>
+          <h2>Fontes consultadas</h2>
+          <ol>
+            {
+              post.data.fontes.map((fonte) => (
+                <li>
+                  <a href={fonte.url} target="_blank" rel="noopener">
+                    {fonte.titulo}
+                  </a>
+                  <span>Acesso em {formatarData(fonte.acessado_em)}</span>
+                </li>
+              ))
+            }
+          </ol>
+        </section>
       </div>
+
       <aside class="article-aside">
-        <p class="eyebrow">Dados usados</p>
-        <p>
-          Este texto foi montado a partir das fichas abaixo. Uma alteração na
-          fonte deve gerar nova verificação.
-        </p>
+        <div class="method-note">
+          <p class="eyebrow">Como ler este guia</p>
+          <p>
+            Este conteúdo organiza informações publicadas pelas marcas. Quando
+            não existe teste real da Curva Viva, não apresentamos resultado
+            pessoal como fato.
+          </p>
+        </div>
         {
-          produtos.map(
-            (produto) => produto && <ProductCard produto={produto} />
+          produtos.map((produto) =>
+            produto ? <ProductCard produto={produto} compacto /> : null
           )
         }
       </aside>

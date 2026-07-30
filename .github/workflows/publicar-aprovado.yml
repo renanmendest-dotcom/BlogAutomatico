@@ -75,8 +75,8 @@ jobs:
       - name: Salvar a publicação
         shell: bash
         run: |
-          git config user.name "combina-casa[bot]"
-          git config user.email "combina-casa[bot]@users.noreply.github.com"
+          git config user.name "curva-viva[bot]"
+          git config user.email "curva-viva[bot]@users.noreply.github.com"
           git add src/data/posts
           git commit -m "publicar: artigo aprovado na PR #${{ github.event.pull_request.number }}"
           git push origin main

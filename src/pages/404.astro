@@ -2,11 +2,21 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout titulo="Página não encontrada" noindex>
+<BaseLayout
+  titulo="Página não encontrada"
+  descricao="Esta página não foi encontrada."
+  noindex
+>
   <section class="not-found shell">
-    <p class="error-code">404 / NÃO LOCALIZADO</p>
-    <h1>Esta combinação não existe.</h1>
-    <p>A página pode ter mudado ou o endereço foi digitado incorretamente.</p>
-    <a class="button button-primary" href="/">Voltar ao início</a>
+    <p class="eyebrow">Erro 404</p>
+    <h1>Esse fio se perdeu pelo caminho.</h1>
+    <p>
+      A página pode ter mudado de endereço. Volte ao início ou encontre um guia
+      para continuar sua pesquisa.
+    </p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="/">Voltar ao início</a>
+      <a class="text-link" href="/artigos/">Ver os guias ↗</a>
+    </div>
   </section>
 </BaseLayout>

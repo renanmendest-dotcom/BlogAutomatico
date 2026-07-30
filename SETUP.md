@@ -1,94 +1,50 @@
-# Configuração simples do Combina Casa
-
-O sistema pesquisa uma oportunidade por semana e mantém somente um artigo
-esperando aprovação.
+# Configuração simples da Curva Viva
 
 ## O que já está pronto
 
-- Site, páginas de produto e artigos.
-- Pesquisa automática de dúvidas na internet.
-- Pesquisa de produto, fabricante e anúncio candidato.
-- Redação com fontes e perguntas frequentes.
-- Bloqueio de travessão, pressão comercial e orientação elétrica.
-- Aprovação humana antes da publicação.
-- Publicação automática pelo GitHub e pelo Vercel.
-- Espaço seguro para links de afiliado autorizados.
+- O site usa Astro e está ligado à Vercel.
+- Os arquivos ficam guardados no GitHub.
+- A IA tem regras para pesquisar, escrever e revisar.
+- Você sempre aprova o artigo antes da publicação.
 
-## Configuração feita uma única vez
+## O que você precisa configurar uma única vez
 
-### 1. Confirmar o GitHub
+### 1. Endereço do site no GitHub
 
-O repositório deve conter as pastas `.github`, `scripts` e `src`. A branch
-principal deve se chamar `main`.
+No repositório, abra `Settings`, depois `Secrets and variables`, `Actions` e
+`Variables`. Crie:
 
-### 2. Conectar ao Vercel
+- Nome: `SITE_URL`
+- Valor: `https://blog-automatico-sigma.vercel.app`
 
-1. No Vercel, clique em **Add New** e depois em **Project**.
-2. Importe o repositório do GitHub.
-3. Confirme o framework **Astro**.
-4. Clique em **Deploy**.
-5. Copie o endereço criado pelo Vercel.
-6. No Vercel e no GitHub, cadastre `SITE_URL` com esse endereço.
+Isso informa aos buscadores qual é o endereço oficial do site.
 
-Cada alteração aprovada na branch `main` será publicada automaticamente.
+### 2. Acesso da IA no GitHub
 
-### 3. Habilitar a inteligência artificial
+No mesmo lugar, mas dentro de `Secrets`, cadastre:
 
-Esta etapa exige uma assinatura Claude Pro, Max, Team ou Enterprise.
+- Nome: `CLAUDE_CODE_OAUTH_TOKEN`
+- Valor: o código de acesso fornecido pelo Claude Code
 
-1. Instale o Claude Code.
-2. Gere um token com `claude setup-token`.
-3. No GitHub, abra **Settings**, **Secrets and variables** e **Actions**.
-4. Crie o secret `CLAUDE_CODE_OAUTH_TOKEN` e cole o token.
-5. Em **Settings**, **Actions** e **General**, escolha **Read and write
-   permissions**.
-6. Marque **Allow GitHub Actions to create and approve pull requests**.
+Esse código permite que a IA prepare um rascunho. Ele nunca deve ser escrito
+dentro dos arquivos do projeto.
 
-O token é secreto e nunca deve ser enviado por mensagem ou salvo no projeto.
+### 3. Programa de afiliados
 
-## Funcionamento semanal
+Faça o cadastro no programa de afiliados da loja escolhida. A prioridade inicial
+é a Amazon. Depois da aprovação, coloque o seu link na ficha do produto.
 
-Toda segunda-feira pela manhã:
+O site nunca mostra um botão de compra enquanto não existir um link real.
 
-1. A IA procura dúvidas e oportunidades na internet.
-2. Confere se o assunto ainda não existe no site.
-3. Identifica o produto exato.
-4. Consulta fabricante e outras fontes técnicas.
-5. Localiza um anúncio candidato.
-6. Escreve e confere um único artigo.
-7. Abre uma solicitação no GitHub para sua aprovação.
+## Como aprovar um artigo
 
-Se já existir um artigo esperando sua decisão, a automação não cria outro.
+1. A IA abre uma solicitação chamada `Revisar`.
+2. Você lê o resumo e o artigo no GitHub.
+3. Se estiver correto, clique em `Merge pull request`.
+4. O site publica o texto automaticamente.
+5. Se não gostar, feche a solicitação sem aprovar.
 
-## Sua decisão
+## Como pausar a automação
 
-Abra **Pull requests** no GitHub e escolha o artigo.
-
-- **Merge pull request** aprova e publica.
-- **Close pull request** descarta.
-- Um comentário pode registrar o que precisa ser corrigido.
-
-Até a aprovação, o artigo permanece invisível.
-
-## Links de afiliado
-
-A IA encontra o anúncio candidato, mas não pode transformar um link comum em
-link de afiliado.
-
-1. Abra o anúncio sugerido.
-2. Gere o link na Central ou na Barra de Afiliados.
-3. Envie o link autorizado para inclusão no produto.
-
-O site marca links comerciais e informa a possibilidade de comissão.
-
-## Parar a automação
-
-Crie na raiz do repositório um arquivo chamado `PAUSE`. As automações encerrarão
-sem pesquisar ou alterar dados.
-
-Apague o arquivo quando quiser retomar.
-
-## Regra de segurança
-
-Uma afirmação sem fonte vira `Não verificado`. O site não produz orientação de
-instalação elétrica ou dimensionamento de carga.
+Crie um arquivo vazio chamado `PAUSE` na pasta principal do projeto. Para voltar
+a funcionar, apague apenas esse arquivo.

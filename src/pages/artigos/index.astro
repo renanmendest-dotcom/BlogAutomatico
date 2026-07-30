@@ -12,21 +12,35 @@ const posts = (await getCollection("posts"))
 ---
 
 <BaseLayout
-  titulo="Guias de compatibilidade"
-  descricao="Respostas diretas sobre compatibilidade de dispositivos, sempre com fonte e data."
+  titulo="Guias para escolher produtos capilares"
+  descricao="Respostas diretas, comparações e fontes para escolher finalizadores e tratamentos para cabelos texturizados."
 >
-  <header class="page-header shell">
-    <p class="eyebrow">Guias verificados</p>
-    <h1>Uma pergunta por vez.</h1>
+  <header class="page-hero shell">
+    <p class="eyebrow">Guias da Curva Viva</p>
+    <h1>Entenda antes de colocar no carrinho.</h1>
     <p>
-      Cada guia começa pela resposta e mostra o que foi confirmado, o que falta
-      verificar e qual fonte foi consultada.
+      Perguntas reais, resposta curta no início e detalhes suficientes para
+      você decidir sem decorar linguagem de rótulo.
     </p>
   </header>
 
   <section class="section shell section-first">
-    <div class="article-grid article-grid-light">
-      {posts.map((post) => <ArticleCard post={post} />)}
+    <div class="article-list">
+      {
+        posts.map((post, index) => (
+          <ArticleCard post={post} destaque={index === 0} />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="editorial-callout">
+    <div class="shell callout-inner">
+      <p>Não encontrou sua dúvida?</p>
+      <strong>
+        A pesquisa automática procura novas perguntas toda semana. O artigo só
+        entra no site depois da aprovação humana.
+      </strong>
     </div>
   </section>
 </BaseLayout>

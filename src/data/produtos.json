@@ -165,6 +165,67 @@
     ]
   },
   {
+    "id": "salon-line-gelatina-super-definicao-550g",
+    "nome": "Gelatina #todecacho Super Definição 550 g",
+    "descricao": "Gelatina de finalização que a Salon Line apresenta para definição, fixação e controle de frizz em cabelos com curvatura.",
+    "marca": "Salon Line",
+    "categoria": "gelatina",
+    "publicado": true,
+    "verificadoEm": "2026-07-31",
+    "perfil": {
+      "curvaturas": ["Ondulados", "Cacheados", "Crespos"],
+      "textura": "Gelatina",
+      "intensidade": "Fixação voltada à definição, segundo a marca",
+      "objetivos": ["Definição", "Controle de frizz", "Misturinhas"]
+    },
+    "destaques": [
+      {
+        "rotulo": "Tamanho",
+        "valor": "550 g",
+        "fonteId": "salon-line-gelatinas"
+      },
+      {
+        "rotulo": "Função apresentada",
+        "valor": "Modelar, finalizar e ajudar na fixação",
+        "fonteId": "salon-line-gelatinas"
+      },
+      {
+        "rotulo": "Uso sugerido",
+        "valor": "A marca apresenta a linha como adequada para misturinhas personalizadas",
+        "fonteId": "salon-line-gelatinas"
+      },
+      {
+        "rotulo": "Disponibilidade encontrada",
+        "valor": "Produto localizado no Mercado Livre, sem link de afiliado ativado",
+        "fonteId": "mercado-livre-super-definicao"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": null,
+      "atualizadoEm": null
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A Curva Viva ainda não testou peso, rendimento, formação de resíduos ou duração. A ficha separa as informações publicadas das conclusões que dependem de uso real."
+    },
+    "fontes": [
+      {
+        "id": "salon-line-gelatinas",
+        "titulo": "Gelatinas Salon Line, brilho, definição e fixação",
+        "url": "https://gelatinas.salonline.com.br/",
+        "acessadoEm": "2026-07-31"
+      },
+      {
+        "id": "mercado-livre-super-definicao",
+        "titulo": "Gelatina #todecacho Super Definição Salon Line 550 g no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/gelatina-todecacho-super-definico-salon-line-550g/p/MLB19134426",
+        "acessadoEm": "2026-07-31"
+      }
+    ]
+  },
+  {
     "id": "widi-care-juba-creme-pentear",
     "nome": "Juba Creme de Pentear",
     "marca": "Widi Care",

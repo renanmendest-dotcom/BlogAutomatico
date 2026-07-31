@@ -27,6 +27,12 @@ export type ProdutoPublicado = {
     intensidade: string;
     objetivos: string[];
   };
+  imagem?: {
+    src: string;
+    alt: string;
+    credito: string;
+    fonteUrl: string;
+  };
   destaques: DestaqueProduto[];
   oferta: {
     loja: string;

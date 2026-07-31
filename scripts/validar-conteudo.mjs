@@ -128,6 +128,15 @@ for (const produto of produtos) {
     if (!dataValida(produto.oferta.atualizadoEm)) {
       erro(`${prefixo}: a oferta precisa de data de atualização.`);
     }
+    if (
+      !produto.imagem ||
+      !produto.imagem.src ||
+      !produto.imagem.alt ||
+      !produto.imagem.credito ||
+      !urlSegura(produto.imagem.fonteUrl)
+    ) {
+      erro(`${prefixo}: uma oferta ativa precisa de imagem real, descrição e fonte.`);
+    }
   }
 }
 

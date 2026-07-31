@@ -37,6 +37,20 @@ A IA pode fazer a pesquisa, a escrita e a revisão. Ela não pode fingir que uso
 um produto. Quando a análise for apenas baseada em documentos, isso precisa
 ficar claro para o leitor.
 
+## Regra dos produtos
+
+Todo artigo precisa citar os produtos de forma natural e explicar por que eles
+podem fazer sentido para a dúvida respondida. O bloco de produto deve mostrar:
+
+- nome e imagem real do produto;
+- motivo simples para a indicação;
+- link de afiliado conferido;
+- aviso de que o site pode receber comissão.
+
+O botão de compra só pode ser ativado junto com uma imagem real e uma fonte
+registrada. A indicação não pode prometer que o resultado será igual para todas
+as pessoas.
+
 ## Estrutura do site
 
 - Início: explica rapidamente como o site ajuda.

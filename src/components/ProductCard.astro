@@ -20,8 +20,23 @@ const initials = produto.marca
 
 <article class:list={["product-card", { "is-compact": compacto }]}>
   <a class="product-card-visual" href={`/produtos/${produto.id}/`} aria-hidden="true" tabindex="-1">
-    <span class="product-monogram">{initials}</span>
-    <span class="product-shape"></span>
+    {
+      produto.imagem ? (
+        <img
+          class="product-photo"
+          src={produto.imagem.src}
+          alt={produto.imagem.alt}
+          width="640"
+          height="640"
+          loading="lazy"
+        />
+      ) : (
+        <>
+          <span class="product-monogram">{initials}</span>
+          <span class="product-shape"></span>
+        </>
+      )
+    }
     <span class="product-kind">{rotuloCategoria(produto.categoria)}</span>
   </a>
 
@@ -49,5 +64,26 @@ const initials = produto.marca
         Ver ficha <span aria-hidden="true">↗</span>
       </a>
     </div>
+
+    {
+      produto.oferta.url ? (
+        <>
+          <a
+            class="button button-primary button-full product-buy-button"
+            href={produto.oferta.url}
+            target="_blank"
+            rel="nofollow sponsored noopener"
+          >
+            Ver preço na {produto.oferta.loja}
+          </a>
+          <p class="affiliate-note">
+            Recebemos comissão pelas compras qualificadas. Isso não altera o
+            preço para você.
+          </p>
+        </>
+      ) : (
+        <p class="offer-pending">Link de compra em conferência.</p>
+      )
+    }
   </div>
 </article>

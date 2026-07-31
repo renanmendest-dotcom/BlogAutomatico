@@ -96,6 +96,25 @@ const faqSchema = {
 
     <div class="shell article-body-grid">
       <div class="prose">
+        {
+          produtos.length > 0 && (
+            <section class="article-product-recommendations" aria-labelledby="produtos-citados">
+              <p class="eyebrow">Produtos citados neste guia</p>
+              <h2 id="produtos-citados">Opções que combinam com esta orientação.</h2>
+              <p>
+                Estes produtos foram incluídos porque suas fichas publicadas se
+                relacionam com a dúvida respondida. A indicação não significa
+                que o resultado será igual em todos os cabelos.
+              </p>
+              <div class="article-product-grid">
+                {produtos.map((produto) =>
+                  produto ? <ProductCard produto={produto} compacto /> : null
+                )}
+              </div>
+            </section>
+          )
+        }
+
         <Content />
 
         <section class="faq-section">
@@ -140,11 +159,6 @@ const faqSchema = {
             pessoal como fato.
           </p>
         </div>
-        {
-          produtos.map((produto) =>
-            produto ? <ProductCard produto={produto} compacto /> : null
-          )
-        }
       </aside>
     </div>
   </article>

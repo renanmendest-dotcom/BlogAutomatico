@@ -51,6 +51,18 @@ O botão de compra só pode ser ativado junto com uma imagem real e uma fonte
 registrada. A indicação não pode prometer que o resultado será igual para todas
 as pessoas.
 
+Para cada artigo novo, a IA também deve:
+
+- procurar o produto no Mercado Livre;
+- priorizar loja oficial, boa avaliação e histórico de vendas;
+- conferir se a versão e o tamanho são exatamente os citados;
+- gerar o link dentro da conta de afiliado;
+- cadastrar a imagem real e a página usada como fonte;
+- atualizar o artigo sem depender de o proprietário procurar ou copiar links.
+
+Se a sessão do Mercado Livre expirar, o proprietário só precisa entrar novamente.
+Usuário e senha nunca devem ser enviados pelo chat.
+
 ## Estrutura do site
 
 - Início: explica rapidamente como o site ajuda.

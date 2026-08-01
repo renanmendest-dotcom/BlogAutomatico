@@ -61,12 +61,18 @@
     "marca": "Lola Cosmetics",
     "categoria": "creme_para_pentear",
     "publicado": true,
-    "verificadoEm": "2026-07-30",
+    "verificadoEm": "2026-08-01",
     "perfil": {
       "curvaturas": ["Cacheados, sem numeração informada"],
       "textura": "Creme",
       "intensidade": "Finalização suave, segundo a marca",
       "objetivos": ["Desembaraço", "Definição", "Maciez"]
+    },
+    "imagem": {
+      "src": "https://http2.mlstatic.com/D_NQ_NP_860131-MLB47223465451_082021-O-creme-de-pentear-lola-cosmetics-meu-cacho-minha-vida-500g.webp",
+      "alt": "Frasco do Creme de Pentear Lola Cosmetics Meu Cacho Minha Vida 500 g",
+      "credito": "Mercado Livre",
+      "fonteUrl": "https://www.mercadolivre.com.br/creme-de-pentear-lola-cosmetics-meu-cacho-minha-vida-500g/up/MLBU1090737009"
     },
     "destaques": [
       {
@@ -91,9 +97,9 @@
       }
     ],
     "oferta": {
-      "loja": "Amazon",
-      "url": null,
-      "atualizadoEm": null
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/2g71Sg4",
+      "atualizadoEm": "2026-08-01"
     },
     "analise": {
       "tipo": "documental",
@@ -106,6 +112,12 @@
         "titulo": "Meu Cacho Minha Vida Creme de Pentear 500 g",
         "url": "https://www.lolacosmetics.com.br/meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409",
         "acessadoEm": "2026-07-30"
+      },
+      {
+        "id": "mercado-livre-lola-meu-cacho",
+        "titulo": "Creme de Pentear Lola Cosmetics Meu Cacho Minha Vida 500 g no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/creme-de-pentear-lola-cosmetics-meu-cacho-minha-vida-500g/up/MLBU1090737009",
+        "acessadoEm": "2026-08-01"
       }
     ]
   },
@@ -171,12 +183,18 @@
     "marca": "Salon Line",
     "categoria": "gelatina",
     "publicado": true,
-    "verificadoEm": "2026-07-31",
+    "verificadoEm": "2026-08-01",
     "perfil": {
       "curvaturas": ["Ondulados", "Cacheados", "Crespos"],
       "textura": "Gelatina",
       "intensidade": "Fixação voltada à definição, segundo a marca",
       "objetivos": ["Definição", "Controle de frizz", "Misturinhas"]
+    },
+    "imagem": {
+      "src": "https://http2.mlstatic.com/D_NQ_NP_923484-MLA91579623161_092025-O.webp",
+      "alt": "Pote da Gelatina #todecacho Super Definição Salon Line 550 g",
+      "credito": "Mercado Livre",
+      "fonteUrl": "https://www.mercadolivre.com.br/gelatina-todecacho-super-definicao-salon-line-550g/p/MLB19134426"
     },
     "destaques": [
       {
@@ -196,14 +214,14 @@
       },
       {
         "rotulo": "Disponibilidade encontrada",
-        "valor": "Produto localizado no Mercado Livre, sem link de afiliado ativado",
+        "valor": "Produto conferido no Mercado Livre com link de afiliado ativo",
         "fonteId": "mercado-livre-super-definicao"
       }
     ],
     "oferta": {
       "loja": "Mercado Livre",
-      "url": null,
-      "atualizadoEm": null
+      "url": "https://meli.la/2jhn3hQ",
+      "atualizadoEm": "2026-08-01"
     },
     "analise": {
       "tipo": "documental",
@@ -220,8 +238,8 @@
       {
         "id": "mercado-livre-super-definicao",
         "titulo": "Gelatina #todecacho Super Definição Salon Line 550 g no Mercado Livre",
-        "url": "https://www.mercadolivre.com.br/gelatina-todecacho-super-definico-salon-line-550g/p/MLB19134426",
-        "acessadoEm": "2026-07-31"
+        "url": "https://www.mercadolivre.com.br/gelatina-todecacho-super-definicao-salon-line-550g/p/MLB19134426",
+        "acessadoEm": "2026-08-01"
       }
     ]
   },

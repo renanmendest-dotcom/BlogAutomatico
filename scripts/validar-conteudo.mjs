@@ -125,6 +125,12 @@ for (const produto of produtos) {
     if (!urlSegura(produto.oferta.url)) {
       erro(`${prefixo}: a oferta precisa de URL HTTPS válida.`);
     }
+    if (
+      produto.oferta.loja === "Mercado Livre" &&
+      !produto.oferta.url.startsWith("https://meli.la/")
+    ) {
+      erro(`${prefixo}: a oferta do Mercado Livre precisa usar o link de afiliado gerado na conta.`);
+    }
     if (!dataValida(produto.oferta.atualizadoEm)) {
       erro(`${prefixo}: a oferta precisa de data de atualização.`);
     }

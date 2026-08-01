@@ -6,8 +6,8 @@ descricao: "Veja a ordem mais simples para usar creme de pentear e gelatina sem 
 autor: "Curadoria Curva Viva"
 tipo_analise: "documental"
 publicado_em: 2026-07-31
-atualizado_em: 2026-07-31
-verificado_em: 2026-07-31
+atualizado_em: 2026-08-01
+verificado_em: 2026-08-01
 categoria: finalizacao
 produtos:
   - salon-line-gelatina-super-definicao-550g
@@ -102,7 +102,7 @@ Mude apenas uma coisa em cada tentativa. Se você trocar o creme, a gelatina, a 
 
 A pesquisa localizou a Gelatina #todecacho Super Definição 550 g. A Salon Line apresenta o produto dentro de sua linha voltada à modelagem, definição e fixação. A versão de 550 g também foi encontrada no Mercado Livre.
 
-Essa localização confirma que o produto está disponível para compra, mas não substitui a conferência da oferta. O vendedor, o preço, o frete e a reputação podem mudar. O link de afiliado ainda não foi ativado, por isso o botão de compra continuará indisponível até esse endereço ser conferido.
+A oferta foi conferida em 1º de agosto de 2026 e o botão usa um link de afiliado da Curva Viva. Se houver uma compra qualificada, o site pode receber comissão sem aumentar o preço para o leitor. Preço, frete e disponibilidade podem mudar no Mercado Livre.
 
 Também citamos o creme de pentear Meu Cacho Minha Vida 500 g como exemplo de creme já documentado no site. Não afirmamos que os dois produtos formam a combinação perfeita, porque isso exigiria um teste real.
 

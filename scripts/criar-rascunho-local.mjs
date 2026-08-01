@@ -77,10 +77,10 @@ const conteudo = `---
 titulo: ${yamlSeguro(pergunta)}
 pergunta_principal: ${yamlSeguro(pergunta)}
 resposta_curta: ${yamlSeguro(
-    `Rascunho aguardando revisão. A resposta sobre ${produto.nome} deve usar apenas as fontes registradas e deixar claro o que ainda não foi testado.`
+    `Quer a resposta curta? Explique aqui, em linguagem simples e acolhedora, o que a leitora precisa saber sobre ${produto.nome} antes de escolher.`
   )}
-descricao: ${yamlSeguro(`Rascunho de análise sobre ${produto.nome}.`)}
-autor: "Curadoria Curva Viva"
+descricao: ${yamlSeguro(`Um guia simples e direto para entender se ${produto.nome} combina com a necessidade do seu cabelo.`)}
+autor: "Curva Viva"
 tipo_analise: documental
 publicado_em: ${hoje}
 atualizado_em: ${hoje}
@@ -98,33 +98,33 @@ perguntas_frequentes:
 rascunho: true
 ---
 
-> **Rascunho:** este texto ainda não está publicado. Revise a resposta,
-> os limites e as fontes antes da aprovação.
+## Quer a resposta sem enrolação?
 
-## Resposta direta
+Faça a pergunta que a leitora provavelmente está pensando e responda logo em
+seguida. Use um tom próximo, como uma amiga bem informada.
 
-Escreva aqui uma resposta curta e útil. Diferencie alegação da marca, análise
-documental e teste real.
-
-## O que a ficha confirma?
+## O que vale saber sobre este produto?
 
 | Campo | Informação |
 | --- | --- |
 ${linhasTabela}
 
-## Para quem pode fazer sentido?
+## Para quem ele pode fazer sentido?
 
-Explique a indicação publicada, sem ampliar a faixa de curvaturas por conta
-própria.
+Apresente ${produto.nome} de forma natural. Explique qual problema ele ajuda a
+resolver e em qual etapa da rotina entra. Não transforme promessa da marca em
+resultado garantido.
 
-## O que ainda precisa ser testado?
+## Como usar sem complicar?
 
-Liste peso, rendimento, duração, acabamento e outras dúvidas que dependem de
-experiência real.
+Inclua um passo a passo curto. Faça pelo menos duas perguntas ao longo do texto
+e responda logo depois. Use uma expressão leve como "calma", "pois é" ou
+"vamos combinar", sem exagerar.
 
-## O que conferir antes da compra?
+## O que conferir antes de escolher?
 
-Inclua um checklist curto e prático.
+Inclua um checklist curto e prático. Não fale sobre comissão, afiliados, data
+de pesquisa ou processo interno do site.
 
 ## Fontes
 

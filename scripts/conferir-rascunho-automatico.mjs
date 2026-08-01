@@ -30,6 +30,12 @@ function possuiTravessao(texto) {
   return /[—–]/u.test(String(texto ?? ""));
 }
 
+function possuiLinguagemInterna(texto) {
+  return /\b(análise documental|fontes verificadas|a pesquisa localizou|a oferta foi conferida|link de afiliado|recebemos comissão|criado por (?:uma )?inteligência artificial)\b/iu.test(
+    String(texto ?? "")
+  );
+}
+
 const alterados = executarGit(["diff", "--name-only"])
   .split(/\r?\n/)
   .filter(Boolean);
@@ -131,6 +137,30 @@ if (artigos.length === 1) {
     registrarErro("O artigo usa travessão.");
   }
 
+  const textoPublico = textosEditoriais.join("\n");
+  if (possuiLinguagemInterna(textoPublico)) {
+    registrarErro(
+      "O artigo fala sobre o processo interno, comissão, afiliados ou datas de conferência. Isso não deve aparecer para a leitora."
+    );
+  }
+
+  const perguntasNoCorpo = content.match(/\?/gu) ?? [];
+  if (perguntasNoCorpo.length < 2) {
+    registrarErro(
+      "O artigo precisa fazer pelo menos duas perguntas naturais no corpo e respondê-las logo em seguida."
+    );
+  }
+
+  if (
+    !/\b(quer a resposta curta|vamos combinar|calma|pois é|olha|sem mistério|sem drama|ninguém merece|faça assim|quer saber)\b/iu.test(
+      content
+    )
+  ) {
+    registrarErro(
+      "O texto ainda está formal demais. Inclua pelo menos uma expressão leve e natural da voz Curva Viva."
+    );
+  }
+
   const titulos = content.match(/^##\s+.+$/gmu) ?? [];
   if (titulos.length < 3) {
     registrarErro("O artigo precisa de pelo menos três seções principais.");
@@ -159,7 +189,7 @@ if (artigos.length === 1) {
 
   if (
     /\b(em nosso teste|nós testamos|eu testei|resultado garantido|compre agora|oferta imperdível)\b/iu.test(
-      textosEditoriais.join("\n")
+      textoPublico
     )
   ) {
     registrarErro("O artigo inventa teste, promete resultado ou usa pressão comercial.");

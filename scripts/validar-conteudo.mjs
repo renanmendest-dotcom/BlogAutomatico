@@ -245,6 +245,27 @@ for (const nome of arquivos) {
     erro(`${prefixo}: o texto não pode usar travessão.`);
   }
 
+  const linguagemInternaBloqueada = [
+    /\banálise documental\b/iu,
+    /\bfontes verificadas\b/iu,
+    /\ba pesquisa localizou\b/iu,
+    /\ba oferta foi conferida\b/iu,
+    /\blink de afiliado\b/iu,
+    /\brecebemos comissão\b/iu,
+    /\bcriado por (?:uma )?inteligência artificial\b/iu
+  ];
+
+  for (const padrao of linguagemInternaBloqueada) {
+    if (padrao.test(textoEditorial)) {
+      erro(`${prefixo}: o texto público usa linguagem interna ou um aviso indesejado.`);
+    }
+  }
+
+  const perguntasNoCorpo = content.match(/\?/gu) ?? [];
+  if (perguntasNoCorpo.length < 2) {
+    erro(`${prefixo}: o texto precisa conversar com a leitora usando perguntas e respostas naturais.`);
+  }
+
   if (
     data.tipo_analise === "documental" &&
     /\b(em nosso teste|nós testamos|eu testei|usei por \d+ dias)\b/iu.test(

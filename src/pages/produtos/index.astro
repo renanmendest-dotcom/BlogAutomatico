@@ -2,30 +2,28 @@
 import ProductCard from "../../components/ProductCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
-  produtosNaFila,
   produtosPublicados
 } from "../../lib/produtos";
 ---
 
 <BaseLayout
   titulo="Produtos para cabelos ondulados, cacheados e crespos"
-  descricao="Fichas de produtos capilares com indicação da marca, textura, objetivos, fontes e limites visíveis."
+  descricao="Produtos para cabelos ondulados, cacheados e crespos explicados de um jeito simples e fácil de comparar."
 >
   <header class="page-hero shell">
-    <p class="eyebrow">Catálogo em construção</p>
-    <h1>Produtos sem promessa escondida.</h1>
+    <p class="eyebrow">Escolha sem se perder</p>
+    <h1>O produto certo para o que seu cabelo pede agora.</h1>
     <p>
-      Cada ficha separa informação oficial, observação editorial e teste real.
-      Quando ainda não testamos um produto, você verá isso antes de qualquer
-      indicação.
+      Quer mais definição, maciez ou um day after que sobreviva? Compare as
+      opções com calma e escolha pelo resultado que você procura.
     </p>
   </header>
 
   <section class="section shell section-first">
-    <div class="filter-notes" aria-label="Como ler as fichas">
-      <span>Curvatura é ponto de partida</span>
-      <span>Textura muda o resultado</span>
-      <span>Fonte oficial tem prioridade</span>
+    <div class="filter-notes" aria-label="Dicas para escolher">
+      <span>Para definir</span>
+      <span>Para dar maciez</span>
+      <span>Para segurar o day after</span>
     </div>
 
     <div class="product-grid">
@@ -40,13 +38,12 @@ import {
   <section class="queue-strip">
     <div class="shell queue-inner">
       <div>
-        <p class="eyebrow">Próximas fichas</p>
-        <h2>{produtosNaFila.length} produtos aguardam pesquisa.</h2>
+        <p class="eyebrow">Tem mais vindo aí</p>
+        <h2>Novos queridinhos entram por aqui.</h2>
       </div>
       <p>
-        A fila inclui Widi Care, Soul Power, Apse, Novex, Seda, Inoar e
-        Arvensis. Só publicamos depois de encontrar a versão exata e uma fonte
-        confiável.
+        Widi Care, Soul Power, Apse, Novex, Seda, Inoar e Arvensis estão na
+        nossa lista. Sim, a bancada vai ficar bem mais recheada.
       </p>
     </div>
   </section>

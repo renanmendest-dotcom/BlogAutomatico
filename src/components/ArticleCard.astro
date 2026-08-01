@@ -1,5 +1,5 @@
 ---
-import { formatarData, rotuloCategoria } from "../lib/produtos";
+import { rotuloCategoria } from "../lib/produtos";
 
 interface Props {
   post: {
@@ -21,18 +21,15 @@ const { post, destaque = false } = Astro.props;
 <article class:list={["article-card", { "is-featured": destaque }]}>
   <div class="article-card-meta">
     <span>{rotuloCategoria(post.data.categoria)}</span>
-    <span>{formatarData(post.data.atualizado_em)}</span>
+    <span>Leitura gostosa</span>
   </div>
 
   <h3><a href={`/artigos/${post.id}/`}>{post.data.titulo}</a></h3>
   <p>{post.data.resposta_curta}</p>
 
   <div class="article-card-footer">
-    <span class="evidence-pill">
-      {post.data.tipo_analise === "teste_real" ? "Teste real" : "Fontes oficiais"}
-    </span>
     <a class="arrow-link" href={`/artigos/${post.id}/`}>
-      Ler guia <span aria-hidden="true">↗</span>
+      Quero ler <span aria-hidden="true">↗</span>
     </a>
   </div>
 </article>

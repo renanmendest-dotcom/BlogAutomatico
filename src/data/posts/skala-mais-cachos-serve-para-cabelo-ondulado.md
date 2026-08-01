@@ -93,5 +93,3 @@ Também é possível usar um creme mais nutritivo apenas nas pontas e um finaliz
 Falta um teste real da Curva Viva em cabelo ondulado, com registro da quantidade aplicada, características do fio, clima e resultado depois da secagem.
 
 Até esse teste existir, a conclusão segura é simples: a Skala não inclui cabelos ondulados na indicação oficial consultada. Qualquer afirmação mais forte precisaria de evidência adicional.
-
-> **Transparência:** este conteúdo não é uma resenha de uso. Ele organiza a ficha oficial e mostra como interpretar uma indicação que não cita diretamente o cabelo ondulado.

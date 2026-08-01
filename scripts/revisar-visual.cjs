@@ -28,7 +28,10 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
     larguraViewport: window.innerWidth,
     alturaDocumento: document.documentElement.scrollHeight,
     linksSemTexto: [...document.querySelectorAll("a")].filter(
-      (link) => !link.textContent?.trim() && !link.getAttribute("aria-label")
+      (link) =>
+        link.getAttribute("aria-hidden") !== "true" &&
+        !link.textContent?.trim() &&
+        !link.getAttribute("aria-label")
     ).length
   }));
 
@@ -83,6 +86,22 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
       "/artigos/creme-de-pentear-ou-gelatina-qual-escolher-2026/",
       { width: 390, height: 844 },
       "artigo-celular"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/gelatina-antes-ou-depois-do-creme-de-pentear-2026/",
+      { width: 1440, height: 1000 },
+      "gelatina-artigo-desktop"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/gelatina-antes-ou-depois-do-creme-de-pentear-2026/",
+      { width: 390, height: 844 },
+      "gelatina-artigo-celular"
     )
   );
 

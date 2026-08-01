@@ -4,7 +4,6 @@ import ProductCard from "../../components/ProductCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
   buscarProduto,
-  formatarData,
   rotuloCategoria
 } from "../../lib/produtos";
 
@@ -68,29 +67,10 @@ const faqSchema = {
     <header class="article-hero">
       <div class="shell article-hero-inner">
         <a class="back-link" href="/artigos/">← Todos os guias</a>
-        <p class="eyebrow">
-          {rotuloCategoria(post.data.categoria)} · {
-            post.data.tipo_analise === "teste_real"
-              ? "teste real"
-              : "análise documental"
-          }
-        </p>
+        <p class="eyebrow">{rotuloCategoria(post.data.categoria)} sem complicação</p>
         <h1>{post.data.titulo}</h1>
         <p class="answer-box">{post.data.resposta_curta}</p>
-        <dl class="article-meta">
-          <div>
-            <dt>Por</dt>
-            <dd>{post.data.autor}</dd>
-          </div>
-          <div>
-            <dt>Atualizado</dt>
-            <dd>{formatarData(post.data.atualizado_em)}</dd>
-          </div>
-          <div>
-            <dt>Fontes verificadas</dt>
-            <dd>{post.data.fontes.length}</dd>
-          </div>
-        </dl>
+        <p class="article-byline">Por {post.data.autor}</p>
       </div>
     </header>
 
@@ -99,12 +79,11 @@ const faqSchema = {
         {
           produtos.length > 0 && (
             <section class="article-product-recommendations" aria-labelledby="produtos-citados">
-              <p class="eyebrow">Produtos citados neste guia</p>
-              <h2 id="produtos-citados">Opções que combinam com esta orientação.</h2>
+              <p class="eyebrow">Para colocar em prática</p>
+              <h2 id="produtos-citados">Os produtos que fazem sentido aqui</h2>
               <p>
-                Estes produtos foram incluídos porque suas fichas publicadas se
-                relacionam com a dúvida respondida. A indicação não significa
-                que o resultado será igual em todos os cabelos.
+                Quer testar essa finalização? Separei as opções citadas no guia
+                para você não precisar sair caçando o nome certinho por aí.
               </p>
               <div class="article-product-grid">
                 {produtos.map((produto) =>
@@ -133,8 +112,8 @@ const faqSchema = {
         </section>
 
         <section class="article-sources">
-          <p class="eyebrow">Rastreabilidade</p>
-          <h2>Fontes consultadas</h2>
+          <p class="eyebrow">Para conferir</p>
+          <h2>De onde vieram as informações?</h2>
           <ol>
             {
               post.data.fontes.map((fonte) => (
@@ -142,7 +121,6 @@ const faqSchema = {
                   <a href={fonte.url} target="_blank" rel="noopener">
                     {fonte.titulo}
                   </a>
-                  <span>Acesso em {formatarData(fonte.acessado_em)}</span>
                 </li>
               ))
             }
@@ -150,16 +128,6 @@ const faqSchema = {
         </section>
       </div>
 
-      <aside class="article-aside">
-        <div class="method-note">
-          <p class="eyebrow">Como ler este guia</p>
-          <p>
-            Este conteúdo organiza informações publicadas pelas marcas. Quando
-            não existe teste real da Curva Viva, não apresentamos resultado
-            pessoal como fato.
-          </p>
-        </div>
-      </aside>
     </div>
   </article>
 </BaseLayout>

@@ -88,5 +88,3 @@ Se o objetivo principal for segurar a definição por mais tempo, pode ser neces
 O Meu Cacho Minha Vida tem uma proposta clara de creme de pentear para fios cacheados, com benefícios publicados de desembaraço, emoliência e definição. A ausência de curvaturas numéricas e de teste próprio impede uma recomendação mais específica.
 
 Essa não é uma falha da ficha. É justamente a informação necessária para decidir se você prefere testar com cautela ou escolher um produto com indicação mais detalhada.
-
-> **Transparência:** a Curva Viva ainda não testou este produto. As informações vêm da página oficial da Lola Cosmetics, consultada na data indicada.

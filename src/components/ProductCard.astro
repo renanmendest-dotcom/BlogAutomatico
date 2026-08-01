@@ -1,9 +1,6 @@
 ---
 import type { ProdutoPublicado } from "../lib/produtos";
-import {
-  resumoCurvaturas,
-  rotuloCategoria
-} from "../lib/produtos";
+import { resumoCurvaturas, rotuloCategoria } from "../lib/produtos";
 
 interface Props {
   produto: ProdutoPublicado;
@@ -11,11 +8,22 @@ interface Props {
 }
 
 const { produto, compacto = false } = Astro.props;
-const initials = produto.marca
-  .split(/\s+/)
-  .map((parte) => parte[0])
-  .join("")
-  .slice(0, 2);
+const tamanhoEncontrado = produto.nome.match(/\s(\d+(?:[.,]\d+)?\s?(?:g|kg|ml|l))$/i);
+const tamanho = tamanhoEncontrado?.[1] ?? "";
+let nomePrincipal = tamanhoEncontrado
+  ? produto.nome.slice(0, tamanhoEncontrado.index).trim()
+  : produto.nome;
+nomePrincipal = nomePrincipal.replace(
+  new RegExp(`^${produto.marca.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s+`, "i"),
+  ""
+);
+if (produto.categoria === "gelatina") {
+  nomePrincipal = nomePrincipal.replace(/^Gelatina\s+/i, "");
+}
+if (produto.categoria === "creme_para_pentear") {
+  nomePrincipal = nomePrincipal.replace(/\s+Creme de Pentear$/i, "");
+}
+const tipoProduto = rotuloCategoria(produto.categoria);
 ---
 
 <article class:list={["product-card", { "is-compact": compacto }]}>
@@ -32,58 +40,58 @@ const initials = produto.marca
         />
       ) : (
         <>
-          <span class="product-monogram">{initials}</span>
           <span class="product-shape"></span>
+          <span class="product-shape-small"></span>
         </>
       )
     }
-    <span class="product-kind">{rotuloCategoria(produto.categoria)}</span>
+    <span class="product-visual-glow" aria-hidden="true"></span>
   </a>
 
   <div class="product-card-content">
-    <p class="product-brand">{produto.marca}</p>
-    <h3><a href={`/produtos/${produto.id}/`}>{produto.nome}</a></h3>
+    <div class="product-kicker">
+      <p class="product-brand">{produto.marca}</p>
+      <span>{tipoProduto}</span>
+    </div>
+    <h3>
+      <a href={`/produtos/${produto.id}/`} aria-label={produto.nome}>
+        <span>{nomePrincipal}</span>
+        {tamanho && <small>{tamanho}</small>}
+      </a>
+    </h3>
     <p class="product-summary">{produto.descricao}</p>
 
-    <dl class="product-card-facts">
-      <div>
-        <dt>Para quem</dt>
-        <dd>{resumoCurvaturas(produto.perfil.curvaturas)}</dd>
-      </div>
-      <div>
-        <dt>Textura</dt>
-        <dd>{produto.perfil.textura}</dd>
-      </div>
-    </dl>
-
-    <div class="product-card-footer">
-      <span class="evidence-pill">
-        {produto.analise.testado ? "Teste real" : "Análise documental"}
-      </span>
-      <a class="arrow-link" href={`/produtos/${produto.id}/`}>
-        Ver ficha <span aria-hidden="true">↗</span>
-      </a>
-    </div>
-
     {
-      produto.oferta.url ? (
-        <>
+      !compacto && (
+        <dl class="product-card-facts">
+          <div>
+            <dt>Combina com</dt>
+            <dd>{resumoCurvaturas(produto.perfil.curvaturas)}</dd>
+          </div>
+          <div>
+            <dt>Textura</dt>
+            <dd>{produto.perfil.textura}</dd>
+          </div>
+        </dl>
+      )
+    }
+
+    <div class="product-card-actions">
+      <a class="product-detail-link" href={`/produtos/${produto.id}/`}>
+        Ver detalhes
+      </a>
+      {
+        produto.oferta.url && (
           <a
-            class="button button-primary button-full product-buy-button"
+            class="button button-primary product-buy-button"
             href={produto.oferta.url}
             target="_blank"
             rel="nofollow sponsored noopener"
           >
-            Ver preço na {produto.oferta.loja}
+            Ver na {produto.oferta.loja}
           </a>
-          <p class="affiliate-note">
-            Recebemos comissão pelas compras qualificadas. Isso não altera o
-            preço para você.
-          </p>
-        </>
-      ) : (
-        <p class="offer-pending">Link de compra em conferência.</p>
-      )
-    }
+        )
+      }
+    </div>
   </div>
 </article>

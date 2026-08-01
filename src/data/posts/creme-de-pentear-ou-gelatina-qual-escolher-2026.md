@@ -92,5 +92,3 @@ Também vale observar se a combinação forma resíduos visíveis quando os prod
 6. Teste um produto por vez antes de criar muitas camadas.
 
 O melhor finalizador não é o que promete mais benefícios. É o que entrega o resultado que você procura sem criar um novo problema na rotina.
-
-> **Transparência:** este guia é uma análise documental. Ele organiza informações oficiais e critérios de escolha, mas não apresenta experiência de uso da Curva Viva como se fosse um teste real.

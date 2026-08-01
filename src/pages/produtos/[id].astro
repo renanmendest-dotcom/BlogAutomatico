@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
-  formatarData,
   produtosPublicados,
   resumoCurvaturas,
   rotuloCategoria,
@@ -58,36 +57,46 @@ const productSchema = {
         </p>
         <h1>{produto.nome}</h1>
         <p class="product-description">{produto.descricao}</p>
-        <div class="verified-row">
-          <span class="evidence-pill">Análise documental</span>
-          <span>Atualizada em {formatarData(produto.verificadoEm)}</span>
-        </div>
       </div>
 
-      <aside class="product-profile" aria-label="Resumo do produto">
-        <span class="profile-label">Perfil rápido</span>
-        <dl>
-          <div>
-            <dt>Para quem</dt>
-            <dd>{resumoCurvaturas(produto.perfil.curvaturas)}</dd>
-          </div>
-          <div>
-            <dt>Textura</dt>
-            <dd>{produto.perfil.textura}</dd>
-          </div>
-          <div>
-            <dt>Intensidade</dt>
-            <dd>{produto.perfil.intensidade}</dd>
-          </div>
-        </dl>
+      <aside class="product-showcase" aria-label="Resumo do produto">
+        {
+          produto.imagem && (
+            <div class="product-detail-image">
+              <img
+                src={produto.imagem.src}
+                alt={produto.imagem.alt}
+                width="640"
+                height="640"
+              />
+            </div>
+          )
+        }
+        <div class="product-profile">
+          <span class="profile-label">Combina com a sua rotina?</span>
+          <dl>
+            <div>
+              <dt>Para quem</dt>
+              <dd>{resumoCurvaturas(produto.perfil.curvaturas)}</dd>
+            </div>
+            <div>
+              <dt>Textura</dt>
+              <dd>{produto.perfil.textura}</dd>
+            </div>
+            <div>
+              <dt>Intensidade</dt>
+              <dd>{produto.perfil.intensidade}</dd>
+            </div>
+          </dl>
+        </div>
       </aside>
     </div>
   </header>
 
   <section class="section shell product-detail-grid">
     <div>
-      <p class="eyebrow">O que encontramos</p>
-      <h2 class="content-title">A ficha em linguagem simples.</h2>
+      <p class="eyebrow">Resumo sem enrolação</p>
+      <h2 class="content-title">O que vale saber antes de escolher.</h2>
 
       <dl class="detail-list">
         {
@@ -107,43 +116,27 @@ const productSchema = {
         </ul>
       </div>
 
-      <div class="editorial-note">
-        <p class="eyebrow">Limite desta ficha</p>
-        <p>{produto.analise.nota}</p>
-      </div>
     </div>
 
     <aside class="purchase-panel">
-      <p class="eyebrow">Onde comprar</p>
+      <p class="eyebrow">Gostou da proposta?</p>
       {
         produto.oferta.url ? (
-          <>
-            <a
-              class="button button-primary button-full"
-              href={produto.oferta.url}
-              target="_blank"
-              rel="nofollow sponsored noopener"
-            >
-              Ver na {produto.oferta.loja}
-            </a>
-            <p class="affiliate-note">
-              Recebemos comissão pelas compras qualificadas. Isso não altera o
-              preço para você.
-            </p>
-          </>
+          <a
+            class="button button-primary button-full"
+            href={produto.oferta.url}
+            target="_blank"
+            rel="nofollow sponsored noopener"
+          >
+            Ver na {produto.oferta.loja}
+          </a>
         ) : (
-          <>
-            <strong>Oferta em conferência</strong>
-            <p>
-              O link só aparece depois que a loja, a versão do produto e o
-              endereço de afiliado forem confirmados.
-            </p>
-          </>
+          <p>Veja os detalhes abaixo e compare com o que seu cabelo precisa.</p>
         )
       }
 
       <div class="source-list">
-        <p class="eyebrow">Fontes consultadas</p>
+        <p class="eyebrow">Quer conferir os detalhes?</p>
         <ol>
           {
             produto.fontes.map((fonte) => (
@@ -151,7 +144,6 @@ const productSchema = {
                 <a href={fonte.url} target="_blank" rel="noopener">
                   {fonte.titulo}
                 </a>
-                <span>Acesso em {formatarData(fonte.acessadoEm)}</span>
               </li>
             ))
           }
@@ -164,8 +156,8 @@ const productSchema = {
     postsRelacionados.length > 0 && (
       <section class="section section-soft">
         <div class="shell">
-          <p class="eyebrow">Continue a pesquisa</p>
-          <h2 class="content-title">Guias que citam este produto.</h2>
+          <p class="eyebrow">Para continuar</p>
+          <h2 class="content-title">Veja como usar esse produto na rotina.</h2>
           <div class="related-links">
             {postsRelacionados.map((post) => (
               <a href={`/artigos/${post.id}/`}>

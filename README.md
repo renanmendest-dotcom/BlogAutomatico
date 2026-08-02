@@ -5,14 +5,15 @@ a escolher produtos com mais segurança.
 
 ## Como o projeto funciona
 
-1. A IA procura dúvidas reais que as pessoas fazem na internet.
-2. Ela escolhe uma pergunta útil e com intenção de compra.
-3. Confere as informações no site oficial da marca.
-4. Prepara um artigo e indica produtos que podem ter link de afiliado.
-5. Abre uma solicitação no GitHub para o proprietário revisar.
-6. O artigo só é publicado depois da aprovação humana.
+1. O Codex procura dúvidas reais que as pessoas fazem na internet.
+2. Escolhe uma pergunta útil e com intenção de compra.
+3. Confere informações e produtos em fontes confiáveis.
+4. Escreve um artigo e faz duas revisões completas.
+5. Confere o funcionamento do site e publica diretamente.
+6. A Vercel coloca a nova versão no ar.
 
-A IA não inventa testes, fotos, resultados de uso ou experiências pessoais.
+Não é necessária aprovação manual. A IA também não inventa testes, fotos,
+resultados de uso ou experiências pessoais.
 
 ## Endereço atual
 
@@ -20,7 +21,7 @@ A IA não inventa testes, fotos, resultados de uso ou experiências pessoais.
 
 ## Comandos usados pelo projeto
 
-Estes comandos são executados automaticamente pelo GitHub e pela Vercel:
+Estes comandos são executados automaticamente pelo Codex, GitHub e Vercel:
 
 - `pnpm validar`: confere o conteúdo e as fontes.
 - `pnpm check`: procura erros no site.

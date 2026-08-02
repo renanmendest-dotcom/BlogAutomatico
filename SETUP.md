@@ -4,47 +4,38 @@
 
 - O site usa Astro e está ligado à Vercel.
 - Os arquivos ficam guardados no GitHub.
-- A IA tem regras para pesquisar, escrever e revisar.
-- Você sempre aprova o artigo antes da publicação.
+- O Codex pesquisa, escreve, revisa, testa e publica.
+- O artigo passa por duas revisões automáticas antes da publicação.
+- A publicação acontece diretamente no GitHub, sem aprovação manual.
 
-## O que você precisa configurar uma única vez
+## Como funciona a rotina
 
-### 1. Endereço do site no GitHub
+1. O Codex procura uma dúvida com potencial de busca e clique.
+2. Confere o tema e o produto em fontes confiáveis.
+3. Escreve um artigo no padrão editorial da Curva Viva.
+4. Faz uma revisão de fatos, fontes, produto, imagem e links.
+5. Faz uma segunda revisão de título, naturalidade, retenção e SEO.
+6. Executa todos os testes técnicos e visuais.
+7. Publica no GitHub somente se tudo estiver correto.
+8. A Vercel atualiza o site automaticamente.
 
-No repositório, abra `Settings`, depois `Secrets and variables`, `Actions` e
-`Variables`. Crie:
+## O que precisa ficar disponível
 
-- Nome: `SITE_URL`
-- Valor: `https://blog-automatico-sigma.vercel.app`
+- O notebook ligado, conectado à internet e desbloqueado.
+- O aplicativo do Codex aberto.
+- O Chrome aberto e conectado ao Mercado Livre quando for necessário gerar um
+  novo link de compra.
 
-Isso informa aos buscadores qual é o endereço oficial do site.
+## Endereço do site
 
-### 2. Acesso da IA no GitHub
+Enquanto não houver domínio próprio, o endereço oficial é:
 
-No mesmo lugar, mas dentro de `Secrets`, cadastre:
+`https://blog-automatico-sigma.vercel.app`
 
-- Nome: `CLAUDE_CODE_OAUTH_TOKEN`
-- Valor: o código de acesso fornecido pelo Claude Code
+Quando um domínio próprio for comprado, atualize `SITE_URL` no GitHub e a
+configuração `site` do Astro.
 
-Esse código permite que a IA prepare um rascunho. Ele nunca deve ser escrito
-dentro dos arquivos do projeto.
+## Como pausar
 
-### 3. Programa de afiliados
-
-Faça o cadastro no programa de afiliados da loja escolhida. A prioridade inicial
-é a Amazon. Depois da aprovação, coloque o seu link na ficha do produto.
-
-O site nunca mostra um botão de compra enquanto não existir um link real.
-
-## Como aprovar um artigo
-
-1. A IA abre uma solicitação chamada `Revisar`.
-2. Você lê o resumo e o artigo no GitHub.
-3. Se estiver correto, clique em `Merge pull request`.
-4. O site publica o texto automaticamente.
-5. Se não gostar, feche a solicitação sem aprovar.
-
-## Como pausar a automação
-
-Crie um arquivo vazio chamado `PAUSE` na pasta principal do projeto. Para voltar
-a funcionar, apague apenas esse arquivo.
+Pause a tarefa **Produzir e publicar Curva Viva** na área **Scheduled** do
+aplicativo Codex.

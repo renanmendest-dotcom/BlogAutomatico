@@ -6,11 +6,11 @@ descricao: "Entenda a diferença entre creme de pentear e gelatina e veja o que 
 autor: "Curadoria Curva Viva"
 tipo_analise: "documental"
 publicado_em: 2026-07-30
-atualizado_em: 2026-07-30
-verificado_em: 2026-07-30
+atualizado_em: 2026-08-02
+verificado_em: 2026-08-02
 categoria: finalizacao
 produtos:
-  - salon-line-gelatina-definicao-duradoura-550g
+  - salon-line-gelatina-definicao-extraordinaria-550g
   - lola-meu-cacho-minha-vida-creme-pentear-500g
 fontes:
   - titulo: "Salon Line, Creme para Pentear"
@@ -19,9 +19,12 @@ fontes:
   - titulo: "Salon Line, Ativador de Cachos e diferença para creme de pentear"
     url: "https://universo.salonline.com.br/lp-ativador-de-cachos/"
     acessado_em: 2026-07-30
-  - titulo: "Salon Line, Gelatina Definição Duradoura"
-    url: "https://universo.salonline.com.br/lp-teste-to-de-cacho/"
-    acessado_em: 2026-07-30
+  - titulo: "Salon Line, Gelatinas #todecacho"
+    url: "https://gelatinas.salonline.com.br/"
+    acessado_em: 2026-08-02
+  - titulo: "Mercado Livre, Gelatina Definição Extraordinária 550 g"
+    url: "https://www.mercadolivre.com.br/gelatina-definico-extraordinaria-550g-salon-line-72h/p/MLB53865740"
+    acessado_em: 2026-08-02
   - titulo: "Lola Cosmetics, Meu Cacho Minha Vida Creme de Pentear"
     url: "https://www.lolacosmetics.com.br/meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409"
     acessado_em: 2026-07-30
@@ -70,7 +73,7 @@ Para reduzir o risco de excesso, comece com uma quantidade menor do que você im
 
 A gelatina pode fazer mais sentido quando o cabelo fica bonito logo após a finalização, mas perde o formato pouco tempo depois. Ela também é uma possibilidade para quem gosta de mais controle e aceita uma película de fixação.
 
-Na página oficial da Gelatina Definição Duradoura, a Salon Line informa indicação para curvaturas de 2A a 4C, proteção UV, controle de frizz e fixação por até 72 horas. Esses benefícios são alegações da marca. A Curva Viva ainda não confirmou a duração em teste próprio.
+Quer uma opção para aumentar a fixação? A Gelatina #todecacho Definição Extraordinária 550 g entra justamente nessa etapa. A linha é apresentada com foco em definição e controle do frizz, e a fórmula destaca óleos de jojoba e girassol. Use pouco no começo, porque fixação extra não precisa virar cabelo engessado, né?
 
 Uma gelatina de fixação alta não precisa ser usada em grande quantidade. Em cabelos que pesam facilmente, uma camada fina pode ser suficiente. Em fios mais densos, a quantidade e a divisão em mechas podem mudar.
 

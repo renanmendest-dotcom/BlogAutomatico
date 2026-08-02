@@ -1,56 +1,68 @@
 [
   {
-    "id": "salon-line-gelatina-definicao-duradoura-550g",
-    "nome": "Gelatina Definição Duradoura 550 g",
-    "descricao": "Gelatina de finalização que a Salon Line apresenta para curvaturas de 2A a 4C, com foco em fixação, definição e controle de frizz.",
+    "id": "salon-line-gelatina-definicao-extraordinaria-550g",
+    "nome": "Gelatina #todecacho Definição Extraordinária 550 g",
+    "descricao": "Gelatina de finalização da Salon Line com proposta de superfixação, definição e controle de frizz.",
     "marca": "Salon Line",
     "categoria": "gelatina",
     "publicado": true,
-    "verificadoEm": "2026-07-30",
+    "verificadoEm": "2026-08-02",
     "perfil": {
-      "curvaturas": ["2A", "2B", "2C", "3A", "3B", "3C", "4A", "4B", "4C"],
+      "curvaturas": ["Ondulados", "Cacheados", "Crespos"],
       "textura": "Gelatina",
       "intensidade": "Fixação alta, segundo a marca",
       "objetivos": ["Definição", "Controle de frizz", "Day after"]
     },
     "destaques": [
       {
-        "rotulo": "Indicação da marca",
-        "valor": "Ondulados, cacheados e crespos",
-        "fonteId": "salon-line-definicao-duradoura"
+        "rotulo": "Tamanho",
+        "valor": "550 g",
+        "fonteId": "mercado-livre-definicao-extraordinaria"
       },
       {
-        "rotulo": "Curvaturas informadas",
-        "valor": "2A a 4C",
-        "fonteId": "salon-line-definicao-duradoura"
+        "rotulo": "Proposta da linha",
+        "valor": "Superfixação e controle de frizz",
+        "fonteId": "mercado-livre-definicao-extraordinaria"
       },
       {
-        "rotulo": "Promessa apresentada",
-        "valor": "Fixação e definição por até 72 horas",
-        "fonteId": "salon-line-definicao-duradoura"
+        "rotulo": "Ativos destacados",
+        "valor": "Óleos de jojoba e girassol e cafeína",
+        "fonteId": "mercado-livre-definicao-extraordinaria"
       },
       {
-        "rotulo": "Proteção UV",
-        "valor": "Informada pela marca",
-        "fonteId": "salon-line-definicao-duradoura"
+        "rotulo": "Onde encontrar",
+        "valor": "Mercado Livre",
+        "fonteId": "mercado-livre-definicao-extraordinaria"
       }
     ],
+    "imagem": {
+      "src": "https://http2.mlstatic.com/D_NQ_NP_947775-MLA99870247657_112025-O.webp",
+      "alt": "Pote da Gelatina #todecacho Definição Extraordinária Salon Line 550 g",
+      "credito": "Mercado Livre",
+      "fonteUrl": "https://www.mercadolivre.com.br/gelatina-definico-extraordinaria-550g-salon-line-72h/p/MLB53865740"
+    },
     "oferta": {
-      "loja": "Amazon",
-      "url": null,
-      "atualizadoEm": null
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/2RJJkZS",
+      "atualizadoEm": "2026-08-02"
     },
     "analise": {
       "tipo": "documental",
       "testado": false,
-      "nota": "A ficha organiza informações publicadas pela marca. A duração e o resultado ainda não foram testados pela Curva Viva."
+      "nota": "As informações da ficha vêm das páginas registradas. Peso, rendimento e duração no cabelo dependem do uso real."
     },
     "fontes": [
       {
-        "id": "salon-line-definicao-duradoura",
-        "titulo": "Gelatina #todecacho Definição Duradoura",
-        "url": "https://universo.salonline.com.br/lp-teste-to-de-cacho/",
-        "acessadoEm": "2026-07-30"
+        "id": "salon-line-gelatinas",
+        "titulo": "Gelatinas Salon Line, brilho, definição e fixação",
+        "url": "https://gelatinas.salonline.com.br/",
+        "acessadoEm": "2026-08-02"
+      },
+      {
+        "id": "mercado-livre-definicao-extraordinaria",
+        "titulo": "Gelatina Definição Extraordinária Salon Line 550 g no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/gelatina-definico-extraordinaria-550g-salon-line-72h/p/MLB53865740",
+        "acessadoEm": "2026-08-02"
       }
     ]
   },
@@ -128,12 +140,18 @@
     "marca": "Skala",
     "categoria": "creme_para_pentear",
     "publicado": true,
-    "verificadoEm": "2026-07-30",
+    "verificadoEm": "2026-08-02",
     "perfil": {
       "curvaturas": ["Cacheados", "Crespos", "Crespíssimos", "Em transição"],
       "textura": "Creme 3 em 1",
       "intensidade": "Não informada",
       "objetivos": ["Hidratação", "Desembaraço", "Força"]
+    },
+    "imagem": {
+      "src": "https://http2.mlstatic.com/D_NQ_NP_885276-MLA99332667660_112025-O.webp",
+      "alt": "Frasco do Creme para Pentear Skala Expert #Mais Cachos 3 em 1 250 g",
+      "credito": "Mercado Livre",
+      "fonteUrl": "https://www.mercadolivre.com.br/creme-para-pentear-skala-3-em-1-mais-cachos-250-g/p/MLB19813332"
     },
     "destaques": [
       {
@@ -158,9 +176,9 @@
       }
     ],
     "oferta": {
-      "loja": "Amazon",
-      "url": null,
-      "atualizadoEm": null
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/1JKRpeh",
+      "atualizadoEm": "2026-08-02"
     },
     "analise": {
       "tipo": "documental",
@@ -173,6 +191,12 @@
         "titulo": "Creme para Pentear #Mais Cachos",
         "url": "https://www.skala.com.br/produto/-mais-cachos-740",
         "acessadoEm": "2026-07-30"
+      },
+      {
+        "id": "mercado-livre-skala-mais-cachos",
+        "titulo": "Creme para Pentear Skala 3 em 1 #Mais Cachos 250 g no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/creme-para-pentear-skala-3-em-1-mais-cachos-250-g/p/MLB19813332",
+        "acessadoEm": "2026-08-02"
       }
     ]
   },

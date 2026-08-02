@@ -75,7 +75,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
   resultados.push(
     await inspecionarPagina(
       browser,
-      "/produtos/salon-line-gelatina-definicao-duradoura-550g/",
+      "/produtos/salon-line-gelatina-definicao-extraordinaria-550g/",
       { width: 1440, height: 1000 },
       "produto-desktop"
     )
@@ -113,7 +113,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
     "/artigos/skala-mais-cachos-serve-para-cabelo-ondulado/",
     "/como-verificamos/",
     "/produtos/",
-    "/produtos/salon-line-gelatina-definicao-duradoura-550g/",
+    "/produtos/salon-line-gelatina-definicao-extraordinaria-550g/",
     "/produtos/lola-meu-cacho-minha-vida-creme-pentear-500g/",
     "/produtos/skala-mais-cachos-3-em-1-250g/",
     "/sobre/"

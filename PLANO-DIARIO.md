@@ -1,43 +1,27 @@
-# Plano diário da Curva Viva
+# Rotina simples da Curva Viva
 
-Tempo: 1 hora por dia, de segunda a sexta-feira.
+A produção de artigos acontece automaticamente às segundas, quartas e sextas,
+à noite. O notebook precisa estar ligado, desbloqueado, conectado à internet e
+com o Codex aberto.
 
-## Segunda-feira: conferir a pesquisa
+## Segunda-feira: produção automática
 
-- Abra o GitHub e veja se existe uma solicitação com o nome `Revisar`.
-- Leia o resumo criado pela IA.
-- Confira se a pergunta parece útil para quem vai comprar um produto.
+O Codex pesquisa, escreve, revisa duas vezes, testa e publica um artigo.
 
-Por que fazer: a IA pesquisa sozinha, mas você decide se a pauta combina com o
-site.
+## Terça-feira: acompanhamento
 
-## Terça-feira: ler o artigo
+Reserve alguns minutos apenas para olhar visitas e cliques quando as métricas
+estiverem configuradas.
 
-- Leia o rascunho sem pressa.
-- Veja se a resposta aparece logo no começo.
-- Marque qualquer trecho confuso ou exagerado.
+## Quarta-feira: produção automática
 
-Por que fazer: textos claros seguram melhor a atenção do leitor.
+Um novo artigo passa pelo mesmo processo completo e é publicado se estiver bom.
 
-## Quarta-feira: conferir produto e fonte
+## Quinta-feira: redes sociais
 
-- Abra o link oficial da marca citado no artigo.
-- Confira se o nome e o tamanho do produto estão corretos.
-- Confira se o botão de compra usa o seu link de afiliado.
+Use o resumo preparado a partir dos artigos para movimentar Instagram e X.
 
-Por que fazer: isso evita indicar o produto errado ou perder uma comissão.
+## Sexta-feira: produção automática
 
-## Quinta-feira: aprovar ou recusar
-
-- Se estiver tudo correto, clique em `Merge pull request`.
-- Se estiver ruim, feche a solicitação sem aprovar e anote o motivo.
-
-Por que fazer: somente a sua aprovação libera a publicação.
-
-## Sexta-feira: olhar o resultado
-
-- Abra o site pelo celular.
-- Entre no artigo novo e teste os links.
-- Anote uma melhoria para a semana seguinte.
-
-Por que fazer: uma verificação curta evita que pequenos problemas se acumulem.
+O terceiro artigo da semana é produzido. No fim do dia, abra o site pelo celular
+e veja rapidamente se tudo está funcionando.

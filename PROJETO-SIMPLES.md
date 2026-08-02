@@ -2,76 +2,49 @@
 
 ## Objetivo
 
-Ajudar pessoas com cabelos ondulados, cacheados e crespos a entender qual
-produto faz sentido para o seu cabelo antes da compra.
+Ajudar pessoas com cabelos ondulados, cacheados e crespos a descobrir qual
+produto faz sentido antes da compra.
 
-O site pode ganhar dinheiro de duas formas:
-
-- comissão quando alguém compra por um link de afiliado;
-- anúncios, quando o site tiver público suficiente.
+O site pode ganhar dinheiro com links de afiliado e, quando tiver público
+suficiente, com anúncios.
 
 ## Organograma
 
 ```text
-IA pesquisa dúvidas reais na internet
-                 |
-                 v
-IA escolhe uma dúvida útil e com intenção de compra
-                 |
-                 v
-IA confere o produto no site oficial da marca
-                 |
-                 v
-IA escreve e revisa um único rascunho
-                 |
-                 v
-VOCÊ lê e decide: aprovar ou recusar
-                 |
-                 v
-Se aprovado, o site publica automaticamente
+Codex pesquisa dúvidas reais e produtos
+                  |
+                  v
+Escolhe uma pergunta útil com potencial de clique
+                  |
+                  v
+Escreve o artigo e inclui o produto naturalmente
+                  |
+                  v
+1ª revisão: fatos, fontes, imagem e link
+                  |
+                  v
+2ª revisão: título, interesse, clareza e leitura
+                  |
+                  v
+Testes automáticos do site
+                  |
+                  v
+Publicação automática na Vercel
 ```
-
-## Regra principal
-
-A IA pode fazer a pesquisa, a escrita e a revisão. Ela não pode fingir que usou
-um produto. Quando a análise for apenas baseada em documentos, isso precisa
-ficar claro para o leitor.
 
 ## Regra dos produtos
 
-Todo artigo precisa citar os produtos de forma natural e explicar por que eles
-podem fazer sentido para a dúvida respondida. O bloco de produto deve mostrar:
+Todo artigo deve citar o produto de forma natural e explicar por que ele pode
+ajudar naquela situação. O bloco mostra nome organizado, imagem real, motivo da
+indicação e link de afiliado conferido. O texto público não comenta comissão,
+processo interno ou data da pesquisa.
 
-- nome e imagem real do produto;
-- motivo simples para a indicação;
-- link de afiliado conferido;
-- aviso de que o site pode receber comissão.
-
-O botão de compra só pode ser ativado junto com uma imagem real e uma fonte
-registrada. A indicação não pode prometer que o resultado será igual para todas
-as pessoas.
-
-Para cada artigo novo, a IA também deve:
-
-- procurar o produto no Mercado Livre;
-- priorizar loja oficial, boa avaliação e histórico de vendas;
-- conferir se a versão e o tamanho são exatamente os citados;
-- gerar o link dentro da conta de afiliado;
-- cadastrar a imagem real e a página usada como fonte;
-- atualizar o artigo sem depender de o proprietário procurar ou copiar links.
-
-Se a sessão do Mercado Livre expirar, o proprietário só precisa entrar novamente.
-Usuário e senha nunca devem ser enviados pelo chat.
-
-## Estrutura do site
-
-- Início: explica rapidamente como o site ajuda.
-- Artigos: responde às dúvidas encontradas pela pesquisa.
-- Produtos: reúne fichas simples e verificadas.
-- Como verificamos: mostra de onde vêm as informações.
-- Sobre: explica a proposta e a transparência.
+O Codex procura o produto exato no Mercado Livre, confere versão e tamanho,
+gera o link na conta autenticada e cadastra a imagem. Se a sessão expirar, o
+proprietário só precisa entrar novamente. Usuário e senha nunca são enviados
+pelo chat.
 
 ## Publicação
 
-Existe apenas um rascunho por vez. Nada entra no ar sem a aprovação do
-proprietário.
+Não existe aprovação manual. O artigo entra no ar apenas quando passa pelas
+duas revisões e pelos testes automáticos.

@@ -104,18 +104,44 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
       "gelatina-artigo-celular"
     )
   );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/mousse-para-cabelo-ondulado-fino-funciona-sem-pesar/",
+      { width: 1440, height: 1000 },
+      "mousse-artigo-desktop"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/mousse-para-cabelo-ondulado-fino-funciona-sem-pesar/",
+      { width: 390, height: 844 },
+      "mousse-artigo-celular"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/produtos/widi-care-juba-mousse-200ml/",
+      { width: 390, height: 844 },
+      "mousse-produto-celular"
+    )
+  );
 
   const rotas = [
     "/",
     "/artigos/",
     "/artigos/creme-de-pentear-ou-gelatina-qual-escolher-2026/",
     "/artigos/lola-meu-cacho-minha-vida-para-qual-cabelo/",
+    "/artigos/mousse-para-cabelo-ondulado-fino-funciona-sem-pesar/",
     "/artigos/skala-mais-cachos-serve-para-cabelo-ondulado/",
     "/como-verificamos/",
     "/produtos/",
     "/produtos/salon-line-gelatina-definicao-extraordinaria-550g/",
     "/produtos/lola-meu-cacho-minha-vida-creme-pentear-500g/",
     "/produtos/skala-mais-cachos-3-em-1-250g/",
+    "/produtos/widi-care-juba-mousse-200ml/",
     "/sobre/"
   ];
 

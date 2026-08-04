@@ -268,6 +268,79 @@
     ]
   },
   {
+    "id": "widi-care-juba-mousse-200ml",
+    "nome": "Juba Mousse Criador de Cachos 200 ml",
+    "descricao": "Mousse finalizador que a Widi Care apresenta para definição, controle de frizz e proteção térmica em cabelos ondulados, cacheados e crespos.",
+    "marca": "Widi Care",
+    "categoria": "mousse",
+    "publicado": true,
+    "verificadoEm": "2026-08-04",
+    "perfil": {
+      "curvaturas": ["Ondulados", "Cacheados", "Crespos"],
+      "textura": "Mousse",
+      "intensidade": "Não informada pela marca",
+      "objetivos": ["Definição", "Controle de frizz", "Proteção térmica"]
+    },
+    "imagem": {
+      "src": "https://acdn-us.mitiendanube.com/stores/003/941/769/products/frente-b2449ab46919b6a6c517634683826732-640-0.webp",
+      "alt": "Frasco do Juba Mousse Criador de Cachos Widi Care 200 ml",
+      "credito": "Widi Care",
+      "fonteUrl": "https://lojawidicare.com.br/produtos/mousse-finalizador-juba-mousse-criador-de-cachos-200-ml"
+    },
+    "destaques": [
+      {
+        "rotulo": "Tamanho",
+        "valor": "200 ml",
+        "fonteId": "widi-care-loja-juba-mousse"
+      },
+      {
+        "rotulo": "Indicação da marca",
+        "valor": "Cabelos ondulados, cacheados e crespos",
+        "fonteId": "widi-care-juba-mousse"
+      },
+      {
+        "rotulo": "Modo de uso",
+        "valor": "Pequena quantidade nos cabelos úmidos, pura ou após creme de pentear Juba",
+        "fonteId": "widi-care-juba-mousse"
+      },
+      {
+        "rotulo": "Proteção térmica",
+        "valor": "Benefício apresentado pela marca",
+        "fonteId": "widi-care-juba-mousse"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": null,
+      "atualizadoEm": null
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A textura em mousse e a indicação para ondulados não garantem leveza em todos os fios. Quantidade, combinação de produtos e resposta individual precisam de uso real."
+    },
+    "fontes": [
+      {
+        "id": "widi-care-loja-juba-mousse",
+        "titulo": "Mousse Finalizador Juba Mousse Criador de Cachos 200 ml",
+        "url": "https://lojawidicare.com.br/produtos/mousse-finalizador-juba-mousse-criador-de-cachos-200-ml",
+        "acessadoEm": "2026-08-04"
+      },
+      {
+        "id": "widi-care-juba-mousse",
+        "titulo": "Juba Mousse Criador de Cachos",
+        "url": "https://widicare.com.br/produto/juba-mousse-criador-de-cachos/",
+        "acessadoEm": "2026-08-04"
+      },
+      {
+        "id": "mercado-livre-juba-mousse-200ml",
+        "titulo": "Mousse Criador de Cachos Juba Widi Care 200 ml no Mercado Livre",
+        "url": "https://produto.mercadolivre.com.br/MLB-6988339366-mousse-criador-de-cachos-juba-widi-care-200-ml-_JM",
+        "acessadoEm": "2026-08-04"
+      }
+    ]
+  },
+  {
     "id": "widi-care-juba-creme-pentear",
     "nome": "Juba Creme de Pentear",
     "marca": "Widi Care",

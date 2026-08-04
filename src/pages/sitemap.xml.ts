@@ -20,6 +20,10 @@ export const GET: APIRoute = async ({ site }) => {
     { rota: "/", atualizadoEm: null },
     { rota: "/artigos/", atualizadoEm: null },
     { rota: "/produtos/", atualizadoEm: null },
+    { rota: "/ondulados/", atualizadoEm: null },
+    { rota: "/cacheados/", atualizadoEm: null },
+    { rota: "/crespos/", atualizadoEm: null },
+    { rota: "/descobrir-meu-cabelo/", atualizadoEm: null },
     { rota: "/como-verificamos/", atualizadoEm: null },
     { rota: "/sobre/", atualizadoEm: null }
   ];

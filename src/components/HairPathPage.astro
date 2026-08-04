@@ -1,0 +1,203 @@
+---
+import { getCollection } from "astro:content";
+import ArticleCard from "./ArticleCard.astro";
+import ProductCard from "./ProductCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  produtosDoCaminho,
+  type CaminhoConteudo
+} from "../lib/caminhos";
+
+interface Pista {
+  titulo: string;
+  texto: string;
+}
+
+interface Props {
+  caminho: CaminhoConteudo;
+  numero: string;
+  tituloSeo: string;
+  descricao: string;
+  chamada: string;
+  titulo: string;
+  introducao: string;
+  pergunta: string;
+  resposta: string;
+  tituloPistas: string;
+  introducaoPistas: string;
+  pistas: Pista[];
+  notaProdutos: string;
+}
+
+const {
+  caminho,
+  numero,
+  tituloSeo,
+  descricao,
+  chamada,
+  titulo,
+  introducao,
+  pergunta,
+  resposta,
+  tituloPistas,
+  introducaoPistas,
+  pistas,
+  notaProdutos
+} = Astro.props;
+
+const artigos = (await getCollection("posts"))
+  .filter(
+    (post) =>
+      !post.data.rascunho && post.data.caminhos.includes(caminho)
+  )
+  .sort(
+    (a, b) =>
+      b.data.atualizado_em.getTime() - a.data.atualizado_em.getTime()
+  );
+
+const produtos = produtosDoCaminho(caminho);
+
+const outrosCaminhos = [
+  {
+    caminho: "ondulados",
+    numero: "2",
+    titulo: "Cabelos ondulados",
+    texto: "Leveza, movimento e finalização sem pesar.",
+    href: "/ondulados/"
+  },
+  {
+    caminho: "cacheados",
+    numero: "3",
+    titulo: "Cabelos cacheados",
+    texto: "Definição, maciez e um day after mais previsível.",
+    href: "/cacheados/"
+  },
+  {
+    caminho: "crespos",
+    numero: "4",
+    titulo: "Cabelos crespos",
+    texto: "Cuidado, distribuição e finalização sem receita pronta.",
+    href: "/crespos/"
+  },
+  {
+    caminho: "descobrir-meu-cabelo",
+    numero: "?",
+    titulo: "Descobrir meu cabelo",
+    texto: "Entender o fio antes de encher o carrinho.",
+    href: "/descobrir-meu-cabelo/"
+  }
+].filter((item) => item.caminho !== caminho);
+---
+
+<BaseLayout titulo={tituloSeo} descricao={descricao}>
+  <header class="hair-path-hero">
+    <div class="shell hair-path-hero-inner">
+      <a class="back-link" href="/#meu-cabelo">← Voltar aos caminhos</a>
+
+      <div class="hair-path-hero-grid">
+        <div>
+          <p class="eyebrow">{chamada}</p>
+          <h1>{titulo}</h1>
+          <p class="hair-path-lead">{introducao}</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#guias">Ver guias</a>
+            <a class="text-link" href="#produtos">
+              Ver produtos <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hair-path-answer" aria-label="Resposta rápida">
+          <span class="hair-path-number" aria-hidden="true">{numero}</span>
+          <p>{pergunta}</p>
+          <strong>{resposta}</strong>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <section class="section shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Comece por aqui</p>
+        <h2>{tituloPistas}</h2>
+      </div>
+      <p class="section-intro">{introducaoPistas}</p>
+    </div>
+
+    <div class="hair-clue-grid">
+      {
+        pistas.map((pista, index) => (
+          <article class="hair-clue-card">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{pista.titulo}</h3>
+            <p>{pista.texto}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section section-soft" id="guias">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Respostas para o seu momento</p>
+          <h2>Guias que fazem sentido para você.</h2>
+        </div>
+        <p class="section-intro">
+          Dúvidas práticas, respostas diretas e nada de transformar seu cabelo
+          em prova de matemática.
+        </p>
+      </div>
+
+      <div class="hair-article-grid">
+        {artigos.map((post) => <ArticleCard post={post} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell" id="produtos">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Escolhas mais fáceis</p>
+        <h2>Produtos que combinam com este caminho.</h2>
+      </div>
+      <p class="section-intro">{notaProdutos}</p>
+    </div>
+
+    <div class="product-grid">
+      {produtos.map((produto) => <ProductCard produto={produto} />)}
+    </div>
+  </section>
+
+  <section class="section hair-other-paths">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Quer comparar?</p>
+          <h2>Seu cabelo pode misturar mais de um caminho.</h2>
+        </div>
+        <p class="section-intro">
+          É normal encontrar desenhos diferentes no mesmo cabelo. Escolha o
+          caminho que responde melhor à sua dúvida de hoje.
+        </p>
+      </div>
+
+      <nav class="path-grid" aria-label="Outros caminhos para conhecer o cabelo">
+        {
+          outrosCaminhos.map((item) => (
+            <a class="path-card" href={item.href}>
+              <span class="path-number">{item.numero}</span>
+              <div>
+                <h3>{item.titulo}</h3>
+                <p>{item.texto}</p>
+              </div>
+              <span class="path-arrow" aria-hidden="true">↗</span>
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </section>
+</BaseLayout>

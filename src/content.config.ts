@@ -1,6 +1,7 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
+import { caminhosConteudo } from "./lib/caminhos";
 
 const posts = defineCollection({
   loader: glob({
@@ -26,6 +27,7 @@ const posts = defineCollection({
       "couro_cabeludo",
       "produtos"
     ]),
+    caminhos: z.array(z.enum(caminhosConteudo)).min(1),
     produtos: z.array(z.string()).min(1),
     fontes: z
       .array(

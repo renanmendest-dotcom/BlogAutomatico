@@ -9,6 +9,8 @@ publicado_em: 2026-08-04
 atualizado_em: 2026-08-04
 verificado_em: 2026-08-04
 categoria: finalizacao
+caminhos:
+  - ondulados
 produtos:
   - widi-care-juba-mousse-200ml
 fontes:

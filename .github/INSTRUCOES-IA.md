@@ -55,6 +55,10 @@ Evite saúde, diagnóstico, alopecia, suplementos e promessas de crescimento.
 ## Estrutura do artigo
 
 - 700 a 1.400 palavras
+- Classifique o artigo no campo `caminhos` com um ou mais valores: `ondulados`,
+  `cacheados`, `crespos` ou `descobrir-meu-cabelo`
+- Inclua apenas caminhos realmente atendidos pela pergunta e pela resposta do
+  artigo, pois essa classificação alimenta automaticamente as páginas iniciais
 - Resposta direta nas primeiras linhas
 - Título específico em forma de dúvida ou resposta clara
 - Pelo menos três seções principais

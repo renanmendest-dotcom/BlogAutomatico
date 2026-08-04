@@ -75,6 +75,22 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
   resultados.push(
     await inspecionarPagina(
       browser,
+      "/ondulados/",
+      { width: 1440, height: 1000 },
+      "ondulados-desktop"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/descobrir-meu-cabelo/",
+      { width: 390, height: 844 },
+      "descobrir-celular"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
       "/produtos/salon-line-gelatina-definicao-extraordinaria-550g/",
       { width: 1440, height: 1000 },
       "produto-desktop"
@@ -136,6 +152,10 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
     "/artigos/lola-meu-cacho-minha-vida-para-qual-cabelo/",
     "/artigos/mousse-para-cabelo-ondulado-fino-funciona-sem-pesar/",
     "/artigos/skala-mais-cachos-serve-para-cabelo-ondulado/",
+    "/ondulados/",
+    "/cacheados/",
+    "/crespos/",
+    "/descobrir-meu-cabelo/",
     "/como-verificamos/",
     "/produtos/",
     "/produtos/salon-line-gelatina-definicao-extraordinaria-550g/",

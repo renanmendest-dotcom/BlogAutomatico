@@ -9,6 +9,11 @@ publicado_em: 2026-07-30
 atualizado_em: 2026-08-02
 verificado_em: 2026-08-02
 categoria: finalizacao
+caminhos:
+  - ondulados
+  - cacheados
+  - crespos
+  - descobrir-meu-cabelo
 produtos:
   - salon-line-gelatina-definicao-extraordinaria-550g
   - lola-meu-cacho-minha-vida-creme-pentear-500g

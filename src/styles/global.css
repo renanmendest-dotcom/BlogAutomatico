@@ -2142,3 +2142,203 @@ p {
     margin-inline: -0.2rem;
   }
 }
+
+/* Caminhos personalizados da página inicial */
+
+.hair-path-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(213, 107, 100, 0.18), transparent 21rem),
+    linear-gradient(180deg, rgba(255, 253, 249, 0.72), transparent);
+}
+
+.hair-path-hero::after {
+  content: "";
+  position: absolute;
+  width: 26rem;
+  height: 26rem;
+  right: -13rem;
+  bottom: -18rem;
+  border: 4rem solid rgba(111, 63, 97, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hair-path-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.hair-path-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.48fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 7rem);
+}
+
+.hair-path-hero h1 {
+  max-width: 880px;
+  margin-bottom: 1.5rem;
+  font-size: clamp(3.7rem, 7.5vw, 7rem);
+  line-height: 0.94;
+}
+
+.hair-path-lead {
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: var(--muted);
+  font-size: clamp(1.03rem, 2vw, 1.24rem);
+}
+
+.hair-path-answer {
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.7rem, 4vw, 2.4rem);
+  border-radius: 50% 50% 1.6rem 1.6rem;
+  background: var(--plum-dark);
+  color: white;
+  box-shadow: 0 1.5rem 4rem rgba(79, 43, 69, 0.16);
+}
+
+.hair-path-number {
+  margin-bottom: auto;
+  color: var(--rose-light);
+  font-family: var(--serif);
+  font-size: 7rem;
+  font-style: italic;
+  line-height: 0.8;
+}
+
+.hair-path-answer p {
+  margin-bottom: 0.65rem;
+  color: var(--rose-light);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hair-path-answer strong {
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.hair-clue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hair-clue-card {
+  min-height: 260px;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 1.35rem;
+  background: var(--paper);
+}
+
+.hair-clue-card > span {
+  display: block;
+  margin-bottom: 2.2rem;
+  color: var(--rose);
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.hair-clue-card h3 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+}
+
+.hair-clue-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hair-article-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.hair-other-paths {
+  background: var(--plum-dark);
+  color: white;
+}
+
+.hair-other-paths .eyebrow,
+.hair-other-paths .path-number {
+  color: var(--rose-light);
+}
+
+.hair-other-paths .section-intro {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.hair-other-paths .path-grid {
+  border-color: var(--white-line);
+  background: var(--white-line);
+}
+
+.hair-other-paths .path-card {
+  background: var(--plum-dark);
+  color: white;
+}
+
+.hair-other-paths .path-card:hover {
+  background: var(--plum);
+}
+
+.hair-other-paths .path-card p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 900px) {
+  .hair-path-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hair-path-answer {
+    min-height: 330px;
+    max-width: 540px;
+  }
+
+  .hair-clue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hair-clue-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .hair-path-hero-inner {
+    padding-top: 2.5rem;
+  }
+
+  .hair-path-hero h1 {
+    font-size: clamp(3.15rem, 15vw, 4.8rem);
+  }
+
+  .hair-path-answer {
+    min-height: 300px;
+  }
+
+  .hair-path-number {
+    font-size: 5.8rem;
+  }
+
+  .hair-article-grid {
+    grid-template-columns: 1fr;
+  }
+}

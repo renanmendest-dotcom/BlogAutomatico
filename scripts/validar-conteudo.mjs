@@ -167,6 +167,7 @@ for (const nome of arquivos) {
     "atualizado_em",
     "verificado_em",
     "categoria",
+    "caminhos",
     "produtos",
     "fontes",
     "perguntas_frequentes",
@@ -181,6 +182,27 @@ for (const nome of arquivos) {
 
   if (!["documental", "teste_real"].includes(data.tipo_analise)) {
     erro(`${prefixo}: o tipo de análise é inválido.`);
+  }
+
+  const caminhosPermitidos = [
+    "ondulados",
+    "cacheados",
+    "crespos",
+    "descobrir-meu-cabelo"
+  ];
+
+  if (!Array.isArray(data.caminhos) || data.caminhos.length === 0) {
+    erro(`${prefixo}: precisa indicar ao menos um caminho de cabelo.`);
+  } else {
+    for (const caminhoEditorial of data.caminhos) {
+      if (!caminhosPermitidos.includes(caminhoEditorial)) {
+        erro(`${prefixo}: o caminho "${caminhoEditorial}" é inválido.`);
+      }
+    }
+
+    if (new Set(data.caminhos).size !== data.caminhos.length) {
+      erro(`${prefixo}: há caminhos de cabelo repetidos.`);
+    }
   }
 
   if (!Array.isArray(data.produtos) || data.produtos.length === 0) {

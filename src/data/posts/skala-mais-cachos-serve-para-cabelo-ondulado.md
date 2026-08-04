@@ -9,6 +9,9 @@ publicado_em: 2026-07-30
 atualizado_em: 2026-07-30
 verificado_em: 2026-07-30
 categoria: produtos
+caminhos:
+  - ondulados
+  - descobrir-meu-cabelo
 produtos:
   - skala-mais-cachos-3-em-1-250g
 fontes:

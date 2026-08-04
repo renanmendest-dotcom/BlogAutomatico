@@ -9,6 +9,9 @@ publicado_em: 2026-07-30
 atualizado_em: 2026-07-30
 verificado_em: 2026-07-30
 categoria: produtos
+caminhos:
+  - cacheados
+  - descobrir-meu-cabelo
 produtos:
   - lola-meu-cacho-minha-vida-creme-pentear-500g
 fontes:

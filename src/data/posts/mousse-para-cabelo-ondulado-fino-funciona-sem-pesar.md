@@ -5,6 +5,8 @@ resposta_curta: "Pode funcionar como uma alternativa mais leve ao creme, princip
 descricao: "Entenda quando o mousse faz sentido no cabelo ondulado fino, como usar sem rigidez e o que observar antes de comprar."
 autor: "Curadoria Curva Viva"
 tipo_analise: "documental"
+modelo_artigo: analise
+conclusao: "O Juba Mousse merece consideração quando cremes densos tiram o movimento das ondas e a prioridade é modelar com menos camadas. Ele não garante leveza para todo cabelo, por isso o melhor teste começa com pouca quantidade e apenas um finalizador."
 publicado_em: 2026-08-04
 atualizado_em: 2026-08-04
 verificado_em: 2026-08-04
@@ -13,6 +15,14 @@ caminhos:
   - ondulados
 produtos:
   - widi-care-juba-mousse-200ml
+recomendacoes:
+  - produto: widi-care-juba-mousse-200ml
+    melhor_indicacao: "Para ondas finas que perdem movimento com cremes densos e precisam de modelagem com textura aerada."
+    motivo: "O produto combina com a dúvida porque a marca inclui cabelos ondulados na indicação e permite aplicar uma pequena quantidade pura."
+    pontos_positivos:
+      - "Indicação publicada para ondulados, cacheados e crespos"
+      - "Pode ser usado puro ou depois do creme"
+      - "Proteção térmica apresentada pela marca"
 fontes:
   - titulo: "Widi Care, Juba Mousse Criador de Cachos"
     url: "https://widicare.com.br/produto/juba-mousse-criador-de-cachos/"
@@ -99,9 +109,3 @@ Se a finalização desmanchar rápido, não conclua de imediato que faltou produ
 5. Comece com pouco e aumente apenas na lavagem seguinte, se necessário.
 6. Avalie o resultado somente depois de o cabelo secar por completo.
 7. Compare volume, definição, toque e aparência no dia seguinte.
-
-## Então, vale a pena para ondas finas?
-
-Vale considerar quando cremes tradicionais deixam o cabelo sem movimento e você procura uma finalização com menos camadas. O Juba Mousse faz sentido nessa pauta porque a marca cita ondulados e permite o uso puro, além de orientar uma quantidade pequena.
-
-Mas a compra fica mais consciente quando a expectativa é correta: mousse ajuda a modelar e fixar, não garante ausência de peso nem o mesmo day after para todas. Comece simples, observe o cabelo seco e ajuste uma variável por vez. Esse teste diz muito mais do que o rótulo da curvatura sozinho.

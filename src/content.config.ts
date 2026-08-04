@@ -15,6 +15,8 @@ const posts = defineCollection({
     descricao: z.string(),
     autor: z.string().default("Curadoria Curva Viva"),
     tipo_analise: z.enum(["documental", "teste_real"]).default("documental"),
+    modelo_artigo: z.enum(["educativo", "analise", "comparativo"]),
+    conclusao: z.string().min(100),
     publicado_em: z.coerce.date(),
     atualizado_em: z.coerce.date(),
     verificado_em: z.coerce.date(),
@@ -29,6 +31,17 @@ const posts = defineCollection({
     ]),
     caminhos: z.array(z.enum(caminhosConteudo)).min(1),
     produtos: z.array(z.string()).min(1),
+    recomendacoes: z
+      .array(
+        z.object({
+          produto: z.string(),
+          melhor_indicacao: z.string().min(30),
+          motivo: z.string().min(60),
+          pontos_positivos: z.array(z.string()).min(2).max(4)
+        })
+      )
+      .min(1)
+      .max(2),
     fontes: z
       .array(
         z.object({

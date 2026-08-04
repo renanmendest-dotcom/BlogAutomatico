@@ -5,6 +5,8 @@ resposta_curta: "Quer a resposta curta? Passe primeiro uma pequena quantidade de
 descricao: "Entenda a ordem certa entre creme de pentear e gelatina, quanto usar e como evitar cabelo pesado ou com pontinhos brancos."
 autor: "Curva Viva"
 tipo_analise: "documental"
+modelo_artigo: educativo
+conclusao: "Na maioria das finalizações, o caminho mais simples é aplicar pouco creme primeiro e uma camada fina de gelatina depois. Observe o cabelo seco e ajuste uma quantidade por vez, porque a ordem ajuda, mas o excesso ainda pode pesar."
 publicado_em: 2026-07-31
 atualizado_em: 2026-08-01
 verificado_em: 2026-08-01
@@ -16,6 +18,21 @@ caminhos:
 produtos:
   - salon-line-gelatina-super-definicao-550g
   - lola-meu-cacho-minha-vida-creme-pentear-500g
+recomendacoes:
+  - produto: salon-line-gelatina-super-definicao-550g
+    melhor_indicacao: "Para finalizar depois do creme quando a definição precisa de mais sustentação."
+    motivo: "A gelatina entra exatamente na segunda etapa ensinada no artigo, com proposta de modelar, finalizar e ajudar na fixação."
+    pontos_positivos:
+      - "Pode complementar um creme que já funciona na rotina"
+      - "Indicação publicada para ondulados, cacheados e crespos"
+      - "Embalagem de 550 g"
+  - produto: lola-meu-cacho-minha-vida-creme-pentear-500g
+    melhor_indicacao: "Para preparar fios cacheados com foco em desembaraço, maciez e definição."
+    motivo: "O creme ocupa a primeira etapa da técnica e ajuda a mostrar, de forma prática, por que a base mais emoliente vem antes da fixação."
+    pontos_positivos:
+      - "Foco em desembaraço e maciez"
+      - "Modo de uso nos fios limpos, úmidos e condicionados"
+      - "Embalagem de 500 g"
 fontes:
   - titulo: "L'Oréal Paris, gelatina de cabelo: como usar corretamente"
     url: "https://www.loreal-paris.com.br/gelatina-de-cabelo"

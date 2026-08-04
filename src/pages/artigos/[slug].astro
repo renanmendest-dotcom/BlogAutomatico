@@ -1,9 +1,11 @@
 ---
-import { getCollection, render } from "astro:content";
-import ProductCard from "../../components/ProductCard.astro";
+import { getCollection } from "astro:content";
+import { marked } from "marked";
+import ProductRecommendationCard from "../../components/ProductRecommendationCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
   buscarProduto,
+  formatarData,
   rotuloCategoria
 } from "../../lib/produtos";
 
@@ -17,11 +19,94 @@ export async function getStaticPaths() {
     }));
 }
 
+function escaparHtml(valor: string) {
+  return valor
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function criarSlug(valor: string) {
+  return valor
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("pt-BR")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 const { post } = Astro.props;
-const { Content } = await render(post);
-const produtos = post.data.produtos
-  .map((id: string) => buscarProduto(id))
-  .filter(Boolean);
+const corpoMarkdown = post.body ?? "";
+const blocosDoCorpo = corpoMarkdown.split(/(?=^##\s+)/m).filter(Boolean);
+const primeiroBlocoTemTitulo = /^##\s+/m.test(blocosDoCorpo[0] ?? "");
+const quantidadeBlocosIniciais = primeiroBlocoTemTitulo ? 2 : 3;
+const markdownInicial = blocosDoCorpo
+  .slice(0, quantidadeBlocosIniciais)
+  .join("");
+const markdownContinuacao = blocosDoCorpo
+  .slice(quantidadeBlocosIniciais)
+  .join("");
+
+const idsUsados = new Map<string, number>();
+const secoes = [...corpoMarkdown.matchAll(/^##\s+(.+)$/gm)].map((resultado) => {
+  const titulo = resultado[1].trim();
+  const base = criarSlug(titulo);
+  const repeticoes = idsUsados.get(base) ?? 0;
+  idsUsados.set(base, repeticoes + 1);
+  return {
+    titulo,
+    id: repeticoes === 0 ? base : `${base}-${repeticoes + 1}`
+  };
+});
+
+let indiceSecao = 0;
+function renderizarTrecho(markdown: string) {
+  const markdownComIds = markdown.replace(/^##\s+(.+)$/gm, (_, titulo) => {
+    const secao = secoes[indiceSecao++];
+    return `<h2 id="${secao.id}">${escaparHtml(titulo.trim())}</h2>`;
+  });
+  return marked.parse(markdownComIds, { gfm: true }) as string;
+}
+
+const htmlInicial = renderizarTrecho(markdownInicial);
+const quantidadeSecoesIniciais = indiceSecao;
+const htmlContinuacao = renderizarTrecho(markdownContinuacao);
+const primeiraSecaoDaContinuacao = secoes[quantidadeSecoesIniciais];
+
+const recomendacoes = post.data.recomendacoes
+  .map((recomendacao) => ({
+    ...recomendacao,
+    produtoEncontrado: buscarProduto(recomendacao.produto)
+  }))
+  .filter((recomendacao) => recomendacao.produtoEncontrado);
+const recomendacaoPrincipal = recomendacoes[0];
+const produtoPrincipal = recomendacaoPrincipal?.produtoEncontrado;
+const fonteMercadoLivrePrincipal = produtoPrincipal?.fontes.find((fonte) =>
+  fonte.titulo.toLocaleLowerCase("pt-BR").includes("mercado livre")
+);
+const linkPrecoPrincipal =
+  produtoPrincipal?.oferta.url ?? fonteMercadoLivrePrincipal?.url;
+
+const rotulosModelo = {
+  educativo: "Guia educativo",
+  analise: "Análise de produto",
+  comparativo: "Comparativo"
+};
+const titulosRecomendacao = {
+  educativo: "Uma opção para colocar a técnica em prática.",
+  analise: "O produto analisado, com os detalhes que importam.",
+  comparativo: "As opções que representam cada lado da comparação."
+};
+const textosRecomendacao = {
+  educativo:
+    "A indicação entra aqui porque você já entendeu a técnica e consegue avaliar se ela combina com a sua rotina.",
+  analise:
+    "Agora que a proposta e os limites ficaram claros, veja para quem o produto faz mais sentido e por quê.",
+  comparativo:
+    "Cada opção cumpre uma função diferente. Compare a indicação e escolha pelo resultado que está faltando."
+};
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -30,6 +115,7 @@ const articleSchema = {
   description: post.data.descricao,
   datePublished: post.data.publicado_em.toISOString(),
   dateModified: post.data.atualizado_em.toISOString(),
+  articleSection: secoes.map((secao) => secao.titulo),
   author: {
     "@type": "Organization",
     name: post.data.autor
@@ -63,40 +149,102 @@ const faqSchema = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
-  <article>
+  <article class:list={["article-template", `is-${post.data.modelo_artigo}`]}>
     <header class="article-hero">
       <div class="shell article-hero-inner">
         <a class="back-link" href="/artigos/">← Todos os guias</a>
-        <p class="eyebrow">{rotuloCategoria(post.data.categoria)} sem complicação</p>
+        <p class="eyebrow">
+          {rotulosModelo[post.data.modelo_artigo]} | {rotuloCategoria(post.data.categoria)}
+        </p>
         <h1>{post.data.titulo}</h1>
+        <div class="article-heading-meta">
+          <span>Por {post.data.autor}</span>
+          <time datetime={post.data.atualizado_em.toISOString()}>
+            Atualizado em {formatarData(post.data.atualizado_em)}
+          </time>
+        </div>
         <p class="answer-box">{post.data.resposta_curta}</p>
-        <p class="article-byline">Por {post.data.autor}</p>
       </div>
     </header>
 
     <div class="shell article-body-grid">
-      <div class="prose">
+      <div class="prose article-prose">
+        <nav class="article-toc" aria-labelledby="titulo-sumario">
+          <p class="eyebrow">Leitura fácil</p>
+          <h2 id="titulo-sumario">Neste artigo você vai descobrir</h2>
+          <ol>
+            {
+              secoes.map((secao) => (
+                <li><a href={`#${secao.id}`}>{secao.titulo}</a></li>
+              ))
+            }
+            <li><a href="#perguntas-frequentes">Dúvidas frequentes</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+          </ol>
+        </nav>
+
         {
-          produtos.length > 0 && (
-            <section class="article-product-recommendations" aria-labelledby="produtos-citados">
-              <p class="eyebrow">Para colocar em prática</p>
-              <h2 id="produtos-citados">Os produtos que fazem sentido aqui</h2>
-              <p>
-                Quer testar essa finalização? Separei as opções citadas no guia
-                para você não precisar sair caçando o nome certinho por aí.
-              </p>
-              <div class="article-product-grid">
-                {produtos.map((produto) =>
-                  produto ? <ProductCard produto={produto} compacto /> : null
-                )}
+          produtoPrincipal && (
+            <p class="quick-recommendation">
+              <strong>Recomendação rápida:</strong> {produtoPrincipal.nome}.{" "}
+              <a href="#recomendacao-completa">
+                Veja a análise completa mais abaixo ↓
+              </a>
+            </p>
+          )
+        }
+
+        <div class="article-editorial-part" set:html={htmlInicial} />
+
+        {
+          recomendacoes.length > 0 && (
+            <section
+              class:list={[
+                "article-context-recommendation",
+                { "has-comparison": recomendacoes.length > 1 }
+              ]}
+              id="recomendacao-completa"
+              aria-labelledby="titulo-recomendacao"
+            >
+              <p class="eyebrow">Recomendação no contexto certo</p>
+              <h2 id="titulo-recomendacao">
+                {titulosRecomendacao[post.data.modelo_artigo]}
+              </h2>
+              <p>{textosRecomendacao[post.data.modelo_artigo]}</p>
+
+              <div class="context-product-grid">
+                {
+                  recomendacoes.map((recomendacao) =>
+                    recomendacao.produtoEncontrado ? (
+                      <ProductRecommendationCard
+                        produto={recomendacao.produtoEncontrado}
+                        melhorIndicacao={recomendacao.melhor_indicacao}
+                        motivo={recomendacao.motivo}
+                        pontosPositivos={recomendacao.pontos_positivos}
+                      />
+                    ) : null
+                  )
+                }
               </div>
             </section>
           )
         }
 
-        <Content />
+        {
+          markdownContinuacao.trim() && (
+            <div class="article-continues" id="continuacao-do-artigo">
+              <span>O artigo continua</span>
+              <strong>A recomendação foi só uma parte da resposta.</strong>
+              <a href={primeiraSecaoDaContinuacao ? `#${primeiraSecaoDaContinuacao.id}` : "#perguntas-frequentes"}>
+                Continue lendo ↓
+              </a>
+            </div>
+          )
+        }
 
-        <section class="faq-section">
+        <div class="article-editorial-part article-editorial-continuation" set:html={htmlContinuacao} />
+
+        <section class="faq-section" id="perguntas-frequentes">
           <p class="eyebrow">Perguntas rápidas</p>
           <h2>Dúvidas frequentes</h2>
           <dl>
@@ -109,6 +257,12 @@ const faqSchema = {
               ))
             }
           </dl>
+        </section>
+
+        <section class="article-conclusion" id="conclusao">
+          <p class="eyebrow">Para fechar</p>
+          <h2>Qual é a resposta final?</h2>
+          <p>{post.data.conclusao}</p>
         </section>
 
         <section class="article-sources">
@@ -126,8 +280,32 @@ const faqSchema = {
             }
           </ol>
         </section>
-      </div>
 
+        {
+          produtoPrincipal && (
+            <aside class="article-secondary-cta" aria-label="Consultar produto recomendado">
+              <p>
+                Quer conferir o {produtoPrincipal.nome}?{" "}
+                {
+                  linkPrecoPrincipal ? (
+                    <a
+                      href={linkPrecoPrincipal}
+                      target="_blank"
+                      rel="nofollow sponsored noopener"
+                    >
+                      Ver preço e disponibilidade
+                    </a>
+                  ) : (
+                    <a href={`/produtos/${produtoPrincipal.id}/`}>
+                      Ver análise do produto
+                    </a>
+                  )
+                }
+              </p>
+            </aside>
+          )
+        }
+      </div>
     </div>
   </article>
 </BaseLayout>

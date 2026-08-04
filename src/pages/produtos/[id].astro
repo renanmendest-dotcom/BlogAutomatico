@@ -5,7 +5,6 @@ import {
   produtosPublicados,
   resumoCurvaturas,
   rotuloCategoria,
-  rotuloLinkOferta,
   type ProdutoPublicado
 } from "../../lib/produtos";
 
@@ -27,6 +26,10 @@ const postsRelacionados = (await getCollection("posts"))
       !post.data.rascunho && post.data.produtos.includes(produto.id)
   )
   .slice(0, 3);
+const fonteMercadoLivre = produto.fontes.find((fonte) =>
+  fonte.titulo.toLocaleLowerCase("pt-BR").includes("mercado livre")
+);
+const linkPreco = produto.oferta.url ?? fonteMercadoLivre?.url;
 
 const productSchema = {
   "@context": "https://schema.org",
@@ -49,7 +52,7 @@ const productSchema = {
 <BaseLayout titulo={produto.nome} descricao={produto.descricao}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />
 
-  <header class="product-hero">
+  <header class="product-hero product-commercial-hero">
     <div class="shell product-hero-grid">
       <div>
         <a class="back-link" href="/produtos/">← Todos os produtos</a>
@@ -94,7 +97,7 @@ const productSchema = {
     </div>
   </header>
 
-  <section class="section shell product-detail-grid">
+  <section class="section shell product-detail-grid product-commercial-content">
     <div>
       <p class="eyebrow">Resumo sem enrolação</p>
       <h2 class="content-title">O que vale saber antes de escolher.</h2>
@@ -122,14 +125,14 @@ const productSchema = {
     <aside class="purchase-panel">
       <p class="eyebrow">Gostou da proposta?</p>
       {
-        produto.oferta.url ? (
+        linkPreco ? (
           <a
             class="button button-primary button-full"
-            href={produto.oferta.url}
+            href={linkPreco}
             target="_blank"
             rel="nofollow sponsored noopener"
           >
-            {rotuloLinkOferta(produto.oferta.loja)}
+            Ver preço e disponibilidade
           </a>
         ) : (
           <p>Veja os detalhes abaixo e compare com o que seu cabelo precisa.</p>

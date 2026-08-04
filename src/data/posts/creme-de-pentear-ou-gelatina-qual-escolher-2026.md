@@ -5,6 +5,8 @@ resposta_curta: "O creme de pentear costuma priorizar desembaraço, maciez e mod
 descricao: "Entenda a diferença entre creme de pentear e gelatina e veja o que observar antes de escolher um finalizador."
 autor: "Curadoria Curva Viva"
 tipo_analise: "documental"
+modelo_artigo: comparativo
+conclusao: "Creme de pentear e gelatina cumprem funções diferentes. Escolha o creme quando a prioridade for maciez e desembaraço, a gelatina quando faltar fixação, e combine os dois apenas se o seu cabelo realmente pedir as duas etapas."
 publicado_em: 2026-07-30
 atualizado_em: 2026-08-02
 verificado_em: 2026-08-02
@@ -17,6 +19,21 @@ caminhos:
 produtos:
   - salon-line-gelatina-definicao-extraordinaria-550g
   - lola-meu-cacho-minha-vida-creme-pentear-500g
+recomendacoes:
+  - produto: salon-line-gelatina-definicao-extraordinaria-550g
+    melhor_indicacao: "Quando a prioridade é aumentar a fixação e fazer a definição durar mais."
+    motivo: "Ela representa o lado da comparação voltado à fixação, com proposta de superfixação, definição e controle de frizz."
+    pontos_positivos:
+      - "Proposta de fixação alta para complementar o creme"
+      - "Indicação publicada para ondulados, cacheados e crespos"
+      - "Embalagem de 550 g"
+  - produto: lola-meu-cacho-minha-vida-creme-pentear-500g
+    melhor_indicacao: "Para fios cacheados que precisam de desembaraço, maciez e definição na mesma etapa."
+    motivo: "Ele mostra o outro lado da comparação, com uma proposta mais ligada à emoliência e ao preparo do cabelo antes da fixação."
+    pontos_positivos:
+      - "Foco em desembaraço, definição e maciez"
+      - "Aplicação indicada nos fios limpos e úmidos"
+      - "Embalagem de 500 g"
 fontes:
   - titulo: "Salon Line, Creme para Pentear"
     url: "https://universo.salonline.com.br/lp-creme-para-pentear/"

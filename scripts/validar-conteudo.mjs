@@ -163,12 +163,15 @@ for (const nome of arquivos) {
     "descricao",
     "autor",
     "tipo_analise",
+    "modelo_artigo",
+    "conclusao",
     "publicado_em",
     "atualizado_em",
     "verificado_em",
     "categoria",
     "caminhos",
     "produtos",
+    "recomendacoes",
     "fontes",
     "perguntas_frequentes",
     "rascunho"
@@ -182,6 +185,14 @@ for (const nome of arquivos) {
 
   if (!["documental", "teste_real"].includes(data.tipo_analise)) {
     erro(`${prefixo}: o tipo de análise é inválido.`);
+  }
+
+  if (!["educativo", "analise", "comparativo"].includes(data.modelo_artigo)) {
+    erro(`${prefixo}: o modelo de artigo é inválido.`);
+  }
+
+  if (typeof data.conclusao !== "string" || data.conclusao.length < 100) {
+    erro(`${prefixo}: a conclusão precisa ter ao menos 100 caracteres.`);
   }
 
   const caminhosPermitidos = [
@@ -214,6 +225,39 @@ for (const nome of arquivos) {
         erro(`${prefixo}: o produto "${id}" não existe na base.`);
       } else if (!produto.publicado) {
         erro(`${prefixo}: o produto "${id}" ainda está na fila.`);
+      }
+    }
+  }
+
+  if (
+    !Array.isArray(data.recomendacoes) ||
+    data.recomendacoes.length < 1 ||
+    data.recomendacoes.length > 2
+  ) {
+    erro(`${prefixo}: precisa ter uma ou duas recomendações contextuais.`);
+  } else {
+    const produtosRecomendados = new Set();
+
+    for (const recomendacao of data.recomendacoes) {
+      if (!data.produtos.includes(recomendacao.produto)) {
+        erro(`${prefixo}: a recomendação usa um produto que não foi citado no artigo.`);
+      }
+
+      if (produtosRecomendados.has(recomendacao.produto)) {
+        erro(`${prefixo}: há recomendações repetidas para o mesmo produto.`);
+      }
+      produtosRecomendados.add(recomendacao.produto);
+
+      if (
+        typeof recomendacao.melhor_indicacao !== "string" ||
+        recomendacao.melhor_indicacao.length < 30 ||
+        typeof recomendacao.motivo !== "string" ||
+        recomendacao.motivo.length < 60 ||
+        !Array.isArray(recomendacao.pontos_positivos) ||
+        recomendacao.pontos_positivos.length < 2 ||
+        recomendacao.pontos_positivos.length > 4
+      ) {
+        erro(`${prefixo}: há uma recomendação contextual incompleta.`);
       }
     }
   }
@@ -256,6 +300,12 @@ for (const nome of arquivos) {
     data.pergunta_principal,
     data.resposta_curta,
     data.descricao,
+    data.conclusao,
+    ...(data.recomendacoes ?? []).flatMap((item) => [
+      item.melhor_indicacao,
+      item.motivo,
+      ...(item.pontos_positivos ?? [])
+    ]),
     ...(data.perguntas_frequentes ?? []).flatMap((item) => [
       item.pergunta,
       item.resposta

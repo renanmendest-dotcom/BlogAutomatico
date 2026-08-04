@@ -1,0 +1,92 @@
+---
+import type { ProdutoPublicado } from "../lib/produtos";
+
+interface Props {
+  produto: ProdutoPublicado;
+  melhorIndicacao: string;
+  motivo: string;
+  pontosPositivos: string[];
+}
+
+const {
+  produto,
+  melhorIndicacao,
+  motivo,
+  pontosPositivos
+} = Astro.props;
+
+const fonteMercadoLivre = produto.fontes.find((fonte) =>
+  fonte.titulo.toLocaleLowerCase("pt-BR").includes("mercado livre")
+);
+const linkPreco = produto.oferta.url ?? fonteMercadoLivre?.url;
+---
+
+<article class="context-product-card">
+  <a
+    class="context-product-media"
+    href={`/produtos/${produto.id}/`}
+    aria-label={`Ver detalhes de ${produto.nome}`}
+  >
+    {
+      produto.imagem ? (
+        <img
+          src={produto.imagem.src}
+          alt={produto.imagem.alt}
+          width="640"
+          height="640"
+          loading="lazy"
+        />
+      ) : (
+        <>
+          <span class="product-shape"></span>
+          <span class="product-shape-small"></span>
+        </>
+      )
+    }
+  </a>
+
+  <div class="context-product-content">
+    <p class="context-product-brand">{produto.marca}</p>
+    <h3><a href={`/produtos/${produto.id}/`}>{produto.nome}</a></h3>
+
+    <dl class="context-product-details">
+      <div>
+        <dt>Melhor indicação</dt>
+        <dd>{melhorIndicacao}</dd>
+      </div>
+      <div>
+        <dt>Por que escolhemos</dt>
+        <dd>{motivo}</dd>
+      </div>
+    </dl>
+
+    <div class="context-product-points">
+      <p>Pontos positivos</p>
+      <ul>
+        {pontosPositivos.map((ponto) => <li>{ponto}</li>)}
+      </ul>
+    </div>
+
+    <div class="context-product-actions">
+      {
+        linkPreco ? (
+          <a
+            class="button button-primary"
+            href={linkPreco}
+            target="_blank"
+            rel="nofollow sponsored noopener"
+          >
+            Ver preço e disponibilidade
+          </a>
+        ) : (
+          <span class="context-product-unavailable">
+            Preço indisponível no momento
+          </span>
+        )
+      }
+      <a class="product-detail-link" href={`/produtos/${produto.id}/`}>
+        Ver análise do produto
+      </a>
+    </div>
+  </div>
+</article>

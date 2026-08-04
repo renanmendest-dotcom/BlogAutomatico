@@ -5,6 +5,8 @@ resposta_curta: "A Lola apresenta o Meu Cacho Minha Vida como creme de pentear p
 descricao: "Entenda a indicação, os ativos e os limites da ficha oficial do creme de pentear Lola Meu Cacho Minha Vida."
 autor: "Curadoria Curva Viva"
 tipo_analise: "documental"
+modelo_artigo: analise
+conclusao: "O Meu Cacho Minha Vida tem uma proposta clara para fios cacheados, com foco em desembaraço, emoliência e definição. Como a marca não publica uma faixa numérica de curvaturas, a escolha mais segura é respeitar esse limite e começar com pouca quantidade."
 publicado_em: 2026-07-30
 atualizado_em: 2026-07-30
 verificado_em: 2026-07-30
@@ -14,6 +16,14 @@ caminhos:
   - descobrir-meu-cabelo
 produtos:
   - lola-meu-cacho-minha-vida-creme-pentear-500g
+recomendacoes:
+  - produto: lola-meu-cacho-minha-vida-creme-pentear-500g
+    melhor_indicacao: "Para fios cacheados que procuram desembaraço, maciez e definição sem promessa de fixação alta."
+    motivo: "Este é o produto analisado no artigo, e sua ficha permite entender tanto a proposta do creme quanto os limites da indicação publicada."
+    pontos_positivos:
+      - "Proposta de desembaraço, definição e maciez"
+      - "Modo de uso explicado pela marca"
+      - "Embalagem de 500 g"
 fontes:
   - titulo: "Lola Cosmetics, Meu Cacho Minha Vida Creme de Pentear 500 g"
     url: "https://www.lolacosmetics.com.br/meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409"
@@ -85,9 +95,3 @@ Para uma decisão mais informada, procure testes reais de pessoas com caracterí
 7. Registre quanto usou para conseguir repetir ou ajustar.
 
 Se o objetivo principal for segurar a definição por mais tempo, pode ser necessário comparar o creme com uma gelatina ou outro finalizador de maior fixação. Se a prioridade for toque macio e desembaraço, a proposta do creme fica mais alinhada.
-
-## Qual é a conclusão?
-
-O Meu Cacho Minha Vida tem uma proposta clara de creme de pentear para fios cacheados, com benefícios publicados de desembaraço, emoliência e definição. A ausência de curvaturas numéricas e de teste próprio impede uma recomendação mais específica.
-
-Essa não é uma falha da ficha. É justamente a informação necessária para decidir se você prefere testar com cautela ou escolher um produto com indicação mais detalhada.

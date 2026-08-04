@@ -59,7 +59,12 @@ Evite saúde, diagnóstico, alopecia, suplementos e promessas de crescimento.
   `cacheados`, `crespos` ou `descobrir-meu-cabelo`
 - Inclua apenas caminhos realmente atendidos pela pergunta e pela resposta do
   artigo, pois essa classificação alimenta automaticamente as páginas iniciais
+- Escolha o `modelo_artigo`: `educativo`, `analise` ou `comparativo`
+- Escreva uma `conclusao` direta com pelo menos 100 caracteres
+- Preencha `recomendacoes` com um ou dois produtos já citados, incluindo melhor
+  indicação, motivo contextual e de dois a quatro pontos positivos verdadeiros
 - Resposta direta nas primeiras linhas
+- Garanta pelo menos duas seções editoriais antes da primeira recomendação
 - Título específico em forma de dúvida ou resposta clara
 - Pelo menos três seções principais
 - Uma tabela comparativa ou ficha resumida

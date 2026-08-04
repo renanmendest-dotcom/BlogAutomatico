@@ -5,6 +5,8 @@ resposta_curta: "A página oficial do Skala Mais Cachos cita cabelos cacheados, 
 descricao: "Veja para quais cabelos a Skala indica o Mais Cachos 3 em 1 e o que uma pessoa ondulada deve observar antes de comprar."
 autor: "Curadoria Curva Viva"
 tipo_analise: "documental"
+modelo_artigo: analise
+conclusao: "A Skala apresenta o Mais Cachos para cacheados, crespos, crespíssimos e cabelos em transição, sem citar ondulados. Isso não impede um teste cauteloso, mas também não sustenta uma recomendação direta para ondas sem uma experiência real bem registrada."
 publicado_em: 2026-07-30
 atualizado_em: 2026-07-30
 verificado_em: 2026-07-30
@@ -14,6 +16,14 @@ caminhos:
   - descobrir-meu-cabelo
 produtos:
   - skala-mais-cachos-3-em-1-250g
+recomendacoes:
+  - produto: skala-mais-cachos-3-em-1-250g
+    melhor_indicacao: "Para cacheados, crespos, crespíssimos e cabelos em transição que procuram um creme multifuncional."
+    motivo: "O produto é o centro da dúvida e permite comparar a indicação real da marca com a expectativa de quem tem cabelo ondulado."
+    pontos_positivos:
+      - "Uso informado como creme 3 em 1"
+      - "Opções de aplicação com e sem enxágue"
+      - "Embalagem de 250 g"
 fontes:
   - titulo: "Skala Cosméticos, Creme para Pentear Mais Cachos"
     url: "https://www.skala.com.br/produto/-mais-cachos-740"

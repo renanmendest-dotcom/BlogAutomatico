@@ -21,19 +21,90 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
     fullPage: true
   });
 
-  const metricas = await page.evaluate(() => ({
-    titulo: document.title,
-    h1: document.querySelector("h1")?.textContent?.trim(),
-    larguraDocumento: document.documentElement.scrollWidth,
-    larguraViewport: window.innerWidth,
-    alturaDocumento: document.documentElement.scrollHeight,
-    linksSemTexto: [...document.querySelectorAll("a")].filter(
-      (link) =>
-        link.getAttribute("aria-hidden") !== "true" &&
-        !link.textContent?.trim() &&
-        !link.getAttribute("aria-label")
-    ).length
-  }));
+  const metricas = await page.evaluate(() => {
+    const artigo = document.querySelector(".article-template");
+    const paginaProduto = document.querySelector(".product-commercial-hero");
+    const elementosArtigo = artigo
+      ? [
+          artigo.querySelector(".article-toc"),
+          artigo.querySelector(".quick-recommendation"),
+          artigo.querySelector(".article-editorial-part"),
+          artigo.querySelector(".article-context-recommendation"),
+          artigo.querySelector(".article-continues"),
+          artigo.querySelector(".article-editorial-continuation"),
+          artigo.querySelector(".faq-section"),
+          artigo.querySelector(".article-conclusion"),
+          artigo.querySelector(".article-secondary-cta")
+        ]
+      : [];
+    const ordemArtigoCorreta = elementosArtigo.every(
+      (elemento, indice) =>
+        elemento &&
+        (indice === elementosArtigo.length - 1 ||
+          Boolean(
+            elemento.compareDocumentPosition(elementosArtigo[indice + 1]) &
+              Node.DOCUMENT_POSITION_FOLLOWING
+          ))
+    );
+    const linksSumarioValidos = artigo
+      ? [...artigo.querySelectorAll('.article-toc a[href^="#"]')].every(
+          (link) => document.getElementById(link.getAttribute("href").slice(1))
+        )
+      : true;
+    const cardContextual = artigo?.querySelector(".context-product-card");
+    const cardAbaixoDaPrimeiraTela = cardContextual
+      ? cardContextual.getBoundingClientRect().top > window.innerHeight
+      : false;
+    const camposDoCard = cardContextual
+      ? [
+          cardContextual.querySelector(".context-product-media img"),
+          cardContextual.querySelector("h3"),
+          [...cardContextual.querySelectorAll("dt")].some(
+            (item) => item.textContent.trim() === "Melhor indicação"
+          ),
+          [...cardContextual.querySelectorAll("dt")].some(
+            (item) => item.textContent.trim() === "Por que escolhemos"
+          ),
+          cardContextual.querySelector(".context-product-points li"),
+          [...cardContextual.querySelectorAll("a")].some(
+            (item) => item.textContent.trim() === "Ver preço e disponibilidade"
+          )
+        ].every(Boolean)
+      : false;
+
+    return {
+      titulo: document.title,
+      h1: document.querySelector("h1")?.textContent?.trim(),
+      larguraDocumento: document.documentElement.scrollWidth,
+      larguraViewport: window.innerWidth,
+      alturaDocumento: document.documentElement.scrollHeight,
+      linksSemTexto: [...document.querySelectorAll("a")].filter(
+        (link) =>
+          link.getAttribute("aria-hidden") !== "true" &&
+          !link.textContent?.trim() &&
+          !link.getAttribute("aria-label")
+      ).length,
+      estruturaArtigoValida: artigo
+        ? ordemArtigoCorreta &&
+          artigo.querySelectorAll(".article-editorial-part:first-of-type h2").length >= 2 &&
+          linksSumarioValidos &&
+          camposDoCard &&
+          cardAbaixoDaPrimeiraTela
+        : null,
+      primeiroCardEmTelas: cardContextual
+        ? Number((cardContextual.getBoundingClientRect().top / window.innerHeight).toFixed(1))
+        : null,
+      estruturaProdutoValida: paginaProduto
+        ? Boolean(
+            document.querySelector(".product-commercial-content") &&
+              [...document.querySelectorAll(".product-commercial-content a")].some(
+                (item) =>
+                  item.textContent.trim() === "Ver preço e disponibilidade"
+              )
+          )
+        : null
+    };
+  });
 
   await page.close();
   return {
@@ -185,6 +256,8 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
               item.status === 200 &&
               !item.overflowHorizontal &&
               item.linksSemTexto === 0 &&
+              item.estruturaArtigoValida !== false &&
+              item.estruturaProdutoValida !== false &&
               item.erros.length === 0
           ) && requisicoes.every((item) => item.status === 200)
       },

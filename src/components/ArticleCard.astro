@@ -10,18 +10,24 @@ interface Props {
       categoria: string;
       atualizado_em: Date;
       tipo_analise: "documental" | "teste_real";
+      modelo_artigo: "educativo" | "analise" | "comparativo";
     };
   };
   destaque?: boolean;
 }
 
 const { post, destaque = false } = Astro.props;
+const rotuloModelo = {
+  educativo: "Guia educativo",
+  analise: "Análise de produto",
+  comparativo: "Comparativo"
+}[post.data.modelo_artigo];
 ---
 
 <article class:list={["article-card", { "is-featured": destaque }]}>
   <div class="article-card-meta">
     <span>{rotuloCategoria(post.data.categoria)}</span>
-    <span>Leitura gostosa</span>
+    <span>{rotuloModelo}</span>
   </div>
 
   <h3><a href={`/artigos/${post.id}/`}>{post.data.titulo}</a></h3>

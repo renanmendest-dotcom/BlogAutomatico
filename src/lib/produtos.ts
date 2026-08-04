@@ -103,3 +103,11 @@ export function resumoCurvaturas(curvaturas: string[]) {
   if (curvaturas.length > 6) return "Ondulados, cacheados e crespos";
   return curvaturas.join(", ");
 }
+
+export function rotuloLinkOferta(loja: string) {
+  if (loja.trim().toLocaleLowerCase("pt-BR") === "mercado livre") {
+    return "Ver no Mercado Livre";
+  }
+
+  return `Ver oferta em ${loja}`;
+}

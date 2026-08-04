@@ -5,6 +5,7 @@ import {
   produtosPublicados,
   resumoCurvaturas,
   rotuloCategoria,
+  rotuloLinkOferta,
   type ProdutoPublicado
 } from "../../lib/produtos";
 
@@ -128,7 +129,7 @@ const productSchema = {
             target="_blank"
             rel="nofollow sponsored noopener"
           >
-            Ver na {produto.oferta.loja}
+            {rotuloLinkOferta(produto.oferta.loja)}
           </a>
         ) : (
           <p>Veja os detalhes abaixo e compare com o que seu cabelo precisa.</p>

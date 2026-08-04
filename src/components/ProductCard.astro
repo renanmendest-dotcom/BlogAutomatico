@@ -1,6 +1,10 @@
 ---
 import type { ProdutoPublicado } from "../lib/produtos";
-import { resumoCurvaturas, rotuloCategoria } from "../lib/produtos";
+import {
+  resumoCurvaturas,
+  rotuloCategoria,
+  rotuloLinkOferta
+} from "../lib/produtos";
 
 interface Props {
   produto: ProdutoPublicado;
@@ -88,7 +92,7 @@ const tipoProduto = rotuloCategoria(produto.categoria);
             target="_blank"
             rel="nofollow sponsored noopener"
           >
-            Ver na {produto.oferta.loja}
+            {rotuloLinkOferta(produto.oferta.loja)}
           </a>
         )
       }

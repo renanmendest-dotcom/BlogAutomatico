@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
+  informacaoProdutoPublicavel,
+  linkCompraProduto,
   produtosPublicados,
   resumoCurvaturas,
   rotuloCategoria,
@@ -26,10 +28,13 @@ const postsRelacionados = (await getCollection("posts"))
       !post.data.rascunho && post.data.produtos.includes(produto.id)
   )
   .slice(0, 3);
-const fonteMercadoLivre = produto.fontes.find((fonte) =>
-  fonte.titulo.toLocaleLowerCase("pt-BR").includes("mercado livre")
+const linkCompra = linkCompraProduto(produto);
+if (!linkCompra) {
+  throw new Error(`O produto "${produto.id}" precisa de um link de compra.`);
+}
+const destaquesPublicaveis = produto.destaques.filter((destaque) =>
+  informacaoProdutoPublicavel(destaque.valor)
 );
-const linkPreco = produto.oferta.url ?? fonteMercadoLivre?.url;
 
 const productSchema = {
   "@context": "https://schema.org",
@@ -41,7 +46,7 @@ const productSchema = {
   },
   description: produto.descricao,
   category: rotuloCategoria(produto.categoria),
-  additionalProperty: produto.destaques.map((item) => ({
+  additionalProperty: destaquesPublicaveis.map((item) => ({
     "@type": "PropertyValue",
     name: item.rotulo,
     value: item.valor
@@ -87,12 +92,24 @@ const productSchema = {
               <dt>Textura</dt>
               <dd>{produto.perfil.textura}</dd>
             </div>
-            <div>
-              <dt>Intensidade</dt>
-              <dd>{produto.perfil.intensidade}</dd>
-            </div>
+            {
+              informacaoProdutoPublicavel(produto.perfil.intensidade) && (
+                <div>
+                  <dt>Intensidade</dt>
+                  <dd>{produto.perfil.intensidade}</dd>
+                </div>
+              )
+            }
           </dl>
         </div>
+        <a
+          class="button button-primary button-full purchase-button product-hero-purchase"
+          href={linkCompra}
+          target="_blank"
+          rel="nofollow sponsored noopener"
+        >
+          Ver preço e disponibilidade
+        </a>
       </aside>
     </div>
   </header>
@@ -104,7 +121,7 @@ const productSchema = {
 
       <dl class="detail-list">
         {
-          produto.destaques.map((destaque) => (
+          destaquesPublicaveis.map((destaque) => (
             <div>
               <dt>{destaque.rotulo}</dt>
               <dd>{destaque.valor}</dd>
@@ -122,24 +139,8 @@ const productSchema = {
 
     </div>
 
-    <aside class="purchase-panel">
-      <p class="eyebrow">Gostou da proposta?</p>
-      {
-        linkPreco ? (
-          <a
-            class="button button-primary button-full"
-            href={linkPreco}
-            target="_blank"
-            rel="nofollow sponsored noopener"
-          >
-            Ver preço e disponibilidade
-          </a>
-        ) : (
-          <p>Veja os detalhes abaixo e compare com o que seu cabelo precisa.</p>
-        )
-      }
-
-      <div class="source-list">
+    <aside class="purchase-panel product-sources-panel">
+      <div class="source-list source-list-only">
         <p class="eyebrow">Quer conferir os detalhes?</p>
         <ol>
           {

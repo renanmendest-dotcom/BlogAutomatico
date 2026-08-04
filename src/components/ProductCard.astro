@@ -3,7 +3,7 @@ import type { ProdutoPublicado } from "../lib/produtos";
 import {
   resumoCurvaturas,
   rotuloCategoria,
-  rotuloLinkOferta
+  linkCompraProduto
 } from "../lib/produtos";
 
 interface Props {
@@ -28,6 +28,10 @@ if (produto.categoria === "creme_para_pentear") {
   nomePrincipal = nomePrincipal.replace(/\s+Creme de Pentear$/i, "");
 }
 const tipoProduto = rotuloCategoria(produto.categoria);
+const linkCompra = linkCompraProduto(produto);
+if (!linkCompra) {
+  throw new Error(`O produto "${produto.id}" precisa de um link de compra.`);
+}
 ---
 
 <article class:list={["product-card", { "is-compact": compacto }]}>
@@ -84,18 +88,14 @@ const tipoProduto = rotuloCategoria(produto.categoria);
       <a class="product-detail-link" href={`/produtos/${produto.id}/`}>
         Ver detalhes
       </a>
-      {
-        produto.oferta.url && (
-          <a
-            class="button button-primary product-buy-button"
-            href={produto.oferta.url}
-            target="_blank"
-            rel="nofollow sponsored noopener"
-          >
-            {rotuloLinkOferta(produto.oferta.loja)}
-          </a>
-        )
-      }
+      <a
+        class="button button-primary purchase-button product-buy-button"
+        href={linkCompra}
+        target="_blank"
+        rel="nofollow sponsored noopener"
+      >
+        Ver preço e disponibilidade
+      </a>
     </div>
   </div>
 </article>

@@ -8,7 +8,7 @@ tipo_analise: "documental"
 modelo_artigo: comparativo
 conclusao: "Creme de pentear e gelatina cumprem funções diferentes. Escolha o creme quando a prioridade for maciez e desembaraço, a gelatina quando faltar fixação, e combine os dois apenas se o seu cabelo realmente pedir as duas etapas."
 publicado_em: 2026-07-30
-atualizado_em: 2026-08-02
+atualizado_em: 2026-08-04
 verificado_em: 2026-08-02
 categoria: finalizacao
 caminhos:
@@ -87,7 +87,7 @@ O creme de pentear costuma fazer sentido quando a rotina precisa de praticidade.
 
 A página oficial da Lola apresenta o Meu Cacho Minha Vida como um creme de pentear voltado à finalização de fios cacheados, com proposta de desembaraço, emoliência e definição. A marca também publica uma lista extensa de ingredientes e orienta a aplicação nos fios limpos, úmidos e condicionados.
 
-Esse tipo de informação ajuda a entender a proposta do produto, mas não responde sozinho se ele ficará leve no seu cabelo. A página não informa uma faixa exata de curvaturas e a Curva Viva ainda não realizou teste próprio de peso, rendimento ou duração.
+Essas informações ajudam a entender a proposta do produto. Para avaliar leveza, rendimento e duração no seu cabelo, comece com pouca quantidade e observe o resultado completamente seco.
 
 Para reduzir o risco de excesso, comece com uma quantidade menor do que você imagina precisar. Distribua, amasse e observe o cabelo depois de seco. Acrescentar produto é mais simples do que retirar uma aplicação pesada.
 

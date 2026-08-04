@@ -100,14 +100,30 @@ export function rotuloCategoria(categoria: string) {
 }
 
 export function resumoCurvaturas(curvaturas: string[]) {
-  if (curvaturas.length > 6) return "Ondulados, cacheados e crespos";
-  return curvaturas.join(", ");
-}
+  const curvaturasPublicaveis = curvaturas
+    .map((curvatura) => curvatura.replace(/,\s*sem\s+.+$/i, "").trim())
+    .filter(informacaoProdutoPublicavel);
 
-export function rotuloLinkOferta(loja: string) {
-  if (loja.trim().toLocaleLowerCase("pt-BR") === "mercado livre") {
-    return "Ver no Mercado Livre";
+  if (curvaturasPublicaveis.length > 6) {
+    return "Ondulados, cacheados e crespos";
   }
 
-  return `Ver oferta em ${loja}`;
+  return curvaturasPublicaveis.join(", ");
+}
+
+export function informacaoProdutoPublicavel(valor: string | null | undefined) {
+  if (!valor?.trim()) return false;
+  return !/^(?:não\s+informad|não\s+encontrad|indisponível|não\s+disponível)/i.test(
+    valor.trim()
+  );
+}
+
+export function linkCompraProduto(produto: ProdutoPublicado) {
+  if (produto.oferta.url) return produto.oferta.url;
+
+  return (
+    produto.fontes.find((fonte) =>
+      fonte.titulo.toLocaleLowerCase("pt-BR").includes("mercado livre")
+    )?.url ?? null
+  );
 }

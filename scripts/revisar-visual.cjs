@@ -63,7 +63,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
             (item) => item.textContent.trim() === "Melhor indicação"
           ),
           [...cardContextual.querySelectorAll("dt")].some(
-            (item) => item.textContent.trim() === "Por que escolhemos"
+            (item) => item.textContent.trim() === "Por que faz sentido"
           ),
           cardContextual.querySelector(".context-product-points li"),
           [...cardContextual.querySelectorAll("a")].some(
@@ -71,6 +71,19 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
           )
         ].every(Boolean)
       : false;
+    const cardsGerais = [...document.querySelectorAll(".product-card")];
+    const cardsGeraisValidos = cardsGerais.every(
+      (card) =>
+        card.querySelector(".product-card-visual img") &&
+        card.querySelector(".product-summary") &&
+        [...card.querySelectorAll(".purchase-button")].some(
+          (item) => item.textContent.trim() === "Ver preço e disponibilidade"
+        )
+    );
+    const textoPublico = document.body.innerText;
+    const linguagemPublicaValida = !/(?:Recomendação no contexto certo|O artigo continua|A recomendação foi só uma parte|preço indisponível|não informado|não encontrada?)/iu.test(
+      textoPublico
+    );
 
     return {
       titulo: document.title,
@@ -84,6 +97,8 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
           !link.textContent?.trim() &&
           !link.getAttribute("aria-label")
       ).length,
+      cardsGeraisValidos,
+      linguagemPublicaValida,
       estruturaArtigoValida: artigo
         ? ordemArtigoCorreta &&
           artigo.querySelectorAll(".article-editorial-part:first-of-type h2").length >= 2 &&
@@ -97,9 +112,8 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
       estruturaProdutoValida: paginaProduto
         ? Boolean(
             document.querySelector(".product-commercial-content") &&
-              [...document.querySelectorAll(".product-commercial-content a")].some(
-                (item) =>
-                  item.textContent.trim() === "Ver preço e disponibilidade"
+              [...document.querySelectorAll(".product-showcase .purchase-button")].some(
+                (item) => item.textContent.trim() === "Ver preço e disponibilidade"
               )
           )
         : null
@@ -256,6 +270,8 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
               item.status === 200 &&
               !item.overflowHorizontal &&
               item.linksSemTexto === 0 &&
+              item.cardsGeraisValidos &&
+              item.linguagemPublicaValida &&
               item.estruturaArtigoValida !== false &&
               item.estruturaProdutoValida !== false &&
               item.erros.length === 0

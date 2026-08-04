@@ -25,6 +25,16 @@ nova implantação ou correções necessárias ao objetivo já aprovado.
   testes passarem.
 - Publicar no máximo um artigo por execução automática.
 
+## Linguagem pública e produtos
+
+- Nunca expor no site pedidos do proprietário, regras internas, decisões de
+  layout, etapas de revisão ou explicações sobre como o conteúdo foi produzido.
+- Quando uma informação do produto estiver ausente, omitir o campo público em
+  vez de mostrar avisos como "não informado" ou "não encontrado".
+- Todo produto público deve ter imagem, descrição e botão de compra juntos no
+  mesmo bloco, com contraste forte e leitura fácil no celular.
+- Priorizar sempre a solução prática para a leitora.
+
 Esta autorização não inclui informar ou armazenar senhas no projeto, realizar
 compras, alterar dados financeiros ou de segurança, apagar conteúdo de forma
 irreversível ou ampliar o objetivo do projeto para algo diferente do solicitado.

@@ -39,7 +39,7 @@ Evite saúde, diagnóstico, alopecia, suplementos e promessas de crescimento.
 1. Identifique marca, nome, versão e tamanho exatos.
 2. Use pelo menos uma página oficial da marca.
 3. Não transforme linguagem de marketing em resultado comprovado.
-4. Se a marca não informar uma curvatura, escreva "Não informado".
+4. Se uma informação não existir, omita o campo público e não invente uma resposta.
 5. Não declare que a Curva Viva testou o produto.
 6. Procure a oferta exata no Mercado Livre, priorizando a loja oficial, boa
    reputação e histórico de vendas.
@@ -51,6 +51,11 @@ Evite saúde, diagnóstico, alopecia, suplementos e promessas de crescimento.
    análise documental ou processo interno de verificação.
 10. Apresente o produto de forma natural: explique em qual etapa ele entra,
     qual problema ajuda a resolver e por que combina com o assunto.
+11. Todo produto publicado precisa aparecer com imagem, descrição e botão de
+    compra próximos no mesmo card.
+12. Não publique textos que expliquem pedidos do proprietário, decisões de
+    layout, etapas internas, limitações da pesquisa ou campos ausentes. Escreva
+    somente o que ajuda a leitora a decidir e agir.
 
 ## Estrutura do artigo
 

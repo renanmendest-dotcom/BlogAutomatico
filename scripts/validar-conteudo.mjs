@@ -77,6 +77,24 @@ for (const produto of produtos) {
     }
   }
 
+  const fonteDeCompra = produto.fontes.find(
+    (fonte) =>
+      /mercado livre/iu.test(fonte.titulo) && urlSegura(fonte.url)
+  );
+  if (!produto.oferta?.url && !fonteDeCompra) {
+    erro(`${prefixo}: todo produto público precisa de um link de compra válido.`);
+  }
+
+  if (
+    !produto.imagem ||
+    !produto.imagem.src ||
+    !produto.imagem.alt ||
+    !produto.imagem.credito ||
+    !urlSegura(produto.imagem.fonteUrl)
+  ) {
+    erro(`${prefixo}: todo produto público precisa de imagem real, descrição e fonte.`);
+  }
+
   const perfil = produto.perfil;
   if (
     !perfil ||
@@ -133,15 +151,6 @@ for (const produto of produtos) {
     }
     if (!dataValida(produto.oferta.atualizadoEm)) {
       erro(`${prefixo}: a oferta precisa de data de atualização.`);
-    }
-    if (
-      !produto.imagem ||
-      !produto.imagem.src ||
-      !produto.imagem.alt ||
-      !produto.imagem.credito ||
-      !urlSegura(produto.imagem.fonteUrl)
-    ) {
-      erro(`${prefixo}: uma oferta ativa precisa de imagem real, descrição e fonte.`);
     }
   }
 }
@@ -324,7 +333,8 @@ for (const nome of arquivos) {
     /\ba oferta foi conferida\b/iu,
     /\blink de afiliado\b/iu,
     /\brecebemos comissão\b/iu,
-    /\bcriado por (?:uma )?inteligência artificial\b/iu
+    /\bcriado por (?:uma )?inteligência artificial\b/iu,
+    /\b(?:não|sem)\s+(?:informad[ao]s?|encontrad[ao]s?|localizad[ao]s?|especificad[ao]s?)\b/iu
   ];
 
   for (const padrao of linguagemInternaBloqueada) {

@@ -1,5 +1,8 @@
 ---
-import type { ProdutoPublicado } from "../lib/produtos";
+import {
+  linkCompraProduto,
+  type ProdutoPublicado
+} from "../lib/produtos";
 
 interface Props {
   produto: ProdutoPublicado;
@@ -15,10 +18,10 @@ const {
   pontosPositivos
 } = Astro.props;
 
-const fonteMercadoLivre = produto.fontes.find((fonte) =>
-  fonte.titulo.toLocaleLowerCase("pt-BR").includes("mercado livre")
-);
-const linkPreco = produto.oferta.url ?? fonteMercadoLivre?.url;
+const linkCompra = linkCompraProduto(produto);
+if (!linkCompra) {
+  throw new Error(`O produto "${produto.id}" precisa de um link de compra.`);
+}
 ---
 
 <article class="context-product-card">
@@ -55,7 +58,7 @@ const linkPreco = produto.oferta.url ?? fonteMercadoLivre?.url;
         <dd>{melhorIndicacao}</dd>
       </div>
       <div>
-        <dt>Por que escolhemos</dt>
+        <dt>Por que faz sentido</dt>
         <dd>{motivo}</dd>
       </div>
     </dl>
@@ -68,22 +71,14 @@ const linkPreco = produto.oferta.url ?? fonteMercadoLivre?.url;
     </div>
 
     <div class="context-product-actions">
-      {
-        linkPreco ? (
-          <a
-            class="button button-primary"
-            href={linkPreco}
-            target="_blank"
-            rel="nofollow sponsored noopener"
-          >
-            Ver preço e disponibilidade
-          </a>
-        ) : (
-          <span class="context-product-unavailable">
-            Preço indisponível no momento
-          </span>
-        )
-      }
+      <a
+        class="button button-primary purchase-button"
+        href={linkCompra}
+        target="_blank"
+        rel="nofollow sponsored noopener"
+      >
+        Ver preço e disponibilidade
+      </a>
       <a class="product-detail-link" href={`/produtos/${produto.id}/`}>
         Ver análise do produto
       </a>

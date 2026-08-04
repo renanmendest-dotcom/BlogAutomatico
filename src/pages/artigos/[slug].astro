@@ -83,11 +83,6 @@ const recomendacoes = post.data.recomendacoes
   .filter((recomendacao) => recomendacao.produtoEncontrado);
 const recomendacaoPrincipal = recomendacoes[0];
 const produtoPrincipal = recomendacaoPrincipal?.produtoEncontrado;
-const fonteMercadoLivrePrincipal = produtoPrincipal?.fontes.find((fonte) =>
-  fonte.titulo.toLocaleLowerCase("pt-BR").includes("mercado livre")
-);
-const linkPrecoPrincipal =
-  produtoPrincipal?.oferta.url ?? fonteMercadoLivrePrincipal?.url;
 
 const rotulosModelo = {
   educativo: "Guia educativo",
@@ -206,7 +201,6 @@ const faqSchema = {
               id="recomendacao-completa"
               aria-labelledby="titulo-recomendacao"
             >
-              <p class="eyebrow">Recomendação no contexto certo</p>
               <h2 id="titulo-recomendacao">
                 {titulosRecomendacao[post.data.modelo_artigo]}
               </h2>
@@ -233,10 +227,11 @@ const faqSchema = {
         {
           markdownContinuacao.trim() && (
             <div class="article-continues" id="continuacao-do-artigo">
-              <span>O artigo continua</span>
-              <strong>A recomendação foi só uma parte da resposta.</strong>
-              <a href={primeiraSecaoDaContinuacao ? `#${primeiraSecaoDaContinuacao.id}` : "#perguntas-frequentes"}>
-                Continue lendo ↓
+              <a
+                class="continue-reading-button"
+                href={primeiraSecaoDaContinuacao ? `#${primeiraSecaoDaContinuacao.id}` : "#perguntas-frequentes"}
+              >
+                Continue lendo...
               </a>
             </div>
           )
@@ -285,22 +280,8 @@ const faqSchema = {
           produtoPrincipal && (
             <aside class="article-secondary-cta" aria-label="Consultar produto recomendado">
               <p>
-                Quer conferir o {produtoPrincipal.nome}?{" "}
-                {
-                  linkPrecoPrincipal ? (
-                    <a
-                      href={linkPrecoPrincipal}
-                      target="_blank"
-                      rel="nofollow sponsored noopener"
-                    >
-                      Ver preço e disponibilidade
-                    </a>
-                  ) : (
-                    <a href={`/produtos/${produtoPrincipal.id}/`}>
-                      Ver análise do produto
-                    </a>
-                  )
-                }
+                Quer rever a indicação?{" "}
+                <a href="#recomendacao-completa">Voltar ao produto ↑</a>
               </p>
             </aside>
           )

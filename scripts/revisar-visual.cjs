@@ -30,7 +30,6 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
           artigo.querySelector(".quick-recommendation"),
           artigo.querySelector(".article-editorial-part"),
           artigo.querySelector(".article-context-recommendation"),
-          artigo.querySelector(".article-continues"),
           artigo.querySelector(".article-editorial-continuation"),
           artigo.querySelector(".faq-section"),
           artigo.querySelector(".article-conclusion"),
@@ -67,7 +66,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
           ),
           cardContextual.querySelector(".context-product-points li"),
           [...cardContextual.querySelectorAll("a")].some(
-            (item) => item.textContent.trim() === "Ver preço e disponibilidade"
+            (item) => item.textContent.trim() === "Quero esse produto"
           )
         ].every(Boolean)
       : false;
@@ -77,11 +76,11 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
         card.querySelector(".product-card-visual img") &&
         card.querySelector(".product-summary") &&
         [...card.querySelectorAll(".purchase-button")].some(
-          (item) => item.textContent.trim() === "Ver preço e disponibilidade"
+          (item) => item.textContent.trim() === "Quero esse produto"
         )
     );
     const textoPublico = document.body.innerText;
-    const linguagemPublicaValida = !/(?:Recomendação no contexto certo|O artigo continua|A recomendação foi só uma parte|preço indisponível|não informado|não encontrada?)/iu.test(
+    const linguagemPublicaValida = !/(?:Recomendação no contexto certo|O artigo continua|Continue lendo|A recomendação foi só uma parte|preço indisponível|não informado|não encontrada?)/iu.test(
       textoPublico
     );
 
@@ -113,7 +112,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
         ? Boolean(
             document.querySelector(".product-commercial-content") &&
               [...document.querySelectorAll(".product-showcase .purchase-button")].some(
-                (item) => item.textContent.trim() === "Ver preço e disponibilidade"
+                (item) => item.textContent.trim() === "Quero esse produto"
               )
           )
         : null

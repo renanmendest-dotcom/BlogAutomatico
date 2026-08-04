@@ -71,9 +71,7 @@ function renderizarTrecho(markdown: string) {
 }
 
 const htmlInicial = renderizarTrecho(markdownInicial);
-const quantidadeSecoesIniciais = indiceSecao;
 const htmlContinuacao = renderizarTrecho(markdownContinuacao);
-const primeiraSecaoDaContinuacao = secoes[quantidadeSecoesIniciais];
 
 const recomendacoes = post.data.recomendacoes
   .map((recomendacao) => ({
@@ -221,19 +219,6 @@ const faqSchema = {
                 }
               </div>
             </section>
-          )
-        }
-
-        {
-          markdownContinuacao.trim() && (
-            <div class="article-continues" id="continuacao-do-artigo">
-              <a
-                class="continue-reading-button"
-                href={primeiraSecaoDaContinuacao ? `#${primeiraSecaoDaContinuacao.id}` : "#perguntas-frequentes"}
-              >
-                Continue lendo...
-              </a>
-            </div>
           )
         }
 

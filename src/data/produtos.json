@@ -420,6 +420,73 @@
     ]
   },
   {
+    "id": "widi-care-curvas-magicas-nevoa-iluminadora-60ml",
+    "nome": "Curvas Mágicas Névoa Iluminadora 60 ml",
+    "descricao": "Finalizador em spray da Widi Care para cabelos ondulados, cacheados e crespos, com proteção térmica e filtro solar apresentados pela marca.",
+    "marca": "Widi Care",
+    "categoria": "protetor_termico",
+    "publicado": true,
+    "verificadoEm": "2026-08-07",
+    "perfil": {
+      "curvaturas": ["Ondulados", "Cacheados", "Crespos"],
+      "textura": "Névoa em spray",
+      "intensidade": "Camada ajustável pela quantidade borrifada",
+      "objetivos": ["Proteção térmica", "Brilho", "Condicionamento", "Filtro solar"]
+    },
+    "imagem": {
+      "src": "https://http2.mlstatic.com/D_NQ_NP_2X_609305-MLA99899451563_112025-F.webp",
+      "alt": "Frasco da Névoa Iluminadora Curvas Mágicas Widi Care 60 ml",
+      "credito": "Mercado Livre",
+      "fonteUrl": "https://www.mercadolivre.com.br/nevoa-iluminadora-cachos-curvas-magicas-widi-care-60ml/p/MLB27498997"
+    },
+    "destaques": [
+      {
+        "rotulo": "Tamanho",
+        "valor": "60 ml",
+        "fonteId": "mercado-livre-nevoa-curvas-magicas"
+      },
+      {
+        "rotulo": "Indicação da marca",
+        "valor": "Cabelos ondulados, cacheados e crespos",
+        "fonteId": "widi-care-nevoa-curvas-magicas"
+      },
+      {
+        "rotulo": "Modo de uso",
+        "valor": "Borrifar nos fios úmidos ou secos a 30 centímetros",
+        "fonteId": "widi-care-nevoa-curvas-magicas"
+      },
+      {
+        "rotulo": "Proteção",
+        "valor": "Proteção térmica e filtro solar apresentados pela marca",
+        "fonteId": "widi-care-nevoa-curvas-magicas"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/18PZRt2",
+      "atualizadoEm": "2026-08-07"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "O formato em spray facilita distribuir uma camada fina, mas não garante o mesmo acabamento em todos os cabelos. Quantidade, distância e combinação com outros finalizadores influenciam o resultado."
+    },
+    "fontes": [
+      {
+        "id": "widi-care-nevoa-curvas-magicas",
+        "titulo": "Widi Care, Curvas Mágicas Névoa Iluminadora",
+        "url": "https://widicare.com.br/produto/nevoa-curvas-magicas/",
+        "acessadoEm": "2026-08-07"
+      },
+      {
+        "id": "mercado-livre-nevoa-curvas-magicas",
+        "titulo": "Névoa Iluminadora Curvas Mágicas Widi Care 60 ml no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/nevoa-iluminadora-cachos-curvas-magicas-widi-care-60ml/p/MLB27498997",
+        "acessadoEm": "2026-08-07"
+      }
+    ]
+  },
+  {
     "id": "widi-care-juba-creme-pentear",
     "nome": "Juba Creme de Pentear",
     "marca": "Widi Care",

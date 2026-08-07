@@ -16,6 +16,22 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
   const resposta = await page.goto(`${base}${rota}`, {
     waitUntil: "domcontentloaded"
   });
+  await page.evaluate(async () => {
+    const imagens = [...document.images];
+    imagens.forEach((imagem) => {
+      imagem.loading = "eager";
+    });
+    await Promise.all(
+      imagens.map(
+        (imagem) =>
+          imagem.complete ||
+          new Promise((resolver) => {
+            imagem.addEventListener("load", resolver, { once: true });
+            imagem.addEventListener("error", resolver, { once: true });
+          })
+      )
+    );
+  });
   await page.screenshot({
     path: path.join(pasta, `${nome}.png`),
     fullPage: true
@@ -252,6 +268,30 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
       "day-after-produto-celular"
     )
   );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/precisa-usar-protetor-termico-no-difusor/",
+      { width: 1440, height: 1000 },
+      "protetor-termico-artigo-desktop"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/precisa-usar-protetor-termico-no-difusor/",
+      { width: 390, height: 844 },
+      "protetor-termico-artigo-celular"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/produtos/widi-care-curvas-magicas-nevoa-iluminadora-60ml/",
+      { width: 390, height: 844 },
+      "protetor-termico-produto-celular"
+    )
+  );
 
   const rotas = [
     "/",
@@ -259,6 +299,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
     "/artigos/creme-de-pentear-ou-gelatina-qual-escolher-2026/",
     "/artigos/lola-meu-cacho-minha-vida-para-qual-cabelo/",
     "/artigos/como-recuperar-os-cachos-no-day-after-sem-lavar/",
+    "/artigos/precisa-usar-protetor-termico-no-difusor/",
     "/artigos/mousse-para-cabelo-ondulado-fino-funciona-sem-pesar/",
     "/artigos/skala-mais-cachos-serve-para-cabelo-ondulado/",
     "/ondulados/",
@@ -271,6 +312,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
     "/produtos/lola-meu-cacho-minha-vida-creme-pentear-500g/",
     "/produtos/skala-mais-cachos-3-em-1-250g/",
     "/produtos/widi-care-revitalizando-a-juba-bruma-300ml/",
+    "/produtos/widi-care-curvas-magicas-nevoa-iluminadora-60ml/",
     "/produtos/widi-care-juba-mousse-200ml/",
     "/sobre/"
   ];

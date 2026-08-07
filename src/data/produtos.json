@@ -341,6 +341,85 @@
     ]
   },
   {
+    "id": "widi-care-revitalizando-a-juba-bruma-300ml",
+    "nome": "Revitalizando a Juba Bruma Hidratante 300 ml",
+    "descricao": "Bruma finalizadora da Widi Care para reativar a curvatura no day after e ajudar na hidratação, definição e redução do frizz.",
+    "marca": "Widi Care",
+    "categoria": "bruma",
+    "publicado": true,
+    "verificadoEm": "2026-08-07",
+    "perfil": {
+      "curvaturas": ["Ondulados", "Cacheados", "Crespos"],
+      "textura": "Bruma em spray",
+      "intensidade": "Umidade ajustável pela quantidade aplicada",
+      "objetivos": ["Day after", "Reativação da curvatura", "Hidratação", "Controle de frizz"]
+    },
+    "imagem": {
+      "src": "https://acdn-us.mitiendanube.com/stores/003/941/769/products/frente-c06bdc37e6a760b5c617634685125960-640-0.webp",
+      "alt": "Frasco da Bruma Hidratante Revitalizando a Juba Widi Care 300 ml",
+      "credito": "Widi Care",
+      "fonteUrl": "https://lojawidicare.com.br/produtos/finalizador-bruma-revitalizando-a-juba-300ml/"
+    },
+    "destaques": [
+      {
+        "rotulo": "Tamanho",
+        "valor": "300 ml",
+        "fonteId": "widi-care-loja-revitalizando-juba"
+      },
+      {
+        "rotulo": "Uso no cabelo seco",
+        "valor": "Borrifar para reativar e hidratar a curvatura",
+        "fonteId": "widi-care-revitalizando-juba"
+      },
+      {
+        "rotulo": "Uso no cabelo úmido",
+        "valor": "Pode agir como modelador e ajudar na definição",
+        "fonteId": "widi-care-revitalizando-juba"
+      },
+      {
+        "rotulo": "Proteção",
+        "valor": "Proteção térmica e solar apresentada pela marca",
+        "fonteId": "widi-care-revitalizando-juba"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": null,
+      "atualizadoEm": null
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A quantidade necessária e o acabamento variam conforme a densidade, a porosidade, a finalização anterior e o quanto os fios foram amassados durante a noite."
+    },
+    "fontes": [
+      {
+        "id": "widi-care-revitalizando-juba",
+        "titulo": "Widi Care, Revitalizando a Juba Bruma Hidratante",
+        "url": "https://widicare.com.br/produto/revitalizando-a-juba-bruma-hidratante/",
+        "acessadoEm": "2026-08-07"
+      },
+      {
+        "id": "widi-care-loja-revitalizando-juba",
+        "titulo": "Widi Care Loja Oficial, Finalizador Bruma Revitalizando a Juba 300 ml",
+        "url": "https://lojawidicare.com.br/produtos/finalizador-bruma-revitalizando-a-juba-300ml/",
+        "acessadoEm": "2026-08-07"
+      },
+      {
+        "id": "widi-care-video-revitalizando-juba",
+        "titulo": "Widi Care, Revitalizando a Juba Bruma Hidratante",
+        "url": "https://www.youtube.com/watch?v=ZJwAdJn8SVk",
+        "acessadoEm": "2026-08-07"
+      },
+      {
+        "id": "mercado-livre-revitalizando-juba-300ml",
+        "titulo": "Revitalizando a Juba Bruma Hidratante Widi Care 300 ml no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/revitalizando-a-juba-bruma-hidratante-300ml-widi-care/p/MLB19514660",
+        "acessadoEm": "2026-08-07"
+      }
+    ]
+  },
+  {
     "id": "widi-care-juba-creme-pentear",
     "nome": "Juba Creme de Pentear",
     "marca": "Widi Care",

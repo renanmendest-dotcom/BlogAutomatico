@@ -93,6 +93,7 @@ export function rotuloCategoria(categoria: string) {
     creme_para_pentear: "Creme para pentear",
     gelatina: "Gelatina",
     mousse: "Mousse",
+    bruma: "Bruma",
     mascara: "Máscara"
   };
 

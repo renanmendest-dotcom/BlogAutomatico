@@ -228,12 +228,37 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
       "mousse-produto-celular"
     )
   );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/como-recuperar-os-cachos-no-day-after-sem-lavar/",
+      { width: 1440, height: 1000 },
+      "day-after-artigo-desktop"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/como-recuperar-os-cachos-no-day-after-sem-lavar/",
+      { width: 390, height: 844 },
+      "day-after-artigo-celular"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/produtos/widi-care-revitalizando-a-juba-bruma-300ml/",
+      { width: 390, height: 844 },
+      "day-after-produto-celular"
+    )
+  );
 
   const rotas = [
     "/",
     "/artigos/",
     "/artigos/creme-de-pentear-ou-gelatina-qual-escolher-2026/",
     "/artigos/lola-meu-cacho-minha-vida-para-qual-cabelo/",
+    "/artigos/como-recuperar-os-cachos-no-day-after-sem-lavar/",
     "/artigos/mousse-para-cabelo-ondulado-fino-funciona-sem-pesar/",
     "/artigos/skala-mais-cachos-serve-para-cabelo-ondulado/",
     "/ondulados/",
@@ -245,6 +270,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
     "/produtos/salon-line-gelatina-definicao-extraordinaria-550g/",
     "/produtos/lola-meu-cacho-minha-vida-creme-pentear-500g/",
     "/produtos/skala-mais-cachos-3-em-1-250g/",
+    "/produtos/widi-care-revitalizando-a-juba-bruma-300ml/",
     "/produtos/widi-care-juba-mousse-200ml/",
     "/sobre/"
   ];

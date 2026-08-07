@@ -15,7 +15,12 @@ const posts = defineCollection({
     descricao: z.string(),
     autor: z.string().default("Curadoria Curva Viva"),
     tipo_analise: z.enum(["documental", "teste_real"]).default("documental"),
-    modelo_artigo: z.enum(["educativo", "analise", "comparativo"]),
+    modelo_artigo: z.enum([
+      "educativo",
+      "analise",
+      "comparativo",
+      "ranking"
+    ]),
     conclusao: z.string().min(100),
     publicado_em: z.coerce.date(),
     atualizado_em: z.coerce.date(),
@@ -41,7 +46,9 @@ const posts = defineCollection({
         })
       )
       .min(1)
-      .max(2),
+      // O ranking usa a faixa maior; validar-conteudo.mjs cobra o mínimo de 3
+      // para esse modelo e mantém o teto de 2 nos demais.
+      .max(10),
     fontes: z
       .array(
         z.object({

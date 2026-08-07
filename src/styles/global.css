@@ -498,18 +498,30 @@ b {
    8. Heróis
    -------------------------------------------------------------------------- */
 
+/* Sem gradiente: a ilustração do herói tem o creme do site como fundo e
+   precisa encostar na página sem deixar retângulo aparente. */
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(255, 253, 250, 0.8), transparent 60%);
+  background: var(--cream);
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.62fr);
-  align-items: center;
-  gap: clamp(2.5rem, 6vw, 5rem);
-  padding-block: clamp(3.5rem, 7vw, 5.5rem);
+.hero-inner {
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* A ilustração tem exatamente o creme do site como fundo, então ela encosta
+   na página sem moldura e sem emenda visível. */
+.hero-illustration {
+  width: min(100%, 1320px);
+  margin-inline: auto;
+}
+
+.hero-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero-copy {
@@ -545,77 +557,6 @@ b {
   gap: var(--sp-4) var(--sp-5);
 }
 
-/* Cartão editorial do herói. Retângulo com raio consistente,
-   no lugar da forma de meia-lua que não se repetia em lugar nenhum. */
-.curve-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 340px;
-  overflow: hidden;
-  padding: var(--sp-6);
-  border-radius: var(--r-lg);
-  background: linear-gradient(160deg, var(--plum) 0%, var(--plum-deep) 100%);
-  color: white;
-  box-shadow: var(--shadow-2);
-}
-
-.curve-card-kicker {
-  position: relative;
-  z-index: 2;
-  margin-bottom: var(--sp-4);
-  color: var(--rose-light);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.curve-card > p:last-child {
-  position: relative;
-  z-index: 2;
-  max-width: 32ch;
-  margin-bottom: 0;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 0.875rem;
-  line-height: 1.6;
-}
-
-/* Curvaturas: itens separados, com régua entre eles, para não lerem como "234". */
-.curve-numbers {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: baseline;
-  gap: var(--sp-5);
-  margin-bottom: var(--sp-4);
-  padding-bottom: var(--sp-4);
-  border-bottom: 1px solid var(--white-line);
-}
-
-.curve-numbers span {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  font-family: var(--serif);
-  font-size: 2.75rem;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.curve-numbers small {
-  color: rgba(255, 255, 255, 0.6);
-  font-family: var(--sans);
-  font-size: 0.625rem;
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
 .curve-orbit,
 .orbit-one,
 .orbit-two,
@@ -623,6 +564,159 @@ b {
 .product-visual-glow,
 .product-monogram {
   display: none;
+}
+
+/* --------------------------------------------------------------------------
+   8b. Curvaturas com retrato
+   Cada curvatura tem um rosto fixo. A leitora reconhece o dela de longe,
+   sem precisar decifrar número nenhum.
+   -------------------------------------------------------------------------- */
+
+.curvature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sp-4);
+}
+
+.curvature-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-5);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--paper);
+  text-decoration: none;
+  transition:
+    border-color var(--t-base) var(--ease-out),
+    box-shadow var(--t-base) var(--ease-out),
+    transform var(--t-base) var(--ease-out);
+}
+
+.curvature-portrait {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--sp-4);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--r-md);
+  background: var(--cream);
+}
+
+.curvature-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-base) var(--ease-out);
+}
+
+.curvature-portrait.is-mark {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, var(--plum) 0%, var(--plum-deep) 100%);
+  color: var(--rose-light);
+  font-family: var(--serif);
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.curvature-kicker {
+  margin-bottom: var(--sp-2);
+  color: var(--rose);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.curvature-card h3 {
+  margin-bottom: var(--sp-2);
+  font-size: 1.375rem;
+}
+
+.curvature-card p {
+  margin: 0 0 var(--sp-5);
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.curvature-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-top: auto;
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--line);
+  color: var(--plum);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .curvature-card:hover {
+    border-color: var(--line-strong);
+    box-shadow: var(--shadow-1);
+    transform: translateY(-3px);
+  }
+
+  .curvature-card:hover .curvature-portrait img {
+    transform: scale(1.04);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8c. Faixa de confiança
+   O diferencial do projeto dito de frente, que é justamente o que os
+   concorrentes do nicho não têm.
+   -------------------------------------------------------------------------- */
+
+.trust-band {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+  border-block: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.trust-lead h2 {
+  max-width: 14ch;
+  margin: 0;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+}
+
+.trust-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-5);
+}
+
+.trust-items > div {
+  padding-top: var(--sp-4);
+  border-top: 2px solid var(--rose);
+}
+
+.trust-items strong {
+  display: block;
+  margin-bottom: var(--sp-2);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.006em;
+}
+
+.trust-items p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  line-height: 1.6;
 }
 
 /* Herói das páginas internas */
@@ -1037,6 +1131,29 @@ b {
   color: var(--ink-soft);
   font-size: 0.875rem;
   line-height: 1.6;
+}
+
+/* Preço: o dado que mais converte e que nenhuma ficha tinha até agora.
+   Some por completo quando não há preço conferido. */
+.product-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.6rem;
+  margin: 0 0 var(--sp-4);
+}
+
+.product-price strong {
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.014em;
+}
+
+.product-price span {
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+  font-weight: 550;
 }
 
 .product-card-facts {
@@ -1523,6 +1640,124 @@ b {
 }
 
 /* --------------------------------------------------------------------------
+   15b. Trilha de navegação
+   Responde "onde eu estou" e alimenta o BreadcrumbList do Google.
+   -------------------------------------------------------------------------- */
+
+.breadcrumb {
+  margin-bottom: var(--sp-5);
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+  font-weight: 550;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  color: var(--line-strong);
+}
+
+.breadcrumb a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+/* A página atual é longa demais para caber inteira na trilha. */
+.breadcrumb [aria-current="page"] {
+  display: block;
+  overflow: hidden;
+  max-width: 34ch;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .breadcrumb a:hover {
+    color: var(--plum);
+    text-decoration: underline;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   15c. Artigos relacionados
+   Fim de artigo sem saída era um beco: o leitor terminava e ia embora.
+   -------------------------------------------------------------------------- */
+
+.related-articles {
+  margin-top: var(--sp-8);
+  padding-top: var(--sp-6);
+  border-top: 1px solid var(--line);
+}
+
+.related-articles h2 {
+  margin-bottom: var(--sp-5);
+  font-size: clamp(1.5rem, 2.8vw, 1.875rem);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-4);
+}
+
+.related-item {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--paper);
+  text-decoration: none;
+  transition:
+    border-color var(--t-base) var(--ease-out),
+    box-shadow var(--t-base) var(--ease-out);
+}
+
+.related-item-tag {
+  margin-bottom: var(--sp-3);
+  color: var(--rose);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.related-item h3 {
+  margin-bottom: var(--sp-4);
+  font-size: 1.0625rem;
+  line-height: 1.3;
+}
+
+.related-item-go {
+  margin-top: auto;
+  color: var(--plum);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .related-item:hover {
+    border-color: var(--line-strong);
+    box-shadow: var(--shadow-1);
+  }
+}
+
+/* --------------------------------------------------------------------------
    16. Artigo
    -------------------------------------------------------------------------- */
 
@@ -1840,7 +2075,9 @@ b {
   margin-top: var(--sp-5);
 }
 
-.article-context-recommendation.has-comparison .context-product-grid {
+/* Duas colunas quando há vários produtos: comparativo (2) ou ranking (3 a 10). */
+.article-context-recommendation.has-comparison .context-product-grid,
+.article-context-recommendation.has-ranking .context-product-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -1854,7 +2091,8 @@ b {
   background: var(--paper);
 }
 
-.has-comparison .context-product-card {
+.has-comparison .context-product-card,
+.has-ranking .context-product-card {
   grid-template-columns: 1fr;
 }
 
@@ -1867,7 +2105,8 @@ b {
   text-decoration: none;
 }
 
-.has-comparison .context-product-media {
+.has-comparison .context-product-media,
+.has-ranking .context-product-media {
   aspect-ratio: 4 / 3;
   border-right: 0;
   border-bottom: 1px solid var(--line);
@@ -2457,6 +2696,8 @@ b {
   .product-grid,
   .hair-article-grid,
   .related-links,
+  .related-grid,
+  .curvature-grid,
   .hair-clue-grid,
   .evidence-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2492,7 +2733,7 @@ b {
 }
 
 @media (max-width: 900px) {
-  .hero-grid,
+  .trust-grid,
   .product-hero-grid,
   .product-detail-grid,
   .method-grid,
@@ -2512,25 +2753,32 @@ b {
     gap: var(--sp-4);
   }
 
-  .curve-card,
   .hair-path-answer,
   .product-profile {
     max-width: 34rem;
+  }
+
+  .trust-items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--sp-4);
   }
 
   .purchase-panel {
     position: static;
   }
 
-  .article-context-recommendation.has-comparison .context-product-grid {
+  .article-context-recommendation.has-comparison .context-product-grid,
+  .article-context-recommendation.has-ranking .context-product-grid {
     grid-template-columns: 1fr;
   }
 
-  .has-comparison .context-product-card {
+  .has-comparison .context-product-card,
+.has-ranking .context-product-card {
     grid-template-columns: minmax(180px, 0.4fr) minmax(0, 0.6fr);
   }
 
-  .has-comparison .context-product-media {
+  .has-comparison .context-product-media,
+.has-ranking .context-product-media {
     aspect-ratio: auto;
     border-right: 1px solid var(--line);
     border-bottom: 0;
@@ -2558,18 +2806,12 @@ b {
     letter-spacing: 0.06em;
   }
 
-  .hero-grid {
+  .hero-inner {
     padding-top: var(--sp-7);
-    gap: var(--sp-7);
   }
 
-  .curve-card {
-    min-height: 280px;
-    padding: var(--sp-5);
-  }
-
-  .curve-numbers span {
-    font-size: 2.25rem;
+  .trust-items {
+    grid-template-columns: 1fr;
   }
 
   .section {
@@ -2583,10 +2825,26 @@ b {
   .article-product-grid,
   .hair-article-grid,
   .related-links,
+  .related-grid,
   .hair-clue-grid,
   .evidence-grid,
   .article-toc ol {
     grid-template-columns: 1fr;
+  }
+
+  /* Duas colunas seguram as quatro curvaturas em uma tela só,
+     em vez de virar uma pilha de quatro cartões altos. */
+  .curvature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-3);
+  }
+
+  .curvature-card {
+    padding: var(--sp-4);
+  }
+
+  .curvature-card h3 {
+    font-size: 1.125rem;
   }
 
   .article-card.is-featured {
@@ -2600,12 +2858,14 @@ b {
   }
 
   .context-product-card,
-  .has-comparison .context-product-card {
+  .has-comparison .context-product-card,
+.has-ranking .context-product-card {
     grid-template-columns: 1fr;
   }
 
   .context-product-media,
-  .has-comparison .context-product-media {
+  .has-comparison .context-product-media,
+.has-ranking .context-product-media {
     aspect-ratio: 4 / 3;
     border-right: 0;
     border-bottom: 1px solid var(--line);

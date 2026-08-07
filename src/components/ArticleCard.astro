@@ -10,7 +10,7 @@ interface Props {
       categoria: string;
       atualizado_em: Date;
       tipo_analise: "documental" | "teste_real";
-      modelo_artigo: "educativo" | "analise" | "comparativo";
+      modelo_artigo: "educativo" | "analise" | "comparativo" | "ranking";
     };
   };
   destaque?: boolean;
@@ -20,7 +20,8 @@ const { post, destaque = false } = Astro.props;
 const rotuloModelo = {
   educativo: "Guia educativo",
   analise: "Análise de produto",
-  comparativo: "Comparativo"
+  comparativo: "Comparativo",
+  ranking: "Seleção comentada"
 }[post.data.modelo_artigo];
 ---
 

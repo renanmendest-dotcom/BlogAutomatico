@@ -1,0 +1,39 @@
+---
+interface Props {
+  /** Do mais geral para o mais específico. O último item é a página atual
+   *  e não vira link. */
+  trilha: Array<{ nome: string; href?: string }>;
+}
+
+const { trilha } = Astro.props;
+const base = Astro.site?.toString().replace(/\/$/, "") ?? "";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: trilha.map((item, indice) => ({
+    "@type": "ListItem",
+    position: indice + 1,
+    name: item.nome,
+    ...(item.href ? { item: `${base}${item.href}` } : {})
+  }))
+};
+---
+
+<nav class="breadcrumb" aria-label="Você está aqui">
+  <ol>
+    {
+      trilha.map((item, indice) => (
+        <li>
+          {item.href && indice < trilha.length - 1 ? (
+            <a href={item.href}>{item.nome}</a>
+          ) : (
+            <span aria-current="page">{item.nome}</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

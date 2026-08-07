@@ -153,6 +153,35 @@ for (const produto of produtos) {
       erro(`${prefixo}: a oferta precisa de data de atualização.`);
     }
   }
+
+  // O preço é opcional: sem ele o bloco simplesmente não aparece na página.
+  // Mas quando existe, precisa ser confiável, porque vira decisão de compra.
+  if (produto.preco !== undefined) {
+    const { min, max, moeda, verificadoEm } = produto.preco ?? {};
+
+    if (typeof min !== "number" || typeof max !== "number" || min <= 0 || max <= 0) {
+      erro(`${prefixo}: o preço precisa de min e max numéricos maiores que zero.`);
+    } else if (min > max) {
+      erro(`${prefixo}: o preço mínimo não pode ser maior que o máximo.`);
+    }
+
+    if (moeda !== "BRL") {
+      erro(`${prefixo}: o preço precisa usar a moeda "BRL".`);
+    }
+
+    if (!dataValida(verificadoEm)) {
+      erro(`${prefixo}: o preço precisa da data em que foi conferido.`);
+    } else {
+      // Preço velho engana a leitora. Passou de 90 dias, precisa reconferir.
+      const dias =
+        (Date.now() - new Date(`${verificadoEm}T12:00:00Z`).getTime()) / 86400000;
+      if (dias > 90) {
+        erro(
+          `${prefixo}: o preço foi conferido há mais de 90 dias. Reconfira ou remova o campo.`
+        );
+      }
+    }
+  }
 }
 
 const arquivos = (await fs.readdir(pastaPosts))
@@ -196,7 +225,11 @@ for (const nome of arquivos) {
     erro(`${prefixo}: o tipo de análise é inválido.`);
   }
 
-  if (!["educativo", "analise", "comparativo"].includes(data.modelo_artigo)) {
+  if (
+    !["educativo", "analise", "comparativo", "ranking"].includes(
+      data.modelo_artigo
+    )
+  ) {
     erro(`${prefixo}: o modelo de artigo é inválido.`);
   }
 
@@ -238,12 +271,23 @@ for (const nome of arquivos) {
     }
   }
 
+  // O ranking existe justamente para comparar várias opções, então ele precisa
+  // de uma faixa maior. Os outros modelos continuam com no máximo duas, para
+  // não virarem vitrine disfarçada de guia.
+  const ehRanking = data.modelo_artigo === "ranking";
+  const minRecomendacoes = ehRanking ? 3 : 1;
+  const maxRecomendacoes = ehRanking ? 10 : 2;
+
   if (
     !Array.isArray(data.recomendacoes) ||
-    data.recomendacoes.length < 1 ||
-    data.recomendacoes.length > 2
+    data.recomendacoes.length < minRecomendacoes ||
+    data.recomendacoes.length > maxRecomendacoes
   ) {
-    erro(`${prefixo}: precisa ter uma ou duas recomendações contextuais.`);
+    erro(
+      ehRanking
+        ? `${prefixo}: um ranking precisa de 3 a 10 produtos recomendados.`
+        : `${prefixo}: precisa ter uma ou duas recomendações contextuais.`
+    );
   } else {
     const produtosRecomendados = new Set();
 

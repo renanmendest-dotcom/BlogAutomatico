@@ -24,7 +24,10 @@ nova implantação ou correções necessárias ao objetivo já aprovado.
   natural, retenção, SEO, leitura no celular e qualidade da recomendação.
 - Publicar diretamente em `main` somente quando as duas revisões e todos os
   testes passarem.
-- Publicar no máximo um artigo por execução automática.
+- Publicar no máximo dois artigos por execução automática, nunca no mesmo
+  minuto e variando o horário entre execuções, para a cadência não ficar
+  mecânica. As regras de volume, formato e imagem estão em
+  `.github/INSTRUCOES-IA.md`.
 
 ## Linguagem pública e produtos
 

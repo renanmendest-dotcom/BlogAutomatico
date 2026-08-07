@@ -1,0 +1,59 @@
+---
+import { getCollection } from "astro:content";
+import { rotuloCategoria } from "../lib/produtos";
+
+interface Props {
+  /** Slug do artigo atual, para não sugerir ele mesmo. */
+  atual: string;
+  caminhos: string[];
+  categoria: string;
+  limite?: number;
+}
+
+const { atual, caminhos, categoria, limite = 3 } = Astro.props;
+
+const publicados = (await getCollection("posts")).filter(
+  (post) => !post.data.rascunho && post.id !== atual
+);
+
+// Relevância antes de recência: caminho em comum vale mais que categoria igual,
+// porque é o que aproxima o artigo da curvatura da leitora.
+const ordenados = publicados
+  .map((post) => {
+    const caminhosEmComum = post.data.caminhos.filter((caminho) =>
+      caminhos.includes(caminho)
+    ).length;
+    const mesmaCategoria = post.data.categoria === categoria ? 1 : 0;
+    return { post, peso: caminhosEmComum * 2 + mesmaCategoria };
+  })
+  .sort(
+    (a, b) =>
+      b.peso - a.peso ||
+      b.post.data.atualizado_em.getTime() - a.post.data.atualizado_em.getTime()
+  )
+  .slice(0, limite)
+  .map((item) => item.post);
+---
+
+{
+  ordenados.length > 0 && (
+    <section class="related-articles" aria-labelledby="titulo-relacionados">
+      <p class="eyebrow">Continue por aqui</p>
+      <h2 id="titulo-relacionados">Outras dúvidas parecidas</h2>
+
+      <div class="related-grid">
+        {ordenados.map((post) => (
+          <a class="related-item" href={`/artigos/${post.id}/`}>
+            <span class="related-item-tag">
+              {rotuloCategoria(post.data.categoria)}
+            </span>
+            <h3>{post.data.titulo}</h3>
+            <span class="related-item-go" aria-hidden="true">
+              Ler agora ↗
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )
+}

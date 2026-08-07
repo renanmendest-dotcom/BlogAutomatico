@@ -1,7 +1,9 @@
 ---
 import type { ProdutoPublicado } from "../lib/produtos";
 import {
-  resumoCurvaturas,
+  custoPorCemProduto,
+  faixaDePreco,
+  resumoObjetivos,
   rotuloCategoria,
   linkCompraProduto
 } from "../lib/produtos";
@@ -28,6 +30,9 @@ if (produto.categoria === "creme_para_pentear") {
   nomePrincipal = nomePrincipal.replace(/\s+Creme de Pentear$/i, "");
 }
 const tipoProduto = rotuloCategoria(produto.categoria);
+const preco = faixaDePreco(produto);
+const custoPorCem = custoPorCemProduto(produto);
+const melhorPara = resumoObjetivos(produto.perfil.objetivos);
 const linkCompra = linkCompraProduto(produto);
 if (!linkCompra) {
   throw new Error(`O produto "${produto.id}" precisa de um link de compra.`);
@@ -69,12 +74,23 @@ if (!linkCompra) {
     <p class="product-summary">{produto.descricao}</p>
 
     {
+      preco && (
+        <p class="product-price">
+          <strong>{preco}</strong>
+          {custoPorCem && <span>{custoPorCem}</span>}
+        </p>
+      )
+    }
+
+    {
       !compacto && (
         <dl class="product-card-facts">
-          <div>
-            <dt>Combina com</dt>
-            <dd>{resumoCurvaturas(produto.perfil.curvaturas)}</dd>
-          </div>
+          {melhorPara && (
+            <div>
+              <dt>Melhor para</dt>
+              <dd>{melhorPara}</dd>
+            </div>
+          )}
           <div>
             <dt>Textura</dt>
             <dd>{produto.perfil.textura}</dd>

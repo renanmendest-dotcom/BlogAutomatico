@@ -1,7 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import { marked } from "marked";
+import Breadcrumb from "../../components/Breadcrumb.astro";
 import ProductRecommendationCard from "../../components/ProductRecommendationCard.astro";
+import RelatedArticles from "../../components/RelatedArticles.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
   buscarProduto,
@@ -85,12 +87,14 @@ const produtoPrincipal = recomendacaoPrincipal?.produtoEncontrado;
 const rotulosModelo = {
   educativo: "Guia educativo",
   analise: "Análise de produto",
-  comparativo: "Comparativo"
+  comparativo: "Comparativo",
+  ranking: "Seleção comentada"
 };
 const titulosRecomendacao = {
   educativo: "Uma opção para colocar a técnica em prática.",
   analise: "O produto analisado, com os detalhes que importam.",
-  comparativo: "As opções que representam cada lado da comparação."
+  comparativo: "As opções que representam cada lado da comparação.",
+  ranking: "As opções, e para quem cada uma faz sentido."
 };
 const textosRecomendacao = {
   educativo:
@@ -98,7 +102,9 @@ const textosRecomendacao = {
   analise:
     "Agora que a proposta e os limites ficaram claros, veja para quem o produto faz mais sentido e por quê.",
   comparativo:
-    "Cada opção cumpre uma função diferente. Compare a indicação e escolha pelo resultado que está faltando."
+    "Cada opção cumpre uma função diferente. Compare a indicação e escolha pelo resultado que está faltando.",
+  ranking:
+    "Cada uma resolve uma situação diferente. Procure a linha que descreve o seu cabelo hoje e comece por ela."
 };
 
 const articleSchema = {
@@ -145,7 +151,13 @@ const faqSchema = {
   <article class:list={["article-template", `is-${post.data.modelo_artigo}`]}>
     <header class="article-hero">
       <div class="shell article-hero-inner">
-        <a class="back-link" href="/artigos/">← Todos os guias</a>
+        <Breadcrumb
+          trilha={[
+            { nome: "Início", href: "/" },
+            { nome: "Guias", href: "/artigos/" },
+            { nome: post.data.titulo }
+          ]}
+        />
         <p class="eyebrow">
           {rotulosModelo[post.data.modelo_artigo]} | {rotuloCategoria(post.data.categoria)}
         </p>
@@ -194,7 +206,12 @@ const faqSchema = {
             <section
               class:list={[
                 "article-context-recommendation",
-                { "has-comparison": recomendacoes.length > 1 }
+                {
+                  "has-ranking": post.data.modelo_artigo === "ranking",
+                  "has-comparison":
+                    post.data.modelo_artigo !== "ranking" &&
+                    recomendacoes.length > 1
+                }
               ]}
               id="recomendacao-completa"
               aria-labelledby="titulo-recomendacao"
@@ -271,6 +288,12 @@ const faqSchema = {
             </aside>
           )
         }
+
+        <RelatedArticles
+          atual={post.id}
+          caminhos={post.data.caminhos}
+          categoria={post.data.categoria}
+        />
       </div>
     </div>
   </article>

@@ -1,7 +1,8 @@
 # Autonomia do projeto
 
-O proprietário autoriza o Codex a executar, sem nova consulta, as ações normais
-necessárias para concluir este projeto, incluindo:
+O proprietário autoriza os agentes de IA deste projeto, Codex e Claude Code, a
+executar, sem nova consulta, as ações normais necessárias para concluir este
+projeto, incluindo:
 
 - editar e criar arquivos do site;
 - executar testes e corrigir erros;
@@ -15,7 +16,7 @@ nova implantação ou correções necessárias ao objetivo já aprovado.
 
 ## Publicação automática
 
-- Não usar Claude neste projeto.
+- O Codex e o Claude Code estão autorizados a trabalhar neste projeto.
 - Não abrir pull request nem aguardar aprovação humana para artigos novos.
 - Antes de publicar, fazer duas revisões independentes.
 - A primeira revisão confere fatos, fontes, produto, link, imagem e coerência.

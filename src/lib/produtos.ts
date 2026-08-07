@@ -94,10 +94,23 @@ export function rotuloCategoria(categoria: string) {
     gelatina: "Gelatina",
     mousse: "Mousse",
     bruma: "Bruma",
-    mascara: "Máscara"
+    mascara: "Máscara",
+    protetor_termico: "Protetor térmico",
+    ativador: "Ativador de cachos",
+    leave_in: "Leave-in",
+    oleo: "Óleo",
+    shampoo: "Shampoo",
+    condicionador: "Condicionador"
   };
 
-  return rotulos[categoria] ?? categoria;
+  // Sem rótulo cadastrado, mostrar a chave crua exporia "protetor_termico"
+  // no lugar de "Protetor térmico". Formatar é melhor do que vazar o dado interno.
+  return (
+    rotulos[categoria] ??
+    categoria
+      .replace(/_/g, " ")
+      .replace(/^./, (letra) => letra.toUpperCase())
+  );
 }
 
 export function resumoCurvaturas(curvaturas: string[]) {

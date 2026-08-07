@@ -8,3 +8,6 @@ doc_review_render/
 qa/
 tmp/
 *.log
+
+# Configuracao local do Claude Code
+.claude/settings.local.json

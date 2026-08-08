@@ -97,6 +97,10 @@ ranking, em Google Imagens e em tempo de permanência.
 - **Toda imagem precisa de `alt` descritivo e único.**
 - Largura máxima de 1600 px e peso máximo de 200 KB por imagem.
 
+**Tudo dentro de `public/` é publicado.** Material de referência interno, folha
+de personagem e arte de trabalho não vão para lá: o lugar deles é
+`referencias/`, na raiz, que é versionado mas não entra no site.
+
 ### Estilo visual obrigatório
 
 Toda ilustração gerada segue o mesmo sistema, senão o site vira colcha de retalho:
@@ -108,7 +112,9 @@ Toda ilustração gerada segue o mesmo sistema, senão o site vira colcha de ret
 - **O fundo precisa ser exatamente `#F8F3EC`**, que é o creme do site. Assim a
   ilustração encosta na página sem retângulo aparente. Conferir o pixel do canto
   antes de salvar.
-- Exportar em webp com qualidade 95.
+- Exportar em webp com **qualidade 90**. Acima disso o arquivo triplica de peso
+  sem ganho visível: nos avatares, a qualidade 95 gerava 158 KB onde a 90 gera
+  33 KB, com diferença de 1 em 255 por pixel. Peso pesa no ranking.
 
 ---
 
@@ -158,20 +164,20 @@ antes de salvar; é o erro mais comum quando se pede pele clara a um gerador.
 Para criar outra pose ou cena, use sempre como referência a folha completa e a
 linha de ângulos da personagem correspondente:
 
-- `public/avatares/referencia/folha-personagens.webp`
-- `public/avatares/referencia/ondulada-angulos.webp`
-- `public/avatares/referencia/cacheada-angulos.webp`
-- `public/avatares/referencia/crespa-angulos.webp`
-- `public/avatares/referencia/folha-corpo-inteiro.webp`
-- `public/avatares/referencia/ondulada-corpo-angulos.webp`
-- `public/avatares/referencia/cacheada-corpo-angulos.webp`
-- `public/avatares/referencia/crespa-corpo-angulos.webp`
+- `referencias/avatares/folha-personagens.webp`
+- `referencias/avatares/ondulada-angulos.webp`
+- `referencias/avatares/cacheada-angulos.webp`
+- `referencias/avatares/crespa-angulos.webp`
+- `referencias/avatares/folha-corpo-inteiro.webp`
+- `referencias/avatares/ondulada-corpo-angulos.webp`
+- `referencias/avatares/cacheada-corpo-angulos.webp`
+- `referencias/avatares/crespa-corpo-angulos.webp`
 
 Não gere uma personagem separada do zero. A folha registra vista frontal,
 três-quartos e perfil, tanto no rosto quanto no corpo completo, preservando
 rosto, cabelo, tom de pele, proporções e roupa entre imagens futuras.
 
-A folha de personagem em `public/avatares/referencia/` é a referência canônica.
+A folha de personagem em `referencias/avatares/` é a referência canônica.
 Se uma pose nova for aprovada, acrescente-a à referência em vez de substituir a
 identidade existente.
 

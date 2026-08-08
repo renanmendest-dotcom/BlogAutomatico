@@ -2891,6 +2891,46 @@ b {
 }
 
 /* --------------------------------------------------------------------------
+   18c. Fecho de marca
+   As três personagens de corpo inteiro encerrando a home. Altura limitada de
+   propósito: a versão anterior, grande, empurrava a página inteira para baixo.
+   -------------------------------------------------------------------------- */
+
+/* O creme da faixa é o creme que sai do codificador webp, um ponto abaixo do
+   creme do site. Parece detalhe, mas 1/255 numa área lisa grande forma uma
+   borda visível em volta da ilustração. Aqui a troca é de graça: a faixa é
+   ladeada pela seção ameixa em cima e pelo rodapé escuro embaixo, então não
+   existe emenda creme com creme para aparecer. */
+.brand-close {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--line);
+  background: #f8f2eb;
+  text-align: center;
+}
+
+/* Sem isso, a margem do rodapé deixaria uma faixa do creme do site entre a
+   ilustração e o rodapé, recriando justamente a emenda que se quer evitar. */
+.brand-close + .site-footer {
+  margin-top: 0;
+}
+
+.brand-close h2 {
+  max-width: 20ch;
+  margin-inline: auto;
+  margin-bottom: var(--sp-4);
+  font-size: clamp(1.5rem, 3vw, 2.125rem);
+}
+
+.brand-close-art {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: clamp(11rem, 26vw, 19rem);
+  margin: var(--sp-5) auto 0;
+  object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
    19. Rodapé
    -------------------------------------------------------------------------- */
 

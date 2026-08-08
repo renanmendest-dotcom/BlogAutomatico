@@ -14,7 +14,12 @@ export const site = {
   responsavel: "Curva Viva",
 
   /** Data da última revisão dos textos legais. */
-  atualizadoEm: "2026-08-07"
+  atualizadoEm: "2026-08-07",
+
+  /** Verificação de propriedade no Google Search Console.
+   *  Não remover depois de verificado: o Google revalida de tempos em tempos
+   *  e a propriedade cai se a tag sumir. */
+  googleSiteVerification: "Vn_7Nv72lPSUu3x5joNZ_99_DC3REPoOX0NDXUKcYVQ"
 } as const;
 
 export function dataPorExtenso(data: string) {

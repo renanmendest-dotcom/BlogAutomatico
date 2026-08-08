@@ -1,6 +1,7 @@
 ---
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
+import { site as dadosDoSite } from "../lib/site";
 import "../styles/global.css";
 
 interface Props {
@@ -63,6 +64,10 @@ const websiteSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      name="google-site-verification"
+      content={dadosDoSite.googleSiteVerification}
+    />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link
       rel="preload"

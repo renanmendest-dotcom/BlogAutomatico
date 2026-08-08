@@ -16,10 +16,12 @@ export const site = {
   /** Data da última revisão dos textos legais. */
   atualizadoEm: "2026-08-07",
 
-  /** Verificação de propriedade no Google Search Console.
-   *  Não remover depois de verificado: o Google revalida de tempos em tempos
-   *  e a propriedade cai se a tag sumir. */
-  googleSiteVerification: "Vn_7Nv72lPSUu3x5joNZ_99_DC3REPoOX0NDXUKcYVQ"
+  /** Verificação de propriedade nas ferramentas de busca.
+   *  Não remover depois de verificado: os dois revalidam de tempos em tempos
+   *  e a propriedade cai se a tag sumir.
+   *  O Bing importa para o índice que alimenta o ChatGPT e o Copilot. */
+  googleSiteVerification: "Vn_7Nv72lPSUu3x5joNZ_99_DC3REPoOX0NDXUKcYVQ",
+  bingSiteVerification: "5FE5B1AA8E27A6DB8BDC9EFF4BBA1C87"
 } as const;
 
 export function dataPorExtenso(data: string) {

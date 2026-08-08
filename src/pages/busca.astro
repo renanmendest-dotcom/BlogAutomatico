@@ -1,0 +1,160 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  titulo="Buscar no site"
+  descricao="Procure um guia ou um produto pelo nome, pela dúvida ou pelo tipo de cabelo."
+  noindex={true}
+>
+  <div class="page-hero">
+    <Breadcrumb
+      trilha={[{ nome: "Início", href: "/" }, { nome: "Buscar" }]}
+    />
+    <p class="eyebrow">Achar rápido</p>
+    <h1>O que você está procurando?</h1>
+    <p>
+      Digite uma dúvida, o nome de um produto ou o seu tipo de cabelo. A busca
+      responde enquanto você escreve.
+    </p>
+  </div>
+
+  <div class="shell section section-first">
+    <form class="search-form" role="search" onsubmit="return false;">
+      <label class="sr-only" for="campo-busca">Buscar guias e produtos</label>
+      <input
+        id="campo-busca"
+        type="search"
+        name="q"
+        placeholder="gelatina, day after, cabelo ondulado..."
+        autocomplete="off"
+        enterkeyhint="search"
+      />
+    </form>
+
+    <p class="search-status" id="status-busca" role="status" aria-live="polite">
+      Carregando o índice...
+    </p>
+
+    <div class="search-results" id="resultados-busca"></div>
+  </div>
+</BaseLayout>
+
+<script>
+  const campo = document.getElementById("campo-busca") as HTMLInputElement;
+  const status = document.getElementById("status-busca") as HTMLElement;
+  const area = document.getElementById("resultados-busca") as HTMLElement;
+
+  type Item = {
+    tipo: "guia" | "produto";
+    titulo: string;
+    resumo: string;
+    url: string;
+    etiqueta: string;
+    termos: string;
+  };
+
+  let indice: Item[] = [];
+
+  /** Sem acento e em minúscula: "cachos" precisa achar "Cachos" e
+   *  "definicao" precisa achar "definição". */
+  const normalizar = (valor: string) =>
+    valor
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase();
+
+  function escapar(valor: string) {
+    const div = document.createElement("div");
+    div.textContent = valor;
+    return div.innerHTML;
+  }
+
+  function pontuar(item: Item, palavras: string[]) {
+    const titulo = normalizar(item.titulo);
+    const corpo = normalizar(`${item.resumo} ${item.termos} ${item.etiqueta}`);
+    let total = 0;
+
+    for (const palavra of palavras) {
+      // Toda palavra precisa aparecer em algum lugar, senão o resultado sai.
+      if (!titulo.includes(palavra) && !corpo.includes(palavra)) return 0;
+      if (titulo.startsWith(palavra)) total += 6;
+      else if (titulo.includes(palavra)) total += 4;
+      else total += 1;
+    }
+
+    return total;
+  }
+
+  function desenhar(itens: Item[], consulta: string) {
+    if (!consulta) {
+      area.innerHTML = "";
+      status.textContent = `${indice.length} guias e produtos disponíveis.`;
+      return;
+    }
+
+    if (itens.length === 0) {
+      area.innerHTML = "";
+      status.textContent = `Nada encontrado para "${consulta}". Tente outra palavra, como "gelatina" ou "day after".`;
+      return;
+    }
+
+    status.textContent =
+      itens.length === 1
+        ? "1 resultado encontrado."
+        : `${itens.length} resultados encontrados.`;
+
+    area.innerHTML = itens
+      .map(
+        (item) => `
+        <a class="search-item" href="${item.url}">
+          <span class="search-item-tag">${escapar(
+            item.tipo === "guia" ? "Guia" : "Produto"
+          )} · ${escapar(item.etiqueta)}</span>
+          <h2>${escapar(item.titulo)}</h2>
+          <p>${escapar(item.resumo)}</p>
+        </a>`
+      )
+      .join("");
+  }
+
+  function buscar() {
+    const consulta = campo.value.trim();
+    const palavras = normalizar(consulta).split(/\s+/).filter(Boolean);
+
+    if (palavras.length === 0) {
+      desenhar([], "");
+      return;
+    }
+
+    const achados = indice
+      .map((item) => ({ item, peso: pontuar(item, palavras) }))
+      .filter((linha) => linha.peso > 0)
+      .sort((a, b) => b.peso - a.peso)
+      .map((linha) => linha.item);
+
+    desenhar(achados, consulta);
+  }
+
+  fetch("/busca.json")
+    .then((resposta) => resposta.json())
+    .then((dados: Item[]) => {
+      indice = dados;
+      buscar();
+
+      // Termo vindo da URL, para poder linkar uma busca pronta.
+      const daUrl = new URLSearchParams(location.search).get("q");
+      if (daUrl) {
+        campo.value = daUrl;
+        buscar();
+      }
+      campo.focus();
+    })
+    .catch(() => {
+      status.textContent =
+        "Não foi possível carregar a busca agora. Tente recarregar a página.";
+    });
+
+  campo.addEventListener("input", buscar);
+</script>

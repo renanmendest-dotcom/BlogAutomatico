@@ -1,5 +1,10 @@
 # Autonomia do projeto
 
+A divisão de responsabilidade entre as duas IAs está em [PAPEIS.md](./PAPEIS.md).
+Em resumo: o Claude Code cuida do design e do front-end, o Codex cuida do
+conteúdo e das publicações. Leia esse arquivo antes de mexer em algo que não é
+da sua área.
+
 O proprietário autoriza os agentes de IA deste projeto, Codex e Claude Code, a
 executar, sem nova consulta, as ações normais necessárias para concluir este
 projeto, incluindo:

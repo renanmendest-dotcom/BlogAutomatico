@@ -41,33 +41,41 @@ const caminhos = [
 
 <BaseLayout>
   <section class="hero">
-    <div class="shell hero-inner">
-      <p class="eyebrow">Seu fio vem primeiro</p>
-      <h1>
-        Seu cabelo.<br />
-        Suas regras.<br />
-        <em>Sem drama.</em>
-      </h1>
-      <p class="hero-lead">
-        Quer entender seu cabelo e escolher produtos sem cair em promessa
-        bonita demais? Vem comigo. A gente simplifica tudo.
-      </p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="#meu-cabelo">Quero começar</a>
-        <a class="text-link" href="/artigos/">
-          Ver os guias <span aria-hidden="true">↗</span>
-        </a>
+    <div class="shell hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Seu fio vem primeiro</p>
+        <h1>
+          Seu cabelo.<br />
+          Suas regras.<br />
+          <em>Sem drama.</em>
+        </h1>
+        <p class="hero-lead">
+          Quer entender seu cabelo e escolher produtos sem cair em promessa
+          bonita demais? Vem comigo. A gente simplifica tudo.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#meu-cabelo">Quero começar</a>
+          <a class="text-link" href="/artigos/">
+            Ver os guias <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-illustration">
-      <img
-        src="/avatares/curva-viva-trio.webp"
-        alt="Ilustração de três mulheres com cabelo ondulado, cacheado e crespo"
-        width="1600"
-        height="893"
-        fetchpriority="high"
-      />
+      <div class="hero-portraits">
+        {
+          caminhos.map((caminho) => (
+            <span class="hero-portrait">
+              <img
+                src={caminho.avatar}
+                alt={caminho.alt}
+                width="480"
+                height="480"
+                fetchpriority="high"
+              />
+            </span>
+          ))
+        }
+      </div>
     </div>
   </section>
 

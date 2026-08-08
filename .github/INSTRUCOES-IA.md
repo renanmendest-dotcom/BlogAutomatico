@@ -1,8 +1,12 @@
 # Instruções editoriais da Curva Viva
 
 Este arquivo manda em tudo que é **publicação de conteúdo**: artigos, produtos,
-preços e imagens. O design, o CSS e os componentes do site não são alterados
-aqui, salvo quando um formato novo exigir.
+preços e imagens. **É o manual do Codex.**
+
+O design, o CSS e os componentes são responsabilidade do Claude Code e não se
+alteram por aqui. A divisão completa está em [PAPEIS.md](../PAPEIS.md). Se um
+artigo precisar de um formato que o site ainda não tem, não improvise layout:
+registre a necessidade e avise o proprietário.
 
 ## Objetivo
 

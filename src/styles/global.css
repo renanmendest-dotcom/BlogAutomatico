@@ -1614,6 +1614,30 @@ b {
   font-weight: 550;
 }
 
+/* Preço dentro do painel escuro, logo acima do botão de compra. */
+.product-profile-price {
+  margin: var(--sp-4) 0 0;
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--white-line);
+}
+
+.product-profile-price span {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.625rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.product-profile-price strong {
+  font-family: var(--serif);
+  font-size: 1.625rem;
+  font-weight: 600;
+  letter-spacing: -0.016em;
+}
+
 .product-showcase {
   display: grid;
   gap: var(--sp-4);

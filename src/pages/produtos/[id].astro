@@ -1,7 +1,9 @@
 ---
 import { getCollection } from "astro:content";
+import Breadcrumb from "../../components/Breadcrumb.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
+  faixaDePreco,
   informacaoProdutoPublicavel,
   linkCompraProduto,
   produtosPublicados,
@@ -36,6 +38,8 @@ const destaquesPublicaveis = produto.destaques.filter((destaque) =>
   informacaoProdutoPublicavel(destaque.valor)
 );
 
+const preco = faixaDePreco(produto);
+
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -46,6 +50,21 @@ const productSchema = {
   },
   description: produto.descricao,
   category: rotuloCategoria(produto.categoria),
+  ...(produto.imagem ? { image: produto.imagem.src } : {}),
+  // offers só entra com preço conferido. Marcar oferta sem preço real seria
+  // dado inventado, e o Google penaliza schema que não bate com a página.
+  ...(produto.preco && linkCompra
+    ? {
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: produto.preco.moeda,
+          lowPrice: produto.preco.min,
+          highPrice: produto.preco.max,
+          availability: "https://schema.org/InStock",
+          url: linkCompra
+        }
+      }
+    : {}),
   additionalProperty: destaquesPublicaveis.map((item) => ({
     "@type": "PropertyValue",
     name: item.rotulo,
@@ -60,7 +79,13 @@ const productSchema = {
   <header class="product-hero product-commercial-hero">
     <div class="shell product-hero-grid">
       <div>
-        <a class="back-link" href="/produtos/">← Todos os produtos</a>
+        <Breadcrumb
+          trilha={[
+            { nome: "Início", href: "/" },
+            { nome: "Produtos", href: "/produtos/" },
+            { nome: produto.nome }
+          ]}
+        />
         <p class="eyebrow">
           {produto.marca} · {rotuloCategoria(produto.categoria)}
         </p>
@@ -101,6 +126,15 @@ const productSchema = {
               )
             }
           </dl>
+
+          {
+            preco && (
+              <p class="product-profile-price">
+                <span>Faixa de preço</span>
+                <strong>{preco}</strong>
+              </p>
+            )
+          }
         </div>
         <a
           class="button button-primary button-full purchase-button product-hero-purchase"

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:caminho*",
+      "has": [
+        {
+          "type": "host",
+          "value": "blog-automatico-sigma.vercel.app"
+        }
+      ],
+      "destination": "https://www.curvaviva.com.br/:caminho*",
+      "permanent": true
+    }
+  ]
+}

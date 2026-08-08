@@ -117,8 +117,9 @@ Toda ilustração gerada segue o mesmo sistema, senão o site vira colcha de ret
 O site usa três personagens fixas, uma por curvatura. A leitora precisa
 reconhecer a "dela" e se acostumar com elas.
 
-**As imagens que estão no repositório hoje são provisórias.** Substitua os
-arquivos, mantendo exatamente os mesmos caminhos e proporções:
+**As imagens que estão no repositório são as identidades definitivas.** Não
+redesenhe rosto, cabelo, tom de pele ou roupa. Mantenha exatamente os mesmos
+caminhos e proporções:
 
 | Arquivo | Uso | Proporção |
 |---|---|---|
@@ -143,11 +144,21 @@ em ameixa `#6B3D5E` e tinta `#2B2027`, fundo `#F8F3EC` chapado.
 **Nenhum tom de pele pode puxar para verde, oliva, amarelo ou cinza.** Confira
 antes de salvar; é o erro mais comum quando se pede pele clara a um gerador.
 
-**Gere as três na mesma imagem e recorte**, ou use imagem de referência. Gerar
-cada uma separada do zero produz rostos diferentes e quebra a identidade.
+Para criar outra pose ou cena, use sempre como referência a folha completa e a
+linha de ângulos da personagem correspondente:
 
-Quando os avatares tiverem outros ângulos e poses, guarde a folha de personagem
-em `public/avatares/referencia/`, fora do site publicado, para consulta futura.
+- `public/avatares/referencia/folha-personagens.webp`
+- `public/avatares/referencia/ondulada-angulos.webp`
+- `public/avatares/referencia/cacheada-angulos.webp`
+- `public/avatares/referencia/crespa-angulos.webp`
+
+Não gere uma personagem separada do zero. A folha registra vista frontal,
+três-quartos e perfil, preservando rosto, cabelo, tom de pele e roupa entre
+imagens futuras.
+
+A folha de personagem em `public/avatares/referencia/` é a referência canônica.
+Se uma pose nova for aprovada, acrescente-a à referência em vez de substituir a
+identidade existente.
 
 ### Uso nos artigos
 

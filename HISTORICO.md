@@ -60,9 +60,6 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## O que está em aberto
 
-- **Avatares são provisórios.** As imagens em `public/avatares/` foram geradas
-  só para destravar o layout. O Codex vai refazer as quatro mantendo os mesmos
-  caminhos, seguindo a ficha em `.github/INSTRUCOES-IA.md`.
 - **Nenhum artigo em formato ranking foi publicado.** O suporte existe no
   código desde 7 de agosto, mas o formato ainda não foi usado. É a maior lacuna
   de tráfego comercial.
@@ -88,6 +85,15 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 8 de agosto de 2026 — Codex — Avatares definitivos
+
+Substituídos os quatro avatares provisórios pelas identidades definitivas da
+ondulada, da cacheada e da crespa, mantendo os caminhos e as proporções usados
+pelo site. Criadas também uma folha conjunta e referências individuais com
+vista frontal, três-quartos e perfil em `public/avatares/referencia/`, para que
+as ilustrações dos próximos artigos preservem rosto, cabelo, pele, roupa e
+estilo visual. O fundo foi fixado no creme exato do site.
 
 ### 7 de agosto de 2026 — Claude Code — Páginas legais e histórico
 

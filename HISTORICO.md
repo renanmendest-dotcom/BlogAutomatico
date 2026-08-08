@@ -86,6 +86,15 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 8 de agosto de 2026 — Codex — Personagens de corpo inteiro
+
+Criadas versões individuais de corpo inteiro da ondulada, da cacheada e da
+crespa, dois trios para composição e folhas com vistas frontal, três-quartos e
+perfil em `public/avatares/`. O figurino e as proporções agora também fazem parte
+da referência canônica, para manter as personagens consistentes em artigos e
+novas páginas. A home não foi alterada: o trio com área livre para texto ficou
+preparado para o Claude Code usar quando refizer o layout.
+
 ### 8 de agosto de 2026 — Codex — Avatares definitivos
 
 Substituídos os quatro avatares provisórios pelas identidades definitivas da

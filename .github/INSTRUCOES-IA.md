@@ -118,8 +118,8 @@ O site usa três personagens fixas, uma por curvatura. A leitora precisa
 reconhecer a "dela" e se acostumar com elas.
 
 **As imagens que estão no repositório são as identidades definitivas.** Não
-redesenhe rosto, cabelo, tom de pele ou roupa. Mantenha exatamente os mesmos
-caminhos e proporções:
+redesenhe rosto, cabelo, tom de pele, corpo ou roupa. Mantenha exatamente os
+mesmos caminhos e proporções:
 
 | Arquivo | Uso | Proporção |
 |---|---|---|
@@ -127,19 +127,30 @@ caminhos e proporções:
 | `public/avatares/ondulada.webp` | Curvatura 2, cartões e artigos | 1:1, 480 px |
 | `public/avatares/cacheada.webp` | Curvatura 3, cartões e artigos | 1:1, 480 px |
 | `public/avatares/crespa.webp` | Curvatura 4, cartões e artigos | 1:1, 480 px |
+| `public/avatares/corpo-inteiro/trio-home.webp` | Futuro herói da home, com área livre à esquerda para texto | 3:2, 1536 px de largura |
+| `public/avatares/corpo-inteiro/trio-compacto.webp` | As três de corpo inteiro, sem área reservada para texto | 3:2, 1536 px de largura |
+| `public/avatares/corpo-inteiro/ondulada.webp` | Ondulada de corpo inteiro | 2:3, 800 × 1200 px |
+| `public/avatares/corpo-inteiro/cacheada.webp` | Cacheada de corpo inteiro | 2:3, 800 × 1200 px |
+| `public/avatares/corpo-inteiro/crespa.webp` | Crespa de corpo inteiro | 2:3, 800 × 1200 px |
 
 Ficha das personagens, para não perder a identidade:
 
 - **Ondulada:** ondas soltas em S, na altura do ombro. Pele bege quente
-  `#E8B98F`. Blusa terracota `#C2564C`.
+  `#E8B98F`. Blusa terracota `#C2564C` e sapatos baixos terracota.
 - **Cacheada:** cachos espirais definidos e volumosos, na altura do ombro.
-  Pele castanha média `#B87445`. Blusa areia `#EFE5D9`.
+  Pele castanha média `#B87445`. Blusa areia `#EFE5D9` e sapatos baixos areia.
 - **Crespa:** black power redondo e cheio, fios bem fechados. Pele castanha
-  profunda `#7A4A2B`. Blusa blush `#F0D2CB`.
+  profunda `#7A4A2B`. Blusa blush `#F0D2CB` e sapatos baixos blush.
 
-Regras das três: enquadramento dos ombros para cima, expressão calma e simpática
-de boca fechada, encarando a leitora, sobra de espaço em volta da cabeça, cabelo
-em ameixa `#6B3D5E` e tinta `#2B2027`, fundo `#F8F3EC` chapado.
+Nas versões de corpo inteiro, as três usam a mesma calça de cintura alta e
+pernas amplas em ameixa escuro `#47283F`. O figurino é parte da identidade e
+deve ser preservado entre poses.
+
+Regras das três: expressão calma e simpática de boca fechada, encarando a
+leitora, sobra de espaço em volta da personagem, cabelo em ameixa `#6B3D5E`,
+tinta `#2B2027` e fundo `#F8F3EC` chapado. Os retratos quadrados enquadram dos
+ombros para cima; os arquivos em `corpo-inteiro/` mostram da cabeça aos dois
+sapatos, sem cortes.
 
 **Nenhum tom de pele pode puxar para verde, oliva, amarelo ou cinza.** Confira
 antes de salvar; é o erro mais comum quando se pede pele clara a um gerador.
@@ -151,10 +162,14 @@ linha de ângulos da personagem correspondente:
 - `public/avatares/referencia/ondulada-angulos.webp`
 - `public/avatares/referencia/cacheada-angulos.webp`
 - `public/avatares/referencia/crespa-angulos.webp`
+- `public/avatares/referencia/folha-corpo-inteiro.webp`
+- `public/avatares/referencia/ondulada-corpo-angulos.webp`
+- `public/avatares/referencia/cacheada-corpo-angulos.webp`
+- `public/avatares/referencia/crespa-corpo-angulos.webp`
 
 Não gere uma personagem separada do zero. A folha registra vista frontal,
-três-quartos e perfil, preservando rosto, cabelo, tom de pele e roupa entre
-imagens futuras.
+três-quartos e perfil, tanto no rosto quanto no corpo completo, preservando
+rosto, cabelo, tom de pele, proporções e roupa entre imagens futuras.
 
 A folha de personagem em `public/avatares/referencia/` é a referência canônica.
 Se uma pose nova for aprovada, acrescente-a à referência em vez de substituir a

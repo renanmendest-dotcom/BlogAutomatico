@@ -99,8 +99,24 @@ Só publicar com `"aprovado": true`.
 
 ---
 
+## Registrar o que mudou
+
+Os dois, ao terminar um trabalho, acrescentam uma entrada no topo da lista de
+mudanças do **`HISTORICO.md`**: data, quem fez, o que mudou e por quê. Curto.
+
+Isso não é burocracia. É o que permite ao proprietário abrir uma conversa nova
+com qualquer uma das duas IAs e dizer apenas "leia os arquivos do projeto",
+sem reexplicar tudo. Decisão tomada em conversa também entra lá, senão a mesma
+pergunta volta daqui a duas semanas.
+
+Ler o `HISTORICO.md` é o primeiro passo de qualquer sessão.
+
+---
+
 ## Onde está cada instrução
 
+- **`HISTORICO.md`** — estado atual, decisões tomadas, o que está em aberto e o
+  registro de mudanças. **Leia primeiro.**
 - **`AGENTS.md`** — autonomia, autorização e limites gerais.
 - **`.github/INSTRUCOES-IA.md`** — regras editoriais: volume, formato, tom,
   preço, imagem, avatares e dupla revisão. É o manual do Codex.

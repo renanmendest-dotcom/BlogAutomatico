@@ -1,0 +1,120 @@
+---
+import PaginaSimples from "../layouts/PaginaSimples.astro";
+import { site } from "../lib/site";
+---
+
+<PaginaSimples
+  titulo="Política de privacidade"
+  descricao="Como a Curva Viva trata dados de quem visita o site, quais cookies são usados e quais são os seus direitos sob a LGPD."
+  chamada="Seus dados"
+  resumo="Esta página explica, sem juridiquês, o que acontece com os seus dados quando você visita a Curva Viva."
+  mostrarAtualizacao={true}
+>
+  <h2>Quem é responsável</h2>
+  <p>
+    A {site.nome} ({site.dominio}) é responsável pelo tratamento dos dados
+    descritos aqui. Para qualquer assunto envolvendo privacidade, o contato é
+    <a href={`mailto:${site.email}`}>{site.email}</a>.
+  </p>
+
+  <h2>Resumo rápido</h2>
+  <ul>
+    <li>Não pedimos cadastro, login nem qualquer dado pessoal para você ler o site.</li>
+    <li>Não vendemos e não compartilhamos dados pessoais com anunciantes.</li>
+    <li>Usamos medição de audiência para saber quais conteúdos ajudam mais.</li>
+    <li>Links para lojas parceiras podem registrar sua visita na loja de destino.</li>
+  </ul>
+
+  <h2>Quais dados são coletados</h2>
+  <p>
+    Ao navegar, alguns dados técnicos são registrados automaticamente, como
+    acontece em praticamente qualquer site: endereço IP, tipo de navegador e
+    dispositivo, idioma, páginas visitadas, tempo de permanência e a origem da
+    visita.
+  </p>
+  <p>
+    Se você nos escrever por e-mail, passamos a ter o endereço que você usou e o
+    conteúdo da mensagem, guardados apenas pelo tempo necessário para responder.
+  </p>
+  <p>
+    Não coletamos dado sensível, não pedimos documento, não pedimos dado
+    bancário e não fazemos perfil de comportamento individual.
+  </p>
+
+  <h2>Por que esses dados são tratados</h2>
+  <ul>
+    <li><strong>Funcionamento do site:</strong> entregar as páginas e manter a segurança.</li>
+    <li><strong>Medição de audiência:</strong> entender quais assuntos são úteis e onde melhorar.</li>
+    <li><strong>Programas de afiliados:</strong> registrar que a visita à loja veio daqui.</li>
+  </ul>
+  <p>
+    A base legal é o legítimo interesse para audiência e segurança, e o seu
+    consentimento quando a lei exigir, com a opção de recusar.
+  </p>
+
+  <h2>Cookies e tecnologias parecidas</h2>
+  <p>
+    Cookie é um arquivo pequeno guardado no seu navegador. Neste site eles
+    podem ser usados para medir audiência de forma agregada e para os programas
+    de afiliados identificarem a origem de uma compra.
+  </p>
+  <p>
+    Você pode bloquear ou apagar cookies nas configurações do seu navegador.
+    Bloquear não impede a leitura do site.
+  </p>
+
+  <h2>Serviços de terceiros</h2>
+  <p>
+    Para funcionar, a {site.nome} se apoia em serviços externos que tratam dados
+    conforme as próprias políticas:
+  </p>
+  <ul>
+    <li><strong>Vercel:</strong> hospedagem e entrega das páginas.</li>
+    <li><strong>Mercado Livre:</strong> destino dos links de compra e origem das fotos de produto.</li>
+    <li><strong>Ferramenta de medição de audiência</strong>, quando ativa, para estatísticas agregadas.</li>
+  </ul>
+  <p>
+    Ao clicar num link de loja parceira, você passa a navegar no site dela e
+    fica sujeito às regras de privacidade daquele site, não às nossas.
+  </p>
+
+  <h2>Publicidade</h2>
+  <p>
+    Hoje a {site.nome} não exibe anúncios de rede de display. Caso isso mude,
+    esta página será atualizada antes da veiculação, informando o parceiro e a
+    forma de gerenciar suas preferências.
+  </p>
+
+  <h2>Por quanto tempo os dados ficam</h2>
+  <p>
+    Registros técnicos e estatísticas de audiência são mantidos apenas pelo
+    período necessário para análise e depois descartados ou mantidos de forma
+    agregada, sem identificar pessoas. Mensagens de e-mail ficam guardadas
+    enquanto o assunto estiver em andamento.
+  </p>
+
+  <h2>Seus direitos</h2>
+  <p>
+    A Lei Geral de Proteção de Dados garante que você possa pedir confirmação de
+    tratamento, acesso aos dados, correção, anonimização, portabilidade,
+    eliminação e informação sobre compartilhamento, além de revogar
+    consentimento a qualquer momento.
+  </p>
+  <p>
+    Para exercer qualquer um desses direitos, escreva para
+    <a href={`mailto:${site.email}`}>{site.email}</a>. Respondemos no menor prazo
+    possível.
+  </p>
+
+  <h2>Crianças e adolescentes</h2>
+  <p>
+    O site é dirigido a pessoas adultas e não coleta dados de crianças de forma
+    intencional. Se identificarmos um registro nessa situação, ele é apagado.
+  </p>
+
+  <h2>Mudanças nesta política</h2>
+  <p>
+    Quando o texto mudar, a data de atualização no topo muda junto. Vale a pena
+    reler de vez em quando.
+  </p>
+</PaginaSimples>

@@ -1,5 +1,9 @@
 # Autonomia do projeto
 
+**Antes de mexer em qualquer coisa, leia [HISTORICO.md](./HISTORICO.md).** Ele
+conta o estado atual do projeto, o que já foi decidido e o que está em aberto.
+Ao terminar um trabalho, acrescente uma entrada lá.
+
 A divisão de responsabilidade entre as duas IAs está em [PAPEIS.md](./PAPEIS.md).
 Em resumo: o Claude Code cuida do design e do front-end, o Codex cuida do
 conteúdo e das publicações. Leia esse arquivo antes de mexer em algo que não é

@@ -1,6 +1,7 @@
 import { getCollection } from "astro:content";
 import type { APIRoute } from "astro";
 import { produtosPublicados } from "../lib/produtos";
+import { site as site_ } from "../lib/site";
 
 function escaparXml(valor: string) {
   return valor
@@ -25,7 +26,12 @@ export const GET: APIRoute = async ({ site }) => {
     { rota: "/crespos/", atualizadoEm: null },
     { rota: "/descobrir-meu-cabelo/", atualizadoEm: null },
     { rota: "/como-verificamos/", atualizadoEm: null },
-    { rota: "/sobre/", atualizadoEm: null }
+    { rota: "/sobre/", atualizadoEm: null },
+    { rota: "/contato/", atualizadoEm: null },
+    { rota: "/politica-de-privacidade/", atualizadoEm: site_.atualizadoEm },
+    { rota: "/termos-de-uso/", atualizadoEm: site_.atualizadoEm },
+    { rota: "/isencao-de-responsabilidade/", atualizadoEm: site_.atualizadoEm },
+    { rota: "/divulgacao-de-afiliados/", atualizadoEm: site_.atualizadoEm }
   ];
 
   const paginasDeProduto = produtosPublicados.map((produto) => ({

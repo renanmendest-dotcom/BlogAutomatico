@@ -1,25 +1,49 @@
 ---
+import { site } from "../lib/site";
+
 const ano = new Date().getFullYear();
+
+const navegar = [
+  { href: "/artigos/", label: "Guias" },
+  { href: "/produtos/", label: "Produtos" },
+  { href: "/busca/", label: "Buscar" },
+  { href: "/sobre/", label: "Sobre" },
+  { href: "/como-verificamos/", label: "Como avaliamos" },
+  { href: "/contato/", label: "Contato" }
+];
+
+const legais = [
+  { href: "/politica-de-privacidade/", label: "Privacidade" },
+  { href: "/termos-de-uso/", label: "Termos de uso" },
+  { href: "/isencao-de-responsabilidade/", label: "Isenção de responsabilidade" },
+  { href: "/divulgacao-de-afiliados/", label: "Divulgação de afiliados" }
+];
 ---
 
 <footer class="site-footer">
   <div class="shell footer-main">
     <div>
-      <a class="footer-brand" href="/">Curva Viva</a>
-      <p>
-        Escolhas mais claras para cabelos ondulados, cacheados e crespos.
+      <a class="footer-brand" href="/">{site.nome}</a>
+      <p>Escolhas mais claras para cabelos ondulados, cacheados e crespos.</p>
+      <p class="footer-affiliate">
+        A {site.nome} participa de programas de afiliados. Alguns links deste
+        site são links de afiliado.
       </p>
     </div>
 
     <nav aria-label="Navegação do rodapé">
-      <a href="/artigos/">Guias</a>
-      <a href="/produtos/">Produtos</a>
-      <a href="/sobre/">Sobre</a>
+      <p class="footer-heading">Navegar</p>
+      {navegar.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <nav aria-label="Informações legais">
+      <p class="footer-heading">Informações</p>
+      {legais.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
   </div>
 
   <div class="shell footer-bottom">
-    <p>© {ano} Curva Viva.</p>
+    <p>© {ano} {site.nome}.</p>
     <p>Beleza real, explicada sem complicação.</p>
   </div>
 </footer>

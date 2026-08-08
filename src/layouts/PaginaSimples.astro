@@ -1,0 +1,44 @@
+---
+import Breadcrumb from "../components/Breadcrumb.astro";
+import BaseLayout from "./BaseLayout.astro";
+import { dataPorExtenso, site } from "../lib/site";
+
+interface Props {
+  titulo: string;
+  descricao: string;
+  chamada: string;
+  resumo: string;
+  /** Páginas legais mostram a data de revisão. As demais podem omitir. */
+  mostrarAtualizacao?: boolean;
+}
+
+const {
+  titulo,
+  descricao,
+  chamada,
+  resumo,
+  mostrarAtualizacao = false
+} = Astro.props;
+---
+
+<BaseLayout titulo={titulo} descricao={descricao}>
+  <div class="page-hero">
+    <Breadcrumb trilha={[{ nome: "Início", href: "/" }, { nome: titulo }]} />
+    <p class="eyebrow">{chamada}</p>
+    <h1>{titulo}</h1>
+    <p>{resumo}</p>
+  </div>
+
+  <div class="shell section section-first">
+    <div class="prose legal-prose">
+      {
+        mostrarAtualizacao && (
+          <p class="legal-updated">
+            Última atualização em {dataPorExtenso(site.atualizadoEm)}.
+          </p>
+        )
+      }
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

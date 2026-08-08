@@ -2817,6 +2817,80 @@ b {
 }
 
 /* --------------------------------------------------------------------------
+   18b. Páginas legais e contato
+   -------------------------------------------------------------------------- */
+
+.legal-prose {
+  max-width: 68ch;
+}
+
+.legal-prose h2 {
+  margin-top: var(--sp-7);
+  font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+}
+
+.legal-updated {
+  display: inline-block;
+  margin-bottom: var(--sp-6);
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--r-pill);
+  background: var(--sand);
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.contact-lead {
+  margin-bottom: var(--sp-7);
+}
+
+.contact-list {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact-list div {
+  padding-block: var(--sp-4);
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-list dt {
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.contact-list dd {
+  margin: var(--sp-2) 0 0;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
+
+/* Aviso de afiliado no topo do artigo. Discreto mas legível: some do caminho
+   da leitura sem virar letra miúda escondida. */
+.affiliate-disclosure {
+  margin-bottom: var(--sp-5);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--paper);
+}
+
+.affiliate-disclosure p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.affiliate-disclosure a {
+  color: var(--plum);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
    19. Rodapé
    -------------------------------------------------------------------------- */
 
@@ -2829,9 +2903,27 @@ b {
 
 .footer-main {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: var(--sp-8);
+  grid-template-columns: minmax(0, 1.4fr) auto auto;
+  gap: var(--sp-7) var(--sp-8);
   padding-bottom: var(--sp-7);
+}
+
+.footer-heading {
+  margin: 0 0 var(--sp-3);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+/* Seletor longo de propósito: precisa vencer ".footer-main > div p" sem
+   recorrer a !important. */
+.footer-main > div p.footer-affiliate {
+  max-width: 46ch;
+  margin-top: var(--sp-4);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.75rem;
 }
 
 .footer-brand {
@@ -2848,9 +2940,10 @@ b {
 }
 
 .footer-main nav {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: var(--sp-3) var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-2);
 }
 
 .footer-main nav a {
@@ -3123,11 +3216,7 @@ b {
   .footer-bottom {
     grid-template-columns: 1fr;
     flex-direction: column;
-    gap: var(--sp-5);
-  }
-
-  .footer-main nav {
-    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-6);
   }
 
   .footer-bottom {

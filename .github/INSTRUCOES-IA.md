@@ -3,6 +3,10 @@
 Este arquivo manda em tudo que é **publicação de conteúdo**: artigos, produtos,
 preços e imagens. **É o manual do Codex.**
 
+**Comece lendo [HISTORICO.md](../HISTORICO.md)**, que conta o estado atual do
+projeto e o que já foi decidido. Ao terminar uma execução, acrescente uma
+entrada lá dizendo o que publicou.
+
 O design, o CSS e os componentes são responsabilidade do Claude Code e não se
 alteram por aqui. A divisão completa está em [PAPEIS.md](../PAPEIS.md). Se um
 artigo precisar de um formato que o site ainda não tem, não improvise layout:

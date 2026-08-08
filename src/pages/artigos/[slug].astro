@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { marked } from "marked";
+import AffiliateDisclosure from "../../components/AffiliateDisclosure.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 import ProductRecommendationCard from "../../components/ProductRecommendationCard.astro";
 import RelatedArticles from "../../components/RelatedArticles.astro";
@@ -174,6 +175,8 @@ const faqSchema = {
 
     <div class="shell article-body-grid">
       <div class="prose article-prose">
+        {recomendacoes.length > 0 && <AffiliateDisclosure />}
+
         <nav class="article-toc" aria-labelledby="titulo-sumario">
           <p class="eyebrow">Leitura fácil</p>
           <h2 id="titulo-sumario">Neste artigo você vai descobrir</h2>

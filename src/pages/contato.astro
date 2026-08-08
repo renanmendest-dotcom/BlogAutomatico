@@ -1,0 +1,61 @@
+---
+import PaginaSimples from "../layouts/PaginaSimples.astro";
+import { site } from "../lib/site";
+
+const assuntos = [
+  {
+    titulo: "Correção ou dúvida sobre um conteúdo",
+    texto:
+      "Achou uma informação errada, desatualizada ou confusa? Manda o link da página e o trecho. Correção é prioridade aqui."
+  },
+  {
+    titulo: "Sugestão de pauta",
+    texto:
+      "Tem uma dúvida sobre cabelo que você não achou resposta boa em lugar nenhum? Conta qual é. Ela pode virar o próximo guia."
+  },
+  {
+    titulo: "Marcas e imprensa",
+    texto:
+      "Marcas podem enviar informação técnica e ficha de produto. Vale registrar: não existe conteúdo pago, posição comprada nem revisão de texto antes da publicação."
+  },
+  {
+    titulo: "Privacidade e dados",
+    texto:
+      "Para pedir acesso, correção ou exclusão de dados, escreva com o assunto \"LGPD\" e a gente responde no menor prazo possível."
+  }
+];
+---
+
+<PaginaSimples
+  titulo="Contato"
+  descricao="Fale com a Curva Viva para correções, sugestões de pauta, assuntos de imprensa ou pedidos relacionados a dados pessoais."
+  chamada="Fale com a gente"
+  resumo="Um endereço só, que é lido de verdade."
+>
+  <p class="contact-lead">
+    <a class="button button-primary" href={`mailto:${site.email}`}>
+      {site.email}
+    </a>
+  </p>
+
+  <h2>Sobre o que escrever</h2>
+
+  <dl class="contact-list">
+    {
+      assuntos.map((assunto) => (
+        <div>
+          <dt>{assunto.titulo}</dt>
+          <dd>{assunto.texto}</dd>
+        </div>
+      ))
+    }
+  </dl>
+
+  <h2>O que a gente não faz</h2>
+  <p>
+    Não indicamos produto por mensagem individual e não avaliamos casos
+    específicos de cabelo ou couro cabeludo. Para isso, o caminho certo é um
+    profissional que possa ver o seu cabelo de perto, como está explicado na
+    <a href="/isencao-de-responsabilidade/">isenção de responsabilidade</a>.
+  </p>
+</PaginaSimples>

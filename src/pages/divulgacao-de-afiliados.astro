@@ -1,0 +1,83 @@
+---
+import PaginaSimples from "../layouts/PaginaSimples.astro";
+import { site } from "../lib/site";
+---
+
+<PaginaSimples
+  titulo="Divulgação de afiliados"
+  descricao="Como a Curva Viva ganha dinheiro, o que é um link de afiliado e por que isso não muda quais produtos aparecem no site."
+  chamada="Transparência"
+  resumo="Como a Curva Viva se sustenta, dito de forma direta."
+  mostrarAtualizacao={true}
+>
+  <h2>O resumo em uma frase</h2>
+  <p>
+    A {site.nome} participa de programas de afiliados. Se você comprar por um
+    link daqui, o site pode receber uma comissão da loja,
+    <strong>sem nenhum custo a mais para você</strong>.
+  </p>
+
+  <h2>O que é um link de afiliado</h2>
+  <p>
+    É um link comum, com um identificador que avisa a loja que a visita veio
+    daqui. O preço que você paga é exatamente o mesmo que pagaria entrando na
+    loja direto. A comissão sai da margem da loja, não do seu bolso.
+  </p>
+
+  <h2>Onde eles aparecem</h2>
+  <p>
+    Os botões de compra e os links para o Mercado Livre são links de afiliado.
+    Links para páginas oficiais de marca e para fontes de referência não são: são
+    citados só para você poder conferir a informação.
+  </p>
+
+  <h2>Isso muda o que a gente recomenda?</h2>
+  <p>
+    Não, e essa é a parte que mais importa. As regras que seguimos:
+  </p>
+  <ul>
+    <li>
+      A escolha do produto parte da dúvida da leitora, não do valor da comissão.
+    </li>
+    <li>
+      Todo produto recomendado tem também os pontos de atenção. Recomendação só
+      com elogio não é recomendação, é anúncio.
+    </li>
+    <li>
+      Quando um produto não serve para um tipo de cabelo, isso está escrito.
+    </li>
+    <li>
+      Quando uma afirmação é proposta da marca, o texto diz que é proposta da
+      marca.
+    </li>
+    <li>
+      Nenhuma marca paga para aparecer, escolher posição ou revisar texto antes
+      da publicação.
+    </li>
+  </ul>
+
+  <h2>A gente testou o produto?</h2>
+  <p>
+    Não, salvo quando estiver dito com todas as letras no artigo. O trabalho aqui
+    é reunir e comparar informação de fontes públicas, principalmente a página
+    oficial da marca e o rótulo, e organizar isso de um jeito que ajude a
+    decidir.
+  </p>
+  <p>
+    Preferimos dizer isso abertamente a fingir um teste que não aconteceu.
+    Todo guia termina mostrando de onde as informações vieram, com link e data.
+  </p>
+
+  <h2>E os preços?</h2>
+  <p>
+    Quando a ficha mostra faixa de preço, ela vem acompanhada da data em que foi
+    conferida. Preço muda o tempo todo, então o valor final é sempre o que a
+    loja mostrar na hora da compra.
+  </p>
+
+  <h2>Dúvidas</h2>
+  <p>
+    Se algo aqui não ficou claro, escreva para
+    <a href={`mailto:${site.email}`}>{site.email}</a>.
+  </p>
+</PaginaSimples>

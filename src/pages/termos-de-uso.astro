@@ -1,0 +1,97 @@
+---
+import PaginaSimples from "../layouts/PaginaSimples.astro";
+import { site } from "../lib/site";
+---
+
+<PaginaSimples
+  titulo="Termos de uso"
+  descricao="As condições para usar o conteúdo da Curva Viva, direitos sobre o material publicado e limites de responsabilidade."
+  chamada="Regras da casa"
+  resumo="As condições de uso do site, escritas para serem lidas de verdade."
+  mostrarAtualizacao={true}
+>
+  <h2>Ao usar o site, você concorda com isto</h2>
+  <p>
+    Navegar pela {site.nome} significa aceitar as condições desta página. Se não
+    concordar com alguma parte, o melhor é não usar o site.
+  </p>
+
+  <h2>O que a Curva Viva faz</h2>
+  <p>
+    A {site.nome} publica guias e fichas sobre produtos para cabelos ondulados,
+    cacheados e crespos. O conteúdo é informativo e serve para ajudar você a
+    comparar opções antes de comprar.
+  </p>
+  <p>
+    Não somos loja. Não vendemos produto, não processamos pagamento, não
+    entregamos pedido e não intermediamos troca ou devolução. A compra acontece
+    inteiramente no site da loja parceira, sob as regras dela.
+  </p>
+
+  <h2>Informação de produto</h2>
+  <p>
+    Nome, tamanho, composição e proposta dos produtos vêm de fontes públicas, em
+    especial das páginas oficiais das marcas e das listagens do varejo. Essas
+    informações mudam sem aviso.
+  </p>
+  <p>
+    Quando o texto descreve o que a marca promete, isso está escrito de forma
+    explícita. Alegação de fabricante não é o mesmo que resultado comprovado, e
+    a {site.nome} não transforma uma coisa na outra.
+  </p>
+  <p>
+    <strong>Sempre confira o rótulo e a página oficial antes de comprar.</strong>
+    Preço e disponibilidade são os que a loja mostrar no momento da compra.
+  </p>
+
+  <h2>Conteúdo do site</h2>
+  <p>
+    Os textos, a identidade visual e as ilustrações são da {site.nome}. Você pode
+    citar trechos curtos com crédito e link para a página original. Copiar
+    artigos inteiros, republicar em outro site ou usar o material comercialmente
+    sem autorização não é permitido.
+  </p>
+  <p>
+    Marcas, nomes de produto e fotos de embalagem pertencem aos respectivos
+    donos e aparecem aqui apenas para identificar o produto comentado.
+  </p>
+
+  <h2>Links para fora</h2>
+  <p>
+    O site aponta para lojas, fabricantes e fontes de referência. Não temos
+    controle sobre o conteúdo, a disponibilidade ou as práticas desses sites, e
+    não respondemos por eles.
+  </p>
+
+  <h2>Limite de responsabilidade</h2>
+  <p>
+    O conteúdo é oferecido no estado em que se encontra. A {site.nome} se esforça
+    para publicar informação correta e conferida, mas não garante que esteja
+    completa, atualizada ou livre de erro.
+  </p>
+  <p>
+    A decisão de comprar e de usar qualquer produto é sua. Não respondemos por
+    resultado de uso, reação a ingrediente, insatisfação com a compra ou
+    prejuízo decorrente de decisão tomada a partir do conteúdo publicado.
+    Cabelo é individual e o mesmo produto se comporta de formas diferentes em
+    pessoas diferentes.
+  </p>
+
+  <h2>Disponibilidade</h2>
+  <p>
+    Podemos alterar, suspender ou encerrar qualquer parte do site a qualquer
+    momento, inclusive remover ou reescrever conteúdo já publicado.
+  </p>
+
+  <h2>Mudanças nestes termos</h2>
+  <p>
+    Estes termos podem ser atualizados. A data de revisão aparece no topo da
+    página, e continuar usando o site depois de uma mudança significa aceitar a
+    versão nova.
+  </p>
+
+  <h2>Dúvidas</h2>
+  <p>
+    Escreva para <a href={`mailto:${site.email}`}>{site.email}</a>.
+  </p>
+</PaginaSimples>

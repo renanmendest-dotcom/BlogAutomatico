@@ -1,0 +1,72 @@
+---
+import PaginaSimples from "../layouts/PaginaSimples.astro";
+import { site } from "../lib/site";
+---
+
+<PaginaSimples
+  titulo="Isenção de responsabilidade"
+  descricao="O conteúdo da Curva Viva é informativo e não substitui avaliação profissional de dermatologista, tricologista ou cabeleireiro."
+  chamada="Antes de aplicar"
+  resumo="O que o conteúdo daqui é, e principalmente o que ele não é."
+  mostrarAtualizacao={true}
+>
+  <h2>Conteúdo informativo, não recomendação profissional</h2>
+  <p>
+    Tudo que a {site.nome} publica tem finalidade informativa e educacional.
+    Não é consulta, não é diagnóstico e não substitui a avaliação de um
+    dermatologista, tricologista ou cabeleireiro que possa ver o seu cabelo e o
+    seu couro cabeludo de perto.
+  </p>
+
+  <h2>Quando procurar um profissional</h2>
+  <p>Procure ajuda profissional se você notar:</p>
+  <ul>
+    <li>queda de cabelo acima do normal ou falhas no couro cabeludo;</li>
+    <li>coceira persistente, ardência, descamação intensa ou ferida;</li>
+    <li>reação depois de usar um produto, como vermelhidão ou inchaço;</li>
+    <li>quebra severa ou mudança brusca na textura do fio.</li>
+  </ul>
+  <p>
+    Nada disso se resolve escolhendo outro creme, e este site não é o lugar para
+    tratar essas situações.
+  </p>
+
+  <h2>Cabelo é individual</h2>
+  <p>
+    O mesmo produto se comporta de formas diferentes em pessoas diferentes.
+    Curvatura, porosidade, espessura, densidade, histórico de química, água da
+    região e até o clima mudam o resultado. Um produto que funcionou para
+    alguém não tem obrigação nenhuma de funcionar para você.
+  </p>
+  <p>
+    Por isso aqui não existe "produto perfeito", "serve para todo tipo de
+    cabelo" nem "resultado garantido".
+  </p>
+
+  <h2>Alergias e sensibilidade</h2>
+  <p>
+    Leia sempre a lista de ingredientes antes de usar qualquer produto novo, em
+    especial se você já teve reação a cosmético. Na dúvida, faça o teste de
+    toque indicado pelo fabricante e siga as instruções do rótulo.
+  </p>
+  <p>
+    Em caso de reação, interrompa o uso e procure atendimento.
+  </p>
+
+  <h2>Sobre a informação publicada</h2>
+  <p>
+    Fórmula, embalagem, tamanho e disponibilidade mudam sem aviso. A informação
+    correta é sempre a do rótulo que está na sua mão e a da página oficial da
+    marca na data da compra.
+  </p>
+  <p>
+    A {site.nome} não se responsabiliza por decisões tomadas exclusivamente a
+    partir do conteúdo do site, nem por resultado obtido com o uso de qualquer
+    produto mencionado.
+  </p>
+
+  <h2>Dúvidas</h2>
+  <p>
+    Fale com a gente em <a href={`mailto:${site.email}`}>{site.email}</a>.
+  </p>
+</PaginaSimples>

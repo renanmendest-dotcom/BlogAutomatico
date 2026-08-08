@@ -68,8 +68,9 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 - **Autor do site é uma entidade genérica** ("Curadoria Curva Viva"). O
   concorrente assina com pessoa real, foto e bio. Decisão pendente do
   proprietário.
-- **Search Console e Bing Webmaster ainda não foram cadastrados.** Depende de
-  conta do proprietário.
+- **Falta pedir indexação manual das páginas.** O sitemap foi aceito pelos dois
+  serviços, então a descoberta acontece sozinha, mas pedir indexação acelera as
+  primeiras páginas. Vale se o Google demorar.
 - **Redes sociais**: o proprietário vai criar contas no Reddit, Pinterest,
   Instagram e TikTok. A publicação será automatizada pelo Codex, usando o
   navegador já logado. No TikTok, apenas carrossel de imagens com música. O
@@ -85,6 +86,33 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 8 de agosto de 2026 — Claude Code — Search Console e Bing cadastrados
+
+Os dois estão verificados e com o sitemap enviado. Feito operando o navegador
+do proprietário, que aprovou o login na Microsoft e o consentimento OAuth do
+BingWebmasterTools, porque login e concessão de permissão não são feitos por IA.
+
+| | Google | Bing |
+|---|---|---|
+| Propriedade | `https://www.curvaviva.com.br/`, prefixo de URL | mesmo endereço |
+| Verificação | arquivo HTML + meta tag | arquivo XML + meta tag |
+| Sitemap | processado, 28 páginas | enviado, sem erros |
+
+Os dois métodos de verificação foram implantados em cada serviço, em vez de um
+só: eles revalidam de tempos em tempos, e se um método cair o outro segura a
+propriedade. Os tokens ficam em `src/lib/site.ts` e os arquivos em `public/`.
+
+**Não apagar** `public/google639db46a26cb5b78.html`, `public/BingSiteAuth.xml`
+nem os campos de verificação em `src/lib/site.ts`. Perder isso derruba a
+propriedade nos dois serviços.
+
+A verificação foi feita por código em vez de registro TXT no DNS de propósito:
+fica versionada, sobrevive a deploy e não depende de mexer na Hostinger.
+
+O painel do Bing tem uma seção **AI Performance** em beta, que mostra
+aparições em respostas de IA. É a métrica mais direta do objetivo de ser citado
+por LLM, e vale acompanhar quando começar a haver dado.
 
 ### 8 de agosto de 2026 — Codex — Personagens de corpo inteiro
 

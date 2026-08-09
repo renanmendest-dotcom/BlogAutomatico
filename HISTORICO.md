@@ -19,13 +19,14 @@ o que mudou.
 
 ---
 
-## Estado atual em 7 de agosto de 2026
+## Estado atual em 8 de agosto de 2026
 
 | | |
 |---|---|
 | Endereço | `https://www.curvaviva.com.br` (o sem `www` redireciona para o `www`) |
 | Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde |
 | Artigos publicados | 7 |
+| Artigos na fila privada | 24 |
 | Produtos | 7 |
 | Hospedagem | Vercel, publicação automática a partir da `main` |
 | Design | Claude Code |
@@ -86,6 +87,26 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 8 de agosto de 2026 — Codex — Depósito editorial de quatro semanas
+
+Foi pesquisado o padrão de conteúdo do AnalisaMelhor, NutriCabelo e #todecacho,
+além de dúvidas recentes de leitoras. O padrão mais forte combina rankings de
+produto com resposta direta, comparativos de decisão e guias práticos com alta
+densidade visual. A pesquisa e as fontes ficaram registradas em
+`fila-publicacao/PESQUISA-CONCORRENTES.md`.
+
+Foi criada uma fila privada com 24 artigos: 12 rankings, 6 comparativos e 6
+guias educativos, suficiente para aproximadamente quatro semanas na cadência
+de 5 a 7 textos por semana. Cada rascunho já possui desenvolvimento, tabela,
+FAQ, links internos planejados, fontes-base, pendências de atualização e quatro
+briefs de imagem.
+
+O depósito ficou deliberadamente fora de `src/data/posts/`, dentro de
+`fila-publicacao/`. Portanto, nenhum desses artigos foi publicado, indexado,
+adicionado ao sitemap ou exibido na busca. Antes de promover cada texto, ainda
+é obrigatório atualizar fontes e produtos, cadastrar preço/oferta/link/imagem,
+produzir as quatro ilustrações e realizar as duas revisões do manual editorial.
 
 ### 8 de agosto de 2026 — Claude Code — Search Console e Bing cadastrados
 

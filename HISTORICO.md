@@ -25,14 +25,14 @@ o que mudou.
 |---|---|
 | Endereço | `https://www.curvaviva.com.br` (o sem `www` redireciona para o `www`) |
 | Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde |
-| Artigos publicados | 8 |
-| Artigos na fila privada | 23 |
+| Artigos publicados | 9 |
+| Artigos na fila privada | 22 |
 | Produtos públicos | 12 (16 cadastros no total) |
 | Hospedagem | Vercel, publicação automática a partir da `main` |
 | Design | Claude Code |
 | Conteúdo | Codex |
 
-**O gargalo hoje é volume de conteúdo.** 8 artigos contra centenas dos
+**O gargalo hoje é volume de conteúdo.** 9 artigos contra centenas dos
 concorrentes. Nenhum ajuste técnico compensa isso.
 
 ---
@@ -100,6 +100,22 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 10 de agosto de 2026 — Codex — Guia de definição para ondulados publicado
+
+Promovido da fila o artigo `cabelo-ondulado-nao-define-erros`, um guia educativo
+com oito causas práticas, teste de três lavagens, 2.034 palavras, cinco links
+internos e quatro imagens próprias. A capa preserva a personagem ondulada e os
+três infográficos mostram erro, hipótese e ação em texto legível, sem potes
+genéricos. A embalagem real do Juba Mousse foi hospedada no projeto para não
+depender do carregamento externo.
+
+A ficha do Juba Mousse 200 ml recebeu preço de R$ 51,78 e o link de afiliado
+`meli.la/2fykFpR`, ambos conferidos na oferta exata pelo Chrome autenticado. A
+primeira revisão confirmou fontes oficiais, produto, tamanho, imagem, preço e
+destino do link. A segunda revisão conferiu texto e artes em celular e desktop,
+sem rolagem horizontal ou imagem quebrada. `pnpm validar`, `pnpm check`,
+`pnpm build` e o relatório visual passaram com `"aprovado": true`.
 
 ### 10 de agosto de 2026 — Codex — Linguagem dos oito artigos revisada
 

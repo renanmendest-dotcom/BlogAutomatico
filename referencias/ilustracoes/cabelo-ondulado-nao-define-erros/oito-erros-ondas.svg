@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1600" viewBox="0 0 1000 1600">
+  <rect width="1000" height="1600" fill="#F8F3EC"/>
+  <text x="70" y="78" fill="#2B2027" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="700">8 erros que desmontam as ondas</text>
+  <text x="70" y="122" fill="#6B3D5E" font-family="Inter, Arial, sans-serif" font-size="27">Leia o resultado seco antes de trocar a rotina.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <g transform="translate(70 160)">
+      <rect width="860" height="142" rx="24" fill="#EFE5D9"/>
+      <circle cx="68" cy="71" r="38" fill="#C2564C"/><text x="68" y="83" text-anchor="middle" fill="#F8F3EC" font-size="34" font-weight="700">1</text>
+      <text x="130" y="58" fill="#2B2027" font-size="35" font-weight="700">Esperar outro formato de cabelo</text>
+      <text x="130" y="101" fill="#47283F" font-size="29">Compare suas ondas com elas mesmas.</text>
+    </g>
+    <g transform="translate(70 320)">
+      <rect width="860" height="142" rx="24" fill="#F0D2CB"/>
+      <circle cx="68" cy="71" r="38" fill="#6B3D5E"/><text x="68" y="83" text-anchor="middle" fill="#F8F3EC" font-size="34" font-weight="700">2</text>
+      <text x="130" y="58" fill="#2B2027" font-size="35" font-weight="700">Aplicar no fio quase seco</text>
+      <text x="130" y="101" fill="#47283F" font-size="29">Umedeça cada parte antes de aplicar.</text>
+    </g>
+    <g transform="translate(70 480)">
+      <rect width="860" height="142" rx="24" fill="#EFE5D9"/>
+      <circle cx="68" cy="71" r="38" fill="#C2564C"/><text x="68" y="83" text-anchor="middle" fill="#F8F3EC" font-size="34" font-weight="700">3</text>
+      <text x="130" y="58" fill="#2B2027" font-size="35" font-weight="700">Começar com produto demais</text>
+      <text x="130" y="101" fill="#47283F" font-size="29">Reduza a dose antes de trocar o pote.</text>
+    </g>
+    <g transform="translate(70 640)">
+      <rect width="860" height="142" rx="24" fill="#F0D2CB"/>
+      <circle cx="68" cy="71" r="38" fill="#6B3D5E"/><text x="68" y="83" text-anchor="middle" fill="#F8F3EC" font-size="34" font-weight="700">4</text>
+      <text x="130" y="58" fill="#2B2027" font-size="35" font-weight="700">Usar creme quando falta fixação</text>
+      <text x="130" y="101" fill="#47283F" font-size="29">Teste uma camada fina de fixador.</text>
+    </g>
+    <g transform="translate(70 800)">
+      <rect width="860" height="142" rx="24" fill="#EFE5D9"/>
+      <circle cx="68" cy="71" r="38" fill="#C2564C"/><text x="68" y="83" text-anchor="middle" fill="#F8F3EC" font-size="34" font-weight="700">5</text>
+      <text x="130" y="58" fill="#2B2027" font-size="35" font-weight="700">Pentear depois de formar as ondas</text>
+      <text x="130" y="101" fill="#47283F" font-size="29">Desembarace antes do amassar final.</text>
+    </g>
+    <g transform="translate(70 960)">
+      <rect width="860" height="142" rx="24" fill="#F0D2CB"/>
+      <circle cx="68" cy="71" r="38" fill="#6B3D5E"/><text x="68" y="83" text-anchor="middle" fill="#F8F3EC" font-size="34" font-weight="700">6</text>
+      <text x="130" y="58" fill="#2B2027" font-size="35" font-weight="700">Tocar durante toda a secagem</text>
+      <text x="130" y="101" fill="#47283F" font-size="29">Deixe as mechas quietas até secar.</text>
+    </g>
+    <g transform="translate(70 1120)">
+      <rect width="860" height="142" rx="24" fill="#EFE5D9"/>
+      <circle cx="68" cy="71" r="38" fill="#C2564C"/><text x="68" y="83" text-anchor="middle" fill="#F8F3EC" font-size="34" font-weight="700">7</text>
+      <text x="130" y="58" fill="#2B2027" font-size="35" font-weight="700">Soltar a camada firme cedo</text>
+      <text x="130" y="101" fill="#47283F" font-size="29">Amasse só quando estiver 100% seco.</text>
+    </g>
+    <g transform="translate(70 1280)">
+      <rect width="860" height="142" rx="24" fill="#F0D2CB"/>
+      <circle cx="68" cy="71" r="38" fill="#6B3D5E"/><text x="68" y="83" text-anchor="middle" fill="#F8F3EC" font-size="34" font-weight="700">8</text>
+      <text x="130" y="58" fill="#2B2027" font-size="35" font-weight="700">Mudar tudo na mesma lavagem</text>
+      <text x="130" y="101" fill="#47283F" font-size="29">Teste apenas uma variável por vez.</text>
+    </g>
+  </g>
+
+  <rect x="70" y="1460" width="860" height="92" rx="46" fill="#47283F"/>
+  <text x="500" y="1518" text-anchor="middle" fill="#F8F3EC" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="700">UMA MUDANÇA POR LAVAGEM</text>
+</svg>

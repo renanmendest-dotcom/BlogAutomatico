@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400">
+  <rect width="1000" height="1400" fill="#F8F3EC"/>
+  <text x="70" y="82" fill="#2B2027" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">Teste de 3 lavagens</text>
+  <text x="70" y="128" fill="#6B3D5E" font-family="Inter, Arial, sans-serif" font-size="27">Uma mudança de cada vez mostra o que fez diferença.</text>
+
+  <path d="M150 230 V980" stroke="#6B3D5E" stroke-width="12" stroke-linecap="round"/>
+
+  <g transform="translate(100 205)">
+    <circle cx="50" cy="50" r="50" fill="#C2564C"/>
+    <text x="50" y="62" text-anchor="middle" fill="#F8F3EC" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">1</text>
+    <rect x="120" y="0" width="710" height="220" rx="28" fill="#EFE5D9"/>
+    <text x="160" y="58" fill="#2B2027" font-family="Inter, Arial, sans-serif" font-size="37" font-weight="800">REDUZA O CREME</text>
+    <text x="160" y="108" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="29">Use metade da quantidade habitual.</text>
+    <text x="160" y="153" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="26">Mantenha técnica e secagem iguais.</text>
+    <text x="160" y="195" fill="#6B3D5E" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">PERGUNTA: o peso diminuiu?</text>
+  </g>
+
+  <g transform="translate(100 475)">
+    <circle cx="50" cy="50" r="50" fill="#6B3D5E"/>
+    <text x="50" y="62" text-anchor="middle" fill="#F8F3EC" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">2</text>
+    <rect x="120" y="0" width="710" height="220" rx="28" fill="#F0D2CB"/>
+    <text x="160" y="58" fill="#2B2027" font-family="Inter, Arial, sans-serif" font-size="37" font-weight="800">ACRESCENTE FIXAÇÃO</text>
+    <text x="160" y="108" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="29">Repita a dose e use pouco fixador.</text>
+    <text x="160" y="153" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="26">Não troque shampoo nem máscara.</text>
+    <text x="160" y="195" fill="#6B3D5E" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">PERGUNTA: a onda durou mais?</text>
+  </g>
+
+  <g transform="translate(100 745)">
+    <circle cx="50" cy="50" r="50" fill="#C2564C"/>
+    <text x="50" y="62" text-anchor="middle" fill="#F8F3EC" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">3</text>
+    <rect x="120" y="0" width="710" height="220" rx="28" fill="#EFE5D9"/>
+    <text x="160" y="58" fill="#2B2027" font-family="Inter, Arial, sans-serif" font-size="37" font-weight="800">NÃO TOQUE AO SECAR</text>
+    <text x="160" y="108" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="29">Mantenha os produtos da lavagem 2.</text>
+    <text x="160" y="153" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="26">Espere secar antes de soltar as ondas.</text>
+    <text x="160" y="195" fill="#6B3D5E" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">PERGUNTA: o frizz diminuiu?</text>
+  </g>
+
+  <rect x="70" y="1040" width="860" height="285" rx="32" fill="#47283F"/>
+  <text x="110" y="1102" fill="#F8F3EC" font-family="Inter, Arial, sans-serif" font-size="37" font-weight="800">COMPARE NO CABELO SECO</text>
+  <g fill="#F0D2CB" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="700">
+    <text x="130" y="1180">○ Volume</text>
+    <text x="540" y="1180">○ Duração</text>
+    <text x="130" y="1250">○ Tempo de secagem</text>
+    <text x="540" y="1250">○ Toque</text>
+  </g>
+  <text x="500" y="1295" text-anchor="middle" fill="#F8F3EC" font-family="Inter, Arial, sans-serif" font-size="24">Fotografe sempre na mesma luz.</text>
+</svg>

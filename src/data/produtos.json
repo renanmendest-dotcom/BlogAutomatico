@@ -286,7 +286,7 @@
     "marca": "Widi Care",
     "categoria": "mousse",
     "publicado": true,
-    "verificadoEm": "2026-08-04",
+    "verificadoEm": "2026-08-10",
     "perfil": {
       "curvaturas": ["Ondulados", "Cacheados", "Crespos"],
       "textura": "Mousse",
@@ -294,10 +294,16 @@
       "objetivos": ["Definição", "Controle de frizz", "Proteção térmica"]
     },
     "imagem": {
-      "src": "https://acdn-us.mitiendanube.com/stores/003/941/769/products/frente-b2449ab46919b6a6c517634683826732-640-0.webp",
+      "src": "/produtos/widi-care-juba-mousse-200ml-site.webp",
       "alt": "Frasco do Juba Mousse Criador de Cachos Widi Care 200 ml",
       "credito": "Widi Care",
       "fonteUrl": "https://lojawidicare.com.br/produtos/mousse-finalizador-juba-mousse-criador-de-cachos-200-ml"
+    },
+    "preco": {
+      "min": 51.78,
+      "max": 51.78,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-10"
     },
     "destaques": [
       {
@@ -323,8 +329,8 @@
     ],
     "oferta": {
       "loja": "Mercado Livre",
-      "url": null,
-      "atualizadoEm": null
+      "url": "https://meli.la/2fykFpR",
+      "atualizadoEm": "2026-08-10"
     },
     "analise": {
       "tipo": "documental",
@@ -336,19 +342,19 @@
         "id": "widi-care-loja-juba-mousse",
         "titulo": "Mousse Finalizador Juba Mousse Criador de Cachos 200 ml",
         "url": "https://lojawidicare.com.br/produtos/mousse-finalizador-juba-mousse-criador-de-cachos-200-ml",
-        "acessadoEm": "2026-08-04"
+        "acessadoEm": "2026-08-10"
       },
       {
         "id": "widi-care-juba-mousse",
         "titulo": "Juba Mousse Criador de Cachos",
         "url": "https://widicare.com.br/produto/juba-mousse-criador-de-cachos/",
-        "acessadoEm": "2026-08-04"
+        "acessadoEm": "2026-08-10"
       },
       {
         "id": "mercado-livre-juba-mousse-200ml",
         "titulo": "Mousse Criador de Cachos Juba Widi Care 200 ml no Mercado Livre",
         "url": "https://produto.mercadolivre.com.br/MLB-6988339366-mousse-criador-de-cachos-juba-widi-care-200-ml-_JM",
-        "acessadoEm": "2026-08-04"
+        "acessadoEm": "2026-08-10"
       }
     ]
   },

@@ -1,5 +1,6 @@
 ---
-status_fila: rascunho_editorial_completo
+status_fila: publicado
+publicado_em: 2026-08-10
 ordem: 2
 modelo_artigo: educativo
 titulo: "Cabelo ondulado não define? 8 erros que podem desmontar as ondas"

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400">
+  <rect width="1000" height="1400" fill="#F8F3EC"/>
+  <text x="70" y="82" fill="#2B2027" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="700">O que o resultado seco diz?</text>
+  <text x="70" y="126" fill="#6B3D5E" font-family="Inter, Arial, sans-serif" font-size="27">Use estes sinais como hipóteses para o próximo teste.</text>
+
+  <g transform="translate(70 175)">
+    <rect width="860" height="305" rx="28" fill="#EFE5D9"/>
+    <text x="35" y="58" fill="#C2564C" font-family="Inter, Arial, sans-serif" font-size="39" font-weight="800">PESOU E FICOU MURCHO</text>
+    <path d="M120 105 C190 145 185 215 125 250" fill="none" stroke="#6B3D5E" stroke-width="24" stroke-linecap="round"/>
+    <path d="M285 120 V228 M250 195 L285 230 L320 195" fill="none" stroke="#C2564C" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="380" y="144" fill="#2B2027" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Pode ser excesso.</text>
+    <text x="380" y="190" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="28">TENTE: metade do creme.</text>
+    <text x="380" y="233" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="25">Mantenha técnica e secagem iguais.</text>
+  </g>
+
+  <g transform="translate(70 510)">
+    <rect width="860" height="305" rx="28" fill="#F0D2CB"/>
+    <text x="35" y="58" fill="#6B3D5E" font-family="Inter, Arial, sans-serif" font-size="39" font-weight="800">A ONDA SOME QUANDO SECA</text>
+    <path d="M95 105 C165 135 165 195 100 230 C165 260 165 285 110 290" fill="none" stroke="#6B3D5E" stroke-width="19" stroke-linecap="round"/>
+    <path d="M225 120 H315 M290 95 L320 120 L290 145" fill="none" stroke="#C2564C" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M350 105 C395 145 390 235 350 270" fill="none" stroke="#6B3D5E" stroke-width="19" stroke-linecap="round"/>
+    <text x="445" y="144" fill="#2B2027" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Pode faltar fixação.</text>
+    <text x="445" y="190" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="28">TENTE: pouco mousse, gel</text>
+    <text x="445" y="230" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="28">ou gelatina capilar.</text>
+  </g>
+
+  <g transform="translate(70 845)">
+    <rect width="860" height="305" rx="28" fill="#EFE5D9"/>
+    <text x="35" y="58" fill="#C2564C" font-family="Inter, Arial, sans-serif" font-size="39" font-weight="800">FICOU COM FRIZZ AO SECAR</text>
+    <path d="M120 105 C190 145 185 230 120 270" fill="none" stroke="#6B3D5E" stroke-width="22" stroke-linecap="round"/>
+    <path d="M85 135 L45 110 M82 180 L32 180 M90 225 L50 250 M155 130 L200 105 M158 180 L210 175 M150 230 L195 258" fill="none" stroke="#C2564C" stroke-width="9" stroke-linecap="round"/>
+    <text x="285" y="144" fill="#2B2027" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">O toque pode desmontar o grupo.</text>
+    <text x="285" y="190" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="28">TENTE: não mexer até secar.</text>
+    <text x="285" y="233" fill="#47283F" font-family="Inter, Arial, sans-serif" font-size="25">No difusor, mude a mecha com ele desligado.</text>
+  </g>
+
+  <rect x="70" y="1205" width="860" height="120" rx="60" fill="#47283F"/>
+  <text x="500" y="1254" text-anchor="middle" fill="#F8F3EC" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">MUDE UMA COISA</text>
+  <text x="500" y="1292" text-anchor="middle" fill="#F0D2CB" font-family="Inter, Arial, sans-serif" font-size="25">e compare o cabelo totalmente seco</text>
+</svg>

@@ -63,6 +63,11 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
   embalagens reais em vez de produtos genéricos desenhados. Infográficos levam
   título, rótulos e conclusão prática; arte confusa ou com aparência evidente
   de IA é reprovada mesmo quando cumpre tamanho e paleta.
+- **Vocabulário do nicho nunca é conhecimento presumido.** Termos como
+  `day after`, `fitagem`, `dedoliss`, `co-wash`, `leave-in`, `finalização` e
+  `fixação` são explicados na primeira ocorrência. Códigos como `3C` e `4A`
+  aparecem apenas quando a marca os usa, sempre acompanhados de `cacheado` ou
+  `crespo` e tratados como classificação comercial, não regra universal.
 
 ---
 
@@ -95,6 +100,19 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 10 de agosto de 2026 — Codex — Linguagem dos oito artigos revisada
+
+Todos os artigos publicados foram relidos como se a leitora estivesse chegando
+ao assunto pela primeira vez. Códigos de formato deixaram de aparecer soltos e
+o vocabulário técnico passou a ser traduzido em português comum na primeira
+menção. Produtos, recomendações e links existentes foram preservados; o ranking
+recebeu uma fonte científica sobre os limites das classificações capilares.
+
+As duas revisões editoriais, `pnpm validar`, `pnpm check`, `pnpm build` e a
+revisão visual em 17 telas passaram. Os oito artigos foram conferidos em 390 px,
+sem imagens quebradas nem rolagem horizontal, e o relatório retornou
+`"aprovado": true`.
 
 ### 10 de agosto de 2026 — Codex — Imagens do primeiro ranking refeitas
 

@@ -304,6 +304,15 @@ disputando a mesma palavra-chave enfraquecem os dois.
 - Sem pressão comercial e sem repetir palavra-chave à exaustão.
 - Nunca "produto perfeito", "serve para todo cabelo" ou "resultado garantido".
 - Diferenciar fato, alegação da marca e dúvida.
+- **Nunca presumir que a leitora conhece o vocabulário do nicho.** Na primeira
+  ocorrência, traduzir termos como `day after`, `dedoliss`, `co-wash`,
+  `leave-in`, `fitagem`, `finalização`, `fixação`, `emoliência`, `densidade` e
+  `película de fixação` em português comum. Depois, preferir a expressão simples
+  ao jargão.
+- Códigos como `2B`, `3C` e `4A` são uma classificação comercial de formato,
+  não um diagnóstico nem uma regra universal. Explicar o sistema antes da
+  primeira menção, manter o código somente quando a marca o usa oficialmente e
+  escrever também `ondulado`, `cacheado` ou `crespo` no mesmo contexto.
 - Nunca escrever "a pesquisa localizou", "a oferta foi conferida", "análise
   documental", "fontes verificadas" ou "recebemos comissão".
 - Não explicar que o texto foi feito por IA.

@@ -137,7 +137,7 @@ perguntas_frequentes:
 rascunho: false
 ---
 
-![Personagem cacheada da Curva Viva cercada por sete embalagens genéricas de creme de pentear](/ilustracoes/melhores-cremes-de-pentear-para-cabelo-cacheado/capa-ranking-cremes-cacheados.webp)
+![Avatar cacheada da Curva Viva ao lado das embalagens reais de Lola Meu Cacho Minha Vida, Widi Care Encaracolando a Juba e Salon Line Definição Natural](/ilustracoes/melhores-cremes-de-pentear-para-cabelo-cacheado/capa-ranking-cremes-cacheados.webp)
 
 Escolher um creme de pentear parece simples até o cabelo secar. Um produto pode desembaraçar muito bem e deixar os cachos sem sustentação. Outro pode formar mechas bonitas, mas cobrar isso em peso, rigidez ou tempo de secagem. O melhor creme não é, portanto, o pote mais conhecido nem o que reúne mais promessas na frente da embalagem. É o que combina com a espessura do fio, a quantidade de cabelo, o acabamento desejado e a sua disposição para fazer uma finalização mais ou menos detalhada.
 
@@ -175,7 +175,7 @@ Também separamos **gasto inicial** de **custo proporcional**. O Skala de 250 g 
 
 O ranking não usa quantidade de ingredientes como sinônimo de qualidade. Óleo, manteiga, extrato ou proteína ajudam a entender a proposta da fórmula, mas não permitem prever, isoladamente, definição, maciez ou peso. A avaliação mais segura começa na ficha técnica e termina com um teste controlado no próprio cabelo.
 
-![Três consistências de creme, da mais fluida à mais densa, acima de embalagens genéricas](/ilustracoes/melhores-cremes-de-pentear-para-cabelo-cacheado/escala-texturas-creme.webp)
+![Infográfico explica o que observar em cremes de textura leve, média e densa e lembra que textura não garante definição](/ilustracoes/melhores-cremes-de-pentear-para-cabelo-cacheado/escala-texturas-creme.webp)
 
 ## 1. Lola Meu Cacho Minha Vida: melhor equilíbrio geral
 
@@ -251,7 +251,7 @@ Em fios muito densos, uma fórmula direcionada a crespos pode facilitar a escolh
 
 Fio fino costuma revelar excesso cedo: perde volume, demora a secar ou forma mechas com aparência oleosa. Fio grosso pode aceitar mais cobertura, mas isso não obriga a usar um creme denso. Densidade também importa. Muito cabelo aumenta a área de distribuição, enquanto pouco cabelo pode fazer uma pequena porção render bastante.
 
-![Comparação entre fios finos, médios e grossos com uma dose inicial crescente de creme](/ilustracoes/melhores-cremes-de-pentear-para-cabelo-cacheado/quantidade-por-espessura.webp)
+![Infográfico orienta começar com pouco creme em fios finos, médios e grossos, distribuir, esperar secar e ajustar a dose](/ilustracoes/melhores-cremes-de-pentear-para-cabelo-cacheado/quantidade-por-espessura.webp)
 
 Use a ilustração como ponto de partida, não como medidor exato. Separe o cabelo úmido em seções e comece com uma porção pequena em cada uma. Se os dedos travarem ou as pontas continuarem ásperas, acrescente um pouco. Se a mecha ficar coberta por uma camada branca persistente, espalhe melhor antes de colocar mais.
 
@@ -285,7 +285,7 @@ No dia seguinte, observe se o cabelo precisa de água, uma quantidade mínima de
 
 ## Checklist antes de comprar
 
-![Quatro cartões ilustrados representam tamanho, textura, definição e ponto de atenção na escolha do creme](/ilustracoes/melhores-cremes-de-pentear-para-cabelo-cacheado/checklist-compra-creme.webp)
+![Checklist visual orienta conferir nome e tamanho, textura e uso, custo por 100 g ou ml e ponto de atenção antes da compra](/ilustracoes/melhores-cremes-de-pentear-para-cabelo-cacheado/checklist-compra-creme.webp)
 
 1. Confira o nome completo e o tamanho. Linhas com embalagens parecidas podem ter creme, ativador, condicionador e máscara.
 2. Leia a indicação oficial, mas combine-a com espessura e densidade do seu cabelo.

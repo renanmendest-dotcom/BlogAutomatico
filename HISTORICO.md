@@ -59,6 +59,10 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 - **Mercado Livre só pelo Chrome do proprietário.** Pesquisa de oferta, acesso
   à conta de afiliado e geração de link `meli.la` usam exclusivamente o Chrome
   já autenticado. O navegador interno do Codex não deve acessar essa conta.
+- **Imagem de artigo precisa funcionar para a leitora.** Em rankings, usar
+  embalagens reais em vez de produtos genéricos desenhados. Infográficos levam
+  título, rótulos e conclusão prática; arte confusa ou com aparência evidente
+  de IA é reprovada mesmo quando cumpre tamanho e paleta.
 
 ---
 
@@ -91,6 +95,20 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 10 de agosto de 2026 — Codex — Imagens do primeiro ranking refeitas
+
+As quatro imagens do ranking de cremes foram revisadas pela ótica da leitora.
+A capa passou a combinar a avatar oficial com as embalagens reais dos três
+destaques, sem potes genéricos. As outras três artes viraram infográficos com
+título, rótulos e orientação prática legível no celular. O feedback virou regra
+do manual editorial para impedir que densidade de imagem seja confundida com
+clareza ou credibilidade.
+
+A revisão factual confirmou a correspondência das três embalagens e a avatar
+canônica; a revisão de leitura conferiu as quatro artes em desktop e celular.
+`pnpm validar`, `pnpm check`, `pnpm build` e `node scripts/revisar-visual.cjs`
+passaram, com o relatório visual em `"aprovado": true`.
 
 ### 10 de agosto de 2026 — Codex — Primeiro ranking publicado
 

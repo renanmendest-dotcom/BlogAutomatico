@@ -96,6 +96,16 @@ ranking, em Google Imagens e em tempo de permanência.
 - Salvar em `public/ilustracoes/<slug-do-artigo>/`, em `.webp`.
 - **Toda imagem precisa de `alt` descritivo e único.**
 - Largura máxima de 1600 px e peso máximo de 200 KB por imagem.
+- **A imagem precisa ensinar ou ajudar a decidir.** Na revisão, assumir o ponto
+  de vista de uma leitora que ainda não leu o parágrafo: ela deve entender em
+  poucos segundos o que está sendo comparado e por que aquilo importa.
+- Infográfico precisa de título curto, rótulos explícitos e uma conclusão ou
+  ação prática legível no celular. Ícones sem legenda não contam como explicação.
+- Em ranking de produto, usar as embalagens reais sempre que houver imagem
+  autorizada na ficha. Nunca representar recomendações reais com potes genéricos
+  inventados por IA, porque isso reduz clareza e credibilidade.
+- Reprovar arte decorativa, confusa ou com aparência evidente de geração por IA,
+  mesmo que ela esteja tecnicamente correta e dentro da paleta.
 
 **Tudo dentro de `public/` é publicado.** Material de referência interno, folha
 de personagem e arte de trabalho não vão para lá: o lugar deles é
@@ -310,7 +320,9 @@ fontes, preço, imagem e link. Corrigir trecho confuso, repetido ou sem fonte.
 
 **Revisão 2, interesse e leitura.** Confirmar que a pergunta atrai clique
 qualificado. Conferir título, resposta inicial, naturalidade, retenção e leitura
-no celular. Melhorar se estiver robótico, genérico ou comercial demais.
+no celular. Revisar também cada imagem como leitora: sem o contexto do prompt,
+fica claro o que ela explica? Melhorar se estiver robótico, genérico, confuso ou
+comercial demais.
 
 Publicar só quando as duas revisões e todos os testes passarem.
 

@@ -1,6 +1,7 @@
 ---
-status_fila: rascunho_editorial_completo
+status_fila: publicado
 ordem: 3
+publicado_em: 2026-08-10
 modelo_artigo: comparativo
 titulo: "Leave-in ou creme de pentear: qual faz mais sentido para o seu cabelo?"
 pergunta_principal: "Qual é a diferença entre leave-in e creme de pentear?"

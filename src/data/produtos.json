@@ -900,6 +900,79 @@
     ]
   },
   {
+    "id": "widi-care-sou-10-leave-in-200ml",
+    "nome": "Sou 10 Leave-In 200 ml",
+    "descricao": "Leave-in em spray da Widi Care, aplicado sem enxágue no cabelo úmido, com proposta de proteção, maciez, brilho e controle de frizz.",
+    "marca": "Widi Care",
+    "categoria": "leave_in",
+    "publicado": true,
+    "verificadoEm": "2026-08-10",
+    "perfil": {
+      "curvaturas": ["Sem curvatura específica"],
+      "textura": "Spray cremoso",
+      "intensidade": "Aplicação sem enxágue em spray, conforme a marca",
+      "objetivos": ["Proteção", "Controle de frizz", "Maciez", "Brilho"]
+    },
+    "imagem": {
+      "src": "https://http2.mlstatic.com/D_Q_NP_613219-MLA99341885458_112025-F.webp",
+      "alt": "Frasco do Widi Care Sou 10 Leave-In 200 ml",
+      "credito": "Mercado Livre",
+      "fonteUrl": "https://www.mercadolivre.com.br/sou-10-leave-in-200ml-widi-care/p/MLB20688575"
+    },
+    "preco": {
+      "min": 49,
+      "max": 54.9,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-10"
+    },
+    "destaques": [
+      {
+        "rotulo": "Tamanho",
+        "valor": "200 ml",
+        "fonteId": "mercado-livre-widi-sou-10"
+      },
+      {
+        "rotulo": "Aplicação",
+        "valor": "No cabelo úmido, diretamente em spray ou distribuído primeiro nas mãos",
+        "fonteId": "widi-care-sou-10"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Óleos de argan, coco e buriti",
+        "fonteId": "widi-care-sou-10"
+      },
+      {
+        "rotulo": "Proposta da marca",
+        "valor": "Proteção, maciez, brilho e controle de frizz",
+        "fonteId": "widi-care-sou-10"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/1S6SpCq",
+      "atualizadoEm": "2026-08-10"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "As funções e o modo de uso vêm da fabricante. Leveza, rendimento e acabamento variam conforme quantidade, espessura do fio e outros produtos aplicados."
+    },
+    "fontes": [
+      {
+        "id": "widi-care-sou-10",
+        "titulo": "Widi Care, Sou 10 Leave-In",
+        "url": "https://widicare.com.br/produto/sou-10-leave-in/",
+        "acessadoEm": "2026-08-10"
+      },
+      {
+        "id": "mercado-livre-widi-sou-10",
+        "titulo": "Sou 10 Leave-In Widi Care 200 ml no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/sou-10-leave-in-200ml-widi-care/p/MLB20688575",
+        "acessadoEm": "2026-08-10"
+      }
+    ]
+  },
+  {
     "id": "arvensis-cachos-naturais-ativador",
     "nome": "Ativador de Cachos Naturais",
     "marca": "Arvensis",

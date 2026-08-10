@@ -25,9 +25,9 @@ o que mudou.
 |---|---|
 | Endereço | `https://www.curvaviva.com.br` (o sem `www` redireciona para o `www`) |
 | Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde |
-| Artigos publicados | 9 |
-| Artigos na fila privada | 22 |
-| Produtos públicos | 12 (16 cadastros no total) |
+| Artigos publicados | 10 |
+| Artigos na fila privada | 21 |
+| Produtos públicos | 13 (17 cadastros no total) |
 | Hospedagem | Vercel, publicação automática a partir da `main` |
 | Design | Claude Code |
 | Conteúdo | Codex |
@@ -100,6 +100,21 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 10 de agosto de 2026 — Codex — Comparativo de leave-in publicado
+
+Promovido da fila o artigo `leave-in-ou-creme-de-pentear`, que responde a uma
+dúvida brasileira recente e ajuda a escolher entre preparação, proteção,
+desembaraço e modelagem sem tratar o nome da embalagem como regra. O texto tem
+quatro infográficos próprios, cinco links internos e uma recomendação
+contextual do Widi Care Sou 10 Leave-In 200 ml.
+
+A ficha do produto recebeu imagem real, faixa de R$ 49,00 a R$ 54,90 e o link
+de afiliado `meli.la/1S6SpCq`, gerado e validado no Chrome autenticado. A
+primeira revisão confirmou fontes, produto, tamanho, oferta, imagem, link e
+limites das alegações. A segunda aprovou título, intenção, naturalidade, SEO e
+leitura das artes em 390 px. `pnpm validar`, `pnpm check`, `pnpm build` e a
+revisão visual passaram sem erros, imagens quebradas ou rolagem horizontal.
 
 ### 10 de agosto de 2026 — Codex — Guia de definição para ondulados publicado
 

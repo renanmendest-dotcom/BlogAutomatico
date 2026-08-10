@@ -192,6 +192,14 @@ perto do começo. Não repetir o mesmo avatar várias vezes no mesmo texto.
 
 Arquivo: `src/data/produtos.json`.
 
+### Regra do navegador para o Mercado Livre
+
+Toda pesquisa de oferta e toda geração ou conferência de link de afiliado do
+Mercado Livre deve acontecer exclusivamente no Chrome do proprietário, já
+autenticado. Nunca usar o navegador interno do Codex para acessar essa conta.
+Se o Chrome não estiver disponível ou autenticado, aguardar o proprietário
+deixá-lo pronto antes de continuar essa etapa.
+
 ### Preço, agora obrigatório quando existir oferta
 
 O campo é opcional no schema, mas **na prática é o que converte clique em

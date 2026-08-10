@@ -6,7 +6,7 @@ e fonte estejam liberados para publicação.
 
 | Ordem | Slug | Modelo | Cluster | Intenção principal | Estado |
 |---:|---|---|---|---|---|
-| 1 | `melhores-cremes-de-pentear-para-cabelo-cacheado` | ranking | creme de pentear | comprar | rascunho completo |
+| 1 | `melhores-cremes-de-pentear-para-cabelo-cacheado` | ranking | creme de pentear | comprar | publicado em 10/08/2026 |
 | 2 | `cabelo-ondulado-nao-define-erros` | educativo | ondulados | resolver problema | rascunho completo |
 | 3 | `leave-in-ou-creme-de-pentear` | comparativo | finalizadores | escolher formato | rascunho completo |
 | 4 | `melhores-cremes-para-cabelo-ondulado-sem-pesar` | ranking | creme de pentear | comprar | rascunho completo |

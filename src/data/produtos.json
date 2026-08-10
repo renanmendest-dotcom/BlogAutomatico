@@ -73,7 +73,7 @@
     "marca": "Lola Cosmetics",
     "categoria": "creme_para_pentear",
     "publicado": true,
-    "verificadoEm": "2026-08-01",
+    "verificadoEm": "2026-08-09",
     "perfil": {
       "curvaturas": ["Cacheados, sem numeração informada"],
       "textura": "Creme",
@@ -85,6 +85,12 @@
       "alt": "Frasco do Creme de Pentear Lola Cosmetics Meu Cacho Minha Vida 500 g",
       "credito": "Mercado Livre",
       "fonteUrl": "https://www.mercadolivre.com.br/creme-de-pentear-lola-cosmetics-meu-cacho-minha-vida-500g/up/MLBU1090737009"
+    },
+    "preco": {
+      "min": 32.49,
+      "max": 38.94,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-09"
     },
     "destaques": [
       {
@@ -111,7 +117,7 @@
     "oferta": {
       "loja": "Mercado Livre",
       "url": "https://meli.la/2g71Sg4",
-      "atualizadoEm": "2026-08-01"
+      "atualizadoEm": "2026-08-09"
     },
     "analise": {
       "tipo": "documental",
@@ -123,13 +129,13 @@
         "id": "lola-meu-cacho-minha-vida",
         "titulo": "Meu Cacho Minha Vida Creme de Pentear 500 g",
         "url": "https://www.lolacosmetics.com.br/meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409",
-        "acessadoEm": "2026-07-30"
+        "acessadoEm": "2026-08-09"
       },
       {
         "id": "mercado-livre-lola-meu-cacho",
         "titulo": "Creme de Pentear Lola Cosmetics Meu Cacho Minha Vida 500 g no Mercado Livre",
         "url": "https://www.mercadolivre.com.br/creme-de-pentear-lola-cosmetics-meu-cacho-minha-vida-500g/up/MLBU1090737009",
-        "acessadoEm": "2026-08-01"
+        "acessadoEm": "2026-08-09"
       }
     ]
   },
@@ -140,11 +146,11 @@
     "marca": "Skala",
     "categoria": "creme_para_pentear",
     "publicado": true,
-    "verificadoEm": "2026-08-02",
+    "verificadoEm": "2026-08-09",
     "perfil": {
       "curvaturas": ["Cacheados", "Crespos", "Crespíssimos", "Em transição"],
       "textura": "Creme 3 em 1",
-      "intensidade": "Não informada",
+      "intensidade": "Finalização sem enxágue com proposta de definição",
       "objetivos": ["Hidratação", "Desembaraço", "Força"]
     },
     "imagem": {
@@ -152,6 +158,12 @@
       "alt": "Frasco do Creme para Pentear Skala Expert #Mais Cachos 3 em 1 250 g",
       "credito": "Mercado Livre",
       "fonteUrl": "https://www.mercadolivre.com.br/creme-para-pentear-skala-3-em-1-mais-cachos-250-g/p/MLB19813332"
+    },
+    "preco": {
+      "min": 19.9,
+      "max": 22.9,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-09"
     },
     "destaques": [
       {
@@ -178,7 +190,7 @@
     "oferta": {
       "loja": "Mercado Livre",
       "url": "https://meli.la/1JKRpeh",
-      "atualizadoEm": "2026-08-02"
+      "atualizadoEm": "2026-08-09"
     },
     "analise": {
       "tipo": "documental",
@@ -189,14 +201,14 @@
       {
         "id": "skala-mais-cachos",
         "titulo": "Creme para Pentear #Mais Cachos",
-        "url": "https://www.skala.com.br/produto/-mais-cachos-740",
-        "acessadoEm": "2026-07-30"
+        "url": "https://skalabrasil.com/produto/-mais-cachos-740",
+        "acessadoEm": "2026-08-09"
       },
       {
         "id": "mercado-livre-skala-mais-cachos",
         "titulo": "Creme para Pentear Skala 3 em 1 #Mais Cachos 250 g no Mercado Livre",
         "url": "https://www.mercadolivre.com.br/creme-para-pentear-skala-3-em-1-mais-cachos-250-g/p/MLB19813332",
-        "acessadoEm": "2026-08-02"
+        "acessadoEm": "2026-08-09"
       }
     ]
   },
@@ -488,19 +500,228 @@
   },
   {
     "id": "widi-care-juba-creme-pentear",
-    "nome": "Juba Creme de Pentear",
+    "nome": "Encaracolando a Juba Creme de Pentear 500 ml",
+    "descricao": "Creme modelador da linha Juba, indicado pela Widi Care para cachos 3A, 3B e 3C e aplicação por fitagem.",
     "marca": "Widi Care",
     "categoria": "creme_para_pentear",
-    "publicado": false,
-    "status": "Aguardando conferência da fórmula e da página oficial atual"
+    "publicado": true,
+    "verificadoEm": "2026-08-09",
+    "perfil": {
+      "curvaturas": ["3A", "3B", "3C"],
+      "textura": "Creme modelador",
+      "intensidade": "Finalização por fitagem com definição",
+      "objetivos": ["Definição", "Desembaraço", "Maciez"]
+    },
+    "imagem": {
+      "src": "https://acdn-us.mitiendanube.com/stores/003/941/769/products/frente-8083c967cfaf57fc4317634666555268-640-0.webp",
+      "alt": "Frasco do creme de pentear Widi Care Encaracolando a Juba 500 ml",
+      "credito": "Widi Care",
+      "fonteUrl": "https://lojawidicare.com.br/produtos/creme-de-pentear-encaracolando-a-juba-500-ml/"
+    },
+    "preco": {
+      "min": 46.74,
+      "max": 67.8,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-09"
+    },
+    "destaques": [
+      {
+        "rotulo": "Curvaturas indicadas",
+        "valor": "3A, 3B e 3C",
+        "fonteId": "widi-encaracolando-juba"
+      },
+      {
+        "rotulo": "Tamanho",
+        "valor": "500 ml",
+        "fonteId": "widi-loja-encaracolando-juba"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Manteiga de murumuru, óleo de linhaça e extrato de avelã",
+        "fonteId": "widi-encaracolando-juba"
+      },
+      {
+        "rotulo": "Modo de uso",
+        "valor": "Aplicar nos fios úmidos, em mechas finas, e amassar de baixo para cima",
+        "fonteId": "widi-encaracolando-juba"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/16aMaW5",
+      "atualizadoEm": "2026-08-10"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A comparação usa a ficha técnica atual e o modo de uso da marca. Peso, rendimento e duração ainda dependem de teste no cabelo."
+    },
+    "fontes": [
+      {
+        "id": "widi-encaracolando-juba",
+        "titulo": "Encaracolando a Juba, ficha técnica Widi Care",
+        "url": "https://widicare.com.br/produto/juba-encaracolando-a-juba/",
+        "acessadoEm": "2026-08-09"
+      },
+      {
+        "id": "widi-loja-encaracolando-juba",
+        "titulo": "Encaracolando a Juba 500 ml, loja Widi Care",
+        "url": "https://lojawidicare.com.br/produtos/creme-de-pentear-encaracolando-a-juba-500-ml/",
+        "acessadoEm": "2026-08-09"
+      },
+      {
+        "id": "mercado-livre-widi-encaracolando-juba",
+        "titulo": "Encaracolando a Juba Creme de Pentear 500 ml no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/encaracolando-a-juba-creme-de-pentear-widi-care-500ml/p/MLB49578315",
+        "acessadoEm": "2026-08-09"
+      }
+    ]
+  },
+  {
+    "id": "soul-power-curly-styling-cream-500ml",
+    "nome": "Curly Styling Cream 500 ml",
+    "descricao": "Creme de pentear modelador que a Soul Power direciona aos cachos 3A, 3B e 3C, com aplicação mecha a mecha.",
+    "marca": "Soul Power",
+    "categoria": "creme_para_pentear",
+    "publicado": true,
+    "verificadoEm": "2026-08-09",
+    "perfil": {
+      "curvaturas": ["3A", "3B", "3C"],
+      "textura": "Creme modelador",
+      "intensidade": "Modelagem de cachos segundo a marca",
+      "objetivos": ["Definição", "Desembaraço", "Maciez"]
+    },
+    "imagem": {
+      "src": "https://soulpowerbrasil.com.br/wp-content/uploads/2024/09/7c5d3b20c58ab56835c7b6d1a14deeec-1.png",
+      "alt": "Frasco do creme de pentear Soul Power Curly Styling Cream 500 ml",
+      "credito": "Soul Power",
+      "fonteUrl": "https://soulpower.com.br/produtos/creme-para-pentear-modelador-de-cachos-curly-styling-cream-soul-power/"
+    },
+    "preco": {
+      "min": 35.6,
+      "max": 49.9,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-09"
+    },
+    "destaques": [
+      {
+        "rotulo": "Curvaturas indicadas",
+        "valor": "3A, 3B e 3C",
+        "fonteId": "soul-power-curly-styling"
+      },
+      {
+        "rotulo": "Tamanho comparado",
+        "valor": "500 ml",
+        "fonteId": "soul-power-curly-styling"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Colágeno vegetal, manteiga de karité e óleo de oliva",
+        "fonteId": "soul-power-curly-styling"
+      },
+      {
+        "rotulo": "pH informado",
+        "valor": "4,0 a 5,0",
+        "fonteId": "soul-power-curly-styling"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/2xFxqj4",
+      "atualizadoEm": "2026-08-10"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A posição considera a indicação 3A a 3C e a ficha atual da fabricante. Não houve teste comparativo de fixação ou peso."
+    },
+    "fontes": [
+      {
+        "id": "soul-power-curly-styling",
+        "titulo": "Curly Styling Cream, ficha técnica Soul Power",
+        "url": "https://soulpower.com.br/produtos/creme-para-pentear-modelador-de-cachos-curly-styling-cream-soul-power/",
+        "acessadoEm": "2026-08-09"
+      },
+      {
+        "id": "mercado-livre-soul-power-curly-styling",
+        "titulo": "Curly Styling Cream Soul Power 500 ml no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/modelador-de-cachos-soul-power-curly-styling-cream-de-500ml-500g/p/MLB19514238",
+        "acessadoEm": "2026-08-09"
+      }
+    ]
   },
   {
     "id": "soul-power-curly-on-cream",
-    "nome": "Curly On Cream",
+    "nome": "Curly On Cream 500 ml",
+    "descricao": "Creme de pentear ativador que a Soul Power direciona aos fios 4A, 4B e 4C, com foco em definição e hidratação.",
     "marca": "Soul Power",
     "categoria": "creme_para_pentear",
-    "publicado": false,
-    "status": "Aguardando conferência da indicação e da textura"
+    "publicado": true,
+    "verificadoEm": "2026-08-09",
+    "perfil": {
+      "curvaturas": ["4A", "4B", "4C"],
+      "textura": "Creme ativador",
+      "intensidade": "Definição e hidratação para crespos segundo a marca",
+      "objetivos": ["Definição", "Hidratação", "Desembaraço"]
+    },
+    "imagem": {
+      "src": "https://soulpowerbrasil.com.br/wp-content/uploads/2024/09/dca39de1bbf51e52385207a48ce2f563-1.png",
+      "alt": "Frasco do creme de pentear Soul Power Curly On Cream 500 ml",
+      "credito": "Soul Power",
+      "fonteUrl": "https://soulpower.com.br/produtos/creme-para-pentear-ativador-de-cachos-curly-on-cream-soul-power/"
+    },
+    "preco": {
+      "min": 33.11,
+      "max": 43.9,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-09"
+    },
+    "destaques": [
+      {
+        "rotulo": "Curvaturas indicadas",
+        "valor": "4A, 4B e 4C",
+        "fonteId": "soul-power-curly-on"
+      },
+      {
+        "rotulo": "Tamanho comparado",
+        "valor": "500 ml",
+        "fonteId": "soul-power-curly-on"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Colágeno vegetal, manteiga de karité e óleo de abacate",
+        "fonteId": "soul-power-curly-on"
+      },
+      {
+        "rotulo": "pH informado",
+        "valor": "4,0 a 5,0",
+        "fonteId": "soul-power-curly-on"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/1ZJn6vD",
+      "atualizadoEm": "2026-08-10"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A indicação para fios 4A a 4C vem da fabricante. A comparação não mede rendimento, rigidez ou duração no cabelo."
+    },
+    "fontes": [
+      {
+        "id": "soul-power-curly-on",
+        "titulo": "Curly On Cream, ficha técnica Soul Power",
+        "url": "https://soulpower.com.br/produtos/creme-para-pentear-ativador-de-cachos-curly-on-cream-soul-power/",
+        "acessadoEm": "2026-08-09"
+      },
+      {
+        "id": "mercado-livre-soul-power-curly-on",
+        "titulo": "Curly On Cream Soul Power 500 ml no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/creme-para-pentear-curly-on-cream-soul-power-ativa-os-cachos-da-brilho-e-define-500ml/p/MLB19514961",
+        "acessadoEm": "2026-08-10"
+      }
+    ]
   },
   {
     "id": "apse-cachos-creme-pentear",
@@ -528,11 +749,149 @@
   },
   {
     "id": "inoar-meu-cacho-meu-crush",
-    "nome": "Meu Cacho, Meu Crush",
+    "nome": "Meu Cacho, Meu Crush Creme de Pentear 500 ml",
+    "descricao": "Creme de pentear da linha Meu Cacho, Meu Crush, apresentada pela Inoar para cabelos ondulados, cacheados, crespos e afros.",
     "marca": "Inoar",
     "categoria": "creme_para_pentear",
-    "publicado": false,
-    "status": "Aguardando conferência da indicação oficial"
+    "publicado": true,
+    "verificadoEm": "2026-08-09",
+    "perfil": {
+      "curvaturas": ["Ondulados", "Cacheados", "Crespos", "Afros"],
+      "textura": "Creme de pentear",
+      "intensidade": "Finalização de uso cotidiano segundo a marca",
+      "objetivos": ["Definição", "Hidratação", "Maleabilidade"]
+    },
+    "imagem": {
+      "src": "https://inoar.com/wp-content/uploads/2018/08/Inoar_MeuCachoMeuCrush_cremedepentear_500ml_FRONT.png",
+      "alt": "Frasco do creme de pentear Inoar Meu Cacho, Meu Crush 500 ml",
+      "credito": "Inoar",
+      "fonteUrl": "https://inoar.com/produto/meu-cacho-meu-crush/"
+    },
+    "preco": {
+      "min": 28.98,
+      "max": 39.99,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-09"
+    },
+    "destaques": [
+      {
+        "rotulo": "Indicação da linha",
+        "valor": "Ondulados, cacheados, crespos e afros",
+        "fonteId": "inoar-meu-cacho-meu-crush"
+      },
+      {
+        "rotulo": "Tamanho",
+        "valor": "500 ml",
+        "fonteId": "inoar-meu-cacho-meu-crush"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Colágeno vegetal, vitamina E, extrato de jasmim e óleo de amaranto",
+        "fonteId": "inoar-meu-cacho-meu-crush"
+      },
+      {
+        "rotulo": "pH informado",
+        "valor": "3,0 a 4,0",
+        "fonteId": "inoar-meu-cacho-meu-crush"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/2x3jiSP",
+      "atualizadoEm": "2026-08-10"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A indicação ampla e os ativos foram conferidos na página atual da marca. Ainda não comparamos peso, espalhabilidade ou duração em uso real."
+    },
+    "fontes": [
+      {
+        "id": "inoar-meu-cacho-meu-crush",
+        "titulo": "Meu Cacho, Meu Crush, ficha da linha Inoar",
+        "url": "https://inoar.com/produto/meu-cacho-meu-crush/",
+        "acessadoEm": "2026-08-09"
+      },
+      {
+        "id": "mercado-livre-inoar-meu-cacho-meu-crush",
+        "titulo": "Meu Cacho, Meu Crush Creme de Pentear 500 ml no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/creme-de-pentear-meu-cacho-meu-crush-500ml-inoar/p/MLB24529676",
+        "acessadoEm": "2026-08-09"
+      }
+    ]
+  },
+  {
+    "id": "salon-line-definicao-natural-creme-pentear-1kg",
+    "nome": "Definição Natural Creme para Pentear 1 kg",
+    "descricao": "Creme para pentear da Salon Line com proposta de definição leve, movimento e uso sem enxágue em ondas e cachos.",
+    "marca": "Salon Line",
+    "categoria": "creme_para_pentear",
+    "publicado": true,
+    "verificadoEm": "2026-08-09",
+    "perfil": {
+      "curvaturas": ["Ondulados", "Cacheados"],
+      "textura": "Creme leve segundo a marca",
+      "intensidade": "Definição com movimento",
+      "objetivos": ["Definição", "Movimento", "Desembaraço"]
+    },
+    "imagem": {
+      "src": "https://universo.salonline.com.br/wp-content/uploads/2025/07/creme-para-pentear-definicao-natural.jpg",
+      "alt": "Pote do creme para pentear Salon Line Definição Natural 1 kg",
+      "credito": "Salon Line",
+      "fonteUrl": "https://universo.salonline.com.br/creme-para-pentear-definicao-natural-definicao-com-efeito-durinho/"
+    },
+    "preco": {
+      "min": 35.15,
+      "max": 38,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-09"
+    },
+    "destaques": [
+      {
+        "rotulo": "Indicação editorial",
+        "valor": "Ondas e cachos que pedem definição com movimento",
+        "fonteId": "salon-line-definicao-natural"
+      },
+      {
+        "rotulo": "Tamanho",
+        "valor": "1 kg",
+        "fonteId": "mercado-livre-salon-definicao-natural"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Água de coco, colágeno vegetal e extrato de hibisco",
+        "fonteId": "salon-line-definicao-natural"
+      },
+      {
+        "rotulo": "Modo de uso",
+        "valor": "Aplicar nos fios limpos e úmidos, desembaraçar e amassar de baixo para cima",
+        "fonteId": "salon-line-definicao-natural"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/2fMcfWh",
+      "atualizadoEm": "2026-08-10"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A textura leve e o acabamento são alegações da marca. O ranking não mede fixação, duração ou peso em uso real."
+    },
+    "fontes": [
+      {
+        "id": "salon-line-definicao-natural",
+        "titulo": "Creme para Pentear Definição Natural, conteúdo oficial Salon Line",
+        "url": "https://universo.salonline.com.br/creme-para-pentear-definicao-natural-definicao-com-efeito-durinho/",
+        "acessadoEm": "2026-08-09"
+      },
+      {
+        "id": "mercado-livre-salon-definicao-natural",
+        "titulo": "Creme para Pentear Definição Natural Salon Line 1 kg no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/creme-para-pentear-definico-natural-salon-line-cachos-1kg/p/MLB22687740",
+        "acessadoEm": "2026-08-09"
+      }
+    ]
   },
   {
     "id": "arvensis-cachos-naturais-ativador",

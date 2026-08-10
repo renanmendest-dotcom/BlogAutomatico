@@ -38,6 +38,15 @@ nova implantação ou correções necessárias ao objetivo já aprovado.
   mecânica. As regras de volume, formato e imagem estão em
   `.github/INSTRUCOES-IA.md`.
 
+## Acesso ao Mercado Livre
+
+- O portal de afiliados do Mercado Livre deve ser operado exclusivamente no
+  Chrome do proprietário, já autenticado pela extensão do Codex.
+- Nunca usar o navegador interno do Codex para pesquisar ofertas, abrir a conta
+  de afiliado ou gerar links `meli.la`.
+- Se o Chrome não estiver aberto, conectado ou autenticado, interromper apenas
+  essa etapa e pedir ao proprietário que deixe o navegador pronto.
+
 ## Linguagem pública e produtos
 
 - Nunca expor no site pedidos do proprietário, regras internas, decisões de

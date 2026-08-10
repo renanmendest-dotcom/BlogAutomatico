@@ -19,20 +19,20 @@ o que mudou.
 
 ---
 
-## Estado atual em 8 de agosto de 2026
+## Estado atual em 10 de agosto de 2026
 
 | | |
 |---|---|
 | Endereço | `https://www.curvaviva.com.br` (o sem `www` redireciona para o `www`) |
 | Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde |
-| Artigos publicados | 7 |
-| Artigos na fila privada | 24 |
-| Produtos | 7 |
+| Artigos publicados | 8 |
+| Artigos na fila privada | 23 |
+| Produtos públicos | 12 (16 cadastros no total) |
 | Hospedagem | Vercel, publicação automática a partir da `main` |
 | Design | Claude Code |
 | Conteúdo | Codex |
 
-**O gargalo hoje é volume de conteúdo.** 7 artigos contra centenas dos
+**O gargalo hoje é volume de conteúdo.** 8 artigos contra centenas dos
 concorrentes. Nenhum ajuste técnico compensa isso.
 
 ---
@@ -56,16 +56,20 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 - **Newsletter não é prioridade agora.**
 - **Rastreadores de IA são liberados de propósito** no `robots.txt`. Um dos
   objetivos é ser citado como fonte por ChatGPT, Claude, Perplexity e Gemini.
+- **Mercado Livre só pelo Chrome do proprietário.** Pesquisa de oferta, acesso
+  à conta de afiliado e geração de link `meli.la` usam exclusivamente o Chrome
+  já autenticado. O navegador interno do Codex não deve acessar essa conta.
 
 ---
 
 ## O que está em aberto
 
-- **Nenhum artigo em formato ranking foi publicado.** O suporte existe no
-  código desde 7 de agosto, mas o formato ainda não foi usado. É a maior lacuna
-  de tráfego comercial.
-- **Nenhuma ficha de produto tem preço cadastrado.** O campo existe e funciona,
-  falta o Codex preencher.
+- **Só um artigo em formato ranking foi publicado.** O formato estreou em 10 de
+  agosto, mas os outros 11 rankings da fila ainda precisam ser promovidos para
+  reduzir a lacuna de tráfego comercial.
+- **Preço e oferta ainda não cobrem todos os produtos públicos.** 7 das 12
+  fichas públicas têm preço e 10 têm link de compra. Atualizar as demais quando
+  houver oferta exata conferida.
 - **Autor do site é uma entidade genérica** ("Curadoria Curva Viva"). O
   concorrente assina com pessoa real, foto e bio. Decisão pendente do
   proprietário.
@@ -87,6 +91,19 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 10 de agosto de 2026 — Codex — Primeiro ranking publicado
+
+Promovido da fila o artigo `melhores-cremes-de-pentear-para-cabelo-cacheado`,
+com sete recomendações, quatro ilustrações próprias, tabela de preço por 100 g
+ou ml e cinco perguntas frequentes. Cinco produtos foram completados e os links
+`meli.la` foram gerados e validados na conta de afiliado pelo Chrome autenticado
+do proprietário. O projeto passou a ter 8 artigos e 12 produtos públicos.
+
+As duas revisões editoriais, `pnpm validar`, `pnpm check`, `pnpm build` e a
+revisão visual em desktop e celular passaram. A fila foi marcada com a data real
+e ficou registrada como regra permanente a proibição de acessar a conta do
+Mercado Livre pelo navegador interno do Codex.
 
 ### 8 de agosto de 2026 — Codex — Depósito editorial de quatro semanas
 

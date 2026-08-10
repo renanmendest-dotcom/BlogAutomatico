@@ -1,5 +1,6 @@
 ---
-status_fila: rascunho_editorial_completo
+status_fila: publicado
+publicado_em: 2026-08-10
 ordem: 1
 modelo_artigo: ranking
 titulo: "Melhores cremes de pentear para cabelo cacheado: 7 opções para comparar"

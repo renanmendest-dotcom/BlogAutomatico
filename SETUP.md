@@ -23,8 +23,9 @@
 
 - O notebook ligado, conectado à internet e desbloqueado.
 - O aplicativo do Codex aberto.
-- O Chrome aberto e conectado ao Mercado Livre quando for necessário gerar um
-  novo link de compra.
+- O Chrome aberto e conectado ao Mercado Livre quando for necessário pesquisar
+  uma oferta ou gerar um novo link de compra. O portal de afiliados deve ser
+  operado somente nesse Chrome; o navegador interno do Codex não deve ser usado.
 
 ## Endereço do site
 

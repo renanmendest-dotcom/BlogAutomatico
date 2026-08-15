@@ -101,6 +101,19 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 15 de agosto de 2026 — Codex — Perfil oficial no Pinterest configurado
+
+Configurado o perfil `@curvavivaoficial` com a logo do projeto, nome voltado à
+busca, descrição da marca e link para `www.curvaviva.com.br`. O domínio foi
+reivindicado no Pinterest por meio de `public/pinterest-0eef9.html`, publicado
+na Vercel e confirmado pela plataforma, para vincular os Pins futuros ao site
+oficial.
+
+Foram criadas cinco pastas públicas, cada uma com descrição própria: cabelo
+ondulado, cabelo cacheado, cabelo crespo, finalização e day after, e produtos
+para cabelos com curvatura. Nenhum Pin de terceiros foi salvo ou publicado; a
+estrutura ficou pronta para receber apenas conteúdo editorial da Curva Viva.
+
 ### 15 de agosto de 2026 — Codex — Ranking de cremes para ondulados publicado
 
 Promovido da fila o artigo `melhores-cremes-para-cabelo-ondulado-sem-pesar`,

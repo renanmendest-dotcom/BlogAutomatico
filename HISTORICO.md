@@ -101,6 +101,18 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 15 de agosto de 2026 — Codex — Bloqueio do domínio no Pinterest explicado
+
+- `curvaviva.com.br`, `www.curvaviva.com.br` e o artigo usado nos Pins
+  responderam normalmente por HTTPS. O redirecionamento para `www` e o
+  `robots.txt` também estão corretos.
+- Reivindicar o domínio comprova ao Pinterest quem é o proprietário, mas não
+  aprova o endereço no filtro independente de links suspeitos. O bloqueio é um
+  provável falso positivo de reputação do domínio novo, não um problema na
+  compra, no DNS ou no site.
+- A contestação enviada ao suporte continua sendo o caminho correto. Até a
+  revisão, os Pins usam provisoriamente o perfil oficial como destino.
+
 ### 15 de agosto de 2026 — Codex — Carrossel republicado com CTA
 
 - O cartão final foi reorganizado com a logo redonda da Curva Viva centralizada

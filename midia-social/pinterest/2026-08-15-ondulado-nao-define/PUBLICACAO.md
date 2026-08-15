@@ -21,15 +21,22 @@
 - IA: conteúdo modificado por IA e pessoa gerada por IA marcados na plataforma
 - Acessibilidade: texto alternativo descrevendo os três ajustes
 
-## CTA preparado depois da publicação
+## Carrossel republicado com CTA
 
-O cartão `pin-05-cta.png` foi criado após a publicação do carrossel. Ele usa a
-logo Curva Viva, convida a seguir `@curvavivaoficial` para acompanhar o tema e
-apresenta `www.curvaviva.com.br` como destino dos conteúdos completos.
+- Publicado em: 15 de agosto de 2026
+- Pin: https://br.pinterest.com/pin/1146236542701342527/
+- Formato: carrossel orgânico com cinco imagens
+- Artes: `pin-01.png`, `pin-02.png`, `pin-03.png`, `pin-04.png` e
+  `pin-05-cta.png`
+- Pasta: `Cabelo ondulado: leveza e definição`
+- IA: conteúdo modificado por IA e pessoa gerada por IA marcados na plataforma
+- Acessibilidade: texto alternativo descrevendo os quatro cartões educativos e
+  o CTA final
 
-Esse cartão não foi incluído em uma nova republicação para evitar uma terceira
-cópia da mesma pauta. Ele é a primeira aplicação do modelo obrigatório para os
-próximos Pins com múltiplas imagens.
+O cartão final usa a logo redonda Curva Viva centralizada, convida a seguir
+`@curvavivaoficial` e apresenta `www.curvaviva.com.br` como destino dos
+conteúdos completos. A página pública confirmou as cinco imagens na ordem
+correta.
 
 ## Título
 
@@ -67,6 +74,6 @@ orgânica. O fluxo não exibiu aceite contratual separado. A plataforma ofereceu
 patrocínio somente depois de salvar o Pin; a oferta não foi acionada. Nenhuma
 campanha, impulsionamento, forma de pagamento, orçamento ou cobrança foi criada.
 
-O Pin original de imagem única foi preservado. O carrossel também aponta
-provisoriamente para o perfil oficial até a análise do suporte liberar o
-domínio.
+O Pin original de imagem única e o primeiro carrossel de quatro imagens foram
+preservados. O carrossel de cinco imagens também aponta provisoriamente para o
+perfil oficial até a análise do suporte liberar o domínio.

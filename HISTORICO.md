@@ -101,6 +101,19 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 15 de agosto de 2026 — Codex — Carrossel republicado com CTA
+
+- O cartão final foi reorganizado com a logo redonda da Curva Viva centralizada
+  no topo, título e texto centralizados e bloco de CTA equilibrado para leitura
+  no celular.
+- O Pin foi republicado com cinco imagens: quatro cartões educativos e o CTA
+  final. A página pública confirmou as cinco posições, a pasta correta, as
+  marcações de IA e o texto alternativo.
+- Novo Pin: `https://br.pinterest.com/pin/1146236542701342527/`.
+- O clique continua apontando provisoriamente para o perfil oficial porque o
+  Pinterest ainda bloqueia `curvaviva.com.br`. Nenhum patrocínio, campanha ou
+  cobrança foi criado.
+
 ### 15 de agosto de 2026 — Codex — CTA final obrigatório no Pinterest
 
 - Todo futuro Pin com múltiplas imagens terminará com um cartão de marca que

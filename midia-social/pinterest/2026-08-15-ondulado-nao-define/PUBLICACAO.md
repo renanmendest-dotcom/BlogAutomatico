@@ -26,11 +26,24 @@ que podem desmontar a definição no Curva Viva.
 ## Destino
 
 O Pinterest bloqueou o domínio novo `curvaviva.com.br` como possível spam na
-primeira tentativa, mesmo após a reivindicação do site. A publicação usou o
-endereço público anterior da Vercel para o mesmo artigo. O Pinterest acrescentou
-automaticamente `utm_source=Pinterest&utm_medium=organic`.
+primeira tentativa, mesmo após a reivindicação do site. O endereço anterior da
+Vercel chegou a ser usado, mas foi removido em 15 de agosto de 2026 por expor a
+marca técnica `blog-automatico` e prejudicar a credibilidade. O botão aponta
+provisoriamente para o perfil oficial
+`https://br.pinterest.com/curvavivaoficial/`.
+
+O bloqueio foi reproduzido com a página inicial e com a URL do artigo, com e sem
+`www`. Uma contestação foi enviada pelo formulário oficial do Pinterest na
+categoria `O Pinterest bloqueou meu site` e está aguardando análise. A captura
+`evidencia-bloqueio-dominio.png` preserva a tentativa de edição com o domínio
+oficial.
+
+Assim que o domínio for liberado, o destino correto será:
+`https://www.curvaviva.com.br/artigos/cabelo-ondulado-nao-define-erros/`.
 
 O carrossel orgânico exigiu acesso ao Gerenciador de Anúncios e aceitação do
 Contrato de Publicidade. A conta de anunciante `Curva Viva` foi criada para o
-Brasil, em real brasileiro, mas o contrato não foi aceito. Nenhuma campanha,
-orçamento ou cobrança foi criada.
+Brasil, em real brasileiro, mas o contrato não foi aceito pelo Codex em nome do
+proprietário. Nenhuma campanha, orçamento ou cobrança foi criada. As quatro
+artes estão prontas para o carrossel após o aceite do proprietário e o
+desbloqueio do domínio.

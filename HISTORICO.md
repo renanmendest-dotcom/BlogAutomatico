@@ -101,6 +101,22 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 15 de agosto de 2026 — Codex — Destino do primeiro Pin corrigido
+
+- O primeiro Pin saiu com uma imagem única porque o carrossel só ficou
+  disponível pelo Gerenciador de Anúncios/Editor em Massa, cujo uso exige
+  aceitar os termos de publicidade do Pinterest. O Codex não aceitou esse
+  contrato em nome do proprietário.
+- O endereço técnico da Vercel foi removido do Pin por prejudicar a percepção
+  da marca. Enquanto o domínio oficial não é liberado, o botão aponta
+  provisoriamente para `https://br.pinterest.com/curvavivaoficial/`.
+- O Pinterest bloqueou inclusive a página inicial de `curvaviva.com.br` como
+  possível spam, apesar de o domínio estar reivindicado pela conta. Uma
+  contestação foi enviada pelo formulário oficial "O Pinterest bloqueou meu
+  site" e aguarda análise.
+- Nenhuma campanha, orçamento ou cobrança foi criada. O carrossel ficará para
+  depois do aceite dos termos pelo proprietário e do desbloqueio do domínio.
+
 ### 15 de agosto de 2026 — Codex — Primeiro Pin publicado
 
 Publicado o primeiro Pin da Curva Viva sobre ondas que perdem definição ao

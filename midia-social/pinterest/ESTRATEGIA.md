@@ -18,6 +18,9 @@ clara para abrir o guia completo.
   comentários.
 - Adicionar um link para o artigo correspondente. Link de afiliado só entra
   quando a intenção principal for escolher ou comprar o produto.
+- Nunca publicar um endereço técnico da Vercel ou outro domínio que não seja o
+  oficial. Se `curvaviva.com.br` estiver bloqueado, manter o Pin em rascunho,
+  contestar o bloqueio e aguardar a liberação.
 - Marcar corretamente conteúdo criado ou modificado por IA na plataforma.
 - Não aceitar contratos, iniciar campanhas pagas ou definir orçamento sem uma
   autorização específica do proprietário.
@@ -37,4 +40,3 @@ clara para abrir o guia completo.
 2. Salvamentos.
 3. Taxa de engajamento e comentários.
 4. Impressões e alcance.
-

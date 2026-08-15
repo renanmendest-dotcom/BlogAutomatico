@@ -19,11 +19,14 @@ clara para abrir o guia completo.
 - Adicionar um link para o artigo correspondente. Link de afiliado só entra
   quando a intenção principal for escolher ou comprar o produto.
 - Nunca publicar um endereço técnico da Vercel ou outro domínio que não seja o
-  oficial. Se `curvaviva.com.br` estiver bloqueado, manter o Pin em rascunho,
-  contestar o bloqueio e aguardar a liberação.
+  oficial. Se `curvaviva.com.br` estiver bloqueado, manter o Pin em rascunho e
+  contestar o bloqueio. Usar o perfil oficial como destino provisório somente
+  quando o proprietário pedir expressamente que a publicação prossiga.
 - Marcar corretamente conteúdo criado ou modificado por IA na plataforma.
-- Não aceitar contratos, iniciar campanhas pagas ou definir orçamento sem uma
-  autorização específica do proprietário.
+- O proprietário autorizou aceitar termos necessários às publicações orgânicas
+  no Pinterest. Nunca iniciar campanha, patrocínio, impulsionamento, orçamento,
+  cobrança, cadastro de pagamento ou outra ação com custo sem nova autorização
+  específica.
 
 ## Formatos
 

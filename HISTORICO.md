@@ -101,6 +101,21 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 15 de agosto de 2026 — Codex — Primeiro carrossel publicado
+
+- Publicado um novo Pin em carrossel com os quatro cartões já preparados sobre
+  ondas que somem quando secam. A página pública confirmou as quatro imagens,
+  a pasta correta e as marcações de conteúdo e pessoa gerados por IA.
+- O proprietário autorizou o Codex a aceitar termos necessários às publicações
+  orgânicas no Pinterest. A autorização não inclui campanha, impulsionamento,
+  orçamento, cobrança, forma de pagamento ou qualquer ação que gere gasto.
+- O fluxo do criador de Pins para anúncio não exibiu aceite contratual separado
+  e publicou organicamente sem custo. A oferta de patrocínio apareceu apenas
+  depois da publicação e não foi acionada.
+- O domínio `curvaviva.com.br` continua bloqueado pela política de conteúdo do
+  Pinterest. O carrossel aponta provisoriamente para o perfil oficial e será
+  editado para o artigo quando o suporte liberar o domínio.
+
 ### 15 de agosto de 2026 — Codex — Destino do primeiro Pin corrigido
 
 - O primeiro Pin saiu com uma imagem única porque o carrossel só ficou

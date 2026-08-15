@@ -1,5 +1,6 @@
 ---
-status_fila: rascunho_editorial_completo
+status_fila: publicado
+publicado_em: 2026-08-15
 ordem: 4
 modelo_artigo: ranking
 titulo: "Melhores cremes para cabelo ondulado sem pesar: 7 candidatos leves"

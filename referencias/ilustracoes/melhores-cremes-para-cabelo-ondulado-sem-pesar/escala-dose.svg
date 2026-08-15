@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F8F3EC"/>
+  <text x="800" y="105" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#47283F">A dose mais útil é uma dose de teste</text>
+  <text x="800" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#2B2027">Não existe medida universal para todo cabelo ondulado.</text>
+  <g transform="translate(80 230)">
+    <rect width="430" height="500" rx="38" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="5"/>
+    <circle cx="215" cy="170" r="44" fill="#C2564C"/>
+    <circle cx="215" cy="170" r="18" fill="#F8F3EC"/>
+    <text x="215" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#47283F">1. Comece pequena</text>
+    <text x="215" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Espalhe a primeira porção</text>
+    <text x="215" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">entre as duas mãos.</text>
+    <text x="215" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#6B3D5E">Pouco e uniforme</text>
+  </g>
+  <g transform="translate(585 230)">
+    <rect width="430" height="500" rx="38" fill="#F0D2CB" stroke="#C2564C" stroke-width="5"/>
+    <path d="M86 173 C135 105 180 245 225 173 S315 105 354 173" fill="none" stroke="#6B3D5E" stroke-width="18" stroke-linecap="round"/>
+    <text x="215" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#47283F">2. Distribua</text>
+    <text x="215" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Comprimento e pontas</text>
+    <text x="215" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">antes de chegar à raiz.</text>
+    <text x="215" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#6B3D5E">Sem bolsões de creme</text>
+  </g>
+  <g transform="translate(1090 230)">
+    <rect width="430" height="500" rx="38" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="5"/>
+    <path d="M90 180 C130 120 170 240 210 180 S290 120 340 180" fill="none" stroke="#C2564C" stroke-width="14" stroke-linecap="round"/>
+    <path d="M90 205 C130 145 170 265 210 205 S290 145 340 205" fill="none" stroke="#47283F" stroke-width="6" stroke-linecap="round"/>
+    <text x="215" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#47283F">3. Avalie seco</text>
+    <text x="215" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Movimento, raiz, toque</text>
+    <text x="215" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">e tempo de secagem.</text>
+    <text x="215" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#6B3D5E">Só então ajuste</text>
+  </g>
+  <rect x="210" y="778" width="1180" height="70" rx="35" fill="#47283F"/>
+  <text x="800" y="823" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#F8F3EC">Se pesou, reduza a dose antes de trocar o pote.</text>
+</svg>

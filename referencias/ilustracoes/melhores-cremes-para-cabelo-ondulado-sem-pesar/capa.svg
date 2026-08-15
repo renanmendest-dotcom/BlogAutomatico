@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F8F3EC"/>
+  <rect x="60" y="54" width="1480" height="792" rx="44" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="6"/>
+  <text x="112" y="142" font-family="Georgia, serif" font-size="68" font-weight="700" fill="#47283F">Creme para ondulado</text>
+  <text x="112" y="214" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#C2564C">3 escolhas sem promessa de milagre</text>
+  <text x="112" y="270" font-family="Arial, sans-serif" font-size="29" fill="#2B2027">Compare dose, fixação e movimento antes de comprar.</text>
+  <image href="assets/ondulada-avatar.png" x="125" y="360" width="350" height="350" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="510" y="330" width="310" height="420" rx="30" fill="#F8F3EC" stroke="#6B3D5E" stroke-width="4"/>
+  <rect x="546" y="355" width="238" height="300" rx="20" fill="#EFE5D9"/>
+  <image href="assets/widi-ondulando.png" x="577" y="380" width="176" height="250" preserveAspectRatio="xMidYMid meet"/>
+  <text x="665" y="695" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#47283F">Melhor geral</text>
+  <text x="665" y="728" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2B2027">Widi Care 500 ml</text>
+  <rect x="850" y="330" width="310" height="420" rx="30" fill="#F8F3EC" stroke="#C2564C" stroke-width="4"/>
+  <image href="assets/salon-line-definicao-natural.jpg" x="900" y="380" width="210" height="210" preserveAspectRatio="xMidYMid slice"/>
+  <text x="1005" y="670" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#47283F">Melhor custo por volume</text>
+  <text x="1005" y="708" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2B2027">Salon Line 1 kg</text>
+  <rect x="1190" y="330" width="310" height="420" rx="30" fill="#F8F3EC" stroke="#6B3D5E" stroke-width="4"/>
+  <image href="assets/inoar-creme-500ml.png" x="1260" y="380" width="170" height="245" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1345" y="695" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#47283F">Mais versátil</text>
+  <text x="1345" y="728" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2B2027">Inoar 500 ml</text>
+  <rect x="520" y="780" width="960" height="42" rx="21" fill="#47283F"/>
+  <text x="1000" y="809" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#F8F3EC">A embalagem orienta. O cabelo seco confirma.</text>
+</svg>

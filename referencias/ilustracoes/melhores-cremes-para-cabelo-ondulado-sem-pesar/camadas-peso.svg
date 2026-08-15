@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F8F3EC"/>
+  <text x="800" y="105" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#47283F">O peso pode estar na soma das camadas</text>
+  <text x="800" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#2B2027">Antes de culpar o creme, conte tudo que ficou no fio.</text>
+  <g transform="translate(110 255)">
+    <rect width="880" height="110" rx="28" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="4"/>
+    <text x="48" y="48" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">CAMADA 1</text>
+    <text x="48" y="84" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Condicionador mal enxaguado</text>
+    <circle cx="810" cy="55" r="28" fill="#C2564C"/>
+  </g>
+  <g transform="translate(170 390)">
+    <rect width="880" height="110" rx="28" fill="#F0D2CB" stroke="#C2564C" stroke-width="4"/>
+    <text x="48" y="48" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">CAMADA 2</text>
+    <text x="48" y="84" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Creme de pentear em dose alta</text>
+    <circle cx="810" cy="55" r="38" fill="#C2564C"/>
+  </g>
+  <g transform="translate(230 525)">
+    <rect width="880" height="110" rx="28" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="4"/>
+    <text x="48" y="48" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">CAMADA 3</text>
+    <text x="48" y="84" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Gelatina, mousse ou óleo por cima</text>
+    <circle cx="810" cy="55" r="48" fill="#C2564C"/>
+  </g>
+  <path d="M1180 300 C1410 300 1410 590 1180 590" fill="none" stroke="#47283F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1190 278 l-34 22 34 22 M1190 568 l-34 22 34 22" fill="none" stroke="#47283F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1330" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#C2564C">RAIZ BAIXA?</text>
+  <text x="1330" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Retire uma camada</text>
+  <text x="1330" y="486" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">ou corte a dose.</text>
+  <rect x="220" y="735" width="1160" height="80" rx="40" fill="#47283F"/>
+  <text x="800" y="786" text-anchor="middle" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#F8F3EC">Mude uma coisa por lavagem. Assim você descobre a causa.</text>
+</svg>

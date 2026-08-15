@@ -19,20 +19,20 @@ o que mudou.
 
 ---
 
-## Estado atual em 10 de agosto de 2026
+## Estado atual em 15 de agosto de 2026
 
 | | |
 |---|---|
 | Endereço | `https://www.curvaviva.com.br` (o sem `www` redireciona para o `www`) |
 | Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde |
-| Artigos publicados | 10 |
-| Artigos na fila privada | 21 |
-| Produtos públicos | 13 (17 cadastros no total) |
+| Artigos publicados | 11 |
+| Artigos na fila privada | 20 |
+| Produtos públicos | 14 (18 cadastros no total) |
 | Hospedagem | Vercel, publicação automática a partir da `main` |
 | Design | Claude Code |
 | Conteúdo | Codex |
 
-**O gargalo hoje é volume de conteúdo.** 9 artigos contra centenas dos
+**O gargalo hoje é volume de conteúdo.** 11 artigos contra centenas dos
 concorrentes. Nenhum ajuste técnico compensa isso.
 
 ---
@@ -73,11 +73,11 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## O que está em aberto
 
-- **Só um artigo em formato ranking foi publicado.** O formato estreou em 10 de
-  agosto, mas os outros 11 rankings da fila ainda precisam ser promovidos para
+- **Dois artigos em formato ranking foram publicados.** O formato estreou em 10
+  de agosto, mas os outros 10 rankings da fila ainda precisam ser promovidos para
   reduzir a lacuna de tráfego comercial.
-- **Preço e oferta ainda não cobrem todos os produtos públicos.** 7 das 12
-  fichas públicas têm preço e 10 têm link de compra. Atualizar as demais quando
+- **Preço e oferta ainda não cobrem todos os produtos públicos.** 10 das 14
+  fichas públicas têm preço e 13 têm link de compra. Atualizar as demais quando
   houver oferta exata conferida.
 - **Autor do site é uma entidade genérica** ("Curadoria Curva Viva"). O
   concorrente assina com pessoa real, foto e bio. Decisão pendente do
@@ -100,6 +100,23 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 15 de agosto de 2026 — Codex — Ranking de cremes para ondulados publicado
+
+Promovido da fila o artigo `melhores-cremes-para-cabelo-ondulado-sem-pesar`,
+baseado em duas dúvidas brasileiras recentes e voltado à escolha de compra. O
+ranking compara Widi Care Ondulando a Juba 500 ml, Salon Line Definição Natural
+1 kg e Inoar Meu Cacho, Meu Crush 500 ml, com cinco perguntas frequentes,
+quatro imagens próprias e as embalagens reais hospedadas no projeto.
+
+Os três links de afiliado foram gerados ou reconfirmados no Chrome autenticado:
+`meli.la/2Rd12Aj`, `meli.la/2fMcfWh` e `meli.la/2x3jiSP`. A primeira revisão
+conferiu fontes oficiais, nomes, tamanhos, ofertas, imagens, links e limites das
+alegações. A segunda revisou título, intenção de busca, naturalidade, retenção,
+SEO e leitura no celular. `pnpm validar`, `pnpm check`, `pnpm build` e a revisão
+visual passaram; a checagem dedicada confirmou os botões, as imagens, a
+ausência de rolagem horizontal e as páginas do artigo e produto em 390 e 1.440
+px.
 
 ### 10 de agosto de 2026 — Codex — Comparativo de leave-in publicado
 

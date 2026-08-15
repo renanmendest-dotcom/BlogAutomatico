@@ -760,7 +760,7 @@
     "marca": "Inoar",
     "categoria": "creme_para_pentear",
     "publicado": true,
-    "verificadoEm": "2026-08-09",
+    "verificadoEm": "2026-08-15",
     "perfil": {
       "curvaturas": ["Ondulados", "Cacheados", "Crespos", "Afros"],
       "textura": "Creme de pentear",
@@ -768,16 +768,16 @@
       "objetivos": ["Definição", "Hidratação", "Maleabilidade"]
     },
     "imagem": {
-      "src": "https://inoar.com/wp-content/uploads/2018/08/Inoar_MeuCachoMeuCrush_cremedepentear_500ml_FRONT.png",
+      "src": "/produtos/inoar-meu-cacho-meu-crush-500ml.png",
       "alt": "Frasco do creme de pentear Inoar Meu Cacho, Meu Crush 500 ml",
       "credito": "Inoar",
       "fonteUrl": "https://inoar.com/produto/meu-cacho-meu-crush/"
     },
     "preco": {
-      "min": 28.98,
-      "max": 39.99,
+      "min": 27.9,
+      "max": 28.64,
       "moeda": "BRL",
-      "verificadoEm": "2026-08-09"
+      "verificadoEm": "2026-08-15"
     },
     "destaques": [
       {
@@ -804,19 +804,19 @@
     "oferta": {
       "loja": "Mercado Livre",
       "url": "https://meli.la/2x3jiSP",
-      "atualizadoEm": "2026-08-10"
+      "atualizadoEm": "2026-08-15"
     },
     "analise": {
       "tipo": "documental",
       "testado": false,
-      "nota": "A indicação ampla e os ativos foram conferidos na página atual da marca. Ainda não comparamos peso, espalhabilidade ou duração em uso real."
+      "nota": "A indicação ampla e os ativos vêm da fabricante. Peso, espalhabilidade e duração variam com a dose, a espessura dos fios e as demais etapas da rotina."
     },
     "fontes": [
       {
         "id": "inoar-meu-cacho-meu-crush",
         "titulo": "Meu Cacho, Meu Crush, ficha da linha Inoar",
         "url": "https://inoar.com/produto/meu-cacho-meu-crush/",
-        "acessadoEm": "2026-08-09"
+        "acessadoEm": "2026-08-15"
       },
       {
         "id": "mercado-livre-inoar-meu-cacho-meu-crush",
@@ -827,13 +827,86 @@
     ]
   },
   {
+    "id": "widi-care-ondulando-a-juba-500ml",
+    "nome": "Ondulando a Juba Creme de Pentear 500 ml",
+    "descricao": "Creme modelador que a Widi Care direciona às classificações comerciais de cabelos ondulados 2A, 2B e 2C, com aplicação em mechas e amassamento de baixo para cima.",
+    "marca": "Widi Care",
+    "categoria": "creme_para_pentear",
+    "publicado": true,
+    "verificadoEm": "2026-08-15",
+    "perfil": {
+      "curvaturas": ["Ondulado 2A", "Ondulado 2B", "Ondulado 2C"],
+      "textura": "Creme modelador",
+      "intensidade": "Modelagem de ondas segundo a marca",
+      "objetivos": ["Definição de ondas", "Condicionamento", "Brilho"]
+    },
+    "imagem": {
+      "src": "/produtos/widi-care-ondulando-a-juba-500ml.png",
+      "alt": "Frasco do Widi Care Ondulando a Juba Creme de Pentear 500 ml",
+      "credito": "Mercado Livre",
+      "fonteUrl": "https://www.mercadolivre.com.br/ondulando-a-juba-creme-de-pentear-widi-care-500ml/p/MLB19513005"
+    },
+    "preco": {
+      "min": 49.98,
+      "max": 49.98,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-15"
+    },
+    "destaques": [
+      {
+        "rotulo": "Indicação da marca",
+        "valor": "Cabelos ondulados classificados comercialmente como 2A, 2B e 2C",
+        "fonteId": "widi-ondulando-juba"
+      },
+      {
+        "rotulo": "Tamanho",
+        "valor": "500 ml",
+        "fonteId": "mercado-livre-widi-ondulando-juba"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Manteiga de murumuru, óleo de linhaça e extrato de avelã",
+        "fonteId": "widi-ondulando-juba"
+      },
+      {
+        "rotulo": "Modo de uso",
+        "valor": "Aplicar em mechas nos fios úmidos, formar fitas e amassar de baixo para cima",
+        "fonteId": "widi-ondulando-juba"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/2Rd12Aj",
+      "atualizadoEm": "2026-08-15"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "A indicação e o modo de uso vêm da fabricante. Peso, rendimento e duração variam com a dose, a espessura dos fios e as outras camadas da rotina."
+    },
+    "fontes": [
+      {
+        "id": "widi-ondulando-juba",
+        "titulo": "Ondulando a Juba Creme de Pentear Modelador de Ondas, Widi Care",
+        "url": "https://widicare.com.br/produto/juba-ondulando-creme-de-pentear-modelador-de-ondas/",
+        "acessadoEm": "2026-08-15"
+      },
+      {
+        "id": "mercado-livre-widi-ondulando-juba",
+        "titulo": "Ondulando a Juba Creme de Pentear Widi Care 500 ml no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/ondulando-a-juba-creme-de-pentear-widi-care-500ml/p/MLB19513005",
+        "acessadoEm": "2026-08-15"
+      }
+    ]
+  },
+  {
     "id": "salon-line-definicao-natural-creme-pentear-1kg",
     "nome": "Definição Natural Creme para Pentear 1 kg",
     "descricao": "Creme para pentear da Salon Line com proposta de definição leve, movimento e uso sem enxágue em ondas e cachos.",
     "marca": "Salon Line",
     "categoria": "creme_para_pentear",
     "publicado": true,
-    "verificadoEm": "2026-08-09",
+    "verificadoEm": "2026-08-15",
     "perfil": {
       "curvaturas": ["Ondulados", "Cacheados"],
       "textura": "Creme leve segundo a marca",
@@ -841,16 +914,16 @@
       "objetivos": ["Definição", "Movimento", "Desembaraço"]
     },
     "imagem": {
-      "src": "https://universo.salonline.com.br/wp-content/uploads/2025/07/creme-para-pentear-definicao-natural.jpg",
+      "src": "/produtos/salon-line-definicao-natural-1kg.jpg",
       "alt": "Pote do creme para pentear Salon Line Definição Natural 1 kg",
       "credito": "Salon Line",
       "fonteUrl": "https://universo.salonline.com.br/creme-para-pentear-definicao-natural-definicao-com-efeito-durinho/"
     },
     "preco": {
-      "min": 35.15,
-      "max": 38,
+      "min": 33.94,
+      "max": 37.55,
       "moeda": "BRL",
-      "verificadoEm": "2026-08-09"
+      "verificadoEm": "2026-08-15"
     },
     "destaques": [
       {
@@ -877,25 +950,25 @@
     "oferta": {
       "loja": "Mercado Livre",
       "url": "https://meli.la/2fMcfWh",
-      "atualizadoEm": "2026-08-10"
+      "atualizadoEm": "2026-08-15"
     },
     "analise": {
       "tipo": "documental",
       "testado": false,
-      "nota": "A textura leve e o acabamento são alegações da marca. O ranking não mede fixação, duração ou peso em uso real."
+      "nota": "A textura leve e o acabamento são alegações da marca. Fixação, duração e peso variam com a quantidade aplicada e as demais camadas da rotina."
     },
     "fontes": [
       {
         "id": "salon-line-definicao-natural",
         "titulo": "Creme para Pentear Definição Natural, conteúdo oficial Salon Line",
         "url": "https://universo.salonline.com.br/creme-para-pentear-definicao-natural-definicao-com-efeito-durinho/",
-        "acessadoEm": "2026-08-09"
+        "acessadoEm": "2026-08-15"
       },
       {
         "id": "mercado-livre-salon-definicao-natural",
         "titulo": "Creme para Pentear Definição Natural Salon Line 1 kg no Mercado Livre",
         "url": "https://www.mercadolivre.com.br/creme-para-pentear-definico-natural-salon-line-cachos-1kg/p/MLB22687740",
-        "acessadoEm": "2026-08-09"
+        "acessadoEm": "2026-08-15"
       }
     ]
   },

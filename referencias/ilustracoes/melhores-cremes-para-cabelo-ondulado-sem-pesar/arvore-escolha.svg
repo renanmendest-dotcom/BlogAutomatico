@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F8F3EC"/>
+  <text x="800" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#47283F">O que está faltando na sua finalização?</text>
+  <rect x="550" y="160" width="500" height="110" rx="55" fill="#6B3D5E"/>
+  <text x="800" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#F8F3EC">Avalie o cabelo seco</text>
+  <path d="M800 270 V355 M800 355 H300 V410 M800 355 V410 M800 355 H1300 V410" fill="none" stroke="#47283F" stroke-width="8"/>
+  <g transform="translate(80 410)">
+    <rect width="440" height="260" rx="34" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="5"/>
+    <text x="220" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">Falta maciez</text>
+    <text x="220" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Use pouco creme</text>
+    <text x="220" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">e distribua melhor.</text>
+    <text x="220" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#C2564C">Prioridade: condicionamento</text>
+  </g>
+  <g transform="translate(580 410)">
+    <rect width="440" height="260" rx="34" fill="#F0D2CB" stroke="#C2564C" stroke-width="5"/>
+    <text x="220" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">Falta duração</text>
+    <text x="220" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Mantenha o creme leve</text>
+    <text x="220" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">e acrescente fixação.</text>
+    <text x="220" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#C2564C">Prioridade: mousse, gel ou gelatina</text>
+  </g>
+  <g transform="translate(1080 410)">
+    <rect width="440" height="260" rx="34" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="5"/>
+    <text x="220" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">Raiz ficou baixa</text>
+    <text x="220" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Reduza a dose e leve</text>
+    <text x="220" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">o creme para as pontas.</text>
+    <text x="220" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#C2564C">Prioridade: movimento</text>
+  </g>
+  <rect x="270" y="745" width="1060" height="82" rx="41" fill="#47283F"/>
+  <text x="800" y="797" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#F8F3EC">Comprar melhor começa por nomear o resultado que falta.</text>
+</svg>

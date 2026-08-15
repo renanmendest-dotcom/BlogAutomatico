@@ -9,7 +9,7 @@ e fonte estejam liberados para publicação.
 | 1 | `melhores-cremes-de-pentear-para-cabelo-cacheado` | ranking | creme de pentear | comprar | publicado em 10/08/2026 |
 | 2 | `cabelo-ondulado-nao-define-erros` | educativo | ondulados | resolver problema | publicado em 10/08/2026 |
 | 3 | `leave-in-ou-creme-de-pentear` | comparativo | finalizadores | escolher formato | publicado em 10/08/2026 |
-| 4 | `melhores-cremes-para-cabelo-ondulado-sem-pesar` | ranking | creme de pentear | comprar | rascunho completo |
+| 4 | `melhores-cremes-para-cabelo-ondulado-sem-pesar` | ranking | creme de pentear | comprar | publicado em 15/08/2026 |
 | 5 | `como-quebrar-o-efeito-durinho` | educativo | finalização | executar técnica | rascunho completo |
 | 6 | `melhores-gelatinas-capilares` | ranking | gelatina | comprar | rascunho completo |
 | 7 | `ativador-de-cachos-ou-creme-de-pentear` | comparativo | finalizadores | escolher formato | rascunho completo |

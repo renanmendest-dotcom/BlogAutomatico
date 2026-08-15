@@ -101,6 +101,21 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 15 de agosto de 2026 — Codex — Primeiro Pin publicado
+
+Publicado o primeiro Pin da Curva Viva sobre ondas que perdem definição ao
+secar, com fotografia realista, texto vertical 2:3, comentários habilitados e
+link para o guia de oito erros. A publicação foi organizada na pasta de cabelo
+ondulado e marcada corretamente como conteúdo modificado por IA. Três cartões
+adicionais ficaram prontos para futuras variações.
+
+O domínio novo foi recusado pelo filtro de spam do Pinterest, então o Pin usa o
+endereço público anterior da Vercel para o mesmo artigo. O carrossel não foi
+ativado porque a plataforma exigiu aceitar um contrato publicitário. A conta de
+anunciante Curva Viva foi criada para Brasil e BRL, mas nenhuma campanha,
+orçamento ou cobrança foi criada. A estratégia e os ativos ficaram registrados
+em `midia-social/pinterest/`.
+
 ### 15 de agosto de 2026 — Codex — Perfil oficial no Pinterest configurado
 
 Configurado o perfil `@curvavivaoficial` com a logo do projeto, nome voltado à

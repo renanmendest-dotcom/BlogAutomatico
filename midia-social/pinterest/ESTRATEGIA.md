@@ -14,6 +14,12 @@ clara para abrir o guia completo.
 - Usar fotografia muito realista. Quando houver produto, usar a embalagem real
   e conferida, nunca uma recriação por IA.
 - Mostrar discretamente a marca Curva Viva em toda arte.
+- Todo Pin com múltiplas imagens termina com um cartão exclusivo de CTA. Esse
+  último cartão precisa usar a logo Curva Viva, convidar a seguir
+  `@curvavivaoficial` para acompanhar o assunto e apresentar
+  `www.curvaviva.com.br` como destino dos conteúdos completos.
+- O CTA final deve ser visualmente bonito, legível no celular e adaptado ao
+  tema do Pin. Ele não substitui nenhum cartão educativo ou de produto.
 - Escrever título e descrição com palavras-chave naturais e habilitar
   comentários.
 - Adicionar um link para o artigo correspondente. Link de afiliado só entra
@@ -31,7 +37,7 @@ clara para abrir o guia completo.
 ## Formatos
 
 - Pin educativo: uma dor, uma resposta inicial e chamada para o artigo.
-- Carrossel: de 2 a 5 cartões quando a conta estiver liberada para esse formato.
+- Carrossel: de 3 a 5 cartões, contando o CTA obrigatório como último cartão.
 - Pin de produto: embalagem original, contexto de uso e link de compra quando a
   pauta tiver intenção comercial.
 - Variação de artigo: um mesmo artigo pode gerar novos Pins com ângulos visuais

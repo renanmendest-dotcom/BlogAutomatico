@@ -21,6 +21,16 @@
 - IA: conteúdo modificado por IA e pessoa gerada por IA marcados na plataforma
 - Acessibilidade: texto alternativo descrevendo os três ajustes
 
+## CTA preparado depois da publicação
+
+O cartão `pin-05-cta.png` foi criado após a publicação do carrossel. Ele usa a
+logo Curva Viva, convida a seguir `@curvavivaoficial` para acompanhar o tema e
+apresenta `www.curvaviva.com.br` como destino dos conteúdos completos.
+
+Esse cartão não foi incluído em uma nova republicação para evitar uma terceira
+cópia da mesma pauta. Ele é a primeira aplicação do modelo obrigatório para os
+próximos Pins com múltiplas imagens.
+
 ## Título
 
 Cabelo ondulado não define? 3 ajustes antes de trocar os produtos

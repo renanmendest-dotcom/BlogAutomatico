@@ -101,6 +101,18 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 15 de agosto de 2026 — Codex — CTA final obrigatório no Pinterest
+
+- Todo futuro Pin com múltiplas imagens terminará com um cartão de marca que
+  usa a logo oficial, convida a seguir `@curvavivaoficial` para acompanhar o
+  assunto e apresenta `www.curvaviva.com.br` como fonte dos conteúdos
+  completos.
+- Criado um modelo vertical 2:3 reutilizável e adaptável ao tema de cada Pin em
+  `midia-social/pinterest/modelos/`. A primeira versão, sobre ondas, foi
+  renderizada como `pin-05-cta.png` e aprovada visualmente.
+- O carrossel já publicado não foi republicado para evitar uma terceira cópia
+  do mesmo conteúdo. A nova regra vale obrigatoriamente a partir do próximo Pin.
+
 ### 15 de agosto de 2026 — Codex — Primeiro carrossel publicado
 
 - Publicado um novo Pin em carrossel com os quatro cartões já preparados sobre

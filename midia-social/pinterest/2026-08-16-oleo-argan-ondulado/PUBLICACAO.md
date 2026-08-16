@@ -14,3 +14,8 @@
 - Destino confirmado: https://www.curvaviva.com.br/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/.
 - Verificação pública: cinco imagens navegáveis, CTA final, pasta correta, título, descrição, texto alternativo e marcações de IA confirmados.
 - Status do Pin: publicado sem patrocínio, campanha, orçamento ou cobrança.
+- Correção visual preparada em 16 de agosto de 2026: o cartão de produto
+  `pin-03.png` passou a integrar a embalagem real ao círculo rosa, sem o
+  quadrado branco. A edição do Pin publicado não oferece substituição de mídia,
+  apenas metadados e exclusão integral. A republicação aguarda autorização para
+  apagar o Pin atual, pois isso remove o endereço e as estatísticas existentes.

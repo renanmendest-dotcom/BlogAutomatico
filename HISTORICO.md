@@ -487,3 +487,17 @@ O Pinterest aceitou a importação em massa às 20h42. A plataforma confirmou qu
 o arquivo foi carregado e que os Pins estão sendo criados, com processamento
 estimado em cerca de duas horas e aviso por email apenas em caso de problema.
 Nenhuma campanha, orçamento, cobrança ou configuração de anúncios foi aberta.
+
+### 16 de agosto de 2026 — Codex — Correção preparada para o Pin de argan
+
+Confirmado no Pin público `1146236542701452951` que o cartão do Lola Argan Oil
+50 mL exibia o fundo branco quadrado da foto de produto. O cartão foi corrigido
+localmente com composição por multiplicação e máscara suave, preservando a
+embalagem e o rótulo reais sem o quadrado.
+
+O editor do Pinterest foi inspecionado e não oferece substituição, remoção ou
+inclusão de mídia em Pin já publicado. Ele permite alterar apenas pasta, título,
+descrição, site, texto alternativo e marcações. Para trocar a imagem será
+necessário excluir o Pin inteiro e republicar as cinco imagens, o que apaga o
+endereço e as estatísticas atuais. A exclusão não foi executada sem confirmação
+específica do proprietário.

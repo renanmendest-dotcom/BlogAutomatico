@@ -18,9 +18,9 @@
       .brand { display: flex; align-items: center; gap: 12px; padding: 11px 16px 11px 12px; border-radius: 999px; background: rgba(255,250,244,.96); color: #47283f; font-size: 24px; font-weight: 800; white-space: nowrap; }
       .brand img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
       .step h1 { font-size: 66px; }
-      .product { background: #f8f3ec; }
+      .product { background: #f8f3ec; isolation: isolate; }
       .product::before { content: ''; position: absolute; width: 620px; height: 620px; border-radius: 50%; background: #f0d2cb; left: 190px; top: 520px; }
-      .product-photo { position: absolute; z-index: 1; width: 430px; height: 650px; object-fit: contain; left: 285px; top: 485px; }
+      .product-photo { position: absolute; z-index: 1; width: 430px; height: 650px; object-fit: contain; left: 285px; top: 485px; mix-blend-mode: multiply; -webkit-mask-image: radial-gradient(ellipse 58% 58% at center, #000 68%, transparent 100%); mask-image: radial-gradient(ellipse 58% 58% at center, #000 68%, transparent 100%); }
       .product .content { z-index: 2; }
       .product .footer { margin-top: auto; }
       .product h1 { max-width: 850px; font-size: 63px; }

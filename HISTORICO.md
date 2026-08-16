@@ -465,3 +465,25 @@ Publicado também o carrossel de cinco imagens no Pinterest:
 redonda centralizada e os CTAs permanentes da Curva Viva. O Pin aponta direto
 para o artigo em `www.curvaviva.com.br`, que desta vez foi aceito pela
 plataforma. Nenhum patrocínio, campanha, orçamento ou cobrança foi criado.
+
+### 16 de agosto de 2026 — Codex — Programação semanal do Pinterest
+
+Criadas 21 artes verticais originais para o Pinterest, com três Pins por dia
+entre 16 e 22 de agosto. A grade alterna dúvidas práticas, conteúdo salvável,
+comparativos e decisões de produto, sempre com link para um artigo no domínio
+oficial `www.curvaviva.com.br`.
+
+As fotografias de contexto foram geradas em modo integrado e as embalagens de
+produto são imagens reais. Foi criado um tratamento de margens e dissolução das
+bordas para que nenhum produto apareça dentro de retângulo ou quadrado branco,
+sem redesenhar rótulos. Todas as 21 peças passaram por revisão visual conjunta.
+
+O CSV foi validado com 21 títulos, 21 horários e 21 destinos únicos. Também
+passaram `pnpm validar`, `pnpm check` e `pnpm build`. Os arquivos foram enviados
+diretamente para `main` e as imagens inicial e final responderam HTTP 200 no
+domínio oficial.
+
+O Pinterest aceitou a importação em massa às 20h42. A plataforma confirmou que
+o arquivo foi carregado e que os Pins estão sendo criados, com processamento
+estimado em cerca de duas horas e aviso por email apenas em caso de problema.
+Nenhuma campanha, orçamento, cobrança ou configuração de anúncios foi aberta.

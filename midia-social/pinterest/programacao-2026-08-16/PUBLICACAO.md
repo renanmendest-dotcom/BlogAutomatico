@@ -21,6 +21,15 @@ dias, todos com destino no domínio oficial da Curva Viva.
 - As 21 artes são originais e não repetem a mesma combinação de chamada,
   texto e imagem.
 
+## Geração das imagens
+
+Foi usado o gerador de imagens integrado para oito fotografias realistas, sem
+texto, logo ou produto inventado. O conjunto de prompts pediu cenas editoriais
+verticais de aplicação de óleo nas pontas, definição no cabelo úmido, mousse
+na palma, day after com borrifador, secagem com difusor, comparação de texturas,
+análise de uma mecha cacheada e enxágue de condicionador. Os arquivos usados
+estão em `fotos/` e as peças finais em `public/pinterest/programacao-2026-08-16/`.
+
 ## Produtos
 
 As artes de produto usam fotografias reais das embalagens exatas. O recorte é
@@ -41,6 +50,8 @@ Nenhum rótulo foi redesenhado por inteligência artificial.
 - [x] Fotografias realistas e embalagens originais reunidas.
 - [x] Revisão visual final.
 - [x] `pnpm validar`, `pnpm check` e `pnpm build`.
-- [ ] Arquivos publicados no domínio oficial.
-- [ ] CSV importado no Pinterest.
-- [ ] Programação conferida na conta.
+- [x] Arquivos publicados no domínio oficial e verificados com HTTP 200.
+- [x] CSV importado no Pinterest às 20h42 de 16 de agosto de 2026.
+- [ ] Processamento interno do Pinterest concluído. A confirmação da plataforma
+  informa que os Pins estão sendo criados, que isso geralmente leva cerca de
+  duas horas e que um email será enviado somente se houver problema.

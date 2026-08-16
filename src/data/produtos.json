@@ -1046,6 +1046,79 @@
     ]
   },
   {
+    "id": "lola-argan-oil-50ml",
+    "nome": "Argan Oil Óleo 50 mL",
+    "descricao": "Óleo finalizador da Lola Cosmetics com fórmula descrita pela marca como leve e de toque seco, indicado para aplicar em pequena quantidade no comprimento e nas pontas.",
+    "marca": "Lola Cosmetics",
+    "categoria": "oleo",
+    "publicado": true,
+    "verificadoEm": "2026-08-16",
+    "perfil": {
+      "curvaturas": ["Sem curvatura específica"],
+      "textura": "Óleo leve com toque seco, segundo a marca",
+      "intensidade": "Pequena quantidade no comprimento e nas pontas",
+      "objetivos": ["Controle de frizz", "Brilho", "Proteção térmica", "Acabamento"]
+    },
+    "imagem": {
+      "src": "/produtos/lola-argan-oil-50ml.webp",
+      "alt": "Frasco amarelo do Lola Cosmetics Argan Oil Óleo 50 mL",
+      "credito": "Lola Cosmetics",
+      "fonteUrl": "https://www.lolacosmetics.com.br/argan-oil-novo-50-ml-ps-19629-70-p45445"
+    },
+    "preco": {
+      "min": 23.65,
+      "max": 24.9,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-16"
+    },
+    "destaques": [
+      {
+        "rotulo": "Tamanho",
+        "valor": "50 mL",
+        "fonteId": "lola-argan-oil"
+      },
+      {
+        "rotulo": "Modo de uso",
+        "valor": "Pequena quantidade no comprimento e nas pontas, com os fios secos ou úmidos",
+        "fonteId": "lola-argan-oil"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Óleo de argan, proteína de arroz e extrato de acácia senegal",
+        "fonteId": "lola-argan-oil"
+      },
+      {
+        "rotulo": "Proposta da marca",
+        "valor": "Controle de frizz e estática, brilho, toque leve e proteção térmica",
+        "fonteId": "lola-argan-oil"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/2HGgGc6",
+      "atualizadoEm": "2026-08-16"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "Leveza, toque seco, proteção térmica e controle de frizz são alegações da fabricante. O acabamento e a sensação de peso variam com a dose, a espessura do fio e os demais produtos da rotina."
+    },
+    "fontes": [
+      {
+        "id": "lola-argan-oil",
+        "titulo": "Lola Cosmetics, Argan Oil Óleo 50 mL",
+        "url": "https://www.lolacosmetics.com.br/argan-oil-novo-50-ml-ps-19629-70-p45445",
+        "acessadoEm": "2026-08-16"
+      },
+      {
+        "id": "mercado-livre-lola-argan-oil",
+        "titulo": "Óleo Capilar Lola Cosmetics Argan Oil 50 mL no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/oleo-capilar-lola-cosmetics-argan-oil-para-nutricao-50-ml/p/MLB67432459",
+        "acessadoEm": "2026-08-16"
+      }
+    ]
+  },
+  {
     "id": "arvensis-cachos-naturais-ativador",
     "nome": "Ativador de Cachos Naturais",
     "marca": "Arvensis",

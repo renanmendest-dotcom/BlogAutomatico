@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="80" y="105" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#47283F">Um teste simples em 3 lavagens</text>
+  <text x="80" y="160" font-family="Arial, sans-serif" font-size="30" fill="#2B2027">Mude uma coisa por vez para descobrir o que realmente pesa.</text>
+  <line x1="190" y1="350" x2="1010" y2="350" stroke="#6B3D5E" stroke-width="10"/>
+  <circle cx="190" cy="350" r="75" fill="#6B3D5E"/>
+  <circle cx="600" cy="350" r="75" fill="#C2564C"/>
+  <circle cx="1010" cy="350" r="75" fill="#47283F"/>
+  <text x="190" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#F8F3EC">1</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#F8F3EC">2</text>
+  <text x="1010" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#F8F3EC">3</text>
+  <rect x="80" y="475" width="300" height="200" rx="28" fill="#EFE5D9"/>
+  <text x="230" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6B3D5E">LAVAGEM 1</text>
+  <text x="230" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2B2027">mantenha a rotina</text>
+  <text x="230" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2B2027">e use pouco óleo</text>
+  <text x="230" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#C2564C">anote toque e volume</text>
+  <rect x="450" y="475" width="300" height="200" rx="28" fill="#F0D2CB"/>
+  <text x="600" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">LAVAGEM 2</text>
+  <text x="600" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2B2027">se pesou, reduza</text>
+  <text x="600" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2B2027">apenas o óleo</text>
+  <text x="600" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#C2564C">não troque tudo</text>
+  <rect x="820" y="475" width="300" height="200" rx="28" fill="#EFE5D9"/>
+  <text x="970" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">LAVAGEM 3</text>
+  <text x="970" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2B2027">se faltou acabamento,</text>
+  <text x="970" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2B2027">aumente bem pouco</text>
+  <text x="970" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#C2564C">compare cabelo seco</text>
+  <text x="600" y="755" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6B3D5E">A melhor dose é a menor que entrega o acabamento desejado.</text>
+</svg>

@@ -292,6 +292,30 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
       "protetor-termico-produto-celular"
     )
   );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/",
+      { width: 1440, height: 1000 },
+      "oleo-argan-artigo-desktop"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/",
+      { width: 390, height: 844 },
+      "oleo-argan-artigo-celular"
+    )
+  );
+  resultados.push(
+    await inspecionarPagina(
+      browser,
+      "/produtos/lola-argan-oil-50ml/",
+      { width: 390, height: 844 },
+      "oleo-argan-produto-celular"
+    )
+  );
 
   const rotas = [
     "/",
@@ -301,6 +325,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
     "/artigos/como-recuperar-os-cachos-no-day-after-sem-lavar/",
     "/artigos/precisa-usar-protetor-termico-no-difusor/",
     "/artigos/mousse-para-cabelo-ondulado-fino-funciona-sem-pesar/",
+    "/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/",
     "/artigos/skala-mais-cachos-serve-para-cabelo-ondulado/",
     "/ondulados/",
     "/cacheados/",
@@ -314,6 +339,7 @@ async function inspecionarPagina(browser, rota, viewport, nome) {
     "/produtos/widi-care-revitalizando-a-juba-bruma-300ml/",
     "/produtos/widi-care-curvas-magicas-nevoa-iluminadora-60ml/",
     "/produtos/widi-care-juba-mousse-200ml/",
+    "/produtos/lola-argan-oil-50ml/",
     "/sobre/"
   ];
 

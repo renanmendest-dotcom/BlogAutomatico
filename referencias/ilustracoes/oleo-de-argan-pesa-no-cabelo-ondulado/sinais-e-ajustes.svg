@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="80" y="105" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#47283F">Leia o resultado depois de seco</text>
+  <text x="80" y="160" font-family="Arial, sans-serif" font-size="30" fill="#2B2027">O sinal no cabelo aponta o próximo ajuste.</text>
+  <rect x="80" y="225" width="490" height="205" rx="30" fill="#F0D2CB"/>
+  <circle cx="145" cy="295" r="28" fill="#C2564C"/>
+  <text x="145" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#F8F3EC">!</text>
+  <text x="195" y="285" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">Raiz baixa e mechas coladas</text>
+  <text x="195" y="335" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Reduza a dose e não aplique perto</text>
+  <text x="195" y="370" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">da raiz na próxima lavagem.</text>
+  <rect x="630" y="225" width="490" height="205" rx="30" fill="#EFE5D9"/>
+  <circle cx="695" cy="295" r="28" fill="#6B3D5E"/>
+  <text x="695" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#F8F3EC">?</text>
+  <text x="745" y="285" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">Pontas ainda ásperas</text>
+  <text x="745" y="335" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Mantenha pouca dose, mas concentre</text>
+  <text x="745" y="370" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">o produto onde há necessidade.</text>
+  <rect x="80" y="475" width="490" height="205" rx="30" fill="#EFE5D9"/>
+  <circle cx="145" cy="545" r="28" fill="#6B3D5E"/>
+  <text x="145" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#F8F3EC">✓</text>
+  <text x="195" y="535" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">Brilho sem perder movimento</text>
+  <text x="195" y="585" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">A dose está perto do ideal.</text>
+  <text x="195" y="620" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">Repita antes de aumentar.</text>
+  <rect x="630" y="475" width="490" height="205" rx="30" fill="#C2564C"/>
+  <circle cx="695" cy="545" r="28" fill="#F8F3EC"/>
+  <text x="695" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#C2564C">1</text>
+  <text x="745" y="535" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#F8F3EC">Mudou vários produtos?</text>
+  <text x="745" y="585" font-family="Arial, sans-serif" font-size="25" fill="#F8F3EC">Volte a uma rotina simples para</text>
+  <text x="745" y="620" font-family="Arial, sans-serif" font-size="25" fill="#F8F3EC">saber quem causou o peso.</text>
+  <text x="600" y="755" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#6B3D5E">Avalie definição, toque e volume juntos.</text>
+</svg>

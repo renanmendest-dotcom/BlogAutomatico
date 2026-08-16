@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 1000px; height: 1500px; overflow: hidden; }
+      body { font-family: Arial, Helvetica, sans-serif; }
+      .card { position: relative; width: 1000px; height: 1500px; overflow: hidden; background: #f8f3ec; }
+      .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .wash { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(248,243,236,.98) 0%, rgba(248,243,236,.91) 34%, rgba(248,243,236,.12) 58%, rgba(43,32,39,.22) 100%); }
+      .content { position: absolute; inset: 0; padding: 78px 72px 62px; display: flex; flex-direction: column; }
+      .eyebrow { align-self: flex-start; padding: 13px 20px; border-radius: 999px; background: #c2564c; color: #fffaf4; font-size: 25px; font-weight: 800; letter-spacing: .08em; }
+      h1 { max-width: 840px; margin: 30px 0 18px; color: #47283f; font-family: Georgia, 'Times New Roman', serif; font-size: 76px; line-height: 1; letter-spacing: -.035em; }
+      p { max-width: 800px; margin: 0; color: #2b2027; font-size: 32px; line-height: 1.24; font-weight: 600; }
+      .footer { margin-top: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+      .action { max-width: 650px; padding: 18px 24px; border-radius: 18px; background: rgba(71,40,63,.94); color: #fffaf4; font-size: 28px; font-weight: 800; line-height: 1.18; }
+      .brand { display: flex; align-items: center; gap: 12px; padding: 11px 16px 11px 12px; border-radius: 999px; background: rgba(255,250,244,.96); color: #47283f; font-size: 24px; font-weight: 800; white-space: nowrap; }
+      .brand img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
+      .step h1 { font-size: 66px; }
+      .product { background: #f8f3ec; }
+      .product::before { content: ''; position: absolute; width: 620px; height: 620px; border-radius: 50%; background: #f0d2cb; left: 190px; top: 520px; }
+      .product-photo { position: absolute; z-index: 1; width: 430px; height: 650px; object-fit: contain; left: 285px; top: 485px; }
+      .product .content { z-index: 2; }
+      .product .footer { margin-top: auto; }
+      .product h1 { max-width: 850px; font-size: 63px; }
+      .product p { max-width: 860px; }
+    </style>
+  </head>
+  <body>
+    <main id="card" class="card"></main>
+    <script>
+      const cards = [
+        {
+          photo: 'foto-01.png', eyebrow: 'CABELO ONDULADO',
+          title: 'Óleo de argan pesa nas ondas?',
+          body: 'Pode pesar, mas a dose e as outras camadas contam mais do que o nome do óleo.',
+          action: 'Deslize e salve para testar sem erro'
+        },
+        {
+          photo: 'foto-02.png', eyebrow: 'COMECE PEQUENO',
+          title: 'Espalhe primeiro nas mãos',
+          body: 'Encoste nas pontas e leve apenas o restante para o comprimento. Deixe a raiz fora do primeiro teste.',
+          action: 'Avalie só depois de o cabelo secar', step: true
+        },
+        {
+          product: true, eyebrow: 'PRODUTO EXATO',
+          title: 'Lola Argan Oil Óleo 50 mL',
+          body: 'A Lola orienta pequena quantidade no comprimento e nas pontas, em fios secos ou úmidos. A marca descreve toque seco e proteção térmica.',
+          action: 'Confira a análise completa no Curva Viva'
+        },
+        {
+          photo: 'foto-01.png', eyebrow: 'LEIA O RESULTADO',
+          title: 'Raiz baixa? Reduza a dose',
+          body: 'Pontas ainda ásperas? Mantenha pouco produto, mas concentre onde realmente precisa.',
+          action: 'Mude uma coisa por lavagem', step: true
+        }
+      ];
+      const n = Math.max(0, Math.min(3, Number(new URLSearchParams(location.search).get('card') || 0)));
+      const c = cards[n];
+      const root = document.querySelector('#card');
+      root.classList.toggle('step', Boolean(c.step));
+      root.classList.toggle('product', Boolean(c.product));
+      root.innerHTML = `
+        ${c.product ? '<img class="product-photo" src="lola-argan-oil-50ml.webp" alt="" />' : `<img class="photo" src="${c.photo}" alt="" /><div class="wash"></div>`}
+        <section class="content">
+          <div class="eyebrow">${c.eyebrow}</div>
+          <h1>${c.title}</h1>
+          <p>${c.body}</p>
+          <div class="footer">
+            <div class="action">${c.action}</div>
+            <div class="brand"><img src="../../../public/logo-curva-viva.png" alt="" /> Curva Viva</div>
+          </div>
+        </section>`;
+    </script>
+  </body>
+</html>

@@ -447,3 +447,21 @@ Registradas para não se repetirem.
   artigos, formato ranking, preço nas fichas, densidade de imagem (12 por
   artigo contra 1) e autor com nome real. O Curva Viva ganha deles em fontes
   abertas, honestidade e navegação por curvatura.
+
+### 16 de agosto de 2026 — Codex — Óleo de argan e novo carrossel
+
+Publicado o artigo `oleo-de-argan-pesa-no-cabelo-ondulado`, baseado em dúvidas
+brasileiras recentes sobre óleo nas pontas e receio de peso. O produto exato é
+o Lola Cosmetics Argan Oil Óleo 50 mL, com ficha oficial, imagem da marca,
+oferta em loja oficial do Mercado Livre e link de afiliado `https://meli.la/2HGgGc6`.
+
+O artigo recebeu quatro infográficos próprios, passou por duas revisões e foi
+aprovado em `pnpm validar`, `pnpm check`, `pnpm build` e revisão visual em
+desktop e celular. Artigo e ficha do produto responderam HTTP 200 no domínio
+oficial após o push para `main`.
+
+Publicado também o carrossel de cinco imagens no Pinterest:
+`https://br.pinterest.com/pin/1146236542701452951/`. A última imagem usa a logo
+redonda centralizada e os CTAs permanentes da Curva Viva. O Pin aponta direto
+para o artigo em `www.curvaviva.com.br`, que desta vez foi aceito pela
+plataforma. Nenhum patrocínio, campanha, orçamento ou cobrança foi criado.

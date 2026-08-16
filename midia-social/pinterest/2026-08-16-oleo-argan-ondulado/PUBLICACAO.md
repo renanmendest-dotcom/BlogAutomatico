@@ -10,4 +10,7 @@
 - Revisão 1: produto, tamanho, imagem, fatos, texto, link e ordem dos cartões conferidos.
 - Revisão 2: título, intenção de busca, leitura no celular, retenção, naturalidade e CTA conferidos.
 - Testes do site: `pnpm validar`, `pnpm check`, `pnpm build` e revisão visual aprovados.
-- Status do Pin: aguardando publicação.
+- Pin público: https://br.pinterest.com/pin/1146236542701452951/.
+- Destino confirmado: https://www.curvaviva.com.br/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/.
+- Verificação pública: cinco imagens navegáveis, CTA final, pasta correta, título, descrição, texto alternativo e marcações de IA confirmados.
+- Status do Pin: publicado sem patrocínio, campanha, orçamento ou cobrança.

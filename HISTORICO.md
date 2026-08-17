@@ -618,3 +618,35 @@ fim do processamento, o painel removeu o estado `Conteúdo sob análise`, mostro
 privacidade `Todos` e a página pública abriu com as imagens, o título e a
 legenda corretos. Nenhuma promoção, impulsionamento, campanha ou cobrança foi
 criada.
+
+### 17 de agosto de 2026 — Codex — Carrosséis do Pinterest corrigidos
+
+Foi feita uma auditoria completa no perfil, na fila agendada e nas consultas
+`cabelo ondulado`, `finalização cabelo ondulado` e `creme para cabelo
+ondulado` dentro do Pinterest. A causa do erro foi confirmada: a importação por
+CSV aceita uma mídia por linha, mas as artes únicas continham uma seta que
+sugeria outra página. A revisão anterior não comparou a promessa visual com a
+quantidade efetivamente publicada.
+
+Os três Pins únicos já públicos foram substituídos, antes da exclusão, por três
+carrosséis reais com cinco páginas cada. Os novos Pins são
+`https://br.pinterest.com/pin/1146236542701525867/`,
+`https://br.pinterest.com/pin/1146236542701525976/` e
+`https://br.pinterest.com/pin/1146236542701526097/`. A página pública confirmou
+cinco imagens e destino em `www.curvaviva.com.br` nos três casos.
+
+Também foram cancelados os 18 agendamentos do lote defeituoso. Foram geradas
+oito novas fotografias realistas com variação deliberada de perfil, costas,
+close sem rosto, mãos, produto, difusor e day after. As 21 capas únicas foram
+renderizadas novamente sem seta, e as embalagens reais permaneceram recortadas
+e integradas ao fundo. O Pinterest aceitou o CSV corrigido com as 18 peças
+futuras e informou que elas estão sendo criadas; a plataforma pode levar até
+duas horas para concluir o processamento e enviará email se houver erro.
+
+As duas revisões passaram. A primeira conferiu páginas, textos, links, domínio,
+logo, proporção, produtos e ausência de falsa indicação de continuidade. A
+segunda conferiu pesquisa no Pinterest, potencial de clique, intenção de busca,
+variação visual, leitura no celular, naturalidade e coerência entre capa e
+formato. Também passaram `pnpm validar`, `pnpm check` e `pnpm build`. O commit
+dos arquivos foi `a360e9d`. Nenhuma campanha, patrocínio, orçamento ou cobrança
+foi criado.

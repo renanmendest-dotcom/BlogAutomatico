@@ -62,3 +62,11 @@ Nenhum rótulo foi redesenhado por inteligência artificial.
   horário já havia passado foram movidas para 23 de agosto, às 9h e 14h.
 - [x] O Pinterest aceitou o segundo CSV e a fila passou de 11 para 20 Pins
   agendados. Com o Pin do lote já publicado, as 21 peças estão contabilizadas.
+
+## Correção posterior
+
+Em 17 de agosto, este lote foi substituído porque as artes únicas continham uma
+seta que sugeria carrossel. Os três Pins únicos publicados foram trocados por
+carrosséis reais de cinco páginas. Os 18 agendamentos antigos foram cancelados
+e um CSV com artes sem indicação de deslize foi aceito para novo processamento.
+O relatório completo está em `../correcao-2026-08-17/PUBLICACAO.md`.

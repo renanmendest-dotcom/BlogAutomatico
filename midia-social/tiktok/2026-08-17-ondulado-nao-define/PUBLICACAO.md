@@ -17,10 +17,9 @@ vídeo sobre frizz em ondulados apareceu com 159,8 mil. As hashtags mais
 recorrentes e específicas foram `#cabeloondulado`, `#onduladas`,
 `#finalizacaoondulada`, `#ondulado2b` e `#ondulado2c`.
 
-O áudio pesquisado para o carrossel é `voices`, de Øneheart, listado entre sons
+O áudio aplicado ao carrossel é `voices`, de Øneheart, listado entre sons
 populares no Brasil em julho de 2026 e disponível no catálogo do TikTok. Ele é
-instrumental, discreto e não compete com a leitura. A escolha final depende de
-o seletor de som oferecer a faixa no momento da publicação de fotos.
+instrumental, discreto e não compete com a leitura.
 
 ## Legenda
 
@@ -38,9 +37,8 @@ O guia completo com 8 erros está em curvaviva.com.br ✨
 ## Imagens e transparência
 
 As três fotografias foram criadas com o gerador de imagens da OpenAI para esta
-publicação. Elas não representam teste pessoal nem resultado de produto. Marcar
-o conteúdo como gerado ou modificado por IA no TikTok quando o controle estiver
-disponível.
+publicação. Elas não representam teste pessoal nem resultado de produto. O
+rótulo de conteúdo gerado por IA foi ativado no TikTok antes da publicação.
 
 ## Revisões
 
@@ -51,8 +49,12 @@ disponível.
 
 ## Estado da publicação
 
-O carrossel foi preparado e revisado, mas o envio pelo TikTok Studio ficou
-pendente porque a extensão do Chrome não conseguiu abrir o seletor de arquivos.
-Para liberar uploads, é necessário ativar `Permitir acesso a URLs de arquivo`
-nos detalhes da extensão ChatGPT em `chrome://extensions`. Nenhum conteúdo foi
-publicado parcialmente.
+Publicado em 17 de agosto de 2026 no perfil `@curvavivaoficial`:
+
+https://www.tiktok.com/@curvavivaoficial/photo/7675107568791964948
+
+O TikTok recebeu as oito imagens na ordem correta, o áudio `voices`, de
+Øneheart, o título, a legenda e as cinco hashtags. O rótulo de conteúdo gerado
+por IA foi ativado. Após uma análise automática curta, o painel removeu o
+estado `Conteúdo sob análise`, confirmou a privacidade `Todos` e a página
+pública passou a abrir normalmente. Nenhuma promoção ou cobrança foi criada.

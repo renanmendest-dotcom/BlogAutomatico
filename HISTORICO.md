@@ -599,3 +599,22 @@ upload não foi concluído porque a extensão do Chrome não conseguiu abrir o
 seletor de arquivos. É necessário ativar `Permitir acesso a URLs de arquivo`
 nos detalhes da extensão ChatGPT em `chrome://extensions`. Nenhuma imagem foi
 enviada e não houve publicação parcial, promoção ou cobrança.
+
+### 17 de agosto de 2026 — Codex — Primeiro carrossel publicado no TikTok
+
+Depois que o proprietário ativou manualmente o acesso da extensão ChatGPT a
+URLs de arquivo, as oito imagens do primeiro carrossel foram enviadas ao TikTok
+Studio e publicadas em
+`https://www.tiktok.com/@curvavivaoficial/photo/7675107568791964948`.
+
+O post recebeu o título `Cabelo ondulado não define? 5 ajustes antes de trocar
+o creme`, a legenda revisada, as hashtags `#cabeloondulado`, `#onduladas`,
+`#finalizacaoondulada`, `#ondulado2b` e `#ondulado2c`, além do áudio `voices`,
+de Øneheart. O rótulo de conteúdo gerado por IA foi ativado e a opção de
+divulgação comercial permaneceu desligada.
+
+O TikTok manteve o conteúdo privado durante uma análise automática curta. Ao
+fim do processamento, o painel removeu o estado `Conteúdo sob análise`, mostrou
+privacidade `Todos` e a página pública abriu com as imagens, o título e a
+legenda corretos. Nenhuma promoção, impulsionamento, campanha ou cobrança foi
+criada.

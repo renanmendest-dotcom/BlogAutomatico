@@ -537,3 +537,21 @@ Os Pins agendados não aparecem em `Salvos` nem em `Rascunhos`. Eles ficam em
 horários exibidos. Para completar a grade, será necessário um novo lote apenas
 com as nove peças rejeitadas, usando URLs de destino únicas e novos horários;
 o CSV original não deve ser reenviado para evitar duplicatas.
+
+### 17 de agosto de 2026 — Codex — Nove Pins recuperados e agendados
+
+Criado o arquivo `pinterest-bulk-rejeitados.csv` somente com as nove peças que
+falharam no primeiro lote. Cada destino recebeu parâmetros UTM próprios, o que
+eliminou a duplicidade sem alterar o artigo final. Os sete horários ainda
+futuros foram preservados; os dois horários vencidos foram redistribuídos para
+23 de agosto, às 9h e 14h, mantendo no máximo três Pins por dia.
+
+O arquivo foi validado com nove títulos, nove mídias, nove links e nove horários
+únicos. Todas as mídias e páginas de destino responderam HTTP 200. Também
+passaram `pnpm validar`, `pnpm check` e `pnpm build`.
+
+O novo CSV foi enviado no Chrome autenticado e o Pinterest confirmou o upload.
+A fila privada passou de 11 para 20 Pins agendados, com os nove títulos e
+horários novos visíveis. Somado ao Pin do primeiro lote que já foi publicado,
+as 21 peças estão contabilizadas. Nenhuma campanha, patrocínio, orçamento ou
+cobrança foi criado.

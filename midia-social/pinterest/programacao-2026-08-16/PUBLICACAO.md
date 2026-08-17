@@ -42,6 +42,7 @@ Nenhum rótulo foi redesenhado por inteligência artificial.
 - Artes públicas: `public/pinterest/programacao-2026-08-16/pin-01.png` a
   `pin-21.png`.
 - CSV de importação: `pinterest-bulk.csv`.
+- CSV de recuperação das linhas rejeitadas: `pinterest-bulk-rejeitados.csv`.
 - Tamanho das artes: 1.000 × 1.500 px, proporção 2:3.
 
 ## Status
@@ -53,11 +54,11 @@ Nenhum rótulo foi redesenhado por inteligência artificial.
 - [x] Arquivos publicados no domínio oficial e verificados com HTTP 200.
 - [x] CSV importado no Pinterest às 20h42 de 16 de agosto de 2026.
 - [x] Processamento interno do Pinterest concluído e conferido em 17 de agosto.
-- [x] Um Pin foi publicado e 11 Pins aparecem na fila privada `Pins agendados`,
-  totalizando 12 linhas aceitas pelo Pinterest.
-- [ ] Nove linhas foram rejeitadas com o erro `Duplicar link do Pin`. São as
-  segundas ou terceiras peças que apontavam para o mesmo artigo de outra linha
-  do lote. Elas não viraram rascunhos nem agendamentos.
-- [ ] Para completar os 21 Pins, preparar um lote separado com nove links de
-  destino únicos e parâmetros de rastreamento próprios, além de redistribuir os
-  horários que já passaram. Não reenviar o CSV original para evitar duplicatas.
+- [x] O primeiro lote deixou um Pin publicado e 11 Pins na fila privada
+  `Pins agendados`, totalizando 12 linhas aceitas.
+- [x] As nove linhas rejeitadas com `Duplicar link do Pin` foram reunidas em um
+  segundo CSV, com parâmetros de rastreamento únicos por peça.
+- [x] Os sete horários futuros originais foram mantidos. As duas peças cujo
+  horário já havia passado foram movidas para 23 de agosto, às 9h e 14h.
+- [x] O Pinterest aceitou o segundo CSV e a fila passou de 11 para 20 Pins
+  agendados. Com o Pin do lote já publicado, as 21 peças estão contabilizadas.

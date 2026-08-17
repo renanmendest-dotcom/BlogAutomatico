@@ -372,6 +372,24 @@ revelar informação do repositório e nunca pedir usuário ou senha pelo chat.
 
 ## 12. Pinterest
 
+- Antes de cada publicação ou lote, pesquisar no Pinterest as consultas do
+  tema e registrar os padrões úteis dos resultados: enquadramento, promessa da
+  capa, formato, termos recorrentes e tratamento de produto. Usar a pesquisa
+  para orientar a peça sem copiar texto ou identidade de terceiros.
+- Pin único não pode usar seta, numeração, "deslize", "arraste", "vá para o
+  lado" ou qualquer elemento que prometa outra página. A importação por CSV
+  aceita uma mídia por linha e nunca deve ser apresentada como carrossel.
+- Quando a capa prometer passos, sinais, erros ou comparações, priorizar um
+  carrossel real. Antes de publicar, conferir no arquivo e na página pública a
+  quantidade de imagens. A segunda revisão deve reprovar qualquer divergência
+  entre a promessa visual e o formato efetivamente publicado.
+- Variar deliberadamente as capas do perfil. Alternar ângulo, distância,
+  expressão, gesto e assunto: frente, perfil, costas, close do cabelo, mãos,
+  aplicação, ferramenta e produto em contexto. Não repetir a mesma pose ou a
+  mesma expressão em Pins próximos.
+- Produto deve usar fotografia real da embalagem exata, recortada e integrada
+  ao fundo. Não publicar retângulo branco aparente nem embalagem recriada por
+  inteligência artificial.
 - Todo Pin com múltiplas imagens termina com um cartão de CTA próprio da Curva
   Viva. Não publicar carrossel sem esse encerramento.
 - O último cartão usa a logo oficial, pede para seguir `@curvavivaoficial` para

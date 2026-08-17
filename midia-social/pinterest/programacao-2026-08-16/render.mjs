@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..', '..', '..');
 const publicDir = join(root, 'public', 'pinterest', 'programacao-2026-08-16');
+const correctionPhotoDir = join(root, 'midia-social', 'pinterest', 'correcao-2026-08-17', 'fotos');
 const logo = join(root, 'public', 'logo-curva-viva.png');
 const site = 'https://www.curvaviva.com.br';
 
@@ -237,6 +238,23 @@ const palettes = {
   sky: ['#eef8f8', '#4f8b91', '#204247'],
 };
 
+const correctedPhotos = new Map([
+  ['01', '03-oleo-pontas-perfil.png'],
+  ['02', '04-textura-sem-rosto.png'],
+  ['04', '02-close-mecha-umida.png'],
+  ['05', '01-umidade-uniforme.png'],
+  ['06', '04-textura-sem-rosto.png'],
+  ['10', '05-mousse-vista-superior.png'],
+  ['12', '08-close-cacho.png'],
+  ['13', '02-close-mecha-umida.png'],
+  ['14', '04-textura-sem-rosto.png'],
+  ['15', '08-close-cacho.png'],
+  ['16', '06-difusor-lateral.png'],
+  ['17', '07-day-after-janela.png'],
+  ['18', '08-close-cacho.png'],
+  ['19', '07-day-after-janela.png'],
+]);
+
 function escapeHtml(value) {
   return String(value).replace(/[&<>\"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[char]);
 }
@@ -255,7 +273,7 @@ async function imageUrl(path) {
 async function cardHtml(pin, productSources) {
   const [light, accent, ink] = palettes[pin.palette];
   const media = pin.kind === 'photo'
-    ? `<img class="photo" src="${await imageUrl(join(here, 'fotos', pin.photo))}" alt="">`
+    ? `<img class="photo" src="${await imageUrl(correctedPhotos.has(pin.id) ? join(correctionPhotoDir, correctedPhotos.get(pin.id)) : join(here, 'fotos', pin.photo))}" alt="">`
     : `<div class="product-stage">${pin.products.map((product, index) => `<img class="product product-${index + 1}" src="${productSources.get(product)}" alt="">`).join('')}</div>`;
   return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>
     *{box-sizing:border-box}html,body{margin:0;width:1000px;height:1500px;overflow:hidden}
@@ -276,7 +294,7 @@ async function cardHtml(pin, productSources) {
     .cta{background:${accent};color:#fff;border-radius:999px;padding:20px 29px;font-size:27px;font-weight:800;box-shadow:0 12px 32px #00000024}
     .brand{display:flex;align-items:center;gap:14px;background:#fffef8e8;border-radius:999px;padding:10px 20px 10px 10px;box-shadow:0 10px 28px #0002;color:${ink};font-size:22px;font-weight:800;white-space:nowrap}
     .brand img{width:67px;height:67px;border-radius:50%;object-fit:cover}.brand small{display:block;font-size:16px;font-weight:700;margin-top:2px}
-  </style></head><body><main class="card">${media}${pin.kind === 'photo' ? '<div class="photo-shade"></div>' : '<div class="blob b1"></div><div class="blob b2"></div>'}<section class="content"><div class="eyebrow">${escapeHtml(pin.eyebrow)}</div><h1>${escapeHtml(pin.headline)}</h1><div class="body">${escapeHtml(pin.body)}</div></section><footer class="footer"><div class="cta">${escapeHtml(pin.cta)} →</div><div class="brand"><img src="${await imageUrl(logo)}" alt=""><span>Curva Viva<small>curvaviva.com.br</small></span></div></footer></main></body></html>`;
+  </style></head><body><main class="card">${media}${pin.kind === 'photo' ? '<div class="photo-shade"></div>' : '<div class="blob b1"></div><div class="blob b2"></div>'}<section class="content"><div class="eyebrow">${escapeHtml(pin.eyebrow)}</div><h1>${escapeHtml(pin.headline)}</h1><div class="body">${escapeHtml(pin.body)}</div></section><footer class="footer"><div class="cta">${escapeHtml(pin.cta)}</div><div class="brand"><img src="${await imageUrl(logo)}" alt=""><span>Curva Viva<small>curvaviva.com.br</small></span></div></footer></main></body></html>`;
 }
 
 function csvCell(value) {
@@ -359,13 +377,13 @@ for (const product of productNames) {
 
 for (const pin of pins) {
   await page.setContent(await cardHtml(pin, productSources), { waitUntil: 'networkidle' });
-  await page.screenshot({ path: join(publicDir, `pin-${pin.id}.png`) });
+  await page.screenshot({ path: join(publicDir, `pin-${pin.id}-v2.png`) });
 }
 
 await page.setViewportSize({ width: 1100, height: 1850 });
-const reviewCards = await Promise.all(pins.map(async (pin) => `<figure><img src="${await imageUrl(join(publicDir, `pin-${pin.id}.png`))}" alt="Pin ${pin.id}"><figcaption>${pin.id}</figcaption></figure>`));
+const reviewCards = await Promise.all(pins.map(async (pin) => `<figure><img src="${await imageUrl(join(publicDir, `pin-${pin.id}-v2.png`))}" alt="Pin ${pin.id}"><figcaption>${pin.id}</figcaption></figure>`));
 await page.setContent(`<!doctype html><html><head><style>*{box-sizing:border-box}body{margin:0;padding:24px;background:#ede8e1;font-family:Arial,sans-serif}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}figure{position:relative;margin:0;border-radius:15px;overflow:hidden;background:#fff;box-shadow:0 6px 18px #0002}img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover}figcaption{position:absolute;right:8px;top:8px;border-radius:99px;background:#fff;color:#542638;padding:5px 9px;font-weight:800;font-size:15px}</style></head><body><main class="grid">${reviewCards.join('')}</main></body></html>`, { waitUntil: 'networkidle' });
-await page.screenshot({ path: join(here, 'revisao-visual.png') });
+await page.screenshot({ path: join(here, 'revisao-visual-v2.png') });
 
 await browser.close();
 
@@ -410,6 +428,30 @@ const retryRows = [...retrySchedule].map(([id, publish]) => {
 });
 await writeFile(join(here, 'pinterest-bulk-rejeitados.csv'), `\uFEFF${header.map(csvCell).join(',')}\r\n${retryRows.join('\r\n')}\r\n`, 'utf8');
 
+const publishedIds = new Set(['01', '04', '05']);
+const correctedRows = pins.filter((pin) => !publishedIds.has(pin.id)).map((pin) => {
+  const tracking = `utm_source=pinterest&utm_medium=organic&utm_campaign=programacao_2026_08_16_v2&utm_content=pin_${pin.id}`;
+  return [
+    pin.title,
+    `${site}/pinterest/programacao-2026-08-16/pin-${pin.id}-v2.png`,
+    pin.board,
+    '',
+    pin.description,
+    `${site}${pin.link}?${tracking}`,
+    retrySchedule.get(pin.id) ?? pin.publish,
+    pin.keywords,
+  ].map(csvCell).join(',');
+});
+await writeFile(join(here, 'pinterest-bulk-corrigido.csv'), `\uFEFF${header.map(csvCell).join(',')}\r\n${correctedRows.join('\r\n')}\r\n`, 'utf8');
+
+const misleadingCue = /desliz|arrast|para o lado|→/i;
+for (const pin of pins) {
+  if (misleadingCue.test(`${pin.eyebrow} ${pin.headline} ${pin.body} ${pin.cta}`)) {
+    throw new Error(`Pin único ${pin.id} contém indicação falsa de continuidade`);
+  }
+}
+
 console.log(`Renderizados ${pins.length} Pins em ${publicDir}`);
 console.log(`CSV criado em ${join(here, 'pinterest-bulk.csv')}`);
 console.log(`CSV de recuperação criado em ${join(here, 'pinterest-bulk-rejeitados.csv')}`);
+console.log(`CSV corrigido criado em ${join(here, 'pinterest-bulk-corrigido.csv')}`);

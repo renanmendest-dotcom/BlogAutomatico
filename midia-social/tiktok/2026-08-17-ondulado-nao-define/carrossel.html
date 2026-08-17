@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1440px; overflow: hidden; }
+      body { font-family: Arial, Helvetica, sans-serif; }
+      .card { position: relative; width: 1080px; height: 1440px; overflow: hidden; background: #f7eee8; }
+      .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .wash { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,20,34,.92) 0%, rgba(42,20,34,.67) 45%, rgba(42,20,34,.16) 76%, rgba(42,20,34,.66) 100%); }
+      .light .wash { background: linear-gradient(180deg, rgba(255,249,244,.98) 0%, rgba(255,249,244,.88) 48%, rgba(255,249,244,.15) 78%, rgba(53,29,45,.58) 100%); }
+      .content { position: absolute; inset: 0; padding: 70px 70px 64px; display: flex; flex-direction: column; }
+      .topline { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+      .eyebrow { padding: 13px 20px; border-radius: 999px; background: #bd4a62; color: #fffaf4; font-size: 24px; font-weight: 900; letter-spacing: .08em; }
+      .page { color: #fffaf4; font-size: 25px; font-weight: 800; }
+      .light .page { color: #4a2b3b; }
+      h1 { max-width: 920px; margin: 42px 0 24px; color: #fffaf4; font-family: Georgia, 'Times New Roman', serif; font-size: 83px; line-height: .98; letter-spacing: -.035em; text-wrap: balance; }
+      .light h1 { color: #351d2d; }
+      p { max-width: 860px; margin: 0; color: #fffaf4; font-size: 37px; line-height: 1.24; font-weight: 650; text-wrap: balance; }
+      .light p { color: #513746; }
+      .accent { color: #ffd3dc; }
+      .light .accent { color: #a83e54; }
+      .footer { margin-top: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+      .action { max-width: 720px; padding: 18px 24px; border-radius: 20px; background: rgba(255,250,244,.95); color: #351d2d; font-size: 29px; font-weight: 850; line-height: 1.18; }
+      .brand { display: flex; align-items: center; gap: 12px; color: #fffaf4; font-size: 25px; font-weight: 850; white-space: nowrap; }
+      .brand img { width: 58px; height: 58px; border: 3px solid #fffaf4; border-radius: 50%; object-fit: cover; }
+      .light .brand { color: #fffaf4; }
+      .number { display: block; margin-bottom: 12px; color: #ffd3dc; font-family: Arial, Helvetica, sans-serif; font-size: 45px; font-weight: 900; letter-spacing: .02em; }
+      .light .number { color: #a83e54; }
+      .cta { background: radial-gradient(circle at 50% 20%, #fff8f2 0, #f4dfd9 54%, #d8a6ad 100%); }
+      .cta::before, .cta::after { content: ''; position: absolute; border: 2px solid rgba(168,62,84,.2); border-radius: 50%; }
+      .cta::before { width: 760px; height: 760px; left: -260px; top: -260px; }
+      .cta::after { width: 620px; height: 620px; right: -250px; bottom: -230px; }
+      .cta .content { align-items: center; text-align: center; padding-top: 110px; }
+      .cta .logo { width: 238px; height: 238px; border-radius: 50%; object-fit: cover; box-shadow: 0 24px 60px rgba(53,29,45,.24); border: 9px solid rgba(255,255,255,.9); }
+      .cta h1 { max-width: 850px; margin-top: 50px; color: #351d2d; font-size: 76px; }
+      .cta p { max-width: 790px; color: #513746; font-size: 35px; }
+      .cta .site { margin-top: 34px; padding: 18px 34px; border-radius: 999px; background: #a83e54; color: #fffaf4; font-size: 31px; font-weight: 900; }
+      .cta .small { margin-top: 25px; color: #704657; font-size: 27px; font-weight: 750; }
+    </style>
+  </head>
+  <body>
+    <main id="card" class="card"></main>
+    <script>
+      const cards = [
+        {
+          photo: 'foto-capa.png', eyebrow: 'CABELO ONDULADO',
+          title: 'As ondas aparecem molhadas e somem quando secam?',
+          body: 'Antes de trocar o creme, veja <span class="accent">5 ajustes</span> que valem um teste.',
+          action: 'Deslize e salve para a próxima lavagem'
+        },
+        {
+          photo: 'foto-secagem.png', eyebrow: 'AJUSTE 1', light: true,
+          title: '<span class="number">01</span>Compare seu cabelo com ele mesmo',
+          body: 'Definição não é transformar ondas abertas em cachos fechados. Observe movimento, toque e duração.',
+          action: 'Seu formato natural não está errado'
+        },
+        {
+          photo: 'foto-capa.png', eyebrow: 'AJUSTE 2',
+          title: '<span class="number">02</span>Finalize todas as partes úmidas',
+          body: 'Mechas quase secas recebem produto de forma irregular. Umedeça de novo e trabalhe por partes.',
+          action: 'Água ajuda a espalhar o produto'
+        },
+        {
+          photo: 'foto-produto.png', eyebrow: 'AJUSTE 3', light: true,
+          title: '<span class="number">03</span>Comece com menos creme',
+          body: 'Raiz baixa, secagem lenta e ondas alongadas podem indicar excesso. Reduza antes de comprar outro pote.',
+          action: 'Acrescente só onde realmente faltar'
+        },
+        {
+          photo: 'foto-capa.png', eyebrow: 'AJUSTE 4',
+          title: '<span class="number">04</span>Talvez esteja faltando fixação',
+          body: 'Se a onda aparece molhada e some seca, teste uma camada fina de mousse, gel ou gelatina.',
+          action: 'Um fixador por vez já permite comparar'
+        },
+        {
+          photo: 'foto-produto.png', eyebrow: 'AJUSTE 5', light: true,
+          title: '<span class="number">05</span>Não penteie depois de formar as ondas',
+          body: 'Desembarace antes. Pentear depois de amassar pode separar os grupos e esticar o desenho.',
+          action: 'Termine amassando das pontas para a raiz'
+        },
+        {
+          photo: 'foto-secagem.png', eyebrow: 'NA SECAGEM',
+          title: 'Agora vem a parte difícil: não mexer',
+          body: 'Tocar, abrir mechas e mudar o cabelo de lado enquanto seca pode aumentar o frizz e desfazer as ondas.',
+          action: 'Espere secar por completo para avaliar'
+        },
+        { cta: true }
+      ];
+
+      const index = Math.max(0, Math.min(cards.length - 1, Number(new URLSearchParams(location.search).get('card') || 0)));
+      const c = cards[index];
+      const card = document.querySelector('#card');
+
+      if (c.cta) {
+        card.className = 'card cta';
+        card.innerHTML = `
+          <section class="content">
+            <img class="logo" src="../../../public/logo-curva-viva.png" alt="" />
+            <h1>Qual desses ajustes você vai testar primeiro?</h1>
+            <p>Salve este carrossel e siga <strong>@curvavivaoficial</strong> para cuidar das suas ondas com mais clareza.</p>
+            <div class="site">Guia completo em curvaviva.com.br</div>
+            <div class="small">8 erros que podem desmontar a definição</div>
+          </section>`;
+      } else {
+        card.classList.toggle('light', Boolean(c.light));
+        card.innerHTML = `
+          <img class="photo" src="${c.photo}" alt="" />
+          <div class="wash"></div>
+          <section class="content">
+            <div class="topline">
+              <div class="eyebrow">${c.eyebrow}</div>
+              <div class="page">${index + 1}/8</div>
+            </div>
+            <h1>${c.title}</h1>
+            <p>${c.body}</p>
+            <div class="footer">
+              <div class="action">${c.action}</div>
+              <div class="brand"><img src="../../../public/logo-curva-viva.png" alt="" /> Curva Viva</div>
+            </div>
+          </section>`;
+      }
+    </script>
+  </body>
+</html>

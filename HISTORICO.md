@@ -572,3 +572,30 @@ A conta está pública e sem vídeos. O editor não apresentou campo de site
 clicável para esta conta, então o domínio foi incluído na bio. Não houve troca
 para conta empresarial, verificação, promoção ou alteração de dados pessoais,
 segurança e cobrança.
+
+### 17 de agosto de 2026 — Codex — Primeiro carrossel do TikTok preparado
+
+Foi pesquisado no próprio TikTok o interesse por cabelo ondulado, falta de
+definição, finalização e frizz. A pauta escolhida foi `As ondas aparecem
+molhadas e somem quando secam?`, conectada ao artigo existente sobre oito erros
+que confundem a definição. Os resultados observados reforçaram o uso de um
+gancho de identificação, passos curtos, pedido para salvar e hashtags
+específicas do nicho.
+
+Foi criado um carrossel orgânico com oito imagens em proporção 3:4, três fotos
+realistas geradas para a publicação, cinco ajustes práticos e um cartão final
+com a logo centralizada, convite para seguir `@curvavivaoficial` e acesso a
+`curvaviva.com.br`. O material, a legenda, as fontes da pesquisa e os prompts
+foram salvos em `midia-social/tiktok/2026-08-17-ondulado-nao-define/`.
+
+As duas revisões passaram. A primeira conferiu fatos, coerência, acentuação,
+logo, endereço e ausência de promessas. A segunda conferiu gancho, retenção,
+leitura no celular, naturalidade, CTA, hashtags e coerência do áudio pesquisado.
+A revisão visual das oito páginas foi salva em `revisao-visual.png`.
+
+Também passaram `pnpm validar`, `pnpm check` e `pnpm build`. O TikTok Studio
+confirmou suporte a carrossel de fotos com até 35 imagens e proporção 3:4, mas o
+upload não foi concluído porque a extensão do Chrome não conseguiu abrir o
+seletor de arquivos. É necessário ativar `Permitir acesso a URLs de arquivo`
+nos detalhes da extensão ChatGPT em `chrome://extensions`. Nenhuma imagem foi
+enviada e não houve publicação parcial, promoção ou cobrança.

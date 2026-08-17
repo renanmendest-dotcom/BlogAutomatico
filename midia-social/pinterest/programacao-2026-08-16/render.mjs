@@ -383,5 +383,33 @@ const rows = pins.map((pin) => [
 await writeFile(join(here, 'pinterest-bulk.csv'), `\uFEFF${header.map(csvCell).join(',')}\r\n${rows.join('\r\n')}\r\n`, 'utf8');
 await copyFile(join(here, 'pinterest-bulk.csv'), join(publicDir, 'pinterest-bulk.csv'));
 
+const retrySchedule = new Map([
+  ['05', '2026-08-17T17:00:00'],
+  ['06', '2026-08-17T23:00:00'],
+  ['08', '2026-08-18T17:00:00'],
+  ['09', '2026-08-18T23:00:00'],
+  ['11', '2026-08-19T17:00:00'],
+  ['15', '2026-08-20T23:00:00'],
+  ['18', '2026-08-21T23:00:00'],
+  ['02', '2026-08-23T12:00:00'],
+  ['03', '2026-08-23T17:00:00'],
+]);
+const retryRows = [...retrySchedule].map(([id, publish]) => {
+  const pin = pins.find((candidate) => candidate.id === id);
+  const tracking = `utm_source=pinterest&utm_medium=organic&utm_campaign=programacao_2026_08_16&utm_content=pin_${pin.id}`;
+  return [
+    pin.title,
+    `${site}/pinterest/programacao-2026-08-16/pin-${pin.id}.png`,
+    pin.board,
+    '',
+    pin.description,
+    `${site}${pin.link}?${tracking}`,
+    publish,
+    pin.keywords,
+  ].map(csvCell).join(',');
+});
+await writeFile(join(here, 'pinterest-bulk-rejeitados.csv'), `\uFEFF${header.map(csvCell).join(',')}\r\n${retryRows.join('\r\n')}\r\n`, 'utf8');
+
 console.log(`Renderizados ${pins.length} Pins em ${publicDir}`);
 console.log(`CSV criado em ${join(here, 'pinterest-bulk.csv')}`);
+console.log(`CSV de recuperação criado em ${join(here, 'pinterest-bulk-rejeitados.csv')}`);

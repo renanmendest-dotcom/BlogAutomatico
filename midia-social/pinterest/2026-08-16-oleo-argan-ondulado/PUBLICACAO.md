@@ -10,12 +10,11 @@
 - Revisão 1: produto, tamanho, imagem, fatos, texto, link e ordem dos cartões conferidos.
 - Revisão 2: título, intenção de busca, leitura no celular, retenção, naturalidade e CTA conferidos.
 - Testes do site: `pnpm validar`, `pnpm check`, `pnpm build` e revisão visual aprovados.
-- Pin público: https://br.pinterest.com/pin/1146236542701452951/.
+- Pin público corrigido: https://br.pinterest.com/pin/1146236542701459645/.
 - Destino confirmado: https://www.curvaviva.com.br/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/.
 - Verificação pública: cinco imagens navegáveis, CTA final, pasta correta, título, descrição, texto alternativo e marcações de IA confirmados.
 - Status do Pin: publicado sem patrocínio, campanha, orçamento ou cobrança.
-- Correção visual preparada em 16 de agosto de 2026: o cartão de produto
-  `pin-03.png` passou a integrar a embalagem real ao círculo rosa, sem o
-  quadrado branco. A edição do Pin publicado não oferece substituição de mídia,
-  apenas metadados e exclusão integral. A republicação aguarda autorização para
-  apagar o Pin atual, pois isso remove o endereço e as estatísticas existentes.
+- Correção visual publicada em 16 de agosto de 2026: o cartão de produto
+  `pin-03.png` integra a embalagem real ao círculo rosa, sem o quadrado branco.
+  O carrossel corrigido foi conferido publicamente com cinco imagens, e o Pin
+  anterior `1146236542701452951` foi excluído após a validação da nova versão.

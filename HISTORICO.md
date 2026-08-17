@@ -501,3 +501,17 @@ descrição, site, texto alternativo e marcações. Para trocar a imagem será
 necessário excluir o Pin inteiro e republicar as cinco imagens, o que apaga o
 endereço e as estatísticas atuais. A exclusão não foi executada sem confirmação
 específica do proprietário.
+
+### 16 de agosto de 2026 — Codex — Pin de argan corrigido e republicado
+
+Com autorização explícita do proprietário, o carrossel de óleo de argan foi
+republicado com as cinco imagens em
+`https://br.pinterest.com/pin/1146236542701459645/`. A terceira página foi
+conferida no Pin público: a embalagem real do Lola Argan Oil 50 mL aparece
+recortada e integrada ao círculo rosa, sem o quadrado branco.
+
+O novo Pin mantém a pasta `Cabelo ondulado: leveza e definição`, o título, a
+descrição, o texto alternativo, as marcações de IA e o destino oficial
+`https://www.curvaviva.com.br/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/`.
+Depois da validação, o Pin antigo `1146236542701452951` foi excluído. Nenhum
+patrocínio, campanha, orçamento, forma de pagamento ou cobrança foi criado.

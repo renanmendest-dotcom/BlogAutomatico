@@ -67,6 +67,79 @@
     ]
   },
   {
+    "id": "salon-line-gelatina-super-oleos-400g",
+    "nome": "Gelatina Ativadora de Cachos Nutrição SOS Cachos Super Óleos 400 g",
+    "descricao": "Gelatina de finalização da Salon Line para cabelos cacheados e crespos, com proposta de definição, nutrição, brilho e controle de frizz.",
+    "marca": "Salon Line",
+    "categoria": "gelatina",
+    "publicado": true,
+    "verificadoEm": "2026-08-17",
+    "perfil": {
+      "curvaturas": ["Cacheados", "Crespos"],
+      "textura": "Gelatina",
+      "intensidade": "Fixação para finalização, sem nível numérico informado",
+      "objetivos": ["Definição", "Nutrição", "Brilho", "Controle de frizz"]
+    },
+    "imagem": {
+      "src": "/produtos/salon-line-gelatina-super-oleos-400g.jpg",
+      "alt": "Pote rosa e roxo da Gelatina Ativadora de Cachos Nutrição SOS Cachos Super Óleos Salon Line 400 g",
+      "credito": "Salon Line",
+      "fonteUrl": "https://www.salonline.com.br/gelatina-nutritiva-ativadora-de-cachos-super-oleos-400g"
+    },
+    "preco": {
+      "min": 32.5,
+      "max": 32.5,
+      "moeda": "BRL",
+      "verificadoEm": "2026-08-17"
+    },
+    "destaques": [
+      {
+        "rotulo": "Indicação da marca",
+        "valor": "Cabelos cacheados e crespos, para uso a partir de 12 anos",
+        "fonteId": "salon-line-super-oleos-400g"
+      },
+      {
+        "rotulo": "Tamanho",
+        "valor": "400 g",
+        "fonteId": "salon-line-super-oleos-400g"
+      },
+      {
+        "rotulo": "Ativos destacados",
+        "valor": "Mix de 12 óleos, incluindo argan, karité, coco, macadâmia e oliva",
+        "fonteId": "salon-line-super-oleos-400g"
+      },
+      {
+        "rotulo": "Modo de uso",
+        "valor": "Aplicar nos cabelos limpos e úmidos, mecha a mecha, no comprimento e nas pontas, sem enxágue",
+        "fonteId": "salon-line-super-oleos-400g"
+      }
+    ],
+    "oferta": {
+      "loja": "Mercado Livre",
+      "url": "https://meli.la/28PpJEN",
+      "atualizadoEm": "2026-08-17"
+    },
+    "analise": {
+      "tipo": "documental",
+      "testado": false,
+      "nota": "Definição, nutrição, brilho e controle de frizz são propostas publicadas pela fabricante. Sensação de rigidez, maciez e rendimento variam com a dose, a combinação de produtos e o cabelo."
+    },
+    "fontes": [
+      {
+        "id": "salon-line-super-oleos-400g",
+        "titulo": "Salon Line, Gelatina Ativadora de Cachos Nutrição SOS Cachos Super Óleos 400 g",
+        "url": "https://www.salonline.com.br/gelatina-nutritiva-ativadora-de-cachos-super-oleos-400g",
+        "acessadoEm": "2026-08-17"
+      },
+      {
+        "id": "mercado-livre-super-oleos-400g",
+        "titulo": "Gelatina SOS Ativadora de Cachos Super Óleos Salon Line 400 g no Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/gelatina-sos-ativadora-cachos-super-oleos-salon-line-400g/up/MLBU1476354033",
+        "acessadoEm": "2026-08-17"
+      }
+    ]
+  },
+  {
     "id": "lola-meu-cacho-minha-vida-creme-pentear-500g",
     "nome": "Meu Cacho Minha Vida Creme de Pentear 500 g",
     "descricao": "Creme finalizador da Lola com proposta de desembaraço, emoliência, definição e cuidado para fios cacheados.",

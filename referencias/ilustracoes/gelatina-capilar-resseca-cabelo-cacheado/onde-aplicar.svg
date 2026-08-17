@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="600" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#47283F">Camada fina, distribuição completa</text>
+  <text x="600" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" fill="#6B3D5E">A quantidade ideal depende do comprimento e da quantidade de cabelo</text>
+
+  <path d="M205 280 C205 225 250 180 305 180 C360 180 405 225 405 280 C405 370 305 450 305 450 C305 450 205 370 205 280Z" fill="#F0D2CB" stroke="#C2564C" stroke-width="6"/>
+  <path d="M275 322 C289 285 315 258 347 237" fill="none" stroke="#6B3D5E" stroke-width="18" stroke-linecap="round"/>
+  <text x="305" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">1. Cabelo úmido</text>
+  <text x="305" y="554" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#2B2027">comece após a lavagem</text>
+
+  <path d="M475 322 C505 245 550 205 600 205 C650 205 695 245 725 322" fill="none" stroke="#6B3D5E" stroke-width="34" stroke-linecap="round"/>
+  <path d="M493 322 C523 266 558 238 600 238 C642 238 677 266 707 322" fill="none" stroke="#F8F3EC" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="600" cy="274" r="22" fill="#C2564C"/>
+  <text x="600" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">2. Pouco produto</text>
+  <text x="600" y="554" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#2B2027">espalhe antes de aumentar</text>
+
+  <path d="M815 200 C845 310 805 390 870 455 C935 390 895 310 925 200" fill="none" stroke="#6B3D5E" stroke-width="24" stroke-linecap="round"/>
+  <path d="M958 200 C988 310 948 390 1013 455 C1078 390 1038 310 1068 200" fill="none" stroke="#6B3D5E" stroke-width="24" stroke-linecap="round"/>
+  <path d="M828 292 L1045 292" stroke="#C2564C" stroke-width="9" stroke-linecap="round" stroke-dasharray="18 15"/>
+  <text x="941" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">3. Mecha a mecha</text>
+  <text x="941" y="554" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#2B2027">comprimento e pontas</text>
+
+  <path d="M420 625 H780" stroke="#C2564C" stroke-width="8" stroke-linecap="round"/>
+  <path d="M752 602 L785 625 L752 648" fill="none" stroke="#C2564C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="706" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">Amasse das pontas para a raiz e não enxágue</text>
+</svg>

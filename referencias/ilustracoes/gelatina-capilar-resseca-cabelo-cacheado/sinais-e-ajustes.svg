@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="600" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#47283F">Quatro sinais, quatro ajustes</text>
+  <text x="600" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" fill="#6B3D5E">Olhe o cabelo completamente seco antes de mudar tudo</text>
+
+  <rect x="90" y="165" width="490" height="215" rx="28" fill="#EFE5D9"/>
+  <circle cx="160" cy="235" r="38" fill="#6B3D5E"/>
+  <path d="M143 237 q17 -30 34 0 q-17 30 -34 0" fill="none" stroke="#F8F3EC" stroke-width="7"/>
+  <text x="220" y="225" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">Firme antes de secar</text>
+  <text x="220" y="269" font-family="Arial, sans-serif" font-size="23" fill="#2B2027">Espere secar e amasse.</text>
+  <text x="220" y="303" font-family="Arial, sans-serif" font-size="23" fill="#2B2027">Pode ser só a fixação.</text>
+
+  <rect x="620" y="165" width="490" height="215" rx="28" fill="#F0D2CB"/>
+  <circle cx="690" cy="235" r="38" fill="#C2564C"/>
+  <circle cx="676" cy="224" r="6" fill="#F8F3EC"/><circle cx="703" cy="218" r="7" fill="#F8F3EC"/><circle cx="696" cy="246" r="5" fill="#F8F3EC"/>
+  <text x="750" y="225" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">Pontinhos brancos</text>
+  <text x="750" y="269" font-family="Arial, sans-serif" font-size="23" fill="#2B2027">Reduza as camadas e teste</text>
+  <text x="750" y="303" font-family="Arial, sans-serif" font-size="23" fill="#2B2027">a combinação na palma.</text>
+
+  <rect x="90" y="415" width="490" height="215" rx="28" fill="#F0D2CB"/>
+  <circle cx="160" cy="485" r="38" fill="#C2564C"/>
+  <path d="M138 505 l15 -42 l16 42 l15 -42" fill="none" stroke="#F8F3EC" stroke-width="7" stroke-linejoin="round"/>
+  <text x="220" y="475" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">Áspero depois de soltar</text>
+  <text x="220" y="519" font-family="Arial, sans-serif" font-size="23" fill="#2B2027">Na próxima lavagem,</text>
+  <text x="220" y="553" font-family="Arial, sans-serif" font-size="23" fill="#2B2027">reduza apenas a gelatina.</text>
+
+  <rect x="620" y="415" width="490" height="215" rx="28" fill="#EFE5D9"/>
+  <circle cx="690" cy="485" r="38" fill="#6B3D5E"/>
+  <path d="M672 467 l36 36 M708 467 l-36 36" stroke="#F8F3EC" stroke-width="8" stroke-linecap="round"/>
+  <text x="750" y="475" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">Ardor ou incômodo</text>
+  <text x="750" y="519" font-family="Arial, sans-serif" font-size="23" fill="#2B2027">Pare de usar e não leve</text>
+  <text x="750" y="553" font-family="Arial, sans-serif" font-size="23" fill="#2B2027">o finalizador à raiz.</text>
+
+  <text x="600" y="706" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#47283F">Um sinal não explica sozinho o que aconteceu</text>
+</svg>

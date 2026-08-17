@@ -101,6 +101,18 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 17 de agosto de 2026 — Codex — Guia sobre gelatina e ressecamento
+
+- Criado um artigo novo para responder à dúvida real se gelatina capilar
+  resseca cabelos cacheados e crespos, sem repetir os guias já publicados sobre
+  ordem de aplicação e escolha entre creme e gelatina.
+- A indicação é a Gelatina Ativadora de Cachos Nutrição SOS Cachos Super Óleos
+  400 g, da Salon Line, conferida na fonte oficial e vinculada à oferta exata do
+  Mercado Livre pelo link de afiliado `https://meli.la/28PpJEN`.
+- O artigo recebeu quatro ilustrações próprias, foto oficial do produto e duas
+  revisões independentes. Validação de conteúdo, Astro check, build e revisão
+  visual em computador e celular passaram antes da publicação direta na `main`.
+
 ### 15 de agosto de 2026 — Codex — Bloqueio do domínio no Pinterest explicado
 
 - `curvaviva.com.br`, `www.curvaviva.com.br` e o artigo usado nos Pins

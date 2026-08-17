@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="600" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#47283F">Gelatina resseca ou só está segurando?</text>
+  <text x="600" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#6B3D5E">O toque muda entre a secagem e o acabamento</text>
+
+  <rect x="90" y="185" width="465" height="425" rx="34" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="5"/>
+  <circle cx="322" cy="315" r="96" fill="#F0D2CB"/>
+  <path d="M245 350 C270 240, 300 405, 335 280 C370 190, 390 415, 418 255" fill="none" stroke="#6B3D5E" stroke-width="22" stroke-linecap="round"/>
+  <path d="M235 382 C270 250, 310 430, 350 300 C385 215, 410 435, 430 300" fill="none" stroke="#47283F" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 16"/>
+  <text x="322" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#47283F">Enquanto seca</text>
+  <text x="322" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">a película pode ficar firme</text>
+  <text x="322" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">e manter a mecha agrupada</text>
+
+  <rect x="645" y="185" width="465" height="425" rx="34" fill="#F0D2CB" stroke="#C2564C" stroke-width="5"/>
+  <circle cx="878" cy="315" r="96" fill="#EFE5D9"/>
+  <path d="M790 345 C825 230, 855 405, 890 275 C925 190, 955 410, 982 250" fill="none" stroke="#6B3D5E" stroke-width="18" stroke-linecap="round"/>
+  <path d="M788 390 Q828 355 865 390 M925 390 Q965 355 1002 390" fill="none" stroke="#C2564C" stroke-width="8" stroke-linecap="round"/>
+  <text x="878" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#47283F">Depois de seco</text>
+  <text x="878" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">amasse de baixo para cima</text>
+  <text x="878" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2B2027">e só então avalie o toque</text>
+
+  <rect x="210" y="660" width="780" height="82" rx="41" fill="#47283F"/>
+  <text x="600" y="712" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#F8F3EC">Rigidez que solta não prova ressecamento</text>
+</svg>

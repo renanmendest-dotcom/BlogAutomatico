@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="600" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#47283F">Teste de três lavagens</text>
+  <text x="600" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" fill="#6B3D5E">Mude uma variável por vez e avalie depois de seco</text>
+
+  <line x1="230" y1="345" x2="970" y2="345" stroke="#6B3D5E" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="250" cy="345" r="72" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="6"/>
+  <circle cx="600" cy="345" r="72" fill="#F0D2CB" stroke="#C2564C" stroke-width="6"/>
+  <circle cx="950" cy="345" r="72" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="6"/>
+  <text x="250" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#47283F">1</text>
+  <text x="600" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#47283F">2</text>
+  <text x="950" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#47283F">3</text>
+
+  <text x="250" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">Rotina-base</text>
+  <text x="250" y="516" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#2B2027">registre maciez, forma</text>
+  <text x="250" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#2B2027">e duração sem gelatina</text>
+
+  <text x="600" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">Camada mínima</text>
+  <text x="600" y="516" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#2B2027">mantenha os outros</text>
+  <text x="600" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#2B2027">produtos iguais</text>
+
+  <text x="950" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#47283F">Ajuste a dose</text>
+  <text x="950" y="516" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#2B2027">reduza se ficou áspero</text>
+  <text x="950" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#2B2027">ou repita se funcionou</text>
+
+  <rect x="210" y="650" width="780" height="82" rx="41" fill="#47283F"/>
+  <text x="600" y="702" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#F8F3EC">Comparação simples vale mais que trocar tudo junto</text>
+</svg>

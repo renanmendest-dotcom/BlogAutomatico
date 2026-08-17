@@ -555,3 +555,20 @@ A fila privada passou de 11 para 20 Pins agendados, com os nove títulos e
 horários novos visíveis. Somado ao Pin do primeiro lote que já foi publicado,
 as 21 peças estão contabilizadas. Nenhuma campanha, patrocínio, orçamento ou
 cobrança foi criado.
+
+### 17 de agosto de 2026 — Codex — Perfil oficial do TikTok organizado
+
+O perfil autenticado do TikTok foi configurado como presença oficial do Curva
+Viva. O usuário pessoal `@renanmendes47` foi substituído por
+`@curvavivaoficial`, e a nova página pública passou a ser
+`https://www.tiktok.com/@curvavivaoficial`.
+
+A logo redonda oficial foi aplicada como foto de perfil. O nome visível já
+estava definido como `Curva Viva | Cabelos ondulados` e não pôde ser alterado
+novamente antes de 22 de agosto por limite temporário do TikTok. A bio ficou
+`Guias para ondulados, cacheados e crespos ✨ curvaviva.com.br`.
+
+A conta está pública e sem vídeos. O editor não apresentou campo de site
+clicável para esta conta, então o domínio foi incluído na bio. Não houve troca
+para conta empresarial, verificação, promoção ou alteração de dados pessoais,
+segurança e cobrança.

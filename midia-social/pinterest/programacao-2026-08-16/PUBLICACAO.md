@@ -52,6 +52,12 @@ Nenhum rótulo foi redesenhado por inteligência artificial.
 - [x] `pnpm validar`, `pnpm check` e `pnpm build`.
 - [x] Arquivos publicados no domínio oficial e verificados com HTTP 200.
 - [x] CSV importado no Pinterest às 20h42 de 16 de agosto de 2026.
-- [ ] Processamento interno do Pinterest concluído. A confirmação da plataforma
-  informa que os Pins estão sendo criados, que isso geralmente leva cerca de
-  duas horas e que um email será enviado somente se houver problema.
+- [x] Processamento interno do Pinterest concluído e conferido em 17 de agosto.
+- [x] Um Pin foi publicado e 11 Pins aparecem na fila privada `Pins agendados`,
+  totalizando 12 linhas aceitas pelo Pinterest.
+- [ ] Nove linhas foram rejeitadas com o erro `Duplicar link do Pin`. São as
+  segundas ou terceiras peças que apontavam para o mesmo artigo de outra linha
+  do lote. Elas não viraram rascunhos nem agendamentos.
+- [ ] Para completar os 21 Pins, preparar um lote separado com nove links de
+  destino únicos e parâmetros de rastreamento próprios, além de redistribuir os
+  horários que já passaram. Não reenviar o CSV original para evitar duplicatas.

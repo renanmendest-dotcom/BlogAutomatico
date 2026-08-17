@@ -515,3 +515,25 @@ descrição, o texto alternativo, as marcações de IA e o destino oficial
 `https://www.curvaviva.com.br/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/`.
 Depois da validação, o Pin antigo `1146236542701452951` foi excluído. Nenhum
 patrocínio, campanha, orçamento, forma de pagamento ou cobrança foi criado.
+
+### 17 de agosto de 2026 — Codex — Retornos do Pinterest e auditoria do CSV
+
+O Gmail oficial foi conferido. O suporte respondeu à contestação do domínio em
+15 de agosto dizendo que considera o site uma violação da Política de Spam e
+que não o retirará da lista de bloqueio. Apesar dessa resposta formal, os Pins
+mais recentes e a importação em massa aceitaram destinos em
+`https://www.curvaviva.com.br`, portanto o domínio com `www` está funcionando
+operacionalmente nas publicações atuais.
+
+O email de processamento do CSV informou erro em nove linhas, todas marcadas
+como `Duplicar link do Pin`. A auditoria da conta confirmou o resultado real:
+um Pin do lote já foi publicado em
+`https://br.pinterest.com/pin/1146236542701458841/` e 11 Pins estão na fila
+privada `Pins agendados`. Assim, 12 das 21 linhas foram aceitas e nove foram
+rejeitadas por repetir o destino de outra linha do mesmo CSV.
+
+Os Pins agendados não aparecem em `Salvos` nem em `Rascunhos`. Eles ficam em
+`Perfil > Criados > Pins agendados` e serão publicados automaticamente nos
+horários exibidos. Para completar a grade, será necessário um novo lote apenas
+com as nove peças rejeitadas, usando URLs de destino únicas e novos horários;
+o CSV original não deve ser reenviado para evitar duplicatas.

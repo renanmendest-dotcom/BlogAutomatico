@@ -423,6 +423,30 @@ variação visual do conjunto e a experiência real na página pública. Nenhum
 relatório pode usar `publicado`, `concluído` ou `aprovado` sem as duas contagens
 coincidirem e sem todas as aparições humanas serem distintas.
 
+### Completude informacional obrigatória
+
+Esta regra vale para imagem única, carrossel, vídeo e qualquer outra publicação
+em rede social.
+
+1. **Toda promessa precisa ser entregue na postagem.** Título, capa e CTA não
+   podem anunciar uma lista, resposta, comparação ou método que não apareça na
+   mídia nem na descrição.
+2. **Quantidade exige lista completa.** Se a postagem disser `8 erros`,
+   `3 sinais`, `7 produtos` ou `5 passos`, todos os itens precisam estar
+   legíveis nas imagens ou enumerados claramente na descrição.
+3. **O clique serve para aprofundar.** Nunca usar o artigo como única fonte da
+   resposta prometida no Pin ou post. A leitora deve receber a informação
+   central mesmo sem sair da rede social.
+4. **Imagem única precisa ser autossuficiente.** Quando a arte não comportar a
+   resposta completa, incluir a resposta na descrição ou converter a peça em
+   carrossel real. Não usar chamadas como `confira os 8` se os oito não estiverem
+   disponíveis na própria publicação.
+5. **Revisar promessa contra entrega.** Antes do upload e depois da publicação,
+   comparar cada afirmação do título, da arte e do CTA com `mídias + descrição`.
+   Qualquer lacuna reprova a postagem.
+6. **Agendamentos também entram na regra.** Conferir e corrigir posts
+   programados antes do horário de publicação; não esperar o erro ficar público.
+
 ---
 
 ## 13. Pinterest

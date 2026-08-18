@@ -35,6 +35,7 @@ const pins = [
     cta: 'Entenda cada sinal',
     title: '3 sinais de excesso de óleo no cabelo ondulado',
     description: 'Suas ondas perderam volume depois do óleo? Estes sinais ajudam a diferenciar acabamento de excesso e a ajustar uma coisa por vez na próxima finalização.',
+    requiredDetails: ['raiz baixa', 'mechas coladas', 'toque carregado'],
     link: '/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/', board: boards.finalizacao,
     publish: '2026-08-17T01:40:00', keywords: 'óleo no cabelo, cabelo ondulado pesado, finalização, ondas',
   },
@@ -55,6 +56,7 @@ const pins = [
     cta: 'Veja os erros mais comuns',
     title: 'Cabelo ondulado não define? Comece por estes 3 ajustes',
     description: 'Se as ondas somem durante a secagem, o problema pode estar na água, na dose ou no excesso de manipulação. Veja oito erros comuns e como testar cada ajuste.',
+    requiredDetails: ['molhe por igual', 'reduza a dose', 'pare de tocar'],
     link: '/artigos/cabelo-ondulado-nao-define-erros/', board: boards.ondas,
     publish: '2026-08-17T12:00:00', keywords: 'cabelo ondulado não define, finalizar ondas, cabelo 2A 2B 2C',
   },
@@ -74,7 +76,8 @@ const pins = [
     body: 'Do excesso de creme ao toque durante a secagem. Descubra o que ajustar sem trocar todos os produtos.',
     cta: 'Confira os 8 erros',
     title: '8 erros que fazem o cabelo ondulado perder definição',
-    description: 'As ondas não duram ou ficam sem forma? Reunimos oito erros de finalização que podem atrapalhar a definição e um teste simples para cada um.',
+    description: 'As ondas não duram? Os 8 erros são: 1) esperar uma curvatura diferente da natural; 2) finalizar quando partes já secaram; 3) começar com produto demais; 4) usar só creme quando falta fixação; 5) pentear depois de formar as ondas; 6) tocar durante a secagem; 7) amassar a camada firme antes de secar; 8) mudar toda a rotina a cada tentativa. No guia, veja como testar um ajuste por vez.',
+    requiredDetails: ['curvatura diferente da natural', 'partes já secaram', 'produto demais', 'falta fixação', 'pentear depois de formar as ondas', 'tocar durante a secagem', 'camada firme antes de secar', 'mudar toda a rotina'],
     link: '/artigos/cabelo-ondulado-nao-define-erros/', board: boards.ondas,
     publish: '2026-08-17T23:00:00', keywords: 'erros cabelo ondulado, definição, finalização ondulada, frizz',
   },
@@ -85,6 +88,7 @@ const pins = [
     cta: 'Compare as três opções',
     title: 'Creme para cabelo ondulado sem pesar: compare 3 opções',
     description: 'Compare Widi Care Ondulando a Juba, Salon Line Definição Natural e Inoar Meu Cacho Meu Crush por indicação, tamanho e forma de uso.',
+    requiredDetails: ['Widi Care Ondulando a Juba', 'Salon Line Definição Natural', 'Inoar Meu Cacho Meu Crush'],
     link: '/artigos/melhores-cremes-para-cabelo-ondulado-sem-pesar/', board: boards.produtos,
     publish: '2026-08-18T12:00:00', keywords: 'creme cabelo ondulado, creme sem pesar, Widi Care, Salon Line, Inoar',
   },
@@ -104,7 +108,8 @@ const pins = [
     body: 'Uma opção focada em ondas, uma embalagem econômica e uma escolha versátil para várias curvaturas.',
     cta: 'Descubra qual combina com você',
     title: '3 cremes para cabelo ondulado sem pesar',
-    description: 'Quer definição sem derrubar o volume? Veja três cremes de pentear para cabelo ondulado e escolha pela proposta, tamanho e necessidade da sua rotina.',
+    description: 'Três opções para ondas: 1) Widi Care Ondulando a Juba, focado em ondulados; 2) Salon Line Definição Natural 1 kg, embalagem econômica; 3) Inoar Meu Cacho, Meu Crush 500 ml, indicação ampla. Compare proposta, tamanho e modo de uso e comece com pouca quantidade para não pesar.',
+    requiredDetails: ['Widi Care Ondulando a Juba', 'Salon Line Definição Natural', 'Inoar Meu Cacho, Meu Crush'],
     link: '/artigos/melhores-cremes-para-cabelo-ondulado-sem-pesar/', board: boards.ondas,
     publish: '2026-08-18T23:00:00', keywords: 'melhor creme ondulado, ondas sem pesar, creme de pentear',
   },
@@ -165,6 +170,7 @@ const pins = [
     cta: 'Simplifique sua rotina',
     title: '3 sinais de que a finalização está pesada',
     description: 'Seu cabelo seca sem movimento e com sensação de resíduo? Veja sinais de excesso e como descobrir se o problema está na dose ou na soma de camadas.',
+    requiredDetails: ['pouco movimento', 'raiz baixa', 'sensação de resíduo'],
     link: '/artigos/leave-in-ou-creme-de-pentear/', board: boards.finalizacao,
     publish: '2026-08-20T23:00:00', keywords: 'finalização pesada, cabelo sem volume, excesso de produto',
   },
@@ -195,6 +201,7 @@ const pins = [
     cta: 'Veja o guia completo',
     title: '3 passos para recuperar os cachos no day after',
     description: 'Recupere o desenho dos cachos sem molhar tudo: identifique as áreas amassadas, use pouca água e modele apenas as mechas que perderam forma.',
+    requiredDetails: ['áreas amassadas', 'pouca água', 'mechas que perderam forma'],
     link: '/artigos/como-recuperar-os-cachos-no-day-after-sem-lavar/', board: boards.cachos,
     publish: '2026-08-21T23:00:00', keywords: 'recuperar cachos, day after, cachos definidos',
   },
@@ -204,7 +211,8 @@ const pins = [
     body: 'Cruze espessura do fio, acabamento desejado, tamanho e modo de uso antes de olhar só para a promessa.',
     cta: 'Compare 7 opções',
     title: 'Melhores cremes para cabelo cacheado: como escolher',
-    description: 'Compare sete cremes de pentear para cabelo cacheado e escolha por proposta, espessura do fio, tamanho e acabamento desejado.',
+    description: 'As 7 opções são: 1) Lola Meu Cacho Minha Vida; 2) Widi Care Encaracolando a Juba; 3) Salon Line Definição Natural; 4) Soul Power Curly Styling Cream; 5) Inoar Meu Cacho, Meu Crush; 6) Skala #Mais Cachos; 7) Soul Power Curly On Cream. Compare indicação, tamanho e acabamento; a melhor escolha depende do seu fio e da sua rotina.',
+    requiredDetails: ['Lola Meu Cacho Minha Vida', 'Widi Care Encaracolando a Juba', 'Salon Line Definição Natural', 'Soul Power Curly Styling Cream', 'Inoar Meu Cacho, Meu Crush', 'Skala #Mais Cachos', 'Soul Power Curly On Cream'],
     link: '/artigos/melhores-cremes-de-pentear-para-cabelo-cacheado/', board: boards.cachos,
     publish: '2026-08-22T12:00:00', keywords: 'melhor creme cabelo cacheado, creme de pentear, cachos definidos',
   },
@@ -445,9 +453,15 @@ const correctedRows = pins.filter((pin) => !publishedIds.has(pin.id)).map((pin) 
 await writeFile(join(here, 'pinterest-bulk-corrigido.csv'), `\uFEFF${header.map(csvCell).join(',')}\r\n${correctedRows.join('\r\n')}\r\n`, 'utf8');
 
 const misleadingCue = /desliz|arrast|para o lado|→/i;
+const normalize = (value) => value.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
 for (const pin of pins) {
   if (misleadingCue.test(`${pin.eyebrow} ${pin.headline} ${pin.body} ${pin.cta}`)) {
     throw new Error(`Pin único ${pin.id} contém indicação falsa de continuidade`);
+  }
+  const delivered = normalize(`${pin.headline} ${pin.body} ${pin.description}`);
+  const missing = (pin.requiredDetails ?? []).filter((detail) => !delivered.includes(normalize(detail)));
+  if (missing.length) {
+    throw new Error(`Pin único ${pin.id} não entrega a promessa: ${missing.join(', ')}`);
   }
 }
 

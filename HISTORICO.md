@@ -101,6 +101,21 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 18 de agosto de 2026 — Codex — Pins agora precisam entregar tudo o que prometem
+
+- O proprietário identificou um Pin que anunciava oito erros sem enumerá-los na
+  imagem nem na descrição. Ficou definida uma regra absoluta para toda rede
+  social: lista, comparação, resposta ou quantidade prometida precisa aparecer
+  integralmente na mídia ou na descrição; o clique serve apenas para aprofundar.
+- A auditoria dos Pins publicados e dos 16 agendamentos encontrou três falhas. A
+  descrição do Pin público dos oito erros e as descrições de dois agendamentos
+  foram corrigidas diretamente no Pinterest, sem necessidade de apagar ou
+  republicar.
+- O gerador do lote de Pinterest passou a validar os itens obrigatórios e falha
+  se uma promessa numérica ficar incompleta. Regras e evidências estão em
+  `AGENTS.md`, `.github/INSTRUCOES-IA.md` e
+  `midia-social/AUDITORIA-CARROSSEIS-2026-08-18.md`.
+
 ### 18 de agosto de 2026 — Codex — Carrosséis recentes auditados e republicados
 
 - Cinco carrosséis recentes do Pinterest e um do TikTok tinham a quantidade

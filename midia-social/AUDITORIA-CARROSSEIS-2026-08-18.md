@@ -36,6 +36,28 @@ O Pinterest mantém 16 Pins agendados. Eles são peças individuais planejadas
 como imagem única, cada uma com um arquivo de mídia e sem indicação visual de
 continuação. Portanto, nenhum agendamento foi apagado ou republicado.
 
+## Segunda auditoria: promessa e entrega
+
+Uma conferência posterior comparou título, arte e CTA com o conteúdo efetivamente
+entregue em `mídias + descrição`. Essa revisão encontrou três peças incompletas:
+
+- O Pin público `1146236542701531629` prometia oito erros, mas não os enumerava.
+  A descrição foi editada e agora contém os oito itens.
+- O agendamento `3777270183128086144` prometia três cremes, mas não dizia quais.
+  A descrição agora identifica Widi Care Ondulando a Juba, Salon Line Definição
+  Natural e Inoar Meu Cacho, Meu Crush.
+- O agendamento `3777270307213954176` prometia comparar sete opções, mas não as
+  listava. A descrição agora identifica as sete opções.
+
+Não foi necessário apagar ou republicar essas peças, porque a correção completa
+cabia na descrição editável do Pinterest. As demais publicações e os outros 14
+agendamentos passaram na conferência: toda promessa numérica ou resposta central
+está presente na imagem ou na descrição.
+
+O gerador local agora valida os detalhes obrigatórios de cada promessa numérica
+e interrompe a geração se algum item estiver ausente. A regra vale para imagem
+única, carrossel, vídeo e qualquer outra publicação em rede social.
+
 ## Verificação
 
 - Contagem antes do upload: 5/5 em cada carrossel do Pinterest e 8 imagens no
@@ -44,4 +66,5 @@ continuação. Portanto, nenhum agendamento foi apagado ou republicado.
 - Variedade visual: todas as imagens com pessoa agora usam composição, pose,
   expressão ou ângulo distintos dentro do respectivo carrossel.
 - Exclusão: cada versão antiga foi removida apenas depois da validação da nova.
-
+- Completude: toda lista, comparação ou quantidade prometida foi confrontada com
+  o conteúdo visível na mídia e na descrição.

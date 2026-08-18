@@ -70,3 +70,10 @@ seta que sugeria carrossel. Os três Pins únicos publicados foram trocados por
 carrosséis reais de cinco páginas. Os 18 agendamentos antigos foram cancelados
 e um CSV com artes sem indicação de deslize foi aceito para novo processamento.
 O relatório completo está em `../correcao-2026-08-17/PUBLICACAO.md`.
+
+Em 18 de agosto, uma auditoria de completude encontrou uma publicação e dois
+agendamentos que prometiam listas sem entregar todos os itens na imagem ou na
+descrição. As três descrições foram corrigidas diretamente no Pinterest e nas
+fontes locais. O gerador passou a reprovar automaticamente promessas numéricas
+que não contenham todos os detalhes definidos. O relatório consolidado está em
+`../../AUDITORIA-CARROSSEIS-2026-08-18.md`.

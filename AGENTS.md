@@ -78,6 +78,23 @@ nova implantação ou correções necessárias ao objetivo já aprovado.
   carrossel. Nesse caso, usar o fluxo próprio de múltiplas imagens da rede ou
   não publicar como carrossel.
 
+## Regra absoluta de completude informacional nas redes sociais
+
+- Toda postagem precisa entregar, na própria mídia ou na descrição, a resposta
+  básica que promete no título, na capa ou no CTA.
+- Se uma imagem única prometer uma quantidade, como `8 erros`, `3 sinais`,
+  `7 produtos` ou `5 passos`, todos os itens precisam aparecer legíveis na
+  imagem ou estar enumerados claramente na descrição da postagem.
+- Se prometer comparação, guia, lista, resposta ou passo a passo, a leitora não
+  pode depender do clique no site para descobrir a informação central. O link
+  pode aprofundar a resposta, nunca completar uma promessa deixada vazia.
+- Antes de publicar, comparar título, texto da arte e CTA com o conjunto
+  `mídias + descrição`. Se faltar qualquer item prometido, reescrever a
+  descrição, transformar a peça em carrossel real ou reprovar a publicação.
+- Depois de publicar, abrir a postagem pública e confirmar que a informação
+  completa ficou visível. Em posts agendados, fazer a mesma conferência antes
+  do horário programado.
+
 Esta autorização não inclui informar ou armazenar senhas no projeto, realizar
 compras, alterar dados financeiros ou de segurança, apagar conteúdo de forma
 irreversível ou ampliar o objetivo do projeto para algo diferente do solicitado.

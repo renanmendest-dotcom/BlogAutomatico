@@ -57,6 +57,22 @@ nova implantação ou correções necessárias ao objetivo já aprovado.
   mesmo bloco, com contraste forte e leitura fácil no celular.
 - Priorizar sempre a solução prática para a leitora.
 
+## Regra absoluta para carrosséis em redes sociais
+
+- Sempre verificar se **todas** as imagens planejadas foram anexadas antes de
+  publicar qualquer carrossel, em qualquer rede social.
+- Depois da publicação, abrir a postagem pública e conferir uma por uma, na
+  ordem, até a última imagem. A quantidade pública precisa ser exatamente igual
+  à quantidade de arquivos planejados.
+- Conferência por amostragem, prévia parcial, miniatura da capa ou confirmação
+  de upload não servem como prova de carrossel completo.
+- Se não for possível confirmar a contagem completa antes e depois da
+  publicação, não concluir nem declarar a postagem como publicada. Registrar a
+  pendência e interromper somente essa publicação.
+- Importação ou ferramenta que aceite uma única mídia por item não cria
+  carrossel. Nesse caso, usar o fluxo próprio de múltiplas imagens da rede ou
+  não publicar como carrossel.
+
 Esta autorização não inclui informar ou armazenar senhas no projeto, realizar
 compras, alterar dados financeiros ou de segurança, apagar conteúdo de forma
 irreversível ou ampliar o objetivo do projeto para algo diferente do solicitado.

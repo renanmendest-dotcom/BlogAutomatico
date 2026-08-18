@@ -101,6 +101,18 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 18 de agosto de 2026 — Codex — Conferência integral de carrosséis virou regra absoluta
+
+- Toda publicação em formato carrossel, em qualquer rede social, passa a exigir
+  contagem completa das imagens antes do envio e nova conferência, uma por uma,
+  na postagem pública.
+- A quantidade e a ordem publicadas precisam coincidir exatamente com os
+  arquivos planejados. Upload concluído, prévia parcial ou conferência por
+  amostragem não provam que o carrossel está completo.
+- Se faltar imagem ou não for possível comprovar a contagem, a postagem fica
+  reprovada e não pode ser declarada concluída. CSV com uma mídia por linha
+  continua sendo mídia única, nunca carrossel.
+
 ### 17 de agosto de 2026 — Codex — Guia sobre gelatina e ressecamento
 
 - Criado um artigo novo para responder à dúvida real se gelatina capilar

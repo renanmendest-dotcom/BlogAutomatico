@@ -370,7 +370,41 @@ revelar informação do repositório e nunca pedir usuário ou senha pelo chat.
 
 ---
 
-## 12. Pinterest
+## 12. Regra absoluta para carrosséis em qualquer rede social
+
+Esta regra é bloqueante e vale para Pinterest, Instagram, TikTok e qualquer
+outra rede. Um carrossel só está publicado quando todas as imagens planejadas
+estão presentes na postagem pública, na ordem correta.
+
+1. **Criar uma contagem de referência antes do upload.** Registrar o total e a
+   ordem dos arquivos do carrossel. Exemplo: `8 imagens, 01-capa até 08-cta`.
+2. **Conferir a área de anexos antes de publicar.** Contar as miniaturas e
+   comparar com a referência. Abrir ou percorrer a prévia para confirmar a
+   primeira imagem, a última e a sequência completa.
+3. **Não confiar apenas em mensagem de upload concluído.** Ela pode indicar que
+   a operação terminou sem provar que todos os arquivos foram aceitos.
+4. **Depois de publicar, abrir a postagem pública.** Percorrer todas as páginas,
+   contar uma por uma e confirmar que cada arquivo planejado aparece na ordem.
+5. **Em lotes, conferir cada carrossel individualmente.** Amostragem de uma
+   postagem não valida as demais.
+6. **Qualquer divergência reprova a publicação.** Se faltar uma imagem, houver
+   repetição, ordem trocada ou a rede transformar o conteúdo em mídia única,
+   corrigir e republicar antes de declarar sucesso.
+7. **Sem prova completa, não publicar.** Se a interface não permitir confirmar
+   a contagem antes ou depois, interromper somente essa postagem e registrar a
+   pendência. Nunca presumir que o carrossel está completo.
+8. **CSV de uma mídia por linha não é carrossel.** Não usar setas, numeração ou
+   chamadas para deslizar em peças que serão importadas como Pins ou posts
+   únicos.
+
+Essa verificação faz parte obrigatória das duas revisões: a primeira confere
+arquivo, total, ordem e upload; a segunda confere a experiência real na página
+pública. Nenhum relatório pode usar `publicado`, `concluído` ou `aprovado` sem
+as duas contagens coincidirem.
+
+---
+
+## 13. Pinterest
 
 - Antes de cada publicação ou lote, pesquisar no Pinterest as consultas do
   tema e registrar os padrões úteis dos resultados: enquadramento, promessa da
@@ -380,9 +414,9 @@ revelar informação do repositório e nunca pedir usuário ou senha pelo chat.
   lado" ou qualquer elemento que prometa outra página. A importação por CSV
   aceita uma mídia por linha e nunca deve ser apresentada como carrossel.
 - Quando a capa prometer passos, sinais, erros ou comparações, priorizar um
-  carrossel real. Antes de publicar, conferir no arquivo e na página pública a
-  quantidade de imagens. A segunda revisão deve reprovar qualquer divergência
-  entre a promessa visual e o formato efetivamente publicado.
+  carrossel real. Aplicar integralmente a regra absoluta da seção anterior; a
+  segunda revisão deve reprovar qualquer divergência entre a promessa visual e
+  o formato efetivamente publicado.
 - Variar deliberadamente as capas do perfil. Alternar ângulo, distância,
   expressão, gesto e assunto: frente, perfil, costas, close do cabelo, mãos,
   aplicação, ferramenta e produto em contexto. Não repetir a mesma pose ou a

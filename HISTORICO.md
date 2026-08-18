@@ -101,6 +101,17 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 18 de agosto de 2026 — Codex — Poses repetidas foram proibidas em carrosséis
+
+- Virou regra absoluta usar pose, expressão facial e ângulo diferentes em cada
+  imagem com pessoa dentro do mesmo carrossel, em qualquer rede social.
+- A comparação deve abranger o conjunto inteiro: uma pose da primeira imagem
+  não pode reaparecer em nenhuma página seguinte. Recorte, zoom, espelhamento,
+  troca de fundo ou de texto não contam como variação.
+- A primeira revisão reprova a repetição antes do upload e a segunda confirma a
+  variedade visual do carrossel completo. A imagem repetida precisa ser
+  substituída antes da publicação.
+
 ### 18 de agosto de 2026 — Codex — Conferência integral de carrosséis virou regra absoluta
 
 - Toda publicação em formato carrossel, em qualquer rede social, passa a exigir

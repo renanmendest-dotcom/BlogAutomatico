@@ -61,6 +61,11 @@ nova implantação ou correções necessárias ao objetivo já aprovado.
 
 - Sempre verificar se **todas** as imagens planejadas foram anexadas antes de
   publicar qualquer carrossel, em qualquer rede social.
+- Dentro do mesmo carrossel, nenhuma imagem com pessoa pode repetir pose,
+  expressão facial ou ângulo já usados em outra imagem. Cada aparição precisa
+  ser visualmente diferente de todas as demais do conjunto.
+- Recortar, espelhar, aproximar, mudar o fundo ou trocar apenas o texto não
+  transforma a mesma pose e expressão em uma imagem diferente.
 - Depois da publicação, abrir a postagem pública e conferir uma por uma, na
   ordem, até a última imagem. A quantidade pública precisa ser exatamente igual
   à quantidade de arquivos planejados.

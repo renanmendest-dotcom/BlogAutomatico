@@ -370,11 +370,31 @@ revelar informação do repositório e nunca pedir usuário ou senha pelo chat.
 
 ---
 
-## 12. Regra absoluta para carrosséis em qualquer rede social
+## 12. Regras absolutas para carrosséis em qualquer rede social
 
 Esta regra é bloqueante e vale para Pinterest, Instagram, TikTok e qualquer
 outra rede. Um carrossel só está publicado quando todas as imagens planejadas
 estão presentes na postagem pública, na ordem correta.
+
+### Variação visual obrigatória dentro do carrossel
+
+- Toda imagem que mostre uma pessoa precisa usar uma combinação inédita de
+  **pose, expressão facial e ângulo de câmera** dentro daquele carrossel.
+- Comparar cada imagem com todas as outras do conjunto, não apenas com a imagem
+  anterior. Uma pose usada na imagem 1 não pode reaparecer na 2, na 3 nem em
+  qualquer página seguinte.
+- Planejar a variedade antes de gerar ou fotografar: frente, perfil, costas,
+  três-quartos, close do cabelo, mãos aplicando produto, olhar para cima ou para
+  o lado, movimento e interação com objetos são possibilidades, desde que
+  façam sentido para o conteúdo.
+- Recorte, zoom, espelhamento, troca de fundo, roupa, texto ou cor não contam
+  como nova pose quando corpo, rosto e expressão continuam iguais.
+- Repetição de pose, expressão ou ângulo reprova o carrossel antes do upload. A
+  imagem repetida deve ser substituída; não publicar esperando corrigir depois.
+- Na segunda revisão, montar uma visão do conjunto ou percorrer todas as páginas
+  e registrar que cada aparição humana é visualmente distinta das demais.
+
+### Integridade do upload e da postagem pública
 
 1. **Criar uma contagem de referência antes do upload.** Registrar o total e a
    ordem dos arquivos do carrossel. Exemplo: `8 imagens, 01-capa até 08-cta`.
@@ -398,9 +418,10 @@ estão presentes na postagem pública, na ordem correta.
    únicos.
 
 Essa verificação faz parte obrigatória das duas revisões: a primeira confere
-arquivo, total, ordem e upload; a segunda confere a experiência real na página
-pública. Nenhum relatório pode usar `publicado`, `concluído` ou `aprovado` sem
-as duas contagens coincidirem.
+arquivo, total, ordem, upload e ausência de pose repetida; a segunda confere a
+variação visual do conjunto e a experiência real na página pública. Nenhum
+relatório pode usar `publicado`, `concluído` ou `aprovado` sem as duas contagens
+coincidirem e sem todas as aparições humanas serem distintas.
 
 ---
 
@@ -417,6 +438,8 @@ as duas contagens coincidirem.
   carrossel real. Aplicar integralmente a regra absoluta da seção anterior; a
   segunda revisão deve reprovar qualquer divergência entre a promessa visual e
   o formato efetivamente publicado.
+- Dentro de cada carrossel, não repetir pose, expressão facial ou ângulo da
+  mulher em nenhuma página. A comparação é feita contra o conjunto inteiro.
 - Variar deliberadamente as capas do perfil. Alternar ângulo, distância,
   expressão, gesto e assunto: frente, perfil, costas, close do cabelo, mãos,
   aplicação, ferramenta e produto em contexto. Não repetir a mesma pose ou a

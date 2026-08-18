@@ -20,7 +20,7 @@ const carousels = [
       ['03-oleo-pontas-perfil.png', 'ÓLEO NAS ONDAS', 'Óleo de argan pesa no cabelo ondulado?', 'Pode pesar, mas a dose e o lugar da aplicação mudam tudo.', 'Deslize para fazer um teste mais leve'],
       ['04-textura-sem-rosto.png', 'PASSO 1', 'Comece pelas pontas', 'Evite a raiz no primeiro teste. Concentre a aplicação nas áreas mais ressecadas.', '2/5'],
       ['02-close-mecha-umida.png', 'PASSO 2', 'Use uma gota e espalhe bem', 'Aqueça entre as mãos e encoste aos poucos. É mais fácil acrescentar do que retirar.', '3/5'],
-      ['03-oleo-pontas-perfil.png', 'PASSO 3', 'Observe só depois de seco', 'Raiz baixa, mechas coladas e toque carregado pedem menos óleo na próxima vez.', '4/5'],
+      ['08-close-cacho.png', 'PASSO 3', 'Observe só depois de seco', 'Raiz baixa, mechas coladas e toque carregado pedem menos óleo na próxima vez.', '4/5'],
     ],
   },
   {
@@ -30,10 +30,10 @@ const carousels = [
     link: 'https://www.curvaviva.com.br/artigos/cabelo-ondulado-nao-define-erros/?utm_source=pinterest&utm_medium=organic&utm_campaign=correcao_carrossel&utm_content=tres_ajustes',
     board: 'Cabelo ondulado: leveza e definição',
     slides: [
-      ['04-textura-sem-rosto.png', 'DEFINIÇÃO SEM PESO', 'Ondulado não define? Faça 3 ajustes', 'Teste uma mudança por lavagem para descobrir o que suas ondas pedem.', 'Deslize e salve para testar depois'],
+      ['07-day-after-janela.png', 'DEFINIÇÃO SEM PESO', 'Ondulado não define? Faça 3 ajustes', 'Teste uma mudança por lavagem para descobrir o que suas ondas pedem.', 'Deslize e salve para testar depois'],
       ['01-umidade-uniforme.png', 'AJUSTE 1', 'Molhe por igual', 'Partes quase secas recebem o produto de outro jeito. Borrife água antes de continuar.', '2/5'],
-      ['02-close-mecha-umida.png', 'AJUSTE 2', 'Comece com menos creme', 'Excesso pode baixar a raiz, esticar as ondas e deixar a secagem mais lenta.', '3/5'],
-      ['04-textura-sem-rosto.png', 'AJUSTE 3', 'Pare de tocar enquanto seca', 'O movimento das mãos durante a secagem pode desmontar a forma que apareceu molhada.', '4/5'],
+      ['05-mousse-vista-superior.png', 'AJUSTE 2', 'Comece com menos creme', 'Excesso pode baixar a raiz, esticar as ondas e deixar a secagem mais lenta.', '3/5'],
+      ['06-difusor-lateral.png', 'AJUSTE 3', 'Pare de tocar enquanto seca', 'O movimento das mãos durante a secagem pode desmontar a forma que apareceu molhada.', '4/5'],
     ],
   },
   {
@@ -45,7 +45,7 @@ const carousels = [
     slides: [
       ['01-umidade-uniforme.png', 'DETALHE QUE MUDA TUDO', 'Finalize com o cabelo úmido por igual', 'Mechas em níveis diferentes de umidade podem responder de formas diferentes.', 'Deslize para ver o passo a passo'],
       ['04-textura-sem-rosto.png', 'PASSO 1', 'Divida o cabelo em partes', 'Assim fica mais fácil perceber quais áreas estão secando antes de receber o finalizador.', '2/5'],
-      ['01-umidade-uniforme.png', 'PASSO 2', 'Borrife água onde for preciso', 'Umedeça novamente as mechas quase secas antes de continuar a aplicação.', '3/5'],
+      ['07-day-after-janela.png', 'PASSO 2', 'Borrife água onde for preciso', 'Umedeça novamente as mechas quase secas antes de continuar a aplicação.', '3/5'],
       ['02-close-mecha-umida.png', 'PASSO 3', 'Distribua e amasse', 'Espalhe uma pequena dose por mecha e amasse de baixo para cima sem exagerar.', '4/5'],
     ],
   },

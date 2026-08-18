@@ -101,6 +101,20 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 18 de agosto de 2026 — Codex — Carrosséis recentes auditados e republicados
+
+- Cinco carrosséis recentes do Pinterest e um do TikTok tinham a quantidade
+  correta de páginas, mas repetiam composição humana. Todos foram renderizados
+  novamente com pose, expressão e ângulo diferentes, publicados e conferidos
+  integralmente antes da remoção das versões antigas.
+- Os substitutos têm cinco páginas no Pinterest e oito no TikTok. O perfil do
+  Pinterest não mostra mais os cinco IDs antigos, e o TikTok Studio mantém
+  somente a versão nova com privacidade `Todos` e rótulo de conteúdo por IA.
+- Os 16 Pins agendados foram auditados. Todos são peças individuais planejadas
+  como imagem única, sem promessa de continuação, por isso foram preservados.
+- O relatório completo e os IDs substituídos estão em
+  `midia-social/AUDITORIA-CARROSSEIS-2026-08-18.md`.
+
 ### 18 de agosto de 2026 — Codex — Poses repetidas foram proibidas em carrosséis
 
 - Virou regra absoluta usar pose, expressão facial e ângulo diferentes em cada

@@ -58,3 +58,16 @@ O TikTok recebeu as oito imagens na ordem correta, o áudio `voices`, de
 por IA foi ativado. Após uma análise automática curta, o painel removeu o
 estado `Conteúdo sob análise`, confirmou a privacidade `Todos` e a página
 pública passou a abrir normalmente. Nenhuma promoção ou cobrança foi criada.
+
+## Republicação por variedade visual, 18 de agosto de 2026
+
+O carrossel foi renderizado novamente com uma composição humana diferente em
+cada página com pessoa. A versão atual é:
+
+https://www.tiktok.com/@curvavivaoficial/photo/7675358039632858376
+
+O editor confirmou oito imagens, a página pública exibiu o indicador `1/8` e o
+conjunto completo, a privacidade ficou em `Todos` e o rótulo de conteúdo gerado
+por IA foi mantido. A versão `7675107568791964948` foi excluída somente depois
+dessas verificações. A republicação usa o som original do perfil; nenhuma
+promoção ou cobrança foi criada.

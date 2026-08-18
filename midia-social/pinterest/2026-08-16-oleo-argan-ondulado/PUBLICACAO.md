@@ -18,3 +18,10 @@
   `pin-03.png` integra a embalagem real ao círculo rosa, sem o quadrado branco.
   O carrossel corrigido foi conferido publicamente com cinco imagens, e o Pin
   anterior `1146236542701452951` foi excluído após a validação da nova versão.
+
+## Republicação por variedade visual, 18 de agosto de 2026
+
+As imagens humanas foram substituídas para não repetir pose, expressão facial
+ou ângulo. A versão atual é
+https://br.pinterest.com/pin/1146236542701572676/. As cinco páginas foram
+conferidas publicamente antes da exclusão do Pin `1146236542701459645`.

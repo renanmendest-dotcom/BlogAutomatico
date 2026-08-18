@@ -67,3 +67,14 @@ cinco imagens cada e capas visualmente diferentes.
   enviará email se alguma linha precisar de correção.
 
 Nenhuma campanha, patrocínio, orçamento ou cobrança foi criado.
+
+## Auditoria adicional de 18 de agosto de 2026
+
+A quantidade de cinco páginas estava correta, mas as três versões repetiam
+composições humanas. Elas foram substituídas por artes com pose, expressão e
+ângulo diferentes em cada página com pessoa. Os novos Pins foram conferidos
+página por página antes da exclusão dos anteriores:
+
+- Óleo de argan: https://br.pinterest.com/pin/1146236542701571598/
+- Três ajustes de definição: https://br.pinterest.com/pin/1146236542701571900/
+- Umidade uniforme: https://br.pinterest.com/pin/1146236542701572782/

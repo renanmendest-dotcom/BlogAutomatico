@@ -77,3 +77,10 @@ campanha, impulsionamento, forma de pagamento, orçamento ou cobrança foi criad
 O Pin original de imagem única e o primeiro carrossel de quatro imagens foram
 preservados. O carrossel de cinco imagens também aponta provisoriamente para o
 perfil oficial até a análise do suporte liberar o domínio.
+
+## Republicação por variedade visual, 18 de agosto de 2026
+
+O carrossel de cinco imagens foi renderizado novamente para eliminar poses,
+expressões e ângulos repetidos. A nova versão pública é
+https://br.pinterest.com/pin/1146236542701572254/. As cinco páginas foram
+conferidas na ordem correta antes da exclusão do Pin `1146236542701342527`.

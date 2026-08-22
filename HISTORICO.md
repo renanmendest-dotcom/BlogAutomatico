@@ -105,6 +105,22 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 22 de agosto de 2026 — Codex — Lote de sete dias do Pinterest preparado
+
+- Foram criados 21 Pins para 24 a 30 de agosto, três por dia e em horários
+  variados, começando na manhã seguinte ao último agendamento registrado para
+  23 de agosto às 14h. O lote usa sete artigos com três ângulos cada, sendo 14
+  fotografias realistas inéditas e sete infográficos de consulta.
+- Todas as peças entregam a resposta central, usam formato 2:3, link para o
+  artigo correspondente e UTM próprio. Pesquisa de pauta, textos alternativos,
+  CSV, manifesto e duas revisões estão em
+  `midia-social/pinterest/programacao-2026-08-24/`.
+- O lote passou na validação de conteúdo, no Astro check, no build e na revisão
+  visual. O agendamento ainda não foi enviado: a extensão do Chrome está
+  instalada e habilitada, mas o registro do componente de comunicação está
+  ausente no Windows. É necessário reinstalar o plugin de navegador pela
+  interface do Codex, conferir a fila ao vivo e só então enviar o CSV.
+
 ### 22 de agosto de 2026 — Codex — Pesquisa de conteúdo para o Reddit
 
 - Discussões recentes em `r/CabelosDoBrasil` e `r/Cabelocacheado` mostram

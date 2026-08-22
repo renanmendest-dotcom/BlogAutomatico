@@ -21,7 +21,13 @@ export const site = {
    *  e a propriedade cai se a tag sumir.
    *  O Bing importa para o índice que alimenta o ChatGPT e o Copilot. */
   googleSiteVerification: "Vn_7Nv72lPSUu3x5joNZ_99_DC3REPoOX0NDXUKcYVQ",
-  bingSiteVerification: "5FE5B1AA8E27A6DB8BDC9EFF4BBA1C87"
+  bingSiteVerification: "5FE5B1AA8E27A6DB8BDC9EFF4BBA1C87",
+
+  /** Reivindicação do site no Pinterest. Com ela, todo Pin que aponta para o
+   *  domínio sai com o nome e a foto da Curva Viva, inclusive os que outras
+   *  pessoas salvarem do site, e as estatísticas passam a cobrir o domínio
+   *  inteiro. */
+  pinterestSiteVerification: "0eef9493199d0de1746639421e32105a"
 } as const;
 
 export function dataPorExtenso(data: string) {

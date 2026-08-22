@@ -108,19 +108,33 @@ brasileiro. Resultado em `midia-social/pinterest/PLANO-CRESCIMENTO.md`, que
 **complementa o `ESTRATEGIA.md` e vale só daqui para frente**. Nada publicado
 deve ser apagado ou republicado por causa dele.
 
-Três achados que mudam a prioridade:
+Dois achados que mudam a prioridade:
 
-- **Zero salvamentos em cerca de 20 Pins**, com 2 a 18 impressões cada e 132
-  visualizações mensais. Não é falta de tempo: é a plataforma dizendo que a
-  arte não é material de consulta.
-- **O domínio bloqueado é o gargalo real.** Enquanto os Pins apontarem para o
-  perfil, nenhuma melhoria de arte gera visita ao site. Tudo o mais é
-  secundário.
+- **Zero salvamentos em cerca de 20 Pins**, com 2 a 18 impressões cada, 0 a 2
+  cliques e 132 visualizações mensais. Não é falta de tempo: é a plataforma
+  dizendo que a arte não é material de consulta.
 - **O site não está reivindicado no Pinterest hoje.** Conferi por três
   caminhos: não há meta `p:domain_verify`, não há TXT no DNS e não há arquivo
-  de verificação. A nota anterior que dava a reivindicação como feita não
-  corresponde ao estado atual. Quando o token vier, o Claude Code coloca no
-  código, como foi feito com Google e Bing.
+  de verificação. Quando o token vier, o Claude Code coloca no código, como foi
+  feito com Google e Bing.
+
+**Correção da primeira versão deste registro.** Eu havia escrito que o domínio
+bloqueado era o gargalo e que nenhum clique chegava ao site. Estava errado. O
+bloqueio de 15 de agosto durou cerca de um dia e desde 16 de agosto os Pins
+apontam para o domínio oficial; o proprietário confirmou clicando nas
+publicações. O erro foi meu: li a fundo os arquivos de 15 de agosto e só passei
+os olhos nos de 16, tratando documentação de cinco dias atrás como estado
+atual. Tentei confirmar ao vivo pelo depurador de URL do Pinterest, ele
+redirecionou para a documentação e eu segui mesmo assim, em vez de testar por
+outro caminho.
+
+Sem o bloqueio, o diagnóstico fica mais duro, não mais brando: o link funciona
+e ainda assim quase ninguém clica e ninguém salva. O problema é inteiramente
+arte e volume.
+
+Sobrou uma pendência dessa história: os Pins publicados em 15 de agosto
+apontavam para o perfil e não há registro de terem sido editados depois. Vale
+conferir o destino de cada um deles.
 
 O nicho salva dois formatos que o Curva Viva não produz: vídeo vertical 9:16
 para busca larga, e infográfico denso e colorido para busca informativa. Os

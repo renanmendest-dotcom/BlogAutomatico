@@ -16,8 +16,12 @@ mesmo assunto, vale o que está aqui, porque é mais recente e foi medido.
 ## 1. O diagnóstico em uma frase
 
 A conta está tecnicamente correta e comercialmente parada: **20 Pins, 132
-visualizações mensais, zero salvamentos e nenhum clique possível para o site**,
-porque o Pinterest bloqueou o domínio.
+visualizações mensais, zero salvamentos e quase nenhum clique**, com os links
+funcionando normalmente.
+
+Essa última parte é o que torna o diagnóstico duro. Não há trava externa,
+não há desculpa de plataforma. O link abre o artigo certo, e mesmo assim quase
+ninguém clica e ninguém salva. O que precisa mudar é a arte e o volume.
 
 Números medidos em 20 de agosto de 2026, Pin a Pin:
 
@@ -36,43 +40,40 @@ dizendo que o material não é do tipo que as pessoas guardam.
 
 ---
 
-## 2. Prioridade zero: o domínio bloqueado
+## 2. O bloqueio do domínio está resolvido
 
-Enquanto `curvaviva.com.br` estiver bloqueado, **nenhuma melhoria de arte, texto
-ou frequência gera uma única visita ao site.** Os Pins apontam para o próprio
-perfil do Pinterest, então o clique morre dentro da plataforma.
+Registrado aqui porque a primeira versão deste documento errou nesse ponto e a
+correção precisa ficar visível.
 
-Isso é o item mais importante deste documento. Tudo abaixo é secundário.
+O Pinterest bloqueou `curvaviva.com.br` como suspeita de spam em 15 de agosto
+de 2026. **O bloqueio durou cerca de um dia.** Desde 16 de agosto os Pins são
+publicados com destino no domínio oficial, e o proprietário confirmou clicando
+nas publicações: o link abre o artigo certo.
 
-### O que já se sabe
+Não trate mais o bloqueio como pendência. Ele não é o gargalo.
 
-- O bloqueio foi reproduzido na home e em URL de artigo, com e sem `www`.
-- Uma contestação foi enviada em 15 de agosto pelo formulário oficial.
-- É um falso positivo de reputação de domínio novo, não um problema de DNS,
-  hospedagem ou conteúdo.
+### Duas coisas que sobraram dessa história
 
-### O que fazer agora
+1. **Conferir os Pins de 15 de agosto.** Eles foram publicados durante o
+   bloqueio, apontando para `https://br.pinterest.com/curvavivaoficial/`. Não
+   há registro de que tenham sido editados depois. Abra cada um, confira o
+   destino e, se ainda apontar para o perfil, troque pelo artigo. São poucos
+   Pins e é edição rápida.
+2. **O site não está reivindicado hoje.** Verifiquei por três caminhos
+   independentes: não há meta `p:domain_verify` no HTML, não há registro TXT no
+   DNS e não há arquivo de verificação servido. Reivindicar habilita atribuição
+   da marca nos Pins e estatísticas de site. Se o painel do Pinterest mostrar o
+   domínio como reivindicado, investigue de onde vem essa divergência antes de
+   refazer. Quando houver token, o Claude Code coloca no código e publica, como
+   já foi feito com Google e Bing.
 
-1. **Reivindicar o domínio de novo e conferir que ficou de pé.** Verifiquei por
-   três caminhos independentes e **hoje não existe nenhum token de verificação
-   do Pinterest no site**: não há meta `p:domain_verify` no HTML, não há
-   registro TXT no DNS e não há arquivo de verificação. Seja qual for a
-   reivindicação feita antes, ela não está ativa. Peça a meta tag ao Pinterest e
-   entregue ao Claude Code, que coloca no código e publica, como já foi feito
-   com Google e Bing.
-2. **Escalar a contestação no fórum oficial**, em `community.pinterest.biz`,
-   pedindo revisão humana. O formulário automático nega a maioria dos pedidos
-   com resposta genérica; o fórum é o caminho que costuma destravar. Descreva o
-   site, diga que é domínio novo com conteúdo próprio e cite que já existe
-   contestação aberta.
-3. **Não usar endereço alternativo.** Nada de Vercel, encurtador ou redirecionador
-   de terceiro. Encurtador em cima de domínio bloqueado é exatamente o padrão
-   que o filtro de spam procura e pode custar a conta inteira.
-4. **Continuar publicando mesmo assim.** O bloqueio é do link, não da conta. Os
-   Pins seguem construindo autoridade e audiência, e ganham o destino certo
-   quando o domínio for liberado.
-5. **Registrar o teste do bloqueio no `HISTORICO.md` a cada semana**, com data,
-   para haver prova de acompanhamento se a contestação precisar ser reforçada.
+### Se o bloqueio voltar algum dia
+
+- Não usar endereço alternativo, encurtador nem redirecionador de terceiro.
+  Encurtador em cima de domínio sinalizado é o padrão que o filtro procura.
+- Contestar pelo formulário oficial e, se vier negativa automática, pedir
+  revisão humana em `community.pinterest.biz`.
+- Continuar publicando. O bloqueio é do link, não da conta.
 
 ---
 
@@ -205,7 +206,7 @@ ajuda a cair na classificação certa.
 Vale o `PAPEIS.md`. Para o Pinterest:
 
 **Codex:** arte dos Pins, foto, texto, título, descrição, publicação, cadência,
-pastas, contestação do bloqueio, registro no `HISTORICO.md`.
+pastas, conferência do destino dos Pins, registro no `HISTORICO.md`.
 
 **Claude Code:** o que é código do site. Já identificado e pendente:
 
@@ -224,14 +225,15 @@ pastas, contestação do bloqueio, registro no `HISTORICO.md`.
 Na ordem. Não olhe impressão primeiro, ela engana.
 
 1. **Salvamentos.** Hoje é zero. Sair de zero é o primeiro sinal de que a arte
-   virou material de consulta.
-2. **Cliques de saída.** Só passam a existir depois que o domínio for liberado.
+   virou material de consulta, e é o que mais antecipa o resto.
+2. **Cliques de saída.** Hoje 0 a 2 por Pin, com o link funcionando. É a medida
+   de que a arte deu vontade de ler o artigo inteiro.
 3. **Visitas vindas do Pinterest**, no Google Analytics quando estiver ativo, e
    no painel do Pinterest depois da reivindicação.
 4. **Visualizações mensais do perfil.** A menos importante das quatro.
 
-Expectativa honesta de prazo: o Pinterest é lento no começo e acelera. Com o
-domínio liberado e cadência diária, tráfego relevante costuma aparecer entre o
+Expectativa honesta de prazo: o Pinterest é lento no começo e acelera. Com
+cadência diária e arte salvável, tráfego relevante costuma aparecer entre o
 segundo e o quarto mês. Antes disso, o que se mede é salvamento.
 
 ---
@@ -239,7 +241,7 @@ segundo e o quarto mês. Antes disso, o que se mede é salvamento.
 ## 8. O que não fazer
 
 - Não apagar nem republicar o que já está publicado só para aplicar este plano.
-- Não usar encurtador nem domínio alternativo enquanto o oficial está bloqueado.
+- Não usar encurtador nem domínio alternativo no lugar de `curvaviva.com.br`.
 - Não repetir a mesma arte em pastas diferentes para simular volume.
 - Não encher a descrição de palavra-chave repetida.
 - Não prometer resultado que o artigo não sustenta, nem no Pin. A honestidade

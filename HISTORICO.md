@@ -19,7 +19,7 @@ o que mudou.
 
 ---
 
-## Estado atual em 20 de agosto de 2026
+## Estado atual em 22 de agosto de 2026
 
 Confira estes números com `pnpm validar`, que imprime a contagem real, antes de
 confiar nesta tabela. **Atualize-a a cada publicação.**
@@ -30,7 +30,7 @@ confiar nesta tabela. **Atualize-a a cada publicação.**
 | Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde com 200 |
 | Artigos publicados | 13, dois deles em formato ranking |
 | Produtos públicos | 16, sendo 12 com preço cadastrado |
-| Pinterest | `@curvavivaoficial`, ~20 Pins, domínio reivindicado |
+| Pinterest | `@curvavivaoficial`, ~20 Pins, domínio reivindicado e Instagram conectado |
 | Buscadores | Search Console e Bing verificados, sitemap enviado |
 | Hospedagem | Vercel, publicação automática a partir da `main` |
 | Design | Claude Code |
@@ -104,6 +104,22 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 22 de agosto de 2026 — Codex — Instagram vinculado ao Pinterest
+
+- O Instagram `@curvaviva.oficial` foi convertido de conta pessoal para conta
+  profissional `Comercial`, pública e na categoria `Saúde/beleza`, requisito
+  do Pinterest. A categoria fica visível, mas email, telefone, endereço e
+  Facebook não foram adicionados para não expor dados pessoais.
+- O Pinterest recebeu a permissão confirmada pelo proprietário para ver o
+  perfil e acessar as mídias do Instagram. A publicação automática ficou ativa
+  para todos os posts futuros, na pasta `Social`, sem importar posts antigos e
+  sem exclusões por palavra-chave.
+- O botão do Pinterest gerou o endpoint antigo `api.instagram.com`, que devolvia
+  “Página não encontrada”. A autorização só foi concluída após preservar todos
+  os parâmetros emitidos pelo Pinterest e usar o endpoint atual de consentimento
+  `www.instagram.com`; a tela `Importar conteúdo` confirmou a conexão com
+  `@curvaviva.oficial` e a publicação automática ativa.
 
 ### 22 de agosto de 2026 — Codex — Instagram e Reddit configurados
 

@@ -76,6 +76,16 @@ function renderizarTrecho(markdown: string) {
 const htmlInicial = renderizarTrecho(markdownInicial);
 const htmlContinuacao = renderizarTrecho(markdownContinuacao);
 
+// Imagem que representa o artigo quando ele é compartilhado ou salvo no
+// Pinterest. Prefere a capa; se o artigo ainda não tiver ilustração, usa a
+// primeira imagem do texto; sem nenhuma, o BaseLayout cai na genérica.
+const ilustracoesDoTexto = [
+  ...corpoMarkdown.matchAll(/\/ilustracoes\/[^\s")]+\.(?:webp|png|jpg)/g)
+].map((achado) => achado[0]);
+const imagemSocial =
+  ilustracoesDoTexto.find((caminho) => /\/capa[^/]*$/.test(caminho)) ??
+  ilustracoesDoTexto[0];
+
 const recomendacoes = post.data.recomendacoes
   .map((recomendacao) => ({
     ...recomendacao,
@@ -145,6 +155,10 @@ const faqSchema = {
   titulo={post.data.titulo}
   descricao={post.data.descricao}
   tipo="article"
+  imagemSocial={imagemSocial}
+  publicadoEm={post.data.publicado_em}
+  atualizadoEm={post.data.atualizado_em}
+  autor={post.data.autor}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

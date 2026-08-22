@@ -73,7 +73,11 @@ const productSchema = {
 };
 ---
 
-<BaseLayout titulo={produto.nome} descricao={produto.descricao}>
+<BaseLayout
+  titulo={produto.nome}
+  descricao={produto.descricao}
+  imagemSocial={produto.imagem?.src}
+>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />
 
   <header class="product-hero product-commercial-hero">

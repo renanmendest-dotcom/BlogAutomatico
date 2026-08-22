@@ -9,13 +9,25 @@ interface Props {
   descricao?: string;
   noindex?: boolean;
   tipo?: "website" | "article";
+  /** Caminho absoluto de uma imagem do site, por exemplo
+   *  `/ilustracoes/slug/capa.webp`. Sem isso, cai na imagem genérica. */
+  imagemSocial?: string;
+  /** Datas do artigo. Alimentam as tags `article:` que o Facebook, o
+   *  Pinterest e os leitores de link usam para datar o conteúdo. */
+  publicadoEm?: Date;
+  atualizadoEm?: Date;
+  autor?: string;
 }
 
 const {
   titulo,
   descricao = "Guias e fichas para escolher produtos para cabelos ondulados, cacheados e crespos com mais clareza.",
   noindex = false,
-  tipo = "website"
+  tipo = "website",
+  imagemSocial,
+  publicadoEm,
+  atualizadoEm,
+  autor
 } = Astro.props;
 
 const siteName = "Curva Viva";
@@ -23,7 +35,10 @@ const pageTitle = titulo
   ? `${titulo} | ${siteName}`
   : `${siteName} | Seu cabelo, com escolhas mais claras`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const socialImage = new URL("/og.png", Astro.site);
+// Cada artigo compartilha a própria capa. Antes o site inteiro dividia a mesma
+// imagem genérica, o que empobrecia todo link compartilhado e todo Pin salvo
+// direto do site.
+const socialImage = new URL(imagemSocial ?? "/og.png", Astro.site);
 const base = Astro.site?.toString().replace(/\/$/, "") ?? "";
 
 const organizationSchema = {
@@ -65,6 +80,21 @@ const websiteSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script is:inline>
+      // O endereço antigo da Vercel ainda serve uma cópia inteira do site. O
+      // redirecionamento do vercel.json não é aplicado nesse host, e a correção
+      // definitiva é no painel da Vercel. Enquanto isso, isto leva quem clica
+      // num link antigo para o endereço oficial. Os buscadores já são cobertos
+      // pelo canonical.
+      if (location.hostname === "blog-automatico-sigma.vercel.app") {
+        location.replace(
+          "https://www.curvaviva.com.br" +
+            location.pathname +
+            location.search +
+            location.hash
+        );
+      }
+    </script>
     <meta
       name="google-site-verification"
       content={dadosDoSite.googleSiteVerification}
@@ -99,6 +129,23 @@ const websiteSchema = {
     <meta property="og:description" content={descricao} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={socialImage} />
+    {
+      tipo === "article" && publicadoEm && (
+        <meta
+          property="article:published_time"
+          content={publicadoEm.toISOString()}
+        />
+      )
+    }
+    {
+      tipo === "article" && atualizadoEm && (
+        <meta
+          property="article:modified_time"
+          content={atualizadoEm.toISOString()}
+        />
+      )
+    }
+    {tipo === "article" && autor && <meta property="article:author" content={autor} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#f7f1e9" />
     {noindex && <meta name="robots" content="noindex, nofollow" />}

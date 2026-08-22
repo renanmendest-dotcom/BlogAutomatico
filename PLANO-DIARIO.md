@@ -1,27 +1,45 @@
-# Rotina simples da Curva Viva
+# Rotina da Curva Viva
 
-A produção de artigos acontece automaticamente às segundas, quartas e sextas,
-à noite. O notebook precisa estar ligado, desbloqueado, conectado à internet e
-com o Codex aberto.
+## Quem faz o quê
 
-## Segunda-feira: produção automática
+O **Codex** publica os artigos, cadastra os produtos e cuida das redes sociais.
+O **Claude Code** cuida do design, do código e da parte técnica de busca. A
+divisão completa está em [PAPEIS.md](./PAPEIS.md).
 
-O Codex pesquisa, escreve, revisa duas vezes, testa e publica um artigo.
+## Ritmo de publicação
 
-## Terça-feira: acompanhamento
+A meta é de **5 a 7 artigos por semana**, com no máximo dois por execução,
+espalhados ao longo do dia e em horários que variam. A regra completa, com o
+motivo de cada item, está em
+[.github/INSTRUCOES-IA.md](./.github/INSTRUCOES-IA.md).
 
-Reserve alguns minutos apenas para olhar visitas e cliques quando as métricas
-estiverem configuradas.
+Não existe mais "dia de publicar". A cadência é contínua e proposital: horário
+sempre igual e formato sempre igual são padrão de robô, e é isso que as
+diretrizes de spam do Google punem.
 
-## Quarta-feira: produção automática
+Para a automação rodar, o notebook precisa estar ligado, desbloqueado,
+conectado à internet e com o Codex aberto.
 
-Um novo artigo passa pelo mesmo processo completo e é publicado se estiver bom.
+## O que vale a pena você olhar
 
-## Quinta-feira: redes sociais
+Nada disso é obrigatório e nada trava o projeto. É só o que ajuda a acompanhar.
 
-Use o resumo preparado a partir dos artigos para movimentar Instagram e X.
+**Uma vez por semana**
 
-## Sexta-feira: produção automática
+- Abra o site pelo celular e navegue como uma leitora navegaria.
+- Veja se algum artigo novo ficou com imagem, preço ou link estranho.
 
-O terceiro artigo da semana é produzido. No fim do dia, abra o site pelo celular
-e veja rapidamente se tudo está funcionando.
+**Uma vez por mês**
+
+- Google Search Console: páginas indexadas e quais buscas já trazem gente.
+- Bing Webmaster: a aba **AI Performance** mostra aparições em respostas de IA,
+  que é o objetivo de aparecer no ChatGPT e no Copilot.
+- Pinterest: olhe **salvamentos** antes de qualquer outro número. O plano está
+  em [midia-social/pinterest/PLANO-CRESCIMENTO.md](./midia-social/pinterest/PLANO-CRESCIMENTO.md).
+
+**Quando quiser mudar alguma coisa**
+
+Fale com o Claude Code para design e código, e com o Codex para conteúdo e
+redes. Basta pedir que leiam os arquivos do projeto: o
+[HISTORICO.md](./HISTORICO.md) conta em que pé está tudo, sem você precisar
+reexplicar.

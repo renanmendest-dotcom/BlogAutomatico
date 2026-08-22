@@ -105,6 +105,19 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 22 de agosto de 2026 — Codex — Pesquisa de conteúdo para o Reddit
+
+- Discussões recentes em `r/CabelosDoBrasil` e `r/Cabelocacheado` mostram
+  demanda recorrente por ajuda com definição inconsistente, frizz e
+  ressecamento depois de seco, finalização com um produto só, produto que pesa
+  na raiz, gelatina sem aspecto áspero e cronograma capilar sem gasto excessivo.
+- A conta `u/Curva-viva-oficial` ainda tem 0 dias e 1 karma. O
+  `r/CabelosDoBrasil` exige 5 dias e 20 de karma para postar e remove
+  autopromoção sem autorização; o `r/Cabelocacheado` também proíbe divulgação.
+  Por isso, a entrada recomendada é responder dúvidas com conteúdo completo e
+  sem links, ganhar reputação real e só depois publicar guias nativos. Nenhuma
+  postagem ou comentário foi enviado nesta pesquisa.
+
 ### 22 de agosto de 2026 — Codex — Instagram vinculado ao Pinterest
 
 - O Instagram `@curvaviva.oficial` foi convertido de conta pessoal para conta

@@ -101,6 +101,35 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 20 de agosto de 2026 — Claude Code — Auditoria do Pinterest e plano de crescimento
+
+Auditei `@curvavivaoficial` Pin a Pin e pesquisei o nicho no Pinterest
+brasileiro. Resultado em `midia-social/pinterest/PLANO-CRESCIMENTO.md`, que
+**complementa o `ESTRATEGIA.md` e vale só daqui para frente**. Nada publicado
+deve ser apagado ou republicado por causa dele.
+
+Três achados que mudam a prioridade:
+
+- **Zero salvamentos em cerca de 20 Pins**, com 2 a 18 impressões cada e 132
+  visualizações mensais. Não é falta de tempo: é a plataforma dizendo que a
+  arte não é material de consulta.
+- **O domínio bloqueado é o gargalo real.** Enquanto os Pins apontarem para o
+  perfil, nenhuma melhoria de arte gera visita ao site. Tudo o mais é
+  secundário.
+- **O site não está reivindicado no Pinterest hoje.** Conferi por três
+  caminhos: não há meta `p:domain_verify`, não há TXT no DNS e não há arquivo
+  de verificação. A nota anterior que dava a reivindicação como feita não
+  corresponde ao estado atual. Quando o token vier, o Claude Code coloca no
+  código, como foi feito com Google e Bing.
+
+O nicho salva dois formatos que o Curva Viva não produz: vídeo vertical 9:16
+para busca larga, e infográfico denso e colorido para busca informativa. Os
+cartões editoriais atuais são bonitos de ver e não são úteis de guardar.
+
+Pendências do lado do código, para quando fizer sentido: imagem Open Graph
+própria por artigo, já que hoje todos dividem a mesma `/og.png` genérica, e as
+tags `article:published_time` e `article:author`, que alimentam o Rich Pin.
+
 ### 18 de agosto de 2026 — Codex — Pins agora precisam entregar tudo o que prometem
 
 - O proprietário identificou um Pin que anunciava oito erros sem enumerá-los na

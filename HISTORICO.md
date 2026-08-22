@@ -116,10 +116,12 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
   CSV, manifesto e duas revisões estão em
   `midia-social/pinterest/programacao-2026-08-24/`.
 - O lote passou na validação de conteúdo, no Astro check, no build e na revisão
-  visual. O agendamento ainda não foi enviado: a extensão do Chrome está
-  instalada e habilitada, mas o registro do componente de comunicação está
-  ausente no Windows. É necessário reinstalar o plugin de navegador pela
-  interface do Codex, conferir a fila ao vivo e só então enviar o CSV.
+  visual. As 21 mídias e os sete artigos de destino foram publicados no domínio
+  oficial e responderam HTTP 200. O agendamento ainda não foi enviado: a
+  extensão do Chrome está instalada e habilitada, mas o registro do componente
+  de comunicação está ausente no Windows. É necessário reinstalar o plugin de
+  navegador pela interface do Codex, conferir a fila ao vivo e só então enviar
+  o CSV.
 
 ### 22 de agosto de 2026 — Codex — Pesquisa de conteúdo para o Reddit
 

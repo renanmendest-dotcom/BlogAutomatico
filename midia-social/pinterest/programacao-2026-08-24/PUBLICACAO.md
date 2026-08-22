@@ -48,7 +48,7 @@ evitar cadência mecânica.
   proporção e ausência de falso carrossel.
 - [x] Revisão 2: intenção de busca, potencial de salvamento, leitura no celular,
   variedade visual, voz natural e CTA.
-- [ ] Arquivos publicados no domínio oficial e conferidos com HTTP 200.
+- [x] Arquivos publicados no domínio oficial e conferidos com HTTP 200.
 - [ ] Fila atual conferida ao vivo no Pinterest.
 - [ ] CSV enviado no Pinterest.
 - [ ] As 21 linhas confirmadas na fila privada com datas, horários e pastas.
@@ -62,4 +62,3 @@ do componente de comunicação da extensão está ausente no Windows. Pela regra
 da integração, o agente não deve reparar esse componente. É necessário
 reinstalar o plugin de navegador pela interface de plugins do Codex e então
 retomar a conferência e o envio.
-

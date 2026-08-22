@@ -105,6 +105,17 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 22 de agosto de 2026 — Codex — Follow-back artificial não será usado
+
+- A proposta de buscar perfis em `#sdv`, `#followback` e equivalentes para
+  formar prova social com seguidores fora do nicho foi avaliada e não foi
+  executada. Mesmo em lotes pequenos, a finalidade é coletar seguidores
+  artificialmente, prática que as Diretrizes da Comunidade do Instagram
+  tratam como spam e que pode limitar uma conta nova.
+- O crescimento inicial do Instagram seguirá por conteúdo próprio e interações
+  genuínas com pessoas e perfis relacionados a cabelos ondulados, cacheados e
+  crespos. Nenhuma conta foi seguida ou curtida nesta avaliação.
+
 ### 22 de agosto de 2026 — Codex — Instagram vinculado ao Pinterest
 
 - O Instagram `@curvaviva.oficial` foi convertido de conta pessoal para conta

@@ -27,7 +27,12 @@ export const site = {
    *  domínio sai com o nome e a foto da Curva Viva, inclusive os que outras
    *  pessoas salvarem do site, e as estatísticas passam a cobrir o domínio
    *  inteiro. */
-  pinterestSiteVerification: "0eef9493199d0de1746639421e32105a"
+  pinterestSiteVerification: "0eef9493199d0de1746639421e32105a",
+
+  /** Perfis oficiais. Entram no `sameAs` do schema de Organization, que é o
+   *  que faz o Google e as IAs entenderem que o site e os perfis são a mesma
+   *  entidade. Acrescentar aqui conforme cada conta for criada. */
+  perfis: ["https://br.pinterest.com/curvavivaoficial/"]
 } as const;
 
 export function dataPorExtenso(data: string) {

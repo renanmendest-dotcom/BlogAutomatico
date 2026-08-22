@@ -31,7 +31,7 @@
 
 Enquanto não houver domínio próprio, o endereço oficial é:
 
-`https://blog-automatico-sigma.vercel.app`
+`https://www.curvaviva.com.br`
 
 Quando um domínio próprio for comprado, atualize `SITE_URL` no GitHub e a
 configuração `site` do Astro.

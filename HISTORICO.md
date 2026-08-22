@@ -19,20 +19,24 @@ o que mudou.
 
 ---
 
-## Estado atual em 15 de agosto de 2026
+## Estado atual em 20 de agosto de 2026
+
+Confira estes números com `pnpm validar`, que imprime a contagem real, antes de
+confiar nesta tabela. **Atualize-a a cada publicação.**
 
 | | |
 |---|---|
 | Endereço | `https://www.curvaviva.com.br` (o sem `www` redireciona para o `www`) |
-| Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde |
-| Artigos publicados | 11 |
-| Artigos na fila privada | 20 |
-| Produtos públicos | 14 (18 cadastros no total) |
+| Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde com 200 |
+| Artigos publicados | 13, dois deles em formato ranking |
+| Produtos públicos | 16, sendo 12 com preço cadastrado |
+| Pinterest | `@curvavivaoficial`, ~20 Pins, domínio reivindicado |
+| Buscadores | Search Console e Bing verificados, sitemap enviado |
 | Hospedagem | Vercel, publicação automática a partir da `main` |
 | Design | Claude Code |
 | Conteúdo | Codex |
 
-**O gargalo hoje é volume de conteúdo.** 11 artigos contra centenas dos
+**O gargalo hoje é volume de conteúdo.** 13 artigos contra centenas dos
 concorrentes. Nenhum ajuste técnico compensa isso.
 
 ---
@@ -85,12 +89,13 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 - **Falta pedir indexação manual das páginas.** O sitemap foi aceito pelos dois
   serviços, então a descoberta acontece sozinha, mas pedir indexação acelera as
   primeiras páginas. Vale se o Google demorar.
-- **Redes sociais**: o proprietário vai criar contas no Reddit, Pinterest,
-  Instagram e TikTok. A publicação será automatizada pelo Codex, usando o
-  navegador já logado. No TikTok, apenas carrossel de imagens com música. O
-  objetivo é tráfego e sinal de marca, que pesa mais que backlink para citação
-  em IA. Quando os perfis existirem, o Claude Code adiciona `sameAs` no schema
-  de `Organization`.
+- **Redes sociais**: o Pinterest já está no ar como `@curvavivaoficial`, com
+  domínio reivindicado e `sameAs` no schema. Reddit, Instagram e TikTok ainda
+  não existem. Conforme cada perfil for criado, acrescente a URL em
+  `site.perfis`, dentro de `src/lib/site.ts`, para entrar no `sameAs`.
+- **Pinterest: zero salvamentos.** O plano de correção está em
+  `midia-social/pinterest/PLANO-CRESCIMENTO.md`. O gargalo é arte salvável e
+  volume, não a plataforma.
 - **Contato do site é `contato@curvaviva.com.br`**, definido em
   `src/lib/site.ts`. A caixa precisa existir de verdade: é o canal previsto na
   LGPD.

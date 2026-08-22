@@ -59,13 +59,12 @@ Não trate mais o bloqueio como pendência. Ele não é o gargalo.
    há registro de que tenham sido editados depois. Abra cada um, confira o
    destino e, se ainda apontar para o perfil, troque pelo artigo. São poucos
    Pins e é edição rápida.
-2. **O site não está reivindicado hoje.** Verifiquei por três caminhos
-   independentes: não há meta `p:domain_verify` no HTML, não há registro TXT no
-   DNS e não há arquivo de verificação servido. Reivindicar habilita atribuição
-   da marca nos Pins e estatísticas de site. Se o painel do Pinterest mostrar o
-   domínio como reivindicado, investigue de onde vem essa divergência antes de
-   refazer. Quando houver token, o Claude Code coloca no código e publica, como
-   já foi feito com Google e Bing.
+2. **O site já está reivindicado.** Resolvido em 20 de agosto de 2026. Havia uma
+   verificação iniciada e nunca concluída, provavelmente pelo método de registro
+   TXT, e nenhum token no site. A pendência foi cancelada e a reivindicação
+   refeita pela meta tag `p:domain_verify`, que hoje está no código em
+   `src/lib/site.ts` e sai em todas as páginas. **Não remover:** o Pinterest
+   revalida de tempos em tempos e a reivindicação cai junto.
 
 ### Se o bloqueio voltar algum dia
 

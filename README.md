@@ -17,7 +17,7 @@ resultados de uso ou experiências pessoais.
 
 ## Endereço atual
 
-[blog-automatico-sigma.vercel.app](https://blog-automatico-sigma.vercel.app)
+[curvaviva.com.br](https://www.curvaviva.com.br)
 
 ## Comandos usados pelo projeto
 

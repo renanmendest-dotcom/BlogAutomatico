@@ -34,7 +34,8 @@ const organizationSchema = {
   url: Astro.site?.toString(),
   logo: new URL("/logo-curva-viva.png", Astro.site).toString(),
   description:
-    "Curadoria independente de produtos e guias para cabelos ondulados, cacheados e crespos."
+    "Curadoria independente de produtos e guias para cabelos ondulados, cacheados e crespos.",
+  sameAs: [...dadosDoSite.perfis]
 };
 
 // WebSite com busca interna. Só é honesto declarar porque /busca/ existe e

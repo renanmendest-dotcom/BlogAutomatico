@@ -23,8 +23,9 @@ artigo pronto somente depois de duas revisões.
 ## 1. Volume e frequência
 
 O site tem conteúdo de menos para competir. O concorrente direto tem centenas de
-artigos, o Curva Viva tem menos de dez. Sem volume não existe autoridade tópica
-e o Google não entrega tráfego.
+artigos. Sem volume não existe autoridade tópica e o Google não entrega tráfego.
+A contagem atual fica no `HISTORICO.md`, que é atualizado a cada publicação;
+não repita o número aqui, para não envelhecer.
 
 - **Meta: 5 a 7 artigos por semana**, por 6 meses.
 - **Até 2 artigos por execução.** Nunca despejar um lote grande de uma vez.
@@ -57,7 +58,8 @@ O campo `modelo_artigo` aceita quatro valores. Distribua entre eles.
 ### O ranking é a prioridade agora
 
 É o formato que domina a busca comercial e o que a IA mais extrai, porque cada
-item já vem rotulado. **O site não tem nenhum ainda.** Comece por estes:
+item já vem rotulado. **O formato já estreou e há dois publicados**, mas a fila
+ainda tem rankings esperando. Pautas prioritárias:
 
 - Os melhores cremes de pentear para cabelo cacheado
 - As melhores gelatinas capilares
@@ -139,11 +141,12 @@ mesmos caminhos e proporções:
 
 | Arquivo | Uso | Proporção |
 |---|---|---|
-| `public/avatares/curva-viva-trio.webp` | Topo da página inicial, as três juntas | 16:9, 1600 px de largura |
+| `public/avatares/curva-viva-trio.webp` | Sem uso no site hoje. Mantido como arte de arquivo | 16:9, 1600 px de largura |
 | `public/avatares/ondulada.webp` | Curvatura 2, cartões e artigos | 1:1, 480 px |
 | `public/avatares/cacheada.webp` | Curvatura 3, cartões e artigos | 1:1, 480 px |
 | `public/avatares/crespa.webp` | Curvatura 4, cartões e artigos | 1:1, 480 px |
-| `public/avatares/corpo-inteiro/trio-home.webp` | Futuro herói da home, com área livre à esquerda para texto | 3:2, 1536 px de largura |
+| `public/avatares/corpo-inteiro/trio-fecho.webp` | **Faixa de fecho da página inicial.** Recorte do trio-compacto, sem margem vazia | usado pelo site |
+| `public/avatares/corpo-inteiro/trio-home.webp` | Sem uso no site hoje. Tem área livre à esquerda para texto | 3:2, 1536 px de largura |
 | `public/avatares/corpo-inteiro/trio-compacto.webp` | As três de corpo inteiro, sem área reservada para texto | 3:2, 1536 px de largura |
 | `public/avatares/corpo-inteiro/ondulada.webp` | Ondulada de corpo inteiro | 2:3, 800 × 1200 px |
 | `public/avatares/corpo-inteiro/cacheada.webp` | Cacheada de corpo inteiro | 2:3, 800 × 1200 px |

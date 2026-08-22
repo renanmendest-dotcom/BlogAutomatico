@@ -32,7 +32,12 @@ export const site = {
   /** Perfis oficiais. Entram no `sameAs` do schema de Organization, que é o
    *  que faz o Google e as IAs entenderem que o site e os perfis são a mesma
    *  entidade. Acrescentar aqui conforme cada conta for criada. */
-  perfis: ["https://br.pinterest.com/curvavivaoficial/"]
+  perfis: [
+    "https://br.pinterest.com/curvavivaoficial/",
+    "https://www.instagram.com/curvaviva.oficial/",
+    "https://www.tiktok.com/@curvavivaoficial",
+    "https://www.reddit.com/user/Curva-viva-oficial/"
+  ]
 } as const;
 
 export function dataPorExtenso(data: string) {

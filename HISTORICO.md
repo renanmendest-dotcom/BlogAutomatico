@@ -89,10 +89,9 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 - **Falta pedir indexação manual das páginas.** O sitemap foi aceito pelos dois
   serviços, então a descoberta acontece sozinha, mas pedir indexação acelera as
   primeiras páginas. Vale se o Google demorar.
-- **Redes sociais**: o Pinterest já está no ar como `@curvavivaoficial`, com
-  domínio reivindicado e `sameAs` no schema. Reddit, Instagram e TikTok ainda
-  não existem. Conforme cada perfil for criado, acrescente a URL em
-  `site.perfis`, dentro de `src/lib/site.ts`, para entrar no `sameAs`.
+- **Redes sociais**: Pinterest, Instagram, TikTok e Reddit já estão no ar como
+  perfis oficiais e suas URLs constam em `site.perfis`, dentro de
+  `src/lib/site.ts`, para entrarem no `sameAs` do schema.
 - **Pinterest: zero salvamentos.** O plano de correção está em
   `midia-social/pinterest/PLANO-CRESCIMENTO.md`. O gargalo é arte salvável e
   volume, não a plataforma.
@@ -105,6 +104,17 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 22 de agosto de 2026 — Codex — Instagram e Reddit configurados
+
+- O Instagram `@curvaviva.oficial` recebeu a logo, a bio institucional e o
+  nome público `Curva Viva`. O nome pessoal do proprietário foi removido da
+  página pública e nenhum dado de login, contato ou segurança foi alterado.
+- O Reddit `u/Curva-viva-oficial` recebeu a mesma logo, o nome `Curva Viva`,
+  uma descrição institucional e links para o site, Instagram, TikTok e
+  Pinterest. Os dois perfis foram conferidos nas páginas públicas.
+- Instagram, TikTok e Reddit foram adicionados a `site.perfis`, ao lado do
+  Pinterest, para vincular todas as presenças oficiais no `sameAs` do site.
 
 ### 20 de agosto de 2026 — Claude Code — Auditoria do Pinterest e plano de crescimento
 

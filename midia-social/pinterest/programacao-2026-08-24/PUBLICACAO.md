@@ -49,16 +49,22 @@ evitar cadência mecânica.
 - [x] Revisão 2: intenção de busca, potencial de salvamento, leitura no celular,
   variedade visual, voz natural e CTA.
 - [x] Arquivos publicados no domínio oficial e conferidos com HTTP 200.
-- [ ] Fila atual conferida ao vivo no Pinterest.
-- [ ] CSV enviado no Pinterest.
-- [ ] As 21 linhas confirmadas na fila privada com datas, horários e pastas.
-- [ ] Texto alternativo aplicado ou conferido em cada Pin, quando a interface
-  permitir a edição do agendamento.
+- [x] Fila atual conferida ao vivo no Pinterest.
+- [x] CSV enviado no Pinterest.
+- [x] As 21 linhas confirmadas na fila privada com datas, horários e pastas.
+- [x] Texto alternativo conferido no manifesto; o editor de Pins agendados não
+  oferece campo de texto alternativo.
 
-## Pendência de navegador
+## Processamento no Pinterest
 
-O Chrome está aberto e a extensão está instalada e habilitada, mas o registro
-do componente de comunicação da extensão está ausente no Windows. Pela regra
-da integração, o agente não deve reparar esse componente. É necessário
-reinstalar o plugin de navegador pela interface de plugins do Codex e então
-retomar a conferência e o envio.
+Em 22 de agosto de 2026, a fila privada foi conferida ao vivo e continha
+somente os dois Pins já previstos para 23/08, às 09:00 e 14:00. A extensão do
+Chrome foi reinstalada, reconectada ao Codex e recebeu permissão para acessar
+URLs de arquivo. O CSV com as 21 novas linhas foi aceito pelo importador, que
+exibiu `Upload concluído`.
+
+Depois do processamento, a fila passou de 2 para 23 Pins. Todos os 21 novos
+títulos, datas, horários e pastas ficaram visíveis, começando em 24/08 às 09:18
+e terminando em 30/08 às 20:32. O editor de um item agendado confirmou título,
+descrição completa, link com UTM, pasta e horário corretos, mas não apresentou
+campo para texto alternativo; os 21 textos permanecem preservados no manifesto.

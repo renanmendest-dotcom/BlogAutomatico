@@ -52,12 +52,12 @@ O CSV usa UTC, como exige o importador em massa do Pinterest.
 - [x] Revisão 2: potencial de clique e salvamento, intenção de busca,
   naturalidade, leitura no celular, contraste, variedade visual e CTA;
 - [x] `pnpm validar`, `pnpm check`, `pnpm build` e revisão visual final;
-- [ ] mídias publicadas no domínio oficial e conferidas com HTTP 200;
+- [x] mídias publicadas no domínio oficial e conferidas com HTTP 200;
 - [ ] CSV enviado ao Pinterest;
 - [ ] 21 linhas confirmadas na fila com datas, horários, títulos e pastas.
 
 ## Estado
 
-As peças e o CSV estão prontos e passaram por todas as validações locais. A
-publicação no repositório, a validação das URLs públicas e o envio ao Pinterest
-serão registrados aqui depois da conferência.
+As peças e o CSV estão prontos, passaram por todas as validações e as 21 mídias
+respondem com HTTP 200 no domínio oficial. O envio ao Pinterest será registrado
+aqui depois da conferência da fila.

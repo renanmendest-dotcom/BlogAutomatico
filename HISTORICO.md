@@ -105,6 +105,24 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 30 de agosto de 2026 — Codex — Desempenho do Pinterest analisado e nova semana preparada
+
+- O Pinterest Analytics mostrou 297 impressões, 23 engajamentos, 5 cliques de
+  saída e nenhum salvamento nos últimos 30 dias; nos últimos sete dias foram
+  109 impressões sem engajamento. Os cliques vieram de dúvidas específicas,
+  comparações e produtos, enquanto peças genéricas perderam força.
+- A pesquisa no Pinterest Trends, em dúvidas recentes de brasileiras e nas
+  recomendações oficiais do Pinterest confirmou a oportunidade de criar Pins
+  consultáveis e usar pedidos claros de salvamento quando a peça serve para
+  consulta futura.
+- Foi preparado o lote de 31 de agosto a 6 de setembro: 21 Pins únicos, três
+  por dia em horários variados, com 11 guias, 7 fotografias inéditas e 3 peças
+  com embalagens reais. Dezoito descrições usam CTAs específicos de salvamento.
+- Cada promessa numérica está entregue integralmente no próprio Pin ou na
+  descrição. Nenhuma peça simula carrossel. Todos os destinos têm UTM único.
+- Duas revisões independentes, `pnpm validar`, `pnpm check`, `pnpm build` e a
+  revisão visual em desktop e celular passaram sem erros.
+
 ### 22 de agosto de 2026 — Codex — Lote de sete dias do Pinterest preparado
 
 - Foram criados 21 Pins para 24 a 30 de agosto, três por dia e em horários

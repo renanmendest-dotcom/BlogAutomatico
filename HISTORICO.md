@@ -122,6 +122,11 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
   descrição. Nenhuma peça simula carrossel. Todos os destinos têm UTM único.
 - Duas revisões independentes, `pnpm validar`, `pnpm check`, `pnpm build` e a
   revisão visual em desktop e celular passaram sem erros.
+- Com confirmação explícita do proprietário, o CSV foi enviado no Chrome
+  autenticado em 30 de agosto. O Pinterest exibiu `Upload concluído` e informou
+  que os Pins estão sendo criados, com prazo normal de processamento de até
+  cerca de duas horas. A fila ainda não refletia o lote na última conferência;
+  o arquivo não deve ser reenviado para evitar duplicatas.
 
 ### 22 de agosto de 2026 — Codex — Lote de sete dias do Pinterest preparado
 

@@ -105,6 +105,24 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 31 de agosto de 2026 — Codex — Agendamento do Pinterest corrigido
+
+- O CSV enviado em 30 de agosto exibiu `Upload concluído`, mas não criou os 21
+  agendamentos. A fila web e o aplicativo confirmaram a falha silenciosa.
+- O editor bloqueou o domínio oficial, com e sem UTM, e aceitou o endereço
+  antigo `blog-automatico-sigma.vercel.app` sem parâmetros. As mídias continuam
+  hospedadas no domínio oficial; somente os links de destino usam o endereço
+  alternativo.
+- Com confirmação explícita do proprietário, os 21 Pins foram criados
+  individualmente para 1 a 7 de setembro, três por dia. Seis rascunhos que
+  entraram na pasta padrão foram removidos e recriados nas pastas corretas.
+- A fila privada foi conferida integralmente: 21 títulos únicos, todos com
+  data, horário e pasta correspondentes ao planejamento. As sete fotografias
+  receberam as duas marcações de conteúdo gerado por IA.
+- O gerador, o CSV, o manifesto e o relatório foram atualizados para reproduzir
+  o destino aceito. Os oito artigos no endereço alternativo responderam HTTP
+  200. Pendência: o domínio oficial continua bloqueado pelo filtro do Pinterest.
+
 ### 30 de agosto de 2026 — Codex — Desempenho do Pinterest analisado e nova semana preparada
 
 - O Pinterest Analytics mostrou 297 impressões, 23 engajamentos, 5 cliques de

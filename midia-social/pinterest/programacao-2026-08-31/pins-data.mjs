@@ -26,7 +26,7 @@ export const pins = [
     required: ['Expectativa de cacho fechado', 'Partes quase secas', 'Creme demais', 'Só creme quando falta fixação', 'Pentear depois de amassar', 'Tocar enquanto seca', 'Soltar a camada firme cedo', 'Trocar tudo de uma vez'],
     cta: 'Salve para a próxima lavagem',
     link: '/artigos/cabelo-ondulado-nao-define-erros/', board: boards.ondas,
-    publish: '2026-08-31T12:12:00', local: '31/08/2026 09:12', keywords: 'cabelo ondulado não define, erros finalização ondulada, ondas sem definição, cabelo ondulado',
+    publish: '2026-09-01T12:00:00', local: '01/09/2026 09:00', keywords: 'cabelo ondulado não define, erros finalização ondulada, ondas sem definição, cabelo ondulado',
   },
   {
     id: '02', kind: 'photo', theme: 'plum', photo: '01-separar-mechas.png', side: 'left', position: 'center 58%',
@@ -37,7 +37,7 @@ export const pins = [
     alt: 'Mulher ondulada de costas divide o cabelo úmido em quatro partes com presilhas antes de finalizar.',
     cta: 'Salve para testar',
     link: '/artigos/cabelo-ondulado-nao-define-erros/', board: boards.ondas,
-    publish: '2026-08-31T17:46:00', local: '31/08/2026 14:46', keywords: 'finalização cabelo ondulado, separar cabelo em mechas, cabelo úmido, ondas definidas',
+    publish: '2026-09-01T17:30:00', local: '01/09/2026 14:30', keywords: 'finalização cabelo ondulado, separar cabelo em mechas, cabelo úmido, ondas definidas',
   },
   {
     id: '03', kind: 'guide', theme: 'blue',
@@ -55,7 +55,7 @@ export const pins = [
     required: ['Lavagem 1', 'Lavagem 2', 'Lavagem 3', 'Volume, duração, toque e tempo de secagem'],
     cta: 'Salve o roteiro',
     link: '/artigos/cabelo-ondulado-nao-define-erros/', board: boards.ondas,
-    publish: '2026-08-31T23:08:00', local: '31/08/2026 20:08', keywords: 'teste cabelo ondulado, finalização ondulada, ondas duram pouco, fixação cabelo',
+    publish: '2026-09-01T23:00:00', local: '01/09/2026 20:00', keywords: 'teste cabelo ondulado, finalização ondulada, ondas duram pouco, fixação cabelo',
   },
   {
     id: '04', kind: 'product', theme: 'rose', products: ['widi-ondulando.png', 'salon-line-definicao.png', 'inoar-meu-cacho.png'],
@@ -67,7 +67,7 @@ export const pins = [
     required: ['Widi', 'Salon Line', 'Inoar'],
     cta: 'Compare no guia',
     link: '/artigos/melhores-cremes-para-cabelo-ondulado-sem-pesar/', board: boards.produtos,
-    publish: '2026-09-01T11:57:00', local: '01/09/2026 08:57', keywords: 'creme para cabelo ondulado, melhor creme ondulado, Widi Ondulando a Juba, creme sem pesar',
+    publish: '2026-09-02T12:00:00', local: '02/09/2026 09:00', keywords: 'creme para cabelo ondulado, melhor creme ondulado, Widi Ondulando a Juba, creme sem pesar',
   },
   {
     id: '05', kind: 'photo', theme: 'terracotta', photo: '02-dose-palmas.png', side: 'left', position: 'center 55%',
@@ -78,7 +78,7 @@ export const pins = [
     alt: 'Close de duas mãos espalhando uma pequena quantidade de creme ao lado de cabelo ondulado úmido.',
     cta: 'Salve para dosar melhor',
     link: '/artigos/melhores-cremes-para-cabelo-ondulado-sem-pesar/', board: boards.ondas,
-    publish: '2026-09-01T16:33:00', local: '01/09/2026 13:33', keywords: 'quanto creme usar cabelo ondulado, creme pesa, finalização sem pesar, ondas finas',
+    publish: '2026-09-02T16:30:00', local: '02/09/2026 13:30', keywords: 'quanto creme usar cabelo ondulado, creme pesa, finalização sem pesar, ondas finas',
   },
   {
     id: '06', kind: 'guide', theme: 'olive',
@@ -97,7 +97,7 @@ export const pins = [
     required: ['Falta maciez', 'A onda some ao secar', 'Raiz fica colada', 'Secagem demora demais', 'Pontas pedem ajuda'],
     cta: 'Salve antes de comprar',
     link: '/artigos/melhores-cremes-para-cabelo-ondulado-sem-pesar/', board: boards.ondas,
-    publish: '2026-09-01T22:44:00', local: '01/09/2026 19:44', keywords: 'creme cabelo ondulado sem pesar, ondas sem definição, raiz colada, finalização leve',
+    publish: '2026-09-02T22:30:00', local: '02/09/2026 19:30', keywords: 'creme cabelo ondulado sem pesar, ondas sem definição, raiz colada, finalização leve',
   },
   {
     id: '07', kind: 'guide', theme: 'plum', compact: true,
@@ -117,7 +117,7 @@ export const pins = [
     required: ['Indicação oficial', 'Textura', 'Objetivo', 'Dose', 'Camadas', 'Ponto de atenção'],
     cta: 'Salve antes de comparar',
     link: '/artigos/melhores-cremes-de-pentear-para-cabelo-cacheado/', board: boards.cachos,
-    publish: '2026-09-02T12:28:00', local: '02/09/2026 09:28', keywords: 'melhor creme cabelo cacheado, escolher creme de pentear, finalização cacheada, creme sem pesar',
+    publish: '2026-09-03T12:30:00', local: '03/09/2026 09:30', keywords: 'melhor creme cabelo cacheado, escolher creme de pentear, finalização cacheada, creme sem pesar',
   },
   {
     id: '08', kind: 'photo', theme: 'rose', photo: '05-raiz-seca.png', side: 'right', position: 'center 51%',
@@ -128,7 +128,7 @@ export const pins = [
     alt: 'Mulher de cabelo ondulado seco observa e levanta suavemente uma pequena área da raiz diante do espelho.',
     cta: 'Salve para testar',
     link: '/artigos/melhores-cremes-de-pentear-para-cabelo-cacheado/', board: boards.cachos,
-    publish: '2026-09-02T17:11:00', local: '02/09/2026 14:11', keywords: 'creme pesou cabelo cacheado, raiz colada, cabelo sem volume, dose creme pentear',
+    publish: '2026-09-03T17:00:00', local: '03/09/2026 14:00', keywords: 'creme pesou cabelo cacheado, raiz colada, cabelo sem volume, dose creme pentear',
   },
   {
     id: '09', kind: 'product', theme: 'blue', products: ['widi-ondulando.png'],
@@ -140,7 +140,7 @@ export const pins = [
     required: ['Ondulando a Juba', 'dose alta', 'camadas'],
     cta: 'Veja os pontos de atenção',
     link: '/artigos/melhores-cremes-para-cabelo-ondulado-sem-pesar/', board: boards.produtos,
-    publish: '2026-09-02T23:39:00', local: '02/09/2026 20:39', keywords: 'Widi Care Ondulando a Juba, creme cabelo ondulado, ondas sem pesar, creme 500 ml',
+    publish: '2026-09-03T23:30:00', local: '03/09/2026 20:30', keywords: 'Widi Care Ondulando a Juba, creme cabelo ondulado, ondas sem pesar, creme 500 ml',
   },
   {
     id: '10', kind: 'guide', theme: 'terracotta',
@@ -159,7 +159,7 @@ export const pins = [
     required: ['1. Cabelo úmido', '2. Pouco creme', '3. Gelatina fina', '4. Amasse', '5. Espere secar'],
     cta: 'Salve a ordem',
     link: '/artigos/gelatina-antes-ou-depois-do-creme-de-pentear-2026/', board: boards.finalizacao,
-    publish: '2026-09-03T11:43:00', local: '03/09/2026 08:43', keywords: 'gelatina antes ou depois do creme, ordem finalização, creme e gelatina, cachos definidos',
+    publish: '2026-09-04T11:30:00', local: '04/09/2026 08:30', keywords: 'gelatina antes ou depois do creme, ordem finalização, creme e gelatina, cachos definidos',
   },
   {
     id: '11', kind: 'photo', theme: 'olive', photo: '07-gelatina-mecha.png', side: 'left', position: 'center 52%',
@@ -170,7 +170,7 @@ export const pins = [
     alt: 'Mulher de cabelo crespo aplica uma camada fina de gelatina em uma única mecha úmida.',
     cta: 'Salve para testar',
     link: '/artigos/gelatina-antes-ou-depois-do-creme-de-pentear-2026/', board: boards.finalizacao,
-    publish: '2026-09-03T16:58:00', local: '03/09/2026 13:58', keywords: 'como passar gelatina cabelo, gelatina capilar, excesso gelatina, finalização cacheada',
+    publish: '2026-09-04T17:00:00', local: '04/09/2026 14:00', keywords: 'como passar gelatina cabelo, gelatina capilar, excesso gelatina, finalização cacheada',
   },
   {
     id: '12', kind: 'guide', theme: 'rose',
@@ -189,7 +189,7 @@ export const pins = [
     required: ['Rigidez solta ao amassar', 'Continua duro', 'Farelo branco', 'Raiz ficou baixa', 'Aspereza permanece'],
     cta: 'Salve o diagnóstico',
     link: '/artigos/gelatina-capilar-resseca-cabelo-cacheado/', board: boards.finalizacao,
-    publish: '2026-09-03T22:21:00', local: '03/09/2026 19:21', keywords: 'gelatina cabelo duro, gelatina resseca, cabelo cacheado áspero, excesso gelatina',
+    publish: '2026-09-04T22:30:00', local: '04/09/2026 19:30', keywords: 'gelatina cabelo duro, gelatina resseca, cabelo cacheado áspero, excesso gelatina',
   },
   {
     id: '13', kind: 'photo', theme: 'blue', photo: '06-gota-oleo.png', side: 'left', position: 'center 52%',
@@ -200,7 +200,7 @@ export const pins = [
     alt: 'Close de uma gota de óleo na palma da mão ao lado das pontas de cabelo ondulado seco.',
     cta: 'Salve a dose inicial',
     link: '/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/', board: boards.ondas,
-    publish: '2026-09-04T12:36:00', local: '04/09/2026 09:36', keywords: 'óleo cabelo ondulado, óleo pesa, pontas secas, óleo de argan cabelo',
+    publish: '2026-09-05T12:30:00', local: '05/09/2026 09:30', keywords: 'óleo cabelo ondulado, óleo pesa, pontas secas, óleo de argan cabelo',
   },
   {
     id: '14', kind: 'product', theme: 'plum', products: ['lola-argan-oil-50ml.webp'],
@@ -212,7 +212,7 @@ export const pins = [
     required: ['Lola Argan Oil', 'pontas', 'raiz'],
     cta: 'Veja como usar sem pesar',
     link: '/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/', board: boards.produtos,
-    publish: '2026-09-04T18:07:00', local: '04/09/2026 15:07', keywords: 'Lola Argan Oil 50 ml, óleo de argan cabelo, óleo para pontas, cabelo ondulado fino',
+    publish: '2026-09-05T18:00:00', local: '05/09/2026 15:00', keywords: 'Lola Argan Oil 50 ml, óleo de argan cabelo, óleo para pontas, cabelo ondulado fino',
   },
   {
     id: '15', kind: 'guide', theme: 'terracotta',
@@ -231,7 +231,7 @@ export const pins = [
     required: ['Pontas secas', 'Comprimento com frizz', 'Raiz oleosa', 'Camada firme seca', 'Cabelo já pesado'],
     cta: 'Salve o mapa de aplicação',
     link: '/artigos/oleo-de-argan-pesa-no-cabelo-ondulado/', board: boards.ondas,
-    publish: '2026-09-04T23:18:00', local: '04/09/2026 20:18', keywords: 'como usar óleo cabelo ondulado, óleo nas pontas, raiz oleosa, frizz ondulado',
+    publish: '2026-09-05T23:30:00', local: '05/09/2026 20:30', keywords: 'como usar óleo cabelo ondulado, óleo nas pontas, raiz oleosa, frizz ondulado',
   },
   {
     id: '16', kind: 'photo', theme: 'rose', photo: '03-proteger-ao-dormir.png', side: 'right', position: 'center 48%',
@@ -242,7 +242,7 @@ export const pins = [
     alt: 'Mulher cacheada prende os cachos no alto com um elástico largo de cetim, sem esticar a raiz.',
     cta: 'Salve para lembrar à noite',
     link: '/artigos/como-recuperar-os-cachos-no-day-after-sem-lavar/', board: boards.cachos,
-    publish: '2026-09-05T13:14:00', local: '05/09/2026 10:14', keywords: 'day after cacheado, coque abacaxi, proteger cachos dormir, cetim cabelo',
+    publish: '2026-09-06T13:00:00', local: '06/09/2026 10:00', keywords: 'day after cacheado, coque abacaxi, proteger cachos dormir, cetim cabelo',
   },
   {
     id: '17', kind: 'guide', theme: 'olive',
@@ -261,7 +261,7 @@ export const pins = [
     required: ['Poucas mechas amassadas', 'Frizz na camada de cima', 'Uma mecha esticada', 'Perda geral de forma', 'Peso ou acúmulo'],
     cta: 'Salve o guia de day after',
     link: '/artigos/como-recuperar-os-cachos-no-day-after-sem-lavar/', board: boards.cachos,
-    publish: '2026-09-05T17:29:00', local: '05/09/2026 14:29', keywords: 'day after cacheado, recuperar cachos, quando lavar cabelo cacheado, retoque cachos',
+    publish: '2026-09-06T17:30:00', local: '06/09/2026 14:30', keywords: 'day after cacheado, recuperar cachos, quando lavar cabelo cacheado, retoque cachos',
   },
   {
     id: '18', kind: 'guide', theme: 'blue',
@@ -279,7 +279,7 @@ export const pins = [
     required: ['1. Separe a mecha', '2. Umedeça', '3. Modele', '4. Deixe secar'],
     cta: 'Salve os 4 passos',
     link: '/artigos/como-recuperar-os-cachos-no-day-after-sem-lavar/', board: boards.finalizacao,
-    publish: '2026-09-05T22:52:00', local: '05/09/2026 19:52', keywords: 'day after cabelo ondulado, recuperar mecha, retoque localizado, cachos amassados',
+    publish: '2026-09-06T23:00:00', local: '06/09/2026 20:00', keywords: 'day after cabelo ondulado, recuperar mecha, retoque localizado, cachos amassados',
   },
   {
     id: '19', kind: 'photo', theme: 'plum', photo: '04-difusor-posicionar.png', side: 'left', position: 'center 49%',
@@ -290,7 +290,7 @@ export const pins = [
     alt: 'Mulher ondulada posiciona uma mecha no difusor desligado antes de iniciar a secagem.',
     cta: 'Salve para a próxima secagem',
     link: '/artigos/precisa-usar-protetor-termico-no-difusor/', board: boards.finalizacao,
-    publish: '2026-09-06T12:05:00', local: '06/09/2026 09:05', keywords: 'como usar difusor cabelo ondulado, difusor sem frizz, secar ondas, definição cabelo',
+    publish: '2026-09-07T12:00:00', local: '07/09/2026 09:00', keywords: 'como usar difusor cabelo ondulado, difusor sem frizz, secar ondas, definição cabelo',
   },
   {
     id: '20', kind: 'guide', theme: 'terracotta',
@@ -309,7 +309,7 @@ export const pins = [
     required: ['1. Proteja do calor', '2. Escolha morno ou baixo', '3. Posicione desligado', '4. Seque sem passear', '5. Desligue para trocar'],
     cta: 'Salve os 5 passos',
     link: '/artigos/precisa-usar-protetor-termico-no-difusor/', board: boards.finalizacao,
-    publish: '2026-09-06T18:38:00', local: '06/09/2026 15:38', keywords: 'difusor cabelo cacheado, como usar difusor, proteção térmica, secar cachos',
+    publish: '2026-09-07T18:30:00', local: '07/09/2026 15:30', keywords: 'difusor cabelo cacheado, como usar difusor, proteção térmica, secar cachos',
   },
   {
     id: '21', kind: 'guide', theme: 'rose',
@@ -328,6 +328,6 @@ export const pins = [
     required: ['Diz proteção térmica', 'Diz leave-in ou creme', 'Difusor no morno', 'Difusor no frio', 'Vai somar produtos'],
     cta: 'Salve o checklist do rótulo',
     link: '/artigos/precisa-usar-protetor-termico-no-difusor/', board: boards.finalizacao,
-    publish: '2026-09-06T23:26:00', local: '06/09/2026 20:26', keywords: 'protetor térmico difusor, leave-in proteção térmica, cabelo cacheado difusor, rótulo finalizador',
+    publish: '2026-09-07T23:30:00', local: '07/09/2026 20:30', keywords: 'protetor térmico difusor, leave-in proteção térmica, cabelo cacheado difusor, rótulo finalizador',
   },
 ];

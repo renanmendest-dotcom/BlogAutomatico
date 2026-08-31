@@ -11,6 +11,7 @@ const photoDir = join(here, 'fotos');
 const productDir = join(here, 'produtos');
 const logoPath = join(root, 'public', 'logo-curva-viva.png');
 const site = 'https://www.curvaviva.com.br';
+const pinterestDestinationSite = 'https://blog-automatico-sigma.vercel.app';
 
 const boards = {
   ondas: 'Cabelo ondulado: leveza e definição',
@@ -491,14 +492,13 @@ await browser.close();
 
 const header = ['Title', 'Media URL', 'Pinterest board', 'Thumbnail', 'Description', 'Link', 'Publish date', 'Keywords'];
 const rows = pins.map((pin) => {
-  const tracking = `utm_source=pinterest&utm_medium=organic&utm_campaign=programacao_2026_08_31&utm_content=pin_${pin.id}`;
   return [
     pin.title,
     `${site}/pinterest/programacao-2026-08-31/pin-${pin.id}.png`,
     pin.board,
     '',
     pin.description,
-    `${site}${pin.link}?${tracking}`,
+    `${pinterestDestinationSite}${pin.link}`,
     pin.publish,
     pin.keywords,
   ].map(csvCell).join(',');
@@ -506,7 +506,7 @@ const rows = pins.map((pin) => {
 await writeFile(join(here, 'pinterest-bulk.csv'), `\uFEFF${header.map(csvCell).join(',')}\r\n${rows.join('\r\n')}\r\n`, 'utf8');
 
 const manifest = pins.map(({ id, title, alt, local, publish, board, link, kind, photo, products, cta }) => ({
-  id, title, alt, horario_brasilia: local, horario_utc: publish, board, link: `${site}${link}`, kind, photo: photo ?? null, products: products ?? [], cta,
+  id, title, alt, horario_brasilia: local, horario_utc: publish, board, link: `${pinterestDestinationSite}${link}`, kind, photo: photo ?? null, products: products ?? [], cta,
 }));
 await writeFile(join(here, 'manifesto-pins.json'), `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
 

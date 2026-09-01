@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="600" y="82" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="50" font-weight="700" fill="#47283F">Dose por seções: 4 passos</text>
+  <text x="600" y="128" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="26" fill="#6B3D5E">Mais controle, menos creme concentrado no topo</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="70" y="205" width="245" height="405" rx="28" fill="#F0D2CB" stroke="#C2564C" stroke-width="5"/>
+    <circle cx="192" cy="280" r="48" fill="#47283F"/><text x="192" y="297" text-anchor="middle" font-size="46" font-weight="700" fill="#F8F3EC">1</text>
+    <path d="M140 405 C150 335 235 335 245 405 M192 345 V500" fill="none" stroke="#6B3D5E" stroke-width="13" stroke-linecap="round"/>
+    <path d="M155 385 L230 445 M230 385 L155 445" stroke="#C2564C" stroke-width="8"/>
+    <text x="192" y="540" text-anchor="middle" font-size="30" font-weight="700" fill="#47283F">Divida</text>
+    <text x="192" y="578" text-anchor="middle" font-size="19" fill="#2B2027">alcance as partes internas</text>
+    <rect x="342" y="205" width="245" height="405" rx="28" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="5"/>
+    <circle cx="464" cy="280" r="48" fill="#47283F"/><text x="464" y="297" text-anchor="middle" font-size="46" font-weight="700" fill="#F8F3EC">2</text>
+    <path d="M405 425 C420 360 508 360 523 425" fill="none" stroke="#6B3D5E" stroke-width="18" stroke-linecap="round"/>
+    <path d="M435 350 C450 330 478 330 493 350" fill="none" stroke="#C2564C" stroke-width="11" stroke-linecap="round"/>
+    <text x="464" y="540" text-anchor="middle" font-size="30" font-weight="700" fill="#47283F">Espalhe pouco</text>
+    <text x="464" y="578" text-anchor="middle" font-size="22" fill="#2B2027">uma camada nas mãos</text>
+    <rect x="614" y="205" width="245" height="405" rx="28" fill="#F0D2CB" stroke="#C2564C" stroke-width="5"/>
+    <circle cx="736" cy="280" r="48" fill="#47283F"/><text x="736" y="297" text-anchor="middle" font-size="46" font-weight="700" fill="#F8F3EC">3</text>
+    <path d="M700 345 C675 390 675 465 700 505 M736 345 C711 390 711 465 736 505 M772 345 C747 390 747 465 772 505" fill="none" stroke="#6B3D5E" stroke-width="13" stroke-linecap="round"/>
+    <text x="736" y="540" text-anchor="middle" font-size="30" font-weight="700" fill="#47283F">Aplique</text>
+    <text x="736" y="578" text-anchor="middle" font-size="22" fill="#2B2027">termine uma seção</text>
+    <rect x="886" y="205" width="245" height="405" rx="28" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="5"/>
+    <circle cx="1008" cy="280" r="48" fill="#47283F"/><text x="1008" y="297" text-anchor="middle" font-size="46" font-weight="700" fill="#F8F3EC">4</text>
+    <path d="M948 420 H1068 M1040 392 L1068 420 L1040 448" fill="none" stroke="#6B3D5E" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="975" cy="365" r="15" fill="#C2564C"/><circle cx="1020" cy="365" r="24" fill="#C2564C"/>
+    <text x="1008" y="540" text-anchor="middle" font-size="30" font-weight="700" fill="#47283F">Decida</text>
+    <text x="1008" y="578" text-anchor="middle" font-size="22" fill="#2B2027">só então acrescente</text>
+    <rect x="110" y="675" width="980" height="64" rx="32" fill="#47283F"/>
+    <text x="600" y="716" text-anchor="middle" font-size="24" font-weight="700" fill="#F8F3EC">Falta em uma região? Corrija a região, não o cabelo inteiro</text>
+  </g>
+</svg>

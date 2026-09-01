@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="600" y="92" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="52" font-weight="700" fill="#47283F">Quanto creme usar?</text>
+  <text x="600" y="140" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="28" fill="#6B3D5E">A dose aparece por etapas, não numa moeda</text>
+  <path d="M250 405 H950" stroke="#6B3D5E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M930 385 L960 405 L930 425" fill="none" stroke="#6B3D5E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="250" cy="405" r="92" fill="#F0D2CB" stroke="#C2564C" stroke-width="6"/>
+  <path d="M215 415 C230 365 270 365 285 415 C270 455 230 455 215 415Z" fill="#6B3D5E"/>
+  <path d="M230 360 C245 335 270 335 285 360" fill="none" stroke="#47283F" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="600" cy="405" r="92" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="6"/>
+  <path d="M563 430 C580 380 620 380 637 430" fill="none" stroke="#6B3D5E" stroke-width="18" stroke-linecap="round"/>
+  <path d="M600 345 V380 M582 362 H618" stroke="#C2564C" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="950" cy="405" r="92" fill="#F0D2CB" stroke="#C2564C" stroke-width="6"/>
+  <path d="M912 405 C920 355 980 355 988 405 C980 462 920 462 912 405Z" fill="none" stroke="#6B3D5E" stroke-width="14"/>
+  <path d="M930 425 C945 443 965 443 980 425" fill="none" stroke="#47283F" stroke-width="8" stroke-linecap="round"/>
+  <text x="250" y="560" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="700" fill="#47283F">1. Camada fina</text>
+  <text x="250" y="602" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="24" fill="#2B2027">em cada seção úmida</text>
+  <text x="600" y="560" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="700" fill="#47283F">2. Acrescente</text>
+  <text x="600" y="602" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="24" fill="#2B2027">só onde ainda falta</text>
+  <text x="950" y="560" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="700" fill="#47283F">3. Avalie seco</text>
+  <text x="950" y="602" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="24" fill="#2B2027">movimento, toque e raiz</text>
+  <rect x="120" y="682" width="960" height="62" rx="31" fill="#47283F"/>
+  <text x="600" y="722" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700" fill="#F8F3EC">A menor dose que cobre bem é o melhor ponto de partida</text>
+</svg>

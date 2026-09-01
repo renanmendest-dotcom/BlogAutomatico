@@ -19,7 +19,7 @@ o que mudou.
 
 ---
 
-## Estado atual em 22 de agosto de 2026
+## Estado atual em 1 de setembro de 2026
 
 Confira estes números com `pnpm validar`, que imprime a contagem real, antes de
 confiar nesta tabela. **Atualize-a a cada publicação.**
@@ -28,7 +28,7 @@ confiar nesta tabela. **Atualize-a a cada publicação.**
 |---|---|
 | Endereço | `https://www.curvaviva.com.br` (o sem `www` redireciona para o `www`) |
 | Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde com 200 |
-| Artigos publicados | 13, dois deles em formato ranking |
+| Artigos publicados | 14, dois deles em formato ranking |
 | Produtos públicos | 16, sendo 12 com preço cadastrado |
 | Pinterest | `@curvavivaoficial`, ~20 Pins, domínio reivindicado e Instagram conectado |
 | Buscadores | Search Console e Bing verificados, sitemap enviado |
@@ -104,6 +104,22 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 1 de setembro de 2026 — Codex — Guia de dose do creme de pentear
+
+- Publicado exatamente um artigo novo para responder quanto creme de pentear
+  usar sem pesar, uma busca reforçada por dúvida brasileira recente e por um
+  conteúdo concorrente publicado em 27 de agosto.
+- A indicação é o Widi Care Encaracolando a Juba Creme de Pentear 500 ml. Nome,
+  embalagem, imagem real, modo de uso por mechas e fonte oficial foram
+  conferidos; a foto oficial passou a ser hospedada no próprio site.
+- O artigo recebeu quatro infográficos próprios, cinco perguntas frequentes e
+  quatro links internos. As duas revisões editoriais, `pnpm validar`,
+  `pnpm check`, `pnpm build` e a revisão visual em desktop e celular passaram.
+- O Chrome não conectou ao controle automatizado nesta execução. O botão usa o
+  link de afiliado `https://meli.la/16aMaW5`, validado em 10 de agosto, mas a
+  oferta não pôde ser reconfirmada ao vivo no Mercado Livre e ficou como
+  pendência interna.
 
 ### 31 de agosto de 2026 — Codex — Agendamento do Pinterest corrigido
 

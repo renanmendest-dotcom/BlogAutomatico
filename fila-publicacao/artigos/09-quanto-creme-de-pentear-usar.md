@@ -1,5 +1,6 @@
 ---
-status_fila: rascunho_editorial_completo
+status_fila: publicado
+publicado_em: 2026-09-01
 ordem: 9
 modelo_artigo: educativo
 titulo: "Quanto creme de pentear usar sem deixar o cabelo pesado?"

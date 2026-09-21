@@ -359,7 +359,7 @@
     "marca": "Widi Care",
     "categoria": "mousse",
     "publicado": true,
-    "verificadoEm": "2026-08-10",
+    "verificadoEm": "2026-09-20",
     "perfil": {
       "curvaturas": ["Ondulados", "Cacheados", "Crespos"],
       "textura": "Mousse",
@@ -373,10 +373,10 @@
       "fonteUrl": "https://lojawidicare.com.br/produtos/mousse-finalizador-juba-mousse-criador-de-cachos-200-ml"
     },
     "preco": {
-      "min": 51.78,
-      "max": 51.78,
+      "min": 52.28,
+      "max": 52.28,
       "moeda": "BRL",
-      "verificadoEm": "2026-08-10"
+      "verificadoEm": "2026-09-20"
     },
     "destaques": [
       {
@@ -402,8 +402,8 @@
     ],
     "oferta": {
       "loja": "Mercado Livre",
-      "url": "https://meli.la/2fykFpR",
-      "atualizadoEm": "2026-08-10"
+      "url": "https://meli.la/1px7uBK",
+      "atualizadoEm": "2026-09-20"
     },
     "analise": {
       "tipo": "documental",
@@ -415,19 +415,19 @@
         "id": "widi-care-loja-juba-mousse",
         "titulo": "Mousse Finalizador Juba Mousse Criador de Cachos 200 ml",
         "url": "https://lojawidicare.com.br/produtos/mousse-finalizador-juba-mousse-criador-de-cachos-200-ml",
-        "acessadoEm": "2026-08-10"
+        "acessadoEm": "2026-09-20"
       },
       {
         "id": "widi-care-juba-mousse",
         "titulo": "Juba Mousse Criador de Cachos",
         "url": "https://widicare.com.br/produto/juba-mousse-criador-de-cachos/",
-        "acessadoEm": "2026-08-10"
+        "acessadoEm": "2026-09-20"
       },
       {
         "id": "mercado-livre-juba-mousse-200ml",
         "titulo": "Mousse Criador de Cachos Juba Widi Care 200 ml no Mercado Livre",
-        "url": "https://produto.mercadolivre.com.br/MLB-6988339366-mousse-criador-de-cachos-juba-widi-care-200-ml-_JM",
-        "acessadoEm": "2026-08-10"
+        "url": "https://www.mercadolivre.com.br/mousse-criador-de-cachos-juba-widi-care-200-ml/up/MLBU4130315958?pdp_filters=item_id:MLB6988339366",
+        "acessadoEm": "2026-09-20"
       }
     ]
   },

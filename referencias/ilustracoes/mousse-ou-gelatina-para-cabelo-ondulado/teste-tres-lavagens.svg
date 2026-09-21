@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="600" y="82" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="50" font-weight="700" fill="#47283F">Teste dividido: mousse de um lado</text>
+  <text x="600" y="132" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" fill="#C2564C">gelatina do outro</text>
+  <path d="M150 330 H1050" stroke="#6B3D5E" stroke-width="8" stroke-linecap="round"/>
+  <g font-family="Inter,Arial,sans-serif">
+    <circle cx="170" cy="330" r="72" fill="#F0D2CB" stroke="#C2564C" stroke-width="6"/>
+    <text x="170" y="344" text-anchor="middle" font-size="42" font-weight="700" fill="#47283F">1</text>
+    <text x="170" y="455" text-anchor="middle" font-size="29" font-weight="700" fill="#47283F">Mesma lavagem</text>
+    <text x="170" y="494" text-anchor="middle" font-size="23" fill="#2B2027">e mesma umidade</text>
+    <circle cx="455" cy="330" r="72" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="6"/>
+    <text x="455" y="344" text-anchor="middle" font-size="42" font-weight="700" fill="#47283F">2</text>
+    <text x="455" y="455" text-anchor="middle" font-size="29" font-weight="700" fill="#47283F">Camada fina</text>
+    <text x="455" y="494" text-anchor="middle" font-size="23" fill="#2B2027">em cada metade</text>
+    <circle cx="745" cy="330" r="72" fill="#F0D2CB" stroke="#C2564C" stroke-width="6"/>
+    <text x="745" y="344" text-anchor="middle" font-size="42" font-weight="700" fill="#47283F">3</text>
+    <text x="745" y="455" text-anchor="middle" font-size="29" font-weight="700" fill="#47283F">Mesma secagem</text>
+    <text x="745" y="494" text-anchor="middle" font-size="23" fill="#2B2027">sem tocar nos fios</text>
+    <circle cx="1030" cy="330" r="72" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="6"/>
+    <text x="1030" y="344" text-anchor="middle" font-size="42" font-weight="700" fill="#47283F">4</text>
+    <text x="1030" y="455" text-anchor="middle" font-size="29" font-weight="700" fill="#47283F">Compare seco</text>
+    <text x="1030" y="494" text-anchor="middle" font-size="23" fill="#2B2027">e no dia seguinte</text>
+  </g>
+  <rect x="125" y="590" width="950" height="120" rx="32" fill="#47283F"/>
+  <text x="600" y="638" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700" fill="#F8F3EC">Anote: movimento, toque, duração e tempo de secagem</text>
+  <text x="600" y="680" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="24" fill="#F0D2CB">Repita em outra lavagem antes de escolher o vencedor</text>
+</svg>

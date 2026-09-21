@@ -19,7 +19,7 @@ o que mudou.
 
 ---
 
-## Estado atual em 1 de setembro de 2026
+## Estado atual em 20 de setembro de 2026
 
 Confira estes números com `pnpm validar`, que imprime a contagem real, antes de
 confiar nesta tabela. **Atualize-a a cada publicação.**
@@ -28,7 +28,7 @@ confiar nesta tabela. **Atualize-a a cada publicação.**
 |---|---|
 | Endereço | `https://www.curvaviva.com.br` (o sem `www` redireciona para o `www`) |
 | Endereço antigo | `blog-automatico-sigma.vercel.app`, ainda responde com 200 |
-| Artigos publicados | 14, dois deles em formato ranking |
+| Artigos publicados | 15, dois deles em formato ranking |
 | Produtos públicos | 16, sendo 12 com preço cadastrado |
 | Pinterest | `@curvavivaoficial`, ~20 Pins, domínio reivindicado e Instagram conectado |
 | Buscadores | Search Console e Bing verificados, sitemap enviado |
@@ -36,7 +36,7 @@ confiar nesta tabela. **Atualize-a a cada publicação.**
 | Design | Claude Code |
 | Conteúdo | Codex |
 
-**O gargalo hoje é volume de conteúdo.** 13 artigos contra centenas dos
+**O gargalo hoje é volume de conteúdo.** 15 artigos contra centenas dos
 concorrentes. Nenhum ajuste técnico compensa isso.
 
 ---
@@ -104,6 +104,20 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 ---
 
 ## Mudanças
+
+### 20 de setembro de 2026 — Codex — Comparativo de mousse e gelatina para ondulados
+
+- Publicado exatamente um artigo novo para responder se mousse ou gelatina
+  segura melhor o cabelo ondulado sem pesar, dúvida reforçada por conversas
+  brasileiras de 2026 sobre volume, fixação e combinação dos dois produtos.
+- A indicação é o Widi Care Juba Mousse Criador de Cachos 200 ml. Nome,
+  embalagem, imagem real, indicação, modo de uso, oferta de R$ 52,28 e estoque
+  foram conferidos; a Central de Afiliados gerou o link `https://meli.la/1px7uBK`.
+- O artigo recebeu quatro infográficos próprios, cinco perguntas frequentes e
+  quatro links internos. As duas revisões editoriais, `pnpm validar`,
+  `pnpm check`, `pnpm build` e a revisão visual em desktop e celular passaram.
+- Página pública:
+  `https://www.curvaviva.com.br/artigos/mousse-ou-gelatina-para-cabelo-ondulado/`.
 
 ### 1 de setembro de 2026 — Codex — Guia de dose do creme de pentear
 

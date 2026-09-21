@@ -14,7 +14,7 @@ e fonte estejam liberados para publicação.
 | 6 | `melhores-gelatinas-capilares` | ranking | gelatina | comprar | rascunho completo |
 | 7 | `ativador-de-cachos-ou-creme-de-pentear` | comparativo | finalizadores | escolher formato | rascunho completo |
 | 8 | `melhores-cremes-para-cabelo-crespo-4c` | ranking | crespos | comprar | rascunho completo |
-| 9 | `quanto-creme-de-pentear-usar` | educativo | finalização | evitar excesso | rascunho completo |
+| 9 | `quanto-creme-de-pentear-usar` | educativo | finalização | evitar excesso | publicado em 01/09/2026 |
 | 10 | `melhores-shampoos-para-cabelo-cacheado` | ranking | lavagem | comprar | rascunho completo |
 | 11 | `fitagem-ou-dedoliss` | comparativo | técnicas | escolher técnica | rascunho completo |
 | 12 | `melhores-mousses-para-cabelo-ondulado` | ranking | mousse | comprar | rascunho completo |
@@ -24,7 +24,7 @@ e fonte estejam liberados para publicação.
 | 16 | `melhores-finalizadores-para-cabelo-cacheado-fino` | ranking | fios finos | comprar | rascunho completo |
 | 17 | `cronograma-capilar-para-cabelo-cacheado-iniciante` | educativo | tratamento | montar rotina | rascunho completo |
 | 18 | `melhores-ativadores-de-cachos` | ranking | ativador | comprar | rascunho completo |
-| 19 | `mousse-ou-gelatina-para-cabelo-ondulado` | comparativo | ondulados | escolher fixação | rascunho completo |
+| 19 | `mousse-ou-gelatina-para-cabelo-ondulado` | comparativo | ondulados | escolher fixação | publicado em 20/09/2026 |
 | 20 | `melhores-produtos-para-day-after` | ranking | day after | comprar | rascunho completo |
 | 21 | `transicao-capilar-ondulada-por-onde-comecar` | educativo | transição | montar rotina | rascunho completo |
 | 22 | `melhores-mascaras-para-cabelos-cacheados-ressecados` | ranking | tratamento | comprar | rascunho completo |

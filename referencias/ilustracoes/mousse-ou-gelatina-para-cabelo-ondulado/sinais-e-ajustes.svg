@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#F8F3EC"/>
+  <text x="600" y="82" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="50" font-weight="700" fill="#47283F">Resultado seco, próximo ajuste</text>
+  <text x="600" y="130" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="27" fill="#6B3D5E">A resposta aparece no cabelo, não na quantidade da mão</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="85" y="185" width="500" height="210" rx="34" fill="#F0D2CB" stroke="#C2564C" stroke-width="5"/>
+    <text x="125" y="240" font-size="30" font-weight="700" fill="#47283F">Murcho ou grudado</text>
+    <text x="125" y="287" font-size="25" fill="#2B2027">Retire uma camada ou reduza</text>
+    <text x="125" y="324" font-size="25" fill="#2B2027">a dose pela metade</text>
+    <path d="M500 250 V325 M470 295 L500 325 L530 295" fill="none" stroke="#C2564C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="615" y="185" width="500" height="210" rx="34" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="5"/>
+    <text x="655" y="240" font-size="30" font-weight="700" fill="#47283F">Macio, mas abre cedo</text>
+    <text x="655" y="287" font-size="25" fill="#2B2027">Mantenha a base e aumente</text>
+    <text x="655" y="324" font-size="25" fill="#2B2027">a fixação aos poucos</text>
+    <path d="M1030 325 V250 M1000 280 L1030 250 L1060 280" fill="none" stroke="#6B3D5E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="85" y="435" width="500" height="210" rx="34" fill="#EFE5D9" stroke="#6B3D5E" stroke-width="5"/>
+    <text x="125" y="490" font-size="30" font-weight="700" fill="#47283F">Rígido, sem resíduo</text>
+    <text x="125" y="537" font-size="25" fill="#2B2027">Espere secar e amasse</text>
+    <text x="125" y="574" font-size="25" fill="#2B2027">com as mãos limpas</text>
+    <path d="M475 555 C500 520 525 520 550 555 C525 590 500 590 475 555Z" fill="none" stroke="#6B3D5E" stroke-width="9"/>
+    <rect x="615" y="435" width="500" height="210" rx="34" fill="#F0D2CB" stroke="#C2564C" stroke-width="5"/>
+    <text x="655" y="490" font-size="30" font-weight="700" fill="#47283F">Placas ou partículas</text>
+    <text x="655" y="537" font-size="25" fill="#2B2027">Use menos e teste cada</text>
+    <text x="655" y="574" font-size="25" fill="#2B2027">produto separadamente</text>
+    <g fill="#C2564C"><circle cx="1035" cy="526" r="9"/><circle cx="1065" cy="548" r="7"/><circle cx="1018" cy="571" r="6"/><circle cx="1062" cy="590" r="9"/></g>
+  </g>
+  <rect x="220" y="690" width="760" height="62" rx="31" fill="#47283F"/>
+  <text x="600" y="730" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700" fill="#F8F3EC">Não troque dose, base e técnica ao mesmo tempo</text>
+</svg>

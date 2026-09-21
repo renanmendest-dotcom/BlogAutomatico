@@ -1,5 +1,6 @@
 ---
-status_fila: rascunho_editorial_completo
+status_fila: publicado
+publicado_em: 2026-09-20
 ordem: 19
 modelo_artigo: comparativo
 titulo: "Mousse ou gelatina para cabelo ondulado: qual segura sem tirar movimento?"

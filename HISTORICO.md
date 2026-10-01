@@ -105,6 +105,15 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 30 de setembro de 2026 — Codex — Acesso de publicação deste computador habilitado
+
+- O proprietário concluiu o login oficial do GitHub pelo Git Credential
+  Manager. O teste `git push --dry-run origin main` confirmou o envio
+  autenticado para o repositório, resolvendo a pendência desta máquina.
+- Os registros de instalação e auditoria ficaram versionados para preservar
+  o estado do projeto e permitir a continuidade do trabalho em outros
+  computadores. O envio pelo Git está disponível para as próximas publicações.
+
 ### 30 de setembro de 2026 — Codex — Site oficial e fluxo de publicação conferidos
 
 - `https://www.curvaviva.com.br` respondeu HTTP 200 pela Vercel. O endereço

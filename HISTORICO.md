@@ -105,6 +105,41 @@ Não precisam ser rediscutidas, salvo se o proprietário mudar de ideia.
 
 ## Mudanças
 
+### 30 de setembro de 2026 — Codex — Site oficial e fluxo de publicação conferidos
+
+- `https://www.curvaviva.com.br` respondeu HTTP 200 pela Vercel. O endereço
+  sem `www` redirecionou corretamente para o domínio oficial por HTTPS.
+- Após `git fetch`, a cópia deste computador e a `main` do GitHub estavam no
+  commit `65d3fe1`, de 20 de setembro. A página inicial gerada localmente e o
+  índice de busca eram idênticos aos públicos, com 15 artigos e 16 produtos.
+  A Vercel registrava implantação bem-sucedida desse commit.
+- A instalação local permite editar e testar; o site oficial continua
+  hospedado na Vercel. As mudanças públicas chegam ao site depois de enviadas
+  à `main` do GitHub e implantadas pela integração existente.
+- O `git push` do terminal ainda não tem autenticação nesta máquina. Embora
+  o GitHub informe permissão de escrita para a conta, a integração do Codex
+  recusou a atualização do histórico com erro 403. O Chrome do proprietário
+  também não apareceu conectado ao controle do navegador. Os registros
+  ficaram preparados localmente; autenticar a publicação é a pendência para
+  enviar as próximas alterações deste computador.
+
+### 30 de setembro de 2026 — Codex — Ambiente local do Windows preparado
+
+- Instalados Node.js 24.21.0 LTS e pnpm 11.9.0 em
+  `%LOCALAPPDATA%\Programs\nodejs`, com inclusão no PATH do usuário, para
+  executar o projeto também em um terminal comum, sem depender do Codex.
+- Dependências instaladas com `pnpm install --frozen-lockfile`, preservando
+  as versões do projeto. `pnpm validar`, `pnpm check` e `pnpm build` passaram;
+  o Astro não encontrou erros ou avisos e gerou 47 páginas.
+- A revisão visual aprovou 20 telas e 23 rotas. O servidor de desenvolvimento
+  ficou disponível em `http://127.0.0.1:4321/`, com resposta HTTP 200 e
+  conferência da tela inicial no celular.
+- Dentro do Codex, a inicialização usou `ASTRO_DEV_BACKGROUND=0` somente no
+  processo do terminal, pois o modo automático de segundo plano do Astro
+  falhou no Windows. Nenhuma configuração do site foi alterada ou publicada.
+- A política automática do ambiente bloqueou a limpeza recursiva da pasta
+  temporária do instalador; os arquivos temporários foram mantidos.
+
 ### 20 de setembro de 2026 — Codex — Comparativo de mousse e gelatina para ondulados
 
 - Publicado exatamente um artigo novo para responder se mousse ou gelatina
